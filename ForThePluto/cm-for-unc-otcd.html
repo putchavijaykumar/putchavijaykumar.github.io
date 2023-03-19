@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h3 div id="top" align="center">Collateral Management for Uncleared OTC Derivatives</h3>
+<br><br>
+
+<h3 class="d">Introduction</h3>
+Parties face three risks from counterparties, namely Credit risk, Counterparty credit risk and Settlement risk. Collateral Management is an important tool to mitigate counterparty credit risk. It can also help to mitigate systemic risk, which is severe in OTC derivatives. These risks came to the forefront in the case of Lehman Brothers and AIG. The Lehman case did not require a government bailout as the collateral management was adequate, while in the case of AIG government bailout happened as the collateral management was inadequate.
+<br><br>
+The following is a description of the three risks.
+<br><br>
+
+<b class="b"><u>Credit Risk</u></b><br>
+Credit risk arises when only one party has an obligation to another. This situation arises in borrow-lend trades. This sort of risk is faced only by one party (lender) from the other (borrower). The risk arises for a particular period – i.e. from the time the loan is disbursed till it is repaid back.
+<br><br>
+
+<b><u>Counterparty Credit Risk</u></b><br>
+Counterparty credit risk arises when both the parties have an obligation to each other, and the obligation is in future. Such a situation arises only in buy-sell trades. The risk arises on the trade date and continues till the settlement date. On the settlement date, the counterparty credit risk transforms into settlement risk.
+<br><br>
+
+<b><u>Settlement Risk</u></b><br>
+Settlement risk arises when both the parties have an obligation to each other, and the obligation is immediate. Such a situation arises only in buy-sell trades.
+<br><br>
+
+
+<h3 class="d">Exposure and Loss</h3>
+Exposure is the amount due from the counterparty; and loss is the exposure less the amount recovered from the counterparty on default.
+<br><br>
+In other words: <br>
+Exposure = Amount due from counterparty on default <br>
+Loss = Exposure – Recovery. <br>
+<br>
+Recovery is usually expressed as a percentage of exposure. Exposure for Credit Risk is the principal plus accrued interest; and that for Settlement risk is the settlement amount (which is the quantity of underlying multiplied by the unit price). Exposure for Counterparty credit risk is difficult to estimate because the obligation is due in future and the exact amount of the obligation may be difficult to ascertain.
+<br><br>
+
+Counterparty credit risk exposure on any given date consists of the following two parts.
+<ol>
+	<li>Current Exposure (CE); and</li>
+	<li>Potential Exposure (PFE)</li>
+</ol>
+<br>
+
+<b><u>Current Exposure</u></b><br>
+Current exposure is the mark-to-market (MtM) value of trade on any given day, which can be ascertained by comparing with the current market price. If the product is traded on an exchange, the closing price of the product can be used for computing MtM value. If the product is not traded on any exchange, quotes from some dealers can be obtained and an average of the quotes in an agreed method can be used to determine the closing price of the product. If no dealer quotes are available then the parties may agree to calculate the price of the product by a mathematical model, a method which is commonly termed as “Mark-to-Model”.
+<br><br>
+
+<b><u>Potential Exposure</u></b><br>
+Potential exposure is the future MtM value, which is unknown now because the future price is unknown. Since the price can go up or down in future, we treat the Potential exposure as positive for both parties. Unlike current exposure which can be determined precisely, the potential exposure can only be estimated through a mathematical model. 
+<br><br>
+In long duration OTC derivatives (such as swaps of more than 15 years maturity), the potential exposure can be very high. The size of the potential exposure changes both with maturity and the nature of the product. The following table illustrates this.
+<br><br>
+
+<table>
+	<th>Product</th>
+	<th>Party facing CE</th>
+	<th>Profile of PE</th>
+
+	<tr>
+		<td>Forward</td>
+		<td>Buyer and Seller</td>
+		<td>PE rises with maturity</td>
+	</tr>
+
+	<tr>
+		<td>Swap</td>
+		<td>Buyer and Seller</td>
+		<td>PE rises first and then falls</td>
+	</tr>
+
+	<tr>
+		<td>Option</td>
+		<td>Buyer only</td>
+		<td>PE rises with maturity</td>
+	</tr>
+</table>
+<br><br>
+
+For forward and long option trades, the potential exposure rises with the square root of maturity (not linearly with maturity). This is because the market risk (measured as volatility or standard deviation) rises with the square root of time. For swap, the potential exposure rises first until toughly up to one-third of maturity and then falls towards maturity. This is because the swap trades are settled periodically on multiple dates before their maturity. Each periodic settlement reduces the overall liability of the parties reducing the potential exposure over time, and making it zero on the last settlement date, i.e. on termination date. In contrast, forwards and options are settled once at the maturity and therefore liability of each party is concentrated at the end.
+<br><br>
+Potential exposure can be estimated through a model or simulation such as historical or Monte Carlo simulation. 
+<br><br>
+The potential exposure can be subdivided (in terms of method of calculation) into the following two:
+<ol>
+	<li>Potential future exposure (PFE); and</li>
+	<li>Expected exposure (EE)</li>
+</ol>
+<br>
+
+<b><u>Potential future exposure (PFE)</u></b><br>
+Potential future exposure (PFE) is also known as “peak exposure”. It is a value-at-risk (VaR) like measure. It is the simulated maximum positive exposure for a given future date T at a given confidence level (usually 95% or 99%). For any given future date, there will be multiple possible exposures (both positive and negative) each with their own probabilities. The possible exposures and their probabilities can be arranged in the form of a probability distribution, which normally takes the share of a normal distribution. 
+<br><br>
+
+<b><u>Expected exposure (EE)</u></b><br>
+Like PFE, it is estimated for a future date T and is probability-weighted average of all positive exposures (i.e. those that are to the right of zero). Since it is an average of all the positive values, it falls somewhere between the actual mean of the distribution and the PFE. 
+<br><br>
+
+<font color="red" style="font-family: consolas">While PFE is used for IM calculation, EE is used for capital adequacy calculations under Basel III.</font>
+<br><br>
+
+The total Counterparty Credit Risk (CCR) is a sum of current exposure and potential future exposure. We can express it in the form of the following equation.
+<br><br>
+CCR = CE + PE; or <br>
+CCR = Max (0, MtM) + PE <br>
+Counterparty credit risk = Max (0, MtM) + Potential Future E <br>
+<br>
+Both current exposure and potential future exposure are related to market risk. Once a counterparty defaults, the market risk becomes credit risk. Thus, the counterparty credit risk is a combination of both market risk and credit risk. 
+<br><br>
+
+
+<h3 class="d">Managing Counterparty Credit Risk</h3>
+
+<b><u>Managing Current Exposure</u></b><br>
+The counterparty credit risk is managed at counterparty level and not at trade level. Parties, usually, enter into a master netting agreement for all classes of trades such as OTC derivatives, exchange-traded derivatives, repos, security lending, etc) and net all their exposures into a single obligation that is settled between the parties. 
+<br><br>
+It is possible that parties have multiple netting arrangements. In such a case, netting is done for each of such netting arrangements, and thus they will be more than one net obligation to settle. If parties want to net all such multiple netting arrangements into a single net obligation, then they can do so through a “cross netting” agreement / arrangement.
+<br><br>
+
+
+<b><u>Managing Potential Future Exposure</u></b><br>
+The management of PFE is both difficult and different to that of the current exposure. Consider the following:
+<br><br>
+If a portfolio consists of trades with different maturity ranging from, say, one month to 10 years, what is the period for which potential exposure should be computed? Should it be the shortest maturity, farthest or any mid maturity between them? The answer is that it is computed for a period called as “Margin Period of Risk (MPOR)”, which is between one day to 10 days in different markets. The below table shows the MPOR for which the exposure is computed.
+<br><br>
+
+<table>
+	<th>Market</th>
+	<th>MPOR</th>
+
+	<tr>
+		<td>Exchange-traded derivatives</td>
+		<td>1-2 days</td>
+	</tr>
+
+	<tr>
+		<td>Cleared OTC derivatives</td>
+		<td>5 days</td>
+	</tr>
+
+	<tr>
+		<td>Uncleared OTC derivatives</td>
+		<td>10 days</td>
+	</tr>
+</table>
+<br>
+The reason for MPOR is that both the current exposure and potential future exposure is secured by margins. The current exposure is secured through variation margin (VM) and the potential future exposure is secured through (IM). Both the IM and VM are calculated and settled daily. Thus, there is no need to compute the potential exposure as per the duration of the trades; instead, we compute it for only the time till the next IM is revised, as the risk is only till the next IM is settled. 
+<br><br>
+The MPOR must be more than one day because if the counterparty defaults on margin payment the next day, the non-defaulting party can exercise his right of early termination under the master agreement. The early termination would require sending notices, setting up an early termination date, hedging the trades in the market, calculating or valuating (as on the early termination date) a single net obligation amount that needs to be settled between the parties on a payment date. All this may take up to 10 days and thus the MPOR is usually set for 10 days.
+<br><br>
+
+<h3 class="d">Collateral Management</h3>
+
+The importance of collateral management can be appreciated by looking at the volume of outstanding OTC derivatives and their counterparty credit risk exposures. As on H1 of 2019 (as per BIS), the total amount of notional outstanding OTC derivatives is USD 640,442 billion (or USD 640 trillion, which is about 6.5 times the total world GDP). However, the notional amount is not a good indicator of the risk in this financial sector. The common measure of counterparty credit risk for OTC derivatives is Gross Market Value (GMV), which is the current exposure (MtM values) without netting positive and negative MtM values. As on H1 of 2019 (as per BIS) the GMV is USD 12,061 billion (or USD 12 trillion, which is slightly more than half of the US economy, or slightly less than the GDP of China). This GMV value of USD 12 trillion is less than the peak of USD 35 trillion witnessed during the global financial crisis of 2008. The GMV value is also not a correct estimate because it does not consider the benefits from exposure netting. The measure that considers the net exposure is called as “Gross Credit Exposure (GCE)”, which is about USD 3.2 trillion in 2019, compared to a peak value of USD 4.7 trillion during the global financial crisis of 2008.
+<br><br>
+
+<b><u>Understanding how Gross Credit Exposure (GCE) is calculated</u></b><br>
+One key mechanism through which the failure of Lehman Brothers in September 2008 weakened the rest of the financial system involved potential counterparty credit exposure. Lenders withheld credit, fearing that borrowers might have significant claims on the investment bank that were not fully secure. Such claims could have arisen from bilateral derivatives trades in the over the counter (OTC) market, where total counterparty credit risk exposures vastly exceeded the total collateral posted by market participants. Since then, this gap has narrowed, reducing but perhaps not eliminating this systemic risk. This box discusses how to measure counterparty credit exposures across the OTC derivatives market. It does so based on the hypothetical positions.
+<br><br>
+Hypothetical OTC derivatives positions
+<br>
+
+<table>
+	<tr>
+		<th rowspan="2">Party 1</th>
+		<th rowspan="2">Party 2</th>
+		<th rowspan="2">Postitions</th>
+		<th colspan="2">Market value</th>
+		<th rowspan="2">Gross market value</th>
+		<th rowspan="2">Gross credit exposure</th>
+	</tr>
+
+	<tr>
+		<th>Party 1</th>
+		<th>Party 2</th>
+	</tr>
+
+	<tr>
+		<td rowspan="4">Dealer A</td>
+		<td rowspan="4">Dealer B</td>
+		<td>FX option</td>
+		<td class="c">-10</td>
+		<td class="c">+10</td>
+		<td class="c" rowspan="4">13</td>
+		<td class="c" rowspan="4">7</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>Gold future</td>
+		<td class="c">+3</td>
+		<td class="c">-3</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Net bilateral position</td>
+		<td class="c">-7</td>
+		<td class="c">+7</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Collateral received (+) / posted (-)</td>
+		<td class="c">-7</td>
+		<td class="c">+7</td>
+	</tr>
+	
+	<tr>
+		<td rowspan="4">Dealer A</td>
+		<td rowspan="4">Hedge Fund</td>
+		<td>Single-name CDS</td>
+		<td class="c">+9</td>
+		<td class="c">-9</td>
+		<td class="c" rowspan="4">14</td>
+		<td class="c" rowspan="4">4</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>Multi-name CDS</td>
+		<td class="c">-5</td>
+		<td class="c">+5</td>
+	</tr>
+	
+	<tr class="cgray">
+		<td>Net bilateral position</td>
+		<td class="c">+4</td>
+		<td class="c">-4</td>
+	</tr>
+
+	<tr>
+		<td>Collateral received (+) / posted (-)</td>
+		<td class="c">+8</td>
+		<td class="c">-8</td>
+	</tr>
+
+	<tr>
+		<td rowspan="4">Dealer A</td>
+		<td rowspan="4">Non-financial</td>
+		<td>Interest rate swap</td>
+		<td class="c">-4</td>
+		<td class="c">+4</td>
+		<td class="c" rowspan="4">14</td>
+		<td class="c" rowspan="4">6</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>Equity future</td>
+		<td class="c">+10</td>
+		<td class="c">-10</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Net bilateral position</td>
+		<td class="c">+6</td>
+		<td class="c">-6</td>
+	</tr>
+
+	<tr>
+		<td>Collateral received (+) / posted (-)</td>
+		<td class="c">0</td>
+		<td class="c">0</td>
+	</tr>
+
+	<tr class="cgreen">
+		<td colspan="5" class="c">Total</td>
+		<td class="c">41</td>
+		<td class="c">17</td>
+
+	</tr>
+
+</table>
+
+<br><br>
+
+Bilateral netting and collateralisation reduce counterparty credit exposures. Dealers A and B in the above table are counterparties to an FX option that has a positive market value of 10 to B (and hence a negative market value of 10 to A). If A became bankrupt, B may never get to collect his value. B therefore has a counterparty credit exposure to A via the FX option of 10. To neutralise this counterparty credit risk, B could request collateral worth 10 from A, which it would retain if A defaulted on its contractual obligations. But A and B are also counterparties to a gold future, which has market value of +3 to A (and hence -3 to B). With a legally enforceable netting arrangement, A and B could net market values over these two positions. This would compress the counterparty credit exposures between A and B to a single claim of B on A of 7. B would then only need collateral worth 7 from A to eliminate current counterparty credit exposure. Across all the positions, the sum of positive market values (or equivalently, the sum of negative market values), known as the “gross market value”, is 41. The sum of positive (or negative) market values after bilateral netting, known as the “gross credit exposure”, is 17. 
+<br><br>
+Currently, all Gross Credit Exposure is secured through collateral management, implying that if all parties with negative MtM fail, the loss to the remaining party will be negligible. The following is the current status of the implementation of collateral management in three market segments of derivatives.
+<br><br>
+
+<table>
+	<th>Market Segment</th>
+	<th>Status of Collateral Management</th>
+
+	<tr class="noneth">
+		<td>Exchange traded derivatives</td>
+		<td rowspan="2">Mandatory and implemented by central counterparties (CCP), and the terms of collateral management are specified by the bye laws of the CCP, which are subject to regulatory oversight.</td>
+	</tr>
+
+	<tr>
+		<td>Cleared OTC derivatives</td>
+	</tr>
+
+	<tr>
+		<td>Uncleared OTC derivatives</td>
+		<td>Bilateral best practice until 2008 but made mandatory and phased in between 2016 and 2020 under Dodd-Frank Act in the USA and EMIR in EU and similar regulations in other jurisdictions.</td>
+	</tr>
+
+</table>
+<br><br>
+
+
+<b><u>Variation Margin for Current Exposure</u></b><br>
+The mandatory implementation of variation margin for Uncleared OTC derivatives markets started with the introduction of Uncleared Margin Rules (UMR) from 1st September 2016. The variation margin must be calculated daily and posted either on the same day or the next day. The party with the negative MtM must post the variation margin to the party with positive MtM. Usually, the variation margin is posted in the currency of trade and in cash; other securities are generally not accepted. The variation margin is posted directly to the counterparty.
+<br><br>
+There are two models for the calculation of variation margin, namely:
+
+<ol>
+	<li>Collateralized to Market Model (CTM); and</li>
+	<li>Settled to Market Model (STM)</li>
+</ol>
+<br>
+
+<b><u>Collateralised to Market Model (CTM)</u></b><br>
+
+Under Collateralised to Market model, the variation margin secures the current exposure but does not eliminate it. The economic ownership of the collateral remains with the collateral giver regardless of legal form of transfer (i.e. security interest or title transfer) and therefore the economic benefits from the collateral posted belongs to the collateral giver or provider. If the collateral is cash, interest earned on it is called “Price Alignment Interest (PAI)”. If the collateral is security, the economic benefits are the cash or security distributions such as coupon, dividend or bonus shares. In such cases, the parties must agree on whether it can be re-used by the collateral receiver. Upon settlement or termination of trade, collateral receiver must return the same or equivalent collateral except in close-out termination on counterparty’s default in which case the collateral receiver can liquidate the collateral and set it off against the exposure of the counterparty.
+<br><br>
+Since the current exposure is only secured but not extinguished, the trades are carried at the original prices. Accordingly, the variation margin for a party is computed as follows.
+<br><br>
+
+Variation margin = A + B – C
+<br><br>
+Where,<br>
+A = Cumulative MtM value (i.e. difference between original price and current price)<br>
+B – Variation margin posted (i.e. negative MtM value); and <br>
+C = Variation margin previously collected (i.e. positive MtM value) <br>
+
+<br><br>
+
+<font color="red" style="font-family: consolas">CTM Model is followed in Uncleared OTC Derivatives Market.</font>
+<br><br>
+
+<b><u>Settled-to-Market (STM) Model</u></b><br>
+In the STM model, the variation margin is treated as settled payment (unconditional, final and irrevocable), which extinguishes the current exposure. It has two consequences: (1) legal title and economic ownership passes on from the collateral provider to the collateral taker; and (2) the old contract price is reset to the current market price daily so that the contract is always carried at the current price. Thus, the concept of Price Alignment Interest or passing of other economic benefits does not arise. 
+<br><br>
+<font color="red" style="font-family: consolas">The STM model is followed in Exchange Traded Derivatives and Cleared OTC Derivatives Market.</font>
+
+<br><br>
+The STM model followed in Cleared OTCD market is slightly different from that of the STM model followed in Exchange traded market. In Cleared OTCD, though the variation margin is considered settlement payment, the interest earned on cash variation margin is passed on to the collateral provider and is called “Price-Alignment Adjustment or Amount (PAA)”, which is equivalent to the PAI of CTM model. The reason for this is to align the practices in both cleared and uncleared OTCD markets. If an uncleared OTCD trade is hedged in cleared OTCD market, it will lead to cash flow mismatch in hedging and results in basis risk if PAA is not introduced.
+<br><br>
+The following table shows the difference between daily VM under both CTM and STM models for a party who is the buyer at the original price of 100.
+<br><br>
+
+<table>
+	<tr>
+		<th rowspan="2">Day</th>
+		<th rowspan="2">Market Price</th>
+		<th colspan="2" style="background-color: #ffb3ba">STM Model</th>
+		<th colspan="5" style="background-color: #bae1ff">CTM Model</th>	
+	</tr>
+
+	<tr>
+		<th style="background-color: #ffd1d5">MtM</th>
+		<th style="background-color: #ffd1d5">C/F Price</th>
+		<th style="background-color: #d5edff">Gain to A</th>
+		<th style="background-color: #d5edff">Gain to B</th>
+		<th style="background-color: #d5edff">Total Gain</th>
+		<th style="background-color: #d5edff">VM</th>
+		<th style="background-color: #d5edff">C/F Price</th>
+	</tr>
+
+	<tr class="ccenter">
+		<td class="c">1</td>
+		<td class="c">105</td>
+		<td class="c">+5</td>
+		<td class="c">105</td>
+		<td class="c">5</td>
+		<td class="c">0</td>
+		<td class="c">5</td>
+		<td class="c">+5</td>
+		<td class="c">100</td>
+	</tr>
+
+	<tr class="noneth">
+		<td class="c">2</td>
+		<td class="c">107</td>
+		<td class="c">+2</td>
+		<td class="c">107</td>
+		<td class="c">7</td>
+		<td class="c">0</td>
+		<td class="c">7</td>
+		<td class="c">+2</td>
+		<td class="c">100</td>
+	</tr>
+
+	<tr>
+		<td class="c">3</td>
+		<td class="c">103</td>
+		<td class="c">-4</td>
+		<td class="c">103</td>
+		<td class="c">3</td>
+		<td class="c">0</td>
+		<td class="c">3</td>
+		<td class="c">-4</td>
+		<td class="c">100</td>
+	</tr>
+
+	<tr class="noneth">
+		<td class="c">4</td>
+		<td class="c">100</td>
+		<td class="c">-3</td>
+		<td class="c">100</td>
+		<td class="c">0</td>
+		<td class="c">0</td>
+		<td class="c">0</td>
+		<td class="c">-3</td>
+		<td class="c">100</td>
+	</tr>
+</table>
+
+<br><br>
+As we can see above, both the models result in the same daily variation margin flows. The cash flows due to PAI and other securities flows for the CTM model are not shown above; they would be in addition to the above VM flows.
+<br><br>
+
+
+<b><u>CTM vs STM</u></b><br>
+Banks prefer STM model to CTM model because of Leverage Ratio rules under Basel III. Under STM model, the accumulated gains or losses are real though, for accounting purposes, they are considered unrealized until the contract is liquidated. Under CTM model, the gains/losses are recognized as asset/liability to be matched by variation margin as cash collateral (that means, they do not hit the P&L accounts).
+<br><br>
+UBS reported a capital savings of $300 million in August 2016 though adoption of STM model. The following table shows an example of the capital savings that can be made in an FX Swap trade via STM model.
+<br><br>
+
+<table>
+	<th></th>
+	<th>FX Swap (CTM Approach)</th>
+	<th>FX Swap (STM Approach)</th>
+
+	<tr>
+		<td>Notional principal amount</td>
+		<td class="c">$1 billion</td>
+		<td class="c">$1 billion</td>
+	</tr>
+
+	<tr>
+		<td>Remaining maturity</td>
+		<td class="c">7 years</td>
+		<td class="c">1 day</td>
+	</tr>
+
+	<tr>
+		<td>Applicable conversion factor</td>
+		<td class="c">0.75</td>
+		<td class="c">0.01</td>
+	</tr>
+
+	<tr>
+		<td>PFE</td>
+		<td class="c">$75 million</td>
+		<td class="c">$10 million</td>
+	</tr>
+
+	<tr>
+		<td>RWA</td>
+		<td class="c">$1.5 million</td>
+		<td class="c">$200,000</td>
+	</tr>
+
+	<tr>
+		<td>Related regulatory capital requirement</td>
+		<td class="c">$195,000</td>
+		<td class="c">$26,000</td>
+	</tr>
+
+</table>
+<br>
+
+Similarly, the below table shows an example of capital savings for Interest Rate contracts via STM model.
+
+<br><br>
+
+<table>
+	<th></th>
+	<th>IR Contract (CTM Approach)</th>
+	<th>IR Contract (STM Approach)</th>
+
+	<tr>
+		<td>Notional principal amount</td>
+		<td class="c">$1 billion</td>
+		<td class="c">$1 billion</td>
+	</tr>
+
+	<tr>
+		<td>Remaining maturity</td>
+		<td class="c">7 years</td>
+		<td class="c">1 day</td>
+	</tr>
+
+	<tr>
+		<td>Applicable conversion factor</td>
+		<td class="c">0.15</td>
+		<td class="c">0.005</td>
+	</tr>
+
+	<tr>
+		<td>PFE</td>
+		<td class="c">$15 million</td>
+		<td class="c">$5 million</td>
+	</tr>
+
+	<tr>
+		<td>RWA</td>
+		<td class="c">$300,000</td>
+		<td class="c">$100,000</td>
+	</tr>
+
+	<tr>
+		<td>Related regulatory capital requirement</td>
+		<td class="c">$39,000</td>
+		<td class="c">$13,000</td>
+	</tr>
+
+</table>
+<br><br>
+
+In the above two tables, we have used conversion factors to convert the notional principal amount into PFE based on residual maturity. The following table shows the Conversion Factor Matrix for Derivatives Contracts.
+
+<br><br>
+
+<table>
+	<th>Remaining maturity</th>
+	<th>Interest rate</th>
+	<th>Foreign exchange rate and gold</th>
+	<th>Credit (investment grade reference asset)</th>
+	<th>Credit (non-investment grade reference asset)</th>
+	<th>Equity</th>
+	<th>Precious metals (except gold)</th>
+	<th>Others</th>
+
+	<tr>
+		<td>One year or less</td>
+		<td class="c">0.00</td>
+		<td class="c">0.01</td>
+		<td class="c">0.05</td>
+		<td class="c">0.10</td>
+		<td class="c">0.06</td>
+		<td class="c">0.07</td>
+		<td class="c">0.10</td>
+	</tr>
+
+	<tr>
+		<td>Greater than one year and less than or equal to five years</td>
+		<td class="c">0.005</td>
+		<td class="c">0.05</td>
+		<td class="c">0.05</td>
+		<td class="c">0.10</td>
+		<td class="c">0.08</td>
+		<td class="c">0.07</td>
+		<td class="c">0.12</td>
+	</tr>
+
+	<tr>
+		<td>Greater than give years</td>
+		<td class="c">0.015</td>
+		<td class="c">0.075</td>
+		<td class="c">0.05</td>
+		<td class="c">0.10</td>
+		<td class="c">0.10</td>
+		<td class="c">0.08</td>
+		<td class="c">0.15</td>
+	</tr>
+</table>
+
+<br><br>
+Major US banks have adopted the STM model because of which there was huge reduction in the gross derivative assets. The reduction for interest rate derivatives between Q2 and Q3 of 2017 was 98% for Bank of America Merrill Lynch, 96% for Goldman Sachs and 90% for Morgan Stanley. 
+<br><br><br>
+
+
+<b><u>Initial Margin for Potential Future Exposure</u></b><br>
+Initial Margin has been implemented from the beginning in Exchange-traded-derivatives and Cleared OTC derivatives. Its implementation in Uncleared OTC derivatives though Uncleared Margin Rules is done in phases, instead of a “big bang” approach because its implementation required high burdensome legal documentation, operational preparedness, market infrastructure and financial resources.
+<br><br>
+Uncleared margin rules specify: (1) parties and products subject to IM; (2) eligible collateral and applicable haircuts; and (3) method for computation of IM.
+<br><br>
+Under the UMR rules, parties are subject to IM requirements only when the following two conditions are met. 
+<ol>
+	<li>If the aggregate average notional amount (AANA) is more than the jurisdiction-specific level (the details of the levels are given below in a table).</li>
+	<li>If the IM amount is more than the jurisdiction-specific threshold amount (the details are provided below).</li>
+</ol>
+<br>
+
+Table showing jurisdiction specific IM levels:
+<br>
+
+<table>
+	<th>Jurisdiction</th>
+	<th>AANA in Phase 4 (Sep 1, 2019)</th>
+	<th>AANA in Phase 5 (Sep 1, 2020)</th>
+	<th>IM Threshold</th>
+
+	<tr>
+		<td>Unites States (US)</td>
+		<td>USD 0.75 trillion</td>
+		<td>USD 8 billion</td>
+		<td>USD 50 million</td>
+	</tr>
+
+	<tr>
+		<td>European Union (EU)</td>
+		<td>EUR 0.75 trillion</td>
+		<td>EUR 8 billion</td>
+		<td>EUR 50 million</td>
+	</tr>
+
+	<tr>
+		<td>Japan (JP)</td>
+		<td>JPY 105 trillion</td>
+		<td>JPY 1.1 trillion</td>
+		<td>JPY 7 billion</td>
+	</tr>
+
+	<tr>
+		<td>Canada (CA)</td>
+		<td>CAD 1.25 trillion</td>
+		<td>CAD 12 billion</td>
+		<td>CAD 75 million</td>
+	</tr>
+
+	<tr>
+		<td>Switzerland (CH)</td>
+		<td>CHF 0.75 trillion</td>
+		<td>CHF 8 billion</td>
+		<td>CHF 50 million</td>
+	</tr>
+
+	<tr>
+		<td>Australia (AU)</td>
+		<td>AUD 1.125 trillion</td>
+		<td>AUD 12 billion</td>
+		<td>AUD 75 million</td>
+	</tr>
+
+	<tr>
+		<td>Hong Kong (HK)</td>
+		<td>HKD 6 trillion</td>
+		<td>HKD 60 billion</td>
+		<td>HKD 375 million</td>
+	</tr>
+
+	<tr>
+		<td>Singapore (SG)</td>
+		<td>SGD 1.2 trillion</td>
+		<td>SGD 13 billion</td>
+		<td>SGD 80 million</td>
+	</tr>
+
+	<tr>
+		<td>South Korea (KR)</td>
+		<td>KRW 1 quadrillion</td>
+		<td>KRW 10 trillion</td>
+		<td>KRW 65 billion</td>
+	</tr>
+
+	<tr>
+		<td>Brazil (BR)</td>
+		<td>BRL 2.25 trillion</td>
+		<td>BRL 25 billion</td>
+		<td>BRL 150 million</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+The above timeline had been originally designed and implemented. In this plan there were only 5 phases. However, due to representation from the industry to relax the timelines and AANA, the following revised timeline has been published.
+<br><br>
+
+<ul>
+	<li>From 1st September 2020, Phase 5 would apply to firms with an AANA equal to or greater than $/€ 50 billion and less than $/€ 750 billion; and</li>
+	<li>From 1st September 2020, Phase 6 would apply to firms with an AANA equal to or greater than $/€ 8 billion and less than $/€ 50 billion.</li>
+</ul>
+
+
+In short, smaller counterparties with AANA between 8 and 50 billion will have one more year to comply (early the last deadline was 2020, now it is 2021). 
+<br><br>
+
+In view of the above regulations, national regulators have specified the acceptable collateral for IM purposes. In US and EU, the following is what is accepted as IM collateral.
+<br><br>
+
+<table>
+	<th>Collateral</th>
+	<th>Jurisdiction</th>
+	<th>Regulation</th>
+
+	<tr class="noneth">
+		<td rowspan="2">Cash</td>
+		<td>US</td>
+		<td>Must be held with an independent third party in a custodial account; and the third party cannot be an affiliate of either party or derivative dealer. It can be invested in eligible collateral.</td>
+	</tr>
+
+	<tr>
+		<td>EU</td>
+		<td>Same as in US. When both parities are globally systemically important institutions (G-SII), the following diversification applies;
+			<ol>
+				<li>Not more than 20% can be held with a single custodian; and </li>
+				<li>Country diversification if the amount from a single party is above EUR 1 billion</li>
+			</ol>
+		</td>
+	</tr>
+
+	<tr class="noneth">
+		<td rowspan="2">Security</td>
+		<td>US</td>
+		<td>Same as in cash collateral but cannot be rehypothecated.</td>
+	</tr>
+
+	<tr>
+		<td>EU</td>
+		<td>Can be with an independent third party or custodian or the collecting party itself. In such cases, the collateral must be held in a segregated account to protect the collateral from the bankruptcy of the collecting party.</td>
+	</tr>
+
+</table>
+<br><br>
+In both jurisdictions, the posted collateral must be held in a separate account independent of custody account maintained by each party. Both parties posting collateral are given certain rights and they are defined in a separate agreement called “Account Control Agreement”, which is trilateral among the parties, and the custodian. This is different from the normal custody agreement, as it is bilateral.
+<br><br><br>
+
+
+<b><u>AANA Calculation</u></b><br>
+As discussed above, every party must do self-assessment as to whether they will be in-scope of the UMR regulations or not. If they are in-scope then they must comply with its provisions, else they can skip it. Whether a party is in-scope or not depends on the Average Aggregate Notional Amount (AANA). The calculation is as follows.
+<br><br>
+<i>The gross aggregation of notional for all in-scope OTC trades under the same group over a three-month period, then divided by a prescribed number of days to give a notional average.</i>
+<br><br>
+There are jurisdictional differences, but they are minor ones.
+<br><br>
+The following are the key steps for calculation of AANA.
+<br>
+
+<ol>
+	<li><u>Confirm your jurisdiction or jurisdictions:</u><br>
+		It might sound crazy to even include this step but the key point here is that some firms are regulated in multiple jurisdictions, so they will need to perform AANA calculation per jurisdiction. It is possible that a firm is in-scope in one jurisdiction, while it is not in another.
+	</li>
+	<br>
+	<li><u>Confirm whether you are in-scope entity:</u><br>
+		Simplistically, if your group/entity/fund was in-scope for Variation Margin then you will likely be a potential in-scope party for Initial Margin.
+		<br><br>
+		There are jurisdictional differences in entity scope. The US rules only directly apply to Swap Dealers (SDs) and Major Swap Participants (MSP) and indirectly to Financial End Users (FEUs).
+		<br><br>
+		The EU rules catch a broader scope of groups and apply to Financial counterparties (FCs) and Non-Financial counterparties (NFCs) exceeding the clearing threshold, as described below.
+	</li>
+
+<br>
+
+<table>
+	<th>Clearing Threshold</th>
+	<th>Products</th>
+
+	<tr>
+		<td rowspan="2">EUR 1 billion</td>
+		<td>Credit derivatives</td>
+	</tr>
+
+	<tr>
+		<td>Equity derivatives</td>
+	</tr>
+
+	<tr>
+		<td rowspan="3">EUR 3 billion</td>
+		<td>Interest rate derivatives contract</td>
+	</tr>
+
+	<tr>
+		<td>Foreign exchange derivatives contract</td>
+	</tr>
+
+	<tr>
+		<td>Commodities derivatives contact</td>
+	</tr>
+</table>
+<br><br>
+
+	<li><u>Confirm your AANA calculation period</u><br>
+	Different jurisdictions have different calculation periods. For example, the US calculation period is three months from June to August, whereas the EU calculation period is March to May. It is possible that there would be a global alignment of AANA calculation periods over time.
+	</li>
+
+	<br>
+	<li><u>Perform AANA calculations</u><br>
+	In this reading material, we are not providing the detailed calculation as it has been dealt somewhere else. However, we will illustrate the important steps to perform the calculations.
+	<br><br>
+
+	<span class="normalind75"></span>
+
+		<b>Step 1:</b> Identify all the legal entities that are part of your consolidated group.
+		<br><br>
+
+		<b>Step 2:</b>	Identify the uncleared transactions in all AANA covered products for each of the entities in your consolidated group for each business day of the AANA calculation period.
+		<br><br>
+		<u>AANA Covered Products:</u><br>
+		Swaps, Security-based swaps, deliverable (physically settled) and non-deliverable FX swaps and forwards that are not centrally cleared. <br><br>
+
+		<ul class="b">
+			<li>Physically settled FX swaps and forwards are included in the AANA calculation (but will not be included in the calculation of any IM amount).</li>
+			<li>Equity options are not covered by the definition of swap or security-based swap.</li>
+			<li>If a swap is eligible for an exemption from the clearing mandate, it may also be eligible to be excluded from the margin requirements (and thus the AANA calculation).</li>
+		</ul>
+		<br>
+		<u>Business Day:</u><br>
+		It means any day other than Saturday, Sunday or legal holiday.
+	
+		<br><br>
+
+	<b>Step 3:</b>	Calculate the total notional amount of AANA covered products identified in Step 2 for each business day during the AANA calculation period.
+	<br><br>
+	AANA has to be calculated on group basis. This can be done as of the end of each business day by converting the notional amounts to the currency of the jurisdiction concerned and summing all the notional amounts. The following points should be remembered while calculating.
+	<br><br>
+
+	<ul class="b">
+		<li>Average daily aggregate notional amounts should be ascertained.</li>
+		<li>The notional amount for AANA covered products between different margin affiliates should only be counted once.</li>
+		<li>The calculation is gross notional – offsetting positions cannot be netted.</li>
+		<li>There are roughly 64 business days during the calculation period, so one should have 64 separate daily totals.</li>
+	</ul>
+	<br>
+
+	<b>Step 4:</b> Calculate AANA<br/>
+	<br>
+	<b>Step 5:</b> Notify your counterparties<br/><br>
+	If your AANA is greater than $8 billion, then as soon as practicable following August 30th, notify all your derivatives counterparties that are SDs – even if you previously disclosed based on an indicative AANA calculation.
+	<br><br>
+
+	<ul class="b">
+		<li>Inform your SD counterparties that you are definitely “in-scope” for the U.S. regulations, and provide them with the list of all Legal Entity Identifiers (LEIs) for all your margin affiliates that enter into uncleared derivatives, including the LEI of the parent.</li>
+		<li>Conversely, if your U.S. AANA does not exceed $8 billion and you have previously advised your counterparties that you may be in-scope; kindly inform them you will not be in-scope for U.S. initial margin requirements in Phase 5.</li>
+	</ul>
+<br><br>
+
+	ISDA offers the following methods by which market participants can self-disclose to their counterparties: <br><br>
+
+	<ul class="b">
+		<li>Electronically deliver the ISDA Initial Margin Self-Disclosure Letter to other ISDA Amend participants via the ISDA Amend platform.</li>
+		<li>Provide the ISDA Initial Margin Self-Disclosure Letter to counterparties directly.</li>
+		<li>Participate in ISDA’s multi-lateral IM self-disclosure exercise; information will be shared exclusively with other contributing entities from all IM phases.</li>
+	</ul>
+	
+<br>
+
+As discussed above, the self-assessment is not simple for the following reasons.
+<br><br>
+
+<ol>
+	<li>AANA is to be computed at the consolidated group level: that is, for the party and its affiliates being those whose accounts are consolidated. For buy-side firms, it should be aggregated at principal level (i.e. aggregated across all investment managers). Inter-group and inter-affiliate transactions, too, should be considered but counted only once.</li><br>
+
+	<li>A party and its counterparties may be in different jurisdictions and therefore may be subject to different versions of UMR.</li><br>
+
+	<li>Calculation procedures in different jurisdictions vary.</li><br>
+
+	<li>Exempt entity rules are different: For example, the US rules exempt commercial end-users while the EU rules exempt only those commercial end-users that are exempt from mandatory clearing obligation under EMIR.</li><br>
+
+	<li>Exempt products: The following are the jurisdictional differences in the products exempt from UMRs as follows:</li>
+</ol>
+<br><br>
+
+<table>
+	<th>Product</th>
+	<th>Remark</th>
+
+	<tr>
+		<td>Physically settled FX swaps and FX forward</td>
+		<td>In the US and EU, they are exempt from IM only, not from VM.</td>
+	</tr>
+
+	<tr>
+		<td>Principal-payment of currency swap</td>
+		<td>In the US, EU, JPY, CA, CH and BR, they are exempt from IM only, not from VM.</td>
+	</tr>
+
+	<tr>
+		<td>Option on securities (e.g. single stock, equity basket, broad index)</td>
+		<td>Deferred for three years in the EU and KR; until January 4th, 2020 in CH; and until February 29th, 2020 in HK. In SG, all derivatives on securities are exempt until August 31, 2019.</td>
+	</tr>
+
+	<tr>
+		<td>Forward on securities and broad index</td>
+		<td>Exempt in the U.S. In SG, all derivatives on securities are exempt until August 31, 2019.</td>
+	</tr>
+
+	<tr>
+		<td>Physically settled commodity forward</td>
+		<td>Gold is not exempt in BR. Some restrictions apply in the EU and CH. SG exempts all commodity derivatives used for commercial purpose.</td>
+	</tr>
+
+	<tr>
+		<td>Physically settled commodity options</td>
+		<td>Exempt only in JP and CA. SG exempts all commodity derivatives used for commercial purpose.</td>
+	</tr>
+
+	<tr>
+		<td>Security linked to any asset</td>
+		<td>It does not quality as a derivative and therefore exempt.</td>
+	</tr>
+
+	<tr>
+		<td>Derivatives cleared through unrecognised CCP</td>
+		<td>Exempt only in EU, CA, SG, HK, AU and KR.</td>
+	</tr>
+</table>
+
+</ol>
+
+
+<br><br>
+<b><u>Margin Period of Risk (MPOR)</u></b><br>
+
+As stated earlier, portfolio potential future exposure is computed for a margin period of risk (MPOR), which ranges between 1-2 days and 10 days in different market segments, as follows.
+<br><br>
+
+<table>
+	<th>Market Segment</th>
+	<th>MPOR</th>
+
+	<tr>
+		<td>Exchange traded derivatives</td>
+		<td>1-2 days</td>
+	</tr>
+
+	<tr>
+		<td>Cleared OTC derivatives</td>
+		<td>5 days</td>
+	</tr>
+
+	<tr>
+		<td>Uncleared OTC derivatives</td>
+		<td>10 days</td>
+	</tr>
+</table>
+
+<br>
+
+The reason for MPOR being more than one day is that there is a lag between the time the IM is demanded and the time it is received. If the counterparty defaults on margin payment, the other party will invoke its rights to close-out early termination of all trades with the counterparty, which requires time for valuation and replacement of trades. Any dispute on valuation will increase the lag. Therefore, MPOR must be more than the margin call frequency.
+<br><br><br>
+
+
+<b><u>Calculation of IR</u></b><br>
+In the exchange traded and cleared OTC derivatives markets, the IM is computed by the CCPs. They use a risk model which is approved by the regulators and whose details are publicly disclosed. In the uncleared OTC market, the following choices are available to the parties.
+<br>
+
+<ol>
+	<li>Standardised Approach</li>
+	<li>Internal risk model; and</li>
+	<li>ISDA SIMM</li>
+</ol>
+<br>
+
+<b><u>Standardised Approach (or Grid method)</u></b><br>
+Under this approach, the IM is computed as a specified percentage of the notional amount. The percentages are pre-defined by the regulators based on the asset classes. The following is the grid provided by BSBC-IOSCO.
+<br><br>
+
+<table>
+	<th>Asset Class</th>
+	<th>Tenor</th>
+	<th>Percentage (% of notional)</th>
+
+	<tr class="noneth">
+		<td rowspan="3">Rate and Cross currency swap</td>
+		<td>Upto 2 years</td>
+		<td class="c">1%</td>
+	</tr>
+
+	<tr>
+		<td>2 to 5 years</td>
+		<td class="c">2%</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>More than 5 years</td>
+		<td class="c">4%</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Other FX</td>
+		<td>All tenors</td>
+		<td class="c">6%</td>
+	</tr>
+
+	<tr class="noneth">
+		<td rowspan="3">Credit</td>
+		<td>Upto 2 years</td>
+		<td class="c">2%</td>
+	</tr>
+
+	<tr>
+		<td>2 to 5 years</td>
+		<td class="c">5%</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>More than 5 years</td>
+		<td class="c">10%</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Equity</td>
+		<td>All tenors</td>
+		<td class="c">15%</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>Commodity</td>
+		<td>All tenors</td>
+		<td class="c">15%</td>
+	</tr>
+
+</table>
+<br>
+
+The percentage weights above are based on conservative estimates for 10-day 99% confidence level of price move in a representative index in each asset class. For a counterparty, IM is calculated separately for each trade and aggregated. This approach does not take into consideration the benefits of off-setting exposures and diversification in the portfolio. 
+<br><br>
+To account for such risk reduction, the rules allow “net-to-gross adjustment” as follows.
+<br><br>
+IM (for counterparty) = (0.4 x Gross IM) + (0.6 x NGR x Gross IM)
+<br><br>
+
+Where
+<ul class="a">
+	<li>Gross IM = sum of each trade’s IM computed from the standard look-up table.</li>
+	<li>NGR = ratio of Net RC (replacement cost) to Gross RC.</li>
+	<li>Net RC = sum of positive and negative MtM for trades (i.e. current exposure)</li>
+	<li>Gross RC = sum of positive MtM for trades</li>
+</ul>
+<br>
+
+To understand this better, let's consider the following example.
+Consider that the following trades are outstanding with a counterparty.
+
+<ul>
+	<li>6 year interest rate swap (pay fixed, receive floating) for a notional of 10 million</li>
+	<li>2 year interest rate swap (receive fixed, pay floating) for 25 million notional</li>
+	<li>1 year FX forward for 2 million</li>
+	<li>3 year equity swap with 5 million notional; and</li>
+	<li>2 year commodity swap with 10 million notional</li>
+</ul>
+
+We will consider two scenarios for the replacement cost (i.e. current mark to market value of the swap)
+<br><br>
+
+<table>
+	<th>Trade</th>
+	<th>Gross IM</th>
+	<th style="background-color: #ffb3ba">RC in Scenario 1</th>
+	<th style="background-color: #bae1ff">RC in Scenario 2</th>
+
+	<tr class="noneth">
+		<td>6 Year IRS 10 m</td>
+		<td>10 x 4% = 0.4m</td>
+		<td class="c">+0.5</td>
+		<td class="c">-0.1</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>2 Year IRS 25m</td>
+		<td>25 x 2% = 0.5m</td>
+		<td class="c">-0.3</td>
+		<td class="c">0</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>1 Year FX forward 2m</td>
+		<td>2 x 6% = 1.2m</td>
+		<td class="c">+0.1</td>
+		<td class="c">-0.2</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>3 Year Equity swap 5m</td>
+		<td>5 x 15% = 0.75m</td>
+		<td class="c">-0.2</td>
+		<td class="c">-0.1</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>2 Year Commodity swap 10m</td>
+		<td>10 x 15% = 1.5m</td>
+		<td class="c">-0.4</td>
+		<td class="c">-0.2</td>
+	</tr>
+
+	<tr style="background-color: #bcf5cb">
+		<td>Total Gross IM</td>
+		<td>4.35 million</td>
+		<td class="c"></td>
+		<td class="c"></td>
+	</tr>
+
+	<tr style="background-color: #d2f8dc">
+		<td>Total Net RC</td>
+		<td></td>
+		<td class="c">-0.3</td>
+		<td class="c">-0.6</td>
+	</tr>
+
+	<tr style="background-color: #d2f8dc">
+		<td>Total Gross RC</td>
+		<td></td>
+		<td class="c">+0.6</td>
+		<td class="c">0</td>
+	</tr>
+
+</table>
+<br><br>
+
+NGR in Scenario 1: (0.3/0.6) = 0.5 <br>
+NGR in Scenario 2: (-0.6/0) = 1
+<br><br>
+
+IM in Scenario 1: (0.4 x 4.35) + (0.6 x 0.5 x 4.35) = 1.74+1.305 = 3.045 <br>
+IM in Scenario 2: (0.4 x 4.35) + (0.6 x 1 x 4.35) = 1.74 + 2.64 = 4.35
+
+<br><br>
+
+The advantage of standardized approach is the ease of implementation and avoidance of dispute in IM calculations. The disadvantages are: (1) not being sensitive to risk (i.e. it does not differentiate between at-the-money and in-the-money options) and therefore do not provide risk management incentives; (2) does not capture to the full effect of netting and diversification in the portfolio and therefore results in higher IM.
+<br><br><br>
+
+<b><u>Internal Risk Model</u></b><br>
+The internal risk model is an alternative to the standardised approach. This model is subject to approval by regulators and must use “one-tailed 99% confidence level over 10-day liquidation horizon”. The following is the explanation of this statement.
+<br><br>
+
+<table>
+	<tr>
+		<td>One-tailed</td>
+		<td>Consider only adverse price changes</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>99% confidence level</td>
+		<td>Loss estimate should hold good in 99 out of 100 days</td>
+	</tr>
+
+	<tr>
+		<td>10-day horizon</td>
+		<td>Adverse price change must be projected over the next 10 business days</td>
+	</tr>
+</table>
+<br><br>
+
+This model is given flexibility on the following:
+<ol>
+	<li>For risk measures: one can use either Value-at-Risk (VaR) or Estimated Shortall (ES); and</li>
+	<li>For valuation: either full repricing or risk sensitivities.</li>	
+</ol>
+
+However, the model is constrained as follows:
+<ol>
+	<li>It must be recalibrated every year and should consider rolling 5-year historical data including a period of financial stress.</li>
+	<li>EU regulations require back testing every three months</li>
+	<li>IM must be revised everyday based on current market rates and prices</li>
+	<li>It must be benchmarked against margin standards that a CCP would require for similar standards</li>	
+</ol>
+
+This model can incorporate offsetting exposures and diversification if the trades are governed by a single master netting agreement.
+<br><br>
+This model results in lesser IM than the standard model. Some studies indicate that the IM under this model would be 15~60% less than the standard model. 
+<br><br>
+The disadvantages of this model are:
+<ol>
+	<li>It is technologically and operationally complex to implement; and</li>
+	<li>It can lead to disputes about valuation and IM amount because the parties may calibrate the internal model differently.</li>	
+</ol>
+<br>
+
+<b><u>ISDA Standard Initial Margin Model (SIMM)</u></b><br>
+The standardised model gives a higher IM value compared to other models, and hence it is not preferred. The internal model is complex to calculate (due to data availability issues) and may lead to disputes, and thus keeping in view the shortcomings of these models and to bring about uniformity and industry-wide standards, ISDA has come out with a Standard Initial Market Model (SIMM), which is based on the Standard Approach for market risk under Fundamental Review of Trading Book (FRTB), which is the standard for computing market risk under Basel III. By relying on FRTB, ISDA SIMM aligned the practices for counterparty credit risk with market risk. One significant difference between FRTB and SIMM is that the former is based on 97.5% Expected shortfall while the later is based on 99% Value-at-Risk.  The framework for ISDA SIMM requires that every trade in the portfolio with a counterparty must be mapped to the following sequential data hierarchy, which is called “sensitivity normalization”.
+<br><br>
+
+The following are the product classes under ISDA SIMM.
+<ol>
+	<li>Interest rate and Forex</li>
+	<li>Credit</li>
+	<li>Equity; and</li>
+	<li>Commodity</li>	
+</ol>
+
+Risk class is a sub-set of product class. The following are the product classes under ISDA SIMM.
+<ol>
+	<li>Interest rate</li>
+	<li>Credit – qualifying (which covers non-securitization and simple securitization)</li>
+	<li>Credit – non-qualifying (which covers complex securitization)</li>
+	<li>Equity</li>
+	<li>Forex</li>
+	<li>Commodity</li>
+</ol>
+Risk bucket is a sub-set of risk class and corresponds to specific type, severity and granularity of risk. The following table shows the complete data hierarchy.
+<br><br>
+
+<table>
+	<th>Product class</th>
+	<th>Risk class</th>
+	<th>Risk bucket</th>
+	<th>Risk factor</th>
+
+	<tr>
+		<td rowspan="2">Rate and Forex</td>
+		<td>Rate</td>
+		<td>Each currency of rate is a risk bucket</td>
+		<td>12 factors for each bucket, which are rate tenor of 2W, 1M, 3M, 6M, 1Y, 2Y, 3Y, 5Y, 10Y, 20Y, 30Y</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>Forex</td>
+		<td>Each currency pair is a bucket</td>
+		<td>Spot price of risk bucket</td>
+	</tr>
+
+	<tr class="noneth">
+		<td rowspan="2">Credit</td>
+		<td>Credit spread-qualifying</td>
+		<td>12 buckets based on combination of credit quality and economic sector of borrower</td>
+		<td rowspan="2">Five factors which are credit spreads for tenors of 1Y, 2Y, 3Y, 5Y and 10Y</td>
+	</tr>
+
+	<tr>
+		<td>Credit spread - non qualifying</td>
+		<td>12 buckets based on combination of credit quality and economic sector of borrower</td>
+	</tr>
+
+	<tr>
+		<td>Equity</td>
+		<td>Equity price risk</td>
+		<td>12 buckets based on combination of market cap, region and economic sector</td>
+		<td>Spot price of risk bucket</td>
+	</tr>
+
+	<tr>
+		<td>Commodity</td>
+		<td>Commodity price risk</td>
+		<td>17 buckets based on commodity type</td>
+		<td>Spot price of risk bucket</td>
+	</tr>
+</table>
+<br><br>
+
+ISDA SIMM is not a full repricing model. It is based on risk sensitivities. The following three risk sensitivity measures are considered.
+<ol>
+	<li>Delta: Sensitivity to small change in risk factor.</li>
+	<li>Vega: Sensitivity to small change in implied volatility; and</li>
+	<li>Curvature: Sensitivity to large change (“shock”) in risk factor</li>	
+
+</ol>
+
+Delta applies to all instruments while Vega and Curvature applies only to option instruments and instruments with optionality. 
+<br><br>
+
+The ISDA SIMM satisfies the following key criteria.
+<br><br>
+
+<table>
+	<th>Criteria</th>
+	<th>Description</th>
+
+	<tr>
+		<td>Non-procyclical</td>
+		<td>Margins are not supposed to continuous change due to changes in market volatility.</td>
+	</tr>
+
+	<tr>
+		<td>Ease of replication</td>
+		<td>Easy to replicate calculations performed by a counterparty, given the same inputs and trade population</td>
+	</tr>
+
+	<tr>
+		<td>Transparency</td>
+		<td>Calculations can provide contribution of different components to enable effective dispute resolution</td>
+	</tr>
+
+	<tr>
+		<td>Quick to calculate</td>
+		<td>Low analytical overhead to enable quick calculations of re-runs of calculations as needed by participants</td>
+	</tr>
+
+	<tr>
+		<td>Extensible</td>
+		<td>Methodology is conducive to addition of new risk factors and/or products as required by the industry and regulators</td>
+	</tr>
+
+	<tr>
+		<td>Predictability</td>
+		<td>IM demands need to be predictable to preserve consistency in pricing and to allow participants to allocate capital against trades.</td>
+	</tr>
+
+	<tr>
+		<td>Costs</td>
+		<td>Reasonable operational costs and burden on industry, participants and regulators.</td>
+	</tr>
+
+	<tr>
+		<td>Governance</td>
+		<td>Recognises appropriate roles and responsibilities between industry and regulators.</td>
+	</tr>
+
+	<tr>
+		<td>Margin appropriateness</td>
+		<td>Use with large portfolios does not result in vast overstatements or risk. Recognition of risk factors offsets within the same asset class.</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+<h3 class="d">Framework for Collateral Management</h3>
+Collateral management is subject to the following parameters.
+<br><br>
+
+<b><u>Threshold Amount for IM</u></b><br>
+Threshold amount is the size of the potential future exposure left unsecured. The IM is posted only if the potential exposure exceeds the threshold and for an amount exceeding the threshold. For example, if the IM is $90 million and the threshold is $50 million, then the IM posted is $40 million (the IM amount exceeding the threshold amount). Alternatively, if the IM is $30 million and the threshold is $50 million, then no IM is required to be posted.
+<br><br>
+
+<b><u>Minimum Transfer Amount for VM and IM</u></b> <br>
+IM and VM are required to be posted only when the amount exceed the specified Minimum Transfer Amount (MTA). The purpose of MTA is to reduce the number of collateral transactions and, through it, reduce the operational risk and workload. MTA will affect only the timing but not the amount: that is, if the amount exceeds MTA, the entire amount must be collected or posted. 
+<br><br>
+For example, let’s say the IM is $52 million and the threshold is $50 million. Since the IM is more than the threshold, the excess IM must be posted, i.e. $2 million. However, now let’s suppose that the MTA is $3 million, then no IM is required to be posted because the IM of $2 million is less than the MTA of $3 million.
+<br><br>
+Similarly, let’s take the case of VM. Let’s suppose that the VM is $2 million. There is no threshold for VM. The MTA applicable is $3 million. In this case, there is no need to post VM because it is less than the MTA. However, if the VM were $3.5 million, then the entire VM of $3.5 million is required to be posted, as there is no threshold for VM.
+<br><br>
+The following table explains the movement of IM and VM when the Threshold amount is 50 million and MTA is 0.5 million.
+<br><br>
+
+<table>
+	<th>Margin</th>
+	<th>Amount</th>
+	<th>Remark</th>
+
+	<tr class="noneth">
+		<td rowspan="3">IM</td>
+		<td>45 million</td>
+		<td>No margin movement because it is below the threshold</td>
+	</tr>
+
+	<tr>
+		<td>50.1 million</td>
+		<td>No margin movement though higher than threshold because the amount of 0.1 million is less than the MTA</td>
+	</tr>
+
+	<tr class="noneth">
+		<td>51.2 million</td>
+		<td>Margin of 1.2 million needs to be posted</td>
+	</tr>
+
+	<tr class="cgray">
+		<td rowspan="2">VM</td>
+		<td>0.35 million</td>
+		<td>No margin movement because it is below MTA</td>
+	</tr>
+
+	<tr class="cgray">
+		<td>0.75 million</td>
+		<td>Margin of 0.75 million needs to be posted</td>
+	</tr>
+</table>
+<br><br>
+
+The MTA is different in different jurisdictions. The below table shows the MTA levels in various jurisdictions.
+<br><br>
+
+<table>
+	<th>Country</th>
+	<th>MTA</th>
+
+	<tr>
+		<td>USA</td>
+		<td>0.5 million</td>
+	</tr>
+
+	<tr>
+		<td>EU</td>
+		<td>0.5 million</td>
+	</tr>
+
+	<tr>
+		<td>Japan</td>
+		<td>70 million</td>
+	</tr>
+
+	<tr>
+		<td>Canada</td>
+		<td>0.75 million</td>
+	</tr>
+
+	<tr>
+		<td>Switzerland</td>
+		<td>0.5 million</td>
+	</tr>
+
+	<tr>
+		<td>Australia</td>
+		<td>0.75 million</td>
+	</tr>
+
+	<tr>
+		<td>Hong Kong</td>
+		<td>3.75 million</td>
+	</tr>
+
+	<tr>
+		<td>Singapore</td>
+		<td>0.8 million</td>
+	</tr>
+
+	<tr>
+		<td>South Korea</td>
+		<td>1 billion</td>
+	</tr>
+
+	<tr>
+		<td>Brazil</td>
+		<td>1.5 million</td>
+	</tr>
+
+</table>
+<br><br>
+
+<b><u>Netting of Margin Amount</u></b><br>
+Netting of IM is not permitted as it defeats the very purpose for which it is created. Netting of VM is permitted across all products traded between the counterparties, provided they have entered into a master netting arrangement or agreement. IM and VM cannot be cross netted. IM is posted to a third-party custodian and VM is posted directly to the counterparty.
+<br><br>
+<i>Trades executed before the compliance date are not subject to UMR rules. They are called “legacy swaps or trades” for which a separate netting set may be formed.</i>
+<br><br><br>
+
+<b><u>Segregation of Collateral</u></b><br>
+Segregation of collateral applies to IM but not to VM. IM should be posted to a third-party custodian. The following are the big players in this market.
+<br>
+<ol>
+	<li>Euroclear</li>
+	<li>ClearStream</li>
+	<li>BNY Mellon</li>
+	<li>State Street</li>
+	<li>Northern Trust</li>
+</ol>
+
+The custodial agreement should provide the following.
+<br>
+<ol>
+	<li>Prohibiting the custodian from re hypothecating, repledging, re-use or otherwise transferring the assets under custody.</li>
+	<li>Limiting the right of substitution and reinvestment; and</li>
+	<li>Agreement is legally enforceable in all relevant jurisdictions including the event of bankruptcy of similar proceedings</li>
+</ol>
+
+The above custody requirement for IM does not apply when the counterparty is an affiliate. In such cases, the IM can be posted to a common custodian or the affiliate can hold the IM.
+<br><br><br>
+
+<b><u>Collateral Type</u></b><br>
+For IM, the collateral can be in securities or cash.<br>
+For VM, the collateral can be in cash.
+
+<br><br><br>
+
+<b><u>Wrong Way Risk</u></b><br>
+Wrong way risk arises when the counterparty credit exposure is adversely (i.e. positively) correlated with the default probability of counterparty. That is, when the exposure increases, the counterparty’s default probability increases, too. 
+<br><br>
+If the increase in exposure decreases the default probability of the counterparty, then it is called as Right Way Risk. 
+<br><br>
+For example, if the collateral is a bond or equity issued by the counterparty itself. If the IM increases, we will demand more collateral from the counterparty but his bond or equity (which we have taken as collateral) would have reduced in value as the counterparty’s default risk has now increased. 
+<br><br>
+
+
+<h3 class="d">Collateral Management Process</h3>
+
+The following are the main processes of collateral management.
+<ol>
+	<li>Portfolio reconciliation</li>
+	<li>Documentation</li>
+	<li>Margin call</li>
+	<li>Settlement</li>
+	<li>Dispute resolution</li>
+</ol>
+<br>
+
+<b><u>Portfolio Reconciliation</u></b><br>
+It is the process of periodically verifying the principal economic terms of each trade in the portfolio outstanding with a counterparty; and should precede the margin call process. It is a two-step process: matching followed by reconciliation. Matching consists of paring the trades from both counterparties; and reconciliation consists of comparing the economic terms of trades in each matched pair.
+<br><br>
+Matching is carried out by comparing the unique identifiers such as Unique Swap Identifier (USI) or Unique Trade Identifier (UTI). In the absence of such unique identifiers, a set of key terms of trade are used. The discrepancy in matching are called “orphans” and those in reconciliation, the “breaks”, which would be passed on to dispute resolution mechanism.
+<br><br>
+Portfolio reconciliation is carried out periodically through the relationship between the parties, even though the trade confirmation and legal execution have matched all trade terms and established legality of the trade, periodic portfolio reconciliation in trade lifecycle is considered necessary for the following reasons.
+<br>
+
+<ol>
+	<li>Trade details may have been subsequently amended.</li>
+	<li>Trade may have been partially terminated or novated subsequently</li>
+	<li>Corporate actions may have changed the terms for equity and bond trades</li>
+	<li>Trade by trade reconciliation in the portfolio ensures that offsetting ommissions by the parties are captured</li>
+</ol>
+
+Parties can use third party service providers to automate the portfolio reconciliation process and collateral management. Three important providers of such services are triOptima, MarkitSERV and Algo Collateral. 
+<br><br><br>
+
+
+<b><u>Documentation</u></b><br>
+Both DFA and EMIR requires written policies and agreements with counterparties on portfolio reconciliation requirements and to affect certain amendments to the ISDA Master Agreement. To simply and speed up such bilateral agreements and amendments between parties multilaterally, ISDA has brought out the following Protocols
+<br>
+
+<ol>
+	<li>ISDA 2013 DF Protocol; and</li>
+	<li>ISDA 2013 EMIR Portfolio Reconciliation, Dispute Resolution and Disclosure Protocol</li>
+</ol>
+
+Under the Protocol, parties do not bilaterally amend the Master Agreement or execute other agreements. Instead, each party will access the ISDA website for the Protocol and make certain elections such as whether the party is Portfolio Data Receiving Entity (“Receiver”) or Sending entity (“Sender”), definition of local business day, whether the reconciliation will be bilateral or through a specified third party, and certain other elections. The Master Agreement stands automatically amended among the parties adhering to the protocol. The party responsible for portfolio reconciliation will depend on whether the party is a Receiver or Sender, as follows.
+<br><br>
+
+<table>
+	<th>Status</th>
+	<th>Reconciling Party</th>
+
+	<tr>
+		<td>Both parties are Senders</td>
+		<td>Both parties</td>
+	</tr>
+
+	<tr>
+		<td>One party is a Sender, other Receiver</td>
+		<td>Receiver</td>
+	</tr>
+
+	<tr>
+		<td>Both parties are Receivers</td>
+		<td>Parties must agree on the procedure</td>
+	</tr>
+</table>
+<br><br>
+
+If the Receiver does not notify the Sender by 4:00 pm at the business center of the Sender on the fifth business day after reconciliation is due, then it will be deemed that the Receiver has affirmed the portfolio data.
+<br><br><br>
+
+
+<b><u>Margin Call</u></b><br>
+After the portfolio reconciliation is completed, parties must calculate the three risk sensitivities for each counterparty, which require trade data from internal systems and market data from data vendors. Either the calculations can be performed internally or a third-party service such as triCalculate service of triOptima can be used. From this stage until the settlement of margin amount, AcadiaSoft provides a service called “AcadiaSoft Collateral Hub”, which is an end-to-end automation service for IM and margin call process, the details of which are shown below.
+<br><br><br>
+
+<img src="/images/margin-call-process.png" height="600" width="700">
+
+<br><br>
+
+<ol>
+	<li>Send trades for portfolio reconciliation</li>
+	<li>Receive matched trades</li>
+	<li>Send risk sensititivies</li>
+	<li>Receive IM results</li>
+	<li>Send and receive margin calls</li>
+	<li>Track and resolve differences</li>
+	<li>Add/maintain reference data</li>
+	<li>Monitor settlement status</li>
+</ol>
+<br><br>
+
+<b><u>Dispute Resolution</u></b><br>
+Regulations specify rules on dispute resolution for portfolio reconciliation but are silent on dispute resolution at portfolio level or under credit support annex. ISDA has suggested the following three best practices for dispute resolution to augment the regulations.
+<ol>
+	<li>Collateral dispute should be aged on a calendar basis from the perspective of both the parties and the cumulative age of disputes.</li>
+	<li>The collateral dispute ageing clock is reset to zero upon the following: (a) no call from either party; or (b) parties agree in full margin call. Dispute ageing should continue if one party fails to call or respond to a call due to local holidays.</li>
+	<li>The party should communicate to the counterparty the complete population of trades under investigation that are the cause for collateral dispute.</li>
+</ol>
+
+
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 8th February 2020.<br>
+Second updated on 17th February 2020.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Value at Risk</h2>
+<br>
+
+There are various measures to describe the different aspects of risk, such as Delta, Gamma, Vega, Rho, Theta, Duration, Convexity, Standard Deviation, Beta, Correlation, Volatility, etc. These measures are produced everyday and are widedly used. However, they do not measure the overall risk of a portfolio of securities. Value at Risk (VaR) is the measure that is designed to measure the overall risk of a portfolio.
+<br><br>
+
+<h3 class="side-heading-blue">Statement make by VaR</h3>
+In general, VaR makes the following statement:
+<br><br>
+I am <b>X</b> percent certain that there will <b>NOT</b> be a loss of more than <b>V</b> dollars in the next <b>N</b> days.
+<br><br>
+In this statement, the following are the parameters.
+<br><br>
+
+<b><u>Parameters</u></b><br>
+<b>X</b> percent is the confidence level <br>
+<b>N</b> days is the number of days for which the estimate is made.
+<br><br>
+
+<b><u>Example</u></b><br>
+The expression "VaR (99%, 10days) = $2 million" means that one is 99% confident that in the next 10 days the maximum loss would not be more than $2 million.
+<br>
+It also means that there is a 1% chance that the loss would be more than $2 million in the next 10 days.
+<br><br>
+In other words, VaR asks the question "How bad can things get?".
+<br><br>
+
+<h3 class="side-heading-blue">Confidence Level</h3>
+How is confidence level decided? Well! it is based on the assumption that security prices, more often than not, have normal distribution. The explanation of the concept of normal distribution is beyond the scope of this article, but the following picture shows a typical normal distribution. The normal distribution is also called as "Probability Density Function".
+<br><br>
+
+<img src="images/normaldistribution.png" alt="Normal Distribution" height="300" width="550">
+
+<br><br>
+In the above diagram, <br>
+&mu; represents the mean of the distribution. The mean of a normal distribution is 1.<br>
+&sigma; represents standard deviation of the distribution. The standard deviation of a normal distribution is 0. <br>
+&mu; - &sigma;, &mu; - 2&sigma;, &mu; - 3&sigma; represents the deviation of the observations from the mean towards the left side (lower side) of the mean. <br>
+&mu; + &sigma;, &mu; + 2&sigma;, &mu; + 3&sigma; represents the deviation of the observations from the mean towards the right side (higher side) of the mean. <br>
+<br>
+All of the above items represent the x-axis of the normal distribution. <br>
+The y-axis of the normal distribution consists of the probability of occurence of an event (or observation).
+<br><br>
+The center of the graph is the mean (&mu;) of the distribution. The significance of this is that most of the items of any distribution (that exhibits behaviour similar to normal distrbution) will be around the center, and the probability of their occurence is very high.<br>
+All observations are spread equally in both the directions of the &mu; in a symetrical manner. As we go further from the mean (positive or negative, it does not matter), the probability of occurence of events decreases significantly. However, the probability never becomes zero, as there is always a chance of an occurence of an event (or observation) . Therefore, the graph never touches the x-axis, it continues till infinity in both the directions from the mean. 
+<br><br>
+The shaded area between &mu; - &sigma; and &mu; + &sigma; (light red colour) represents an area whose total probability is 68.27%. This means that the probability of the occurence of an event (or observation) whose value is between one (1) standard deviation from the mean in either side is 68.27%. 
+<br><br>
+The shaded area between &mu; - 2&sigma; and &mu; + 2&sigma; (blue colour) represents an area whose total probability is 95.45%. This means that the probability of the occurence of an event (or observation) whose value is between two (2) standard deviations from the mean in either side is 95.45%.
+<br><br>
+The shaded area between &mu; - 3&sigma; and &mu; + 3&sigma; (green colour) represents an area whose total probability is 99.73%. This means that the probability of the occurence of an event (or observation) whose value is between two (3) standard deviations from the mean in either side is 99.73%.
+<br><br>
+
+The 68.27%, 95.45% and 99.73% are the standard confidence levels. We can use any confidence levels that we want. In finance, we generally use 95% and 99% confidence levels.
+<br><br>
+
+<h3 class="side-heading-blue">Example of using a normal distribution for calculating VaR</h3>
+The following are the prices of Bank of America's common equity stock between 14th Sep 2020 and 28th Sep 2020 (11 days).
+<br><br>
+<table>
+	<th>Sl No</th>
+	<th>Date</th>
+	<th>Stock Price ($)</th>
+
+	<tr>
+		<td>1</td>
+		<td>14th Sep 2020</td>
+		<td>25.75</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>15th Sep 2020</td>
+		<td>25.28</td>
+	</tr>
+    
+    <tr>
+    	<td>3</td>
+    	<td>16th Sep 2020</td>
+    	<td>25.60</td>
+    </tr>
+    <tr>
+    	<td>4</td>
+    	<td>17th Sep 2020</td>
+    	<td>25.35</td>
+    </tr>
+    <tr>
+    	<td>5</td>
+    	<td>18th Sep 2020</td>
+    	<td>25.21</td>
+    </tr>
+    <tr>
+    	<td>6</td>
+    	<td>21st Sep 2020</td>
+    	<td>24.47</td>
+    </tr>
+    <tr>
+    	<td>7</td>
+    	<td>22nd Sep 2020</td>
+    	<td>23.94</td>
+    </tr>
+    <tr>
+    	<td>8</td>
+    	<td>23rd Sep 2020</td>
+    	<td>23.26</td>
+    </tr>
+    <tr>
+    	<td>9</td>
+    	<td>24th Sep 2020</td>
+    	<td>23.34</td>
+    </tr>
+    <tr>
+    	<td>10</td>
+    	<td>25th Sep 2020</td>
+    	<td>23.49</td>
+    </tr>
+    <tr>
+    	<td>11</td>
+    	<td>28th Sep 2020</td>
+    	<td>24.09</td>
+    </tr>
+
+</table>
+<br><br>
+
+We can use the above information to calculate the VaR of Bank of America's stock. However, to do that, first, we need to calculate the return, mean and standard deviation. The following is the calculation.
+<br><br>
+
+<b><u>Calculating Price Returns</u></b> <br><br>
+<table>
+	<th>Sl No</th>
+	<th>Stock Price</th>
+	<th>Change over previous</th>
+	<th>Change over previous (%)</th>
+
+	<tr>
+		<td>1</td>
+		<td>25.28</td>
+		<td>25.28 - 25.75 = -0.47</td>
+		<td>1.825%</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>25.60</td>
+		<td>25.60 - 25.28 = +0.32</td>
+		<td>1.265%</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>25.35</td>
+		<td>25.35 - 25.60 = -0.25</td>
+		<td>-0.976%</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>25.21</td>
+		<td>25.21 - 25.35 = -0.14</td>
+		<td>-0.552%</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>24.47</td>
+		<td>24.47 - 25.21 = -0.74</td>
+		<td>-2.935%</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>23.94</td>
+		<td>23.94 - 24.47 = -0.53</td>
+		<td>-2.165%</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>23.26</td>
+		<td>23.26 - 23.94 = -0.68</td>
+		<td>-2.840%</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>23.34</td>
+		<td>23.34 - 23.26 = +0.08</td>
+		<td>0.343%</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>23.49</td>
+		<td>23.49 - 23.34 = +0.15</td>
+		<td>0.642%</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>24.09</td>
+		<td>24.09 - 23.49 = +0.6</td>
+		<td>2.554%</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+The arithmetic mean of the stock price returns is: <br><br>
+
+\[ 
+Mean = {\sum X \over N } = {-2.839 \text % \over 10} = -0.2839 \text %
+\]
+
+
+
+<table>
+	<th>Sl No</th>
+	<th>Return (X)</th>
+	<th>Mean (X&#772;)</th>
+	<th>Deviation x = (X- X&#772;)</th>
+	<th>Deviation x<sup>2</sup></th>
+
+	<tr>
+		<td>1</td>
+		<td>1.825%</td>
+		<td>-0.2839</td>
+		<td>2.1089</td>
+		<td>4.4474</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>1.265%</td>
+		<td>-0.2839</td>
+		<td>1.5489</td>
+		<td>2.3990</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>-0.976%</td>
+		<td>-0.2839</td>
+		<td>-0.6921</td>
+		<td>0.4790</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>-0.552%</td>
+		<td>-0.2839</td>
+		<td>-0.2681</td>
+		<td>0.0718</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>-2.935%</td>
+		<td>-0.2839</td>
+		<td>-2.6511</td>
+		<td>7.0283</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>-2.165%</td>
+		<td>-0.2839</td>
+		<td>-1.881</td>
+		<td>3.5381</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>-2.840%</td>
+		<td>-0.2839</td>
+		<td>-2.556</td>
+		<td>6.5331</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>0.343%</td>
+		<td>-0.2839</td>
+		<td>0.6269</td>
+		<td>0.3930</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>0.642%</td>
+		<td>-0.2839</td>
+		<td>0.9259</td>
+		<td>0.8572</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>2.554%</td>
+		<td>-0.2839</td>
+		<td>2.8379</td>
+		<td>8.0536</td>
+	</tr>
+
+
+</table>
+
+<br><br>
+
+The standard deviation of the stock price returns is: <br><br>
+
+\[ 
+Standard \; Deviation = \sqrt {\sum x^2 \over N } \; = \sqrt {33.8005 \over 10} \; = \sqrt {3.38005} \; = 1.8384 \text %
+
+\]
+
+<br><br>
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 29<sup>th</sup> September 2020.
+</p>
+
+</body>
+</html>

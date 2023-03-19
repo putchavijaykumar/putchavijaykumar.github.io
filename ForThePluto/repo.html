@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<i>The below is an extract from a book named "Understanding Repo and Repo Markets" published by Euroclear. The book (reading material) is so well written that I did not feel it right to edit its content and claim it as my notes. Any major edits would have damaged the free flowing story-line the authors had created. Thus, I have extracted the contents generously from their book with very little edits, as possible. I am guilty of copying its contents without their permission. However, I believe that there is no copyright on this book. The book appears to have been created for educational purposes and was never intended to be sold. The book is available as a free download (in pdf format) on the internet. I encourage the readers to download it directly, if they wish to.</i>
+<br/><br/><br/>
+
+<h3 div id="top" align="center">Understanding Repo and Repo Markets</h3>
+<br/>
+
+<b><u>Introduction</u></b><br/>
+A repo is a loan secured against collateral. However, repo collateral is not pledged, like traditional collateral, but sold and then repurchased at maturity. Ownership gives the lender stronger control over the collateral, which makes repo the preferred means of lending for risk-averse cash investors. On the other hand, the lower risk on repo makes it a source of cheaper fi nancing and greater leverage for borrowers. Consequently, repo has become the primary source of funding for leveraged traders such as proprietary desks and hedge funds. Repo can take the form of either repurchase agreements or buy/sell-backs, which do the same job, but have legal and operational differences. As well as being used to borrow cash,
+repo can also be used to borrow securities, in order to cover short positions. Repo used in this way is comparable to securities lending. For securities strongly indemand, the repo market will offer cheap cash in exchange. Such securities are said to be ‘special’. The interest given up by the buyer of a ‘special’ in the repo market is equivalent to the fee paid by the borrower of the same securities in the securities lending market.
+<br/><br/><br/>
+
+<b><u>What is Repo?</u></b><br/>
+Repo can be defi ned as an agreement in which one party sells securities or other assets to a counterparty, and simultaneously commits to repurchase the same or similar assets from the counterparty, at an agreed future date or on demand, at a repurchase price equal to the original sale price plus a return on the use of the sale proceeds during the term of the repo.
+<br/><br/>
+Between the sale and the repurchase:<br/>
+<ul>
+	<li>The seller gets the use of the cash proceeds of the sale of the assets.</li>
+	<li>The buyer gets legal title to the assets received in exchange for the cash it has paid. The buyer holds the assets in the fi rst instance as collateral. If the seller defaults on the repurchase, the buyer can liquidate the assets to recover some or all of its cash. In addition, because the buyer owns the collateral assets, the buyer can re-use them during the term of the repo by selling the assets outright, repoing them or pledging them to a third party. The buyer must buy back the assets by the end of the repo, in order to be able to sell them back to the seller.</li>
+</ul>
+<br/>
+
+<b><u>Repo terminology</u></b><br/>
+‘Repo’ is the generic term for two equivalent instruments:<br/>
+<ul>
+	<li>repurchase agreements (also known as ‘classic repos’)</li>
+	<li>buy/sell-backs</li>
+</ul>
+Repurchase agreements and buy/sell-backs share the same basic legal and operational mechanisms (i.e. a sale of assets and a commitment by the seller to repurchase those assets from the buyer at a later date).
+<br/><br/>
+The principal differences between a repurchase agreement and a buy/sell-back stem from the fact that repurchase agreements are always documented (i.e. they are evidenced by a written contract), whereas traditional buy/sell-backs are not. Consequently, the two legs of a repurchase agreement are part of a single legal contract, whereas the two legs of a traditional, undocumented buy/sell-back are implicitly separate contracts.
+<br/><br/>
+Many of the terms used in the market to describe repos are taken from standard legal agreements, such as the Global Master Repurchase Agreement (GMRA), which are commonly used to document transactions in the international repo market.
+<br/><br/>
+
+<table>
+	<th>Term</th>
+	<th>Definition</th>
+
+	<tr>
+		<td>Seller</td>
+		<td>Collateral-provider, cash-taker (borrower)</td>
+	</tr>
+
+	<tr>
+		<td>Buyer</td>
+		<td>Collateral-taker, cash-provider (lender)</td>
+	</tr>
+
+	<tr>
+		<td>Purchase</td>
+		<td>Sale of assets at the start of the repo</td>
+	</tr>
+
+	<tr>
+		<td>Repurchase</td>
+		<td>Repurchase of assets at the end of a repo</td>
+	</tr>
+
+	<tr>
+		<td>Purchase date</td>
+		<td>Value date: the date on which cash and assets are actually exchanged</td>
+	</tr>
+
+	<tr>
+		<td>Repurchase date</td>
+		<td>Maturity date: the date on which cash and assets are returned to their original owners </td>
+	</tr>
+
+	<tr>
+		<td>Purchase price</td>
+		<td>Cash value paid by the buyer of assets to the seller on the purchase date</td>
+	</tr>
+
+	<tr>
+		<td>Repurchase price</td>
+		<td>Cash value paid by the seller of assets to the buyer on the repurchase date: equal to the purchase price plus a return on the use of the cash over the term of the repo. In buy-sell backs, the repurchase price may be net of coupon or dividend payments made on the assets during the term of the repo.</td>
+	</tr>
+
+	<tr>
+		<td>Collateral</td>
+		<td>Assets sold in a repo on the repurchase date</td>
+	</tr>
+
+	<tr>
+		<td>Equivalent collateral</td>
+		<td>Assets repurchased in a repo by the seller on the repurchase date</td>
+	</tr>
+
+	<tr>
+		<td>Repo rate</td>
+		<td>Percentage per annum rate of return paid by the seller for the use of the cash over the term of a repurchase agreement and included in the repurchase price</td>
+	</tr>
+
+</table>
+
+<br/><br/>
+
+Although the term ‘repo’ is applied to the whole transaction, it is market convention to specifically describe the seller’s side of the transaction as the ‘repo’ and the buyer’s side as the ‘reverse repo’. Dealers talk about sellers ‘repoing out’ collateral and buyers ‘reversing in’ collateral.
+<br/><br/><br/>
+
+<b><u>Repurchase agreements vs. Buy/Sell agreements</u></b><br/>
+There is much confusion about the differences between repurchase agreements and buy/sell-backs. Comparisons are complicated by the fact that buy/sell-backs can now be documented (so that there are three types of repo: repurchase agreements, undocumented buy/sell-backs, and documented buy/sell-backs). Undocumented buy/sell-backs, which are the traditional form of the instrument, have a number of legal and operational drawbacks in comparison with repurchase agreements and documented buy/sell-backs.
+<br/><br/>
+
+<mark>Consider the following repo transaction:</mark><br/><br/>
+<span class="italicind">
+Collateral: 5.625% Bundesrepublik Deutschland (DBR)	20 September 2019<br/>
+Nominal value: EUR 10,000,000<br/>
+Clean price: 118.83<br/>
+Day count/annual basis: actual/actual<br/>
+Accured interest (days): 178<br/>
+Accrued interest (price terms): 2.7431507<br/>
+Dirty price: 121.5731507<br/>
+Repo term: 31 days<br/><br/>
+If the transaction is structured as a repurchase agreement, at a one-week repo rate of 0.885%, the cash flows would be:
+</span>
+<br/>
+
+
+\[ 
+Purchase \; price = 10,000,000 \; \; \text {x} \; \; \frac {121.5731507} {100} \; \; \text {=} 12,157,315.07
+\]
+
+<br/>
+
+\[
+Repo \; interest = 12,157,315.07 \; \; \text {x} \; \; \frac {0.885} {100} \; \; \text {x} \; \; \frac {31} {360} 
+\; \; \text {=} \; \; 9,264.89
+
+\]
+<br/>
+
+\[
+Repurchase \; price = 12,157,315.07 \; \; \text {+} \; \; 9,264.89 \; \; \text {=} \; \; 12,166,579.96
+
+
+\]
+
+<br/><br/>
+
+<mark>Consider the same example (as above) in case of a sell / buy back repo:</mark><br/><br/>
+<span class="italicind">
+	Purchase price = EUR 12,157,315.07<br/>
+	Repurchase price = EUR 12,166,579.96
+</span>
+
+<br/><br/><br/>
+
+
+<b><u>General collateral repos</u></b><br/>
+General Collateral (GC) repo is defined as a collateralised transaction driven by the need to borrow or lend cash. This means that the buyer does not insist on the seller providing a particular securities issue as collateral, but will accept any of a range of similar quality issues. In other words, the buyer has a ‘general’ requirement for collateral and the seller has some choice about precisely which securities to deliver. The bulk of repo is GC.
+<br/><br/>
+As a means of borrowing or lending, GC repo is an alternative to unsecured money market instruments such as deposits and Commercial Paper (CP). The GC repo rate is therefore highly correlated with other money market rates. GC repo rates are most often compared with interbank deposit rates such as LIBOR and Fed funds. Given that repos are secured with collateral, the GC repo rate is normally below interbank deposit rates. The repo rates of euro-denominated repo are typically compared to the EONIA swap rate. Figure 6 compares Eurepo, EURIBOR and the EONIA swap rate, both for a term of one month.
+<br/><br/>
+Eurepo is an index of the GC repo rate for euro-denominated transactions. It is published daily for 10 terms, ranging between tom/next and 12 months, and is compiled on a similar basis to LIBOR and EURIBOR (i.e. an arithmetic average of rates taken from a middle range of quotes given at 11:00 by a panel of banks).
+<br/><br/><br/>
+
+
+
+<b><u>Specials</u></b><br/>
+On occasion, buyers will seek a specific security as collateral in the repo market. Buyers will compete by offering cheaper cash than their competitors, so the repo rate for a security in demand will be forced below the GC repo rate. When this divergence of repo rates becomes apparent, the security concerned is said to have ‘gone on special’.
+<br/><br/>
+The differential between the GC repo rate and the repo rate on a ‘special’ represents an opportunity cost to the buyer, as the buyer has had to sacrifi ce interest on its cash in order to acquire that security. It should be equivalent to the fee that the buyer would have to pay if it borrowed that same security in the securities lending market.
+<br/><br/>
+If a security is subject to very intense demand, the borrowing fee may be large enough to force the repo rate on that security so far below the GC repo rate as to make it negative. This is not uncommon in equity repo and becomes more likely for all types of securities when interest rates in general are very low.
+<br/><br/><br/>
+
+
+<b><u>Repo versus Security Lending</u></b><br/>
+Securities lending is a financial activity comparable to repo and, in many cases, the two are substitutes for each other.
+<br/><br/>
+
+In a securities lending transaction, one party gives legal title on a security to another party for a limited period of time, in exchange for legal ownership of a collateral asset. The fi rst party is called the ‘lender’, even though the ‘lender’ is transferring legal title to the other party. Similarly, the other party is called the ‘borrower’, even though the ‘borrower’ is taking legal title to the borrowed security.
+<br/><br/>
+
+The collateral assets in securities lending can either be other securities or cash (securities lending against cash collateral is operationally identical to a repo). The borrower pays a fee to the lender for the use of the loaned security.
+<br/><br/>
+
+However, if cash is given as collateral, the lender is obliged to reinvest it for the borrower and to ‘rebate’ most of the reinvestment return to the borrower. This is done by deducting the borrowing fee from the rebate interest earned.
+<br/><br/>
+
+A primary difference between repo and securities lending is that repo is generally motivated by the need to borrow and lend cash, while securities lending is driven by the need to borrow and lend securities. However, there is an overlap in function between securities lending and the ‘specials’ segment of the repo market. 
+<br/><br/>
+
+Another key difference is that the repo market overwhelmingly uses bonds and other fi xed-income instruments as collateral, whereas the core of the securities lending market is equities. Because the sale of equities transfers not only legal ownership, but also voting rights, it has become convention in the securities lending market for equities for loaned securities to be subject to a right of recall by the lender, in order to allow lenders to exercise their voting rights or other ownership options. In contrast, unless a right of substitution is agreed, an equity repo does not allow the seller to recall its securities during the term of the transaction.
+<br/><br/><br/>
+
+
+<b><u>Why use repo?</u></b><br/>
+The usefulness of repo to cash borrowers (or securities sellers) and cash lenders (or securities buyers) stems from the fact that lenders who use the repo market to invest their cash receive collateral in exchange. This has the effect of reducing credit risk. If the borrower defaults, the lender can liquidate the collateral to recover most or all of its cash.
+<br/><br/>
+
+The attraction of the repo market for lenders is enhanced by the fact that the reduced credit risk on lending through repo means that their loans are subject to lower regulatory capital requirements than unsecured lending, which improves the return on their cash.
+<br/><br/>
+
+There is the added advantage that, if required, they can re-use collateral to replenish their cash balances at any time during the term of the repo, by repoing the collateral on to a third party. This means that repo does not signifi cantly deplete the liquidity of lenders, as does lending in markets with unsecured and non-transferable instruments like deposits.
+<br/><br/>
+Reduced credit risk and lower regulatory capital charges on repo mean that investors are willing to lend more cash at lower rates in the repo market than they are in markets in unsecured instruments like deposits and CP.
+<br/><br/>
+Lower funding costs and higher leverage obviously make repo an attractive source of cash for institutions buying assets that can be used as collateral (e.g. securities). Repo is particularly attractive to institutions that are already highly leveraged (e.g. securities fi rms and hedge funds), who would fi nd it expensive and/or diffi cult to borrow more funds in unsecured markets. Indeed, repo is the primary source of funding for such institutions.
+<br/><br/><br/>
+
+<b><u>Basic uses of Repo</u></b><br/>
+From the perspective of a seller (who is usually a securities dealer), there are two principal uses of repo:
+<ul>
+	<li>Borrowing cash to fund long positions in securities or other assets.</li>
+	<li>Borrowing securities to cover short positions in securities.</li>
+</ul>
+
+<span class="italicind">
+	<u>To fund a long position</u> <br/><br/>
+
+	<ol>
+	<li>A dealer buys a bond in an outright purchase from the cash market. He is said to have gone ‘long’ the bond, which means that the dealer owns the bond and will profi t from a rise in price and from the coupon.</li>
+	<br/>
+	<li>The dealer offers the bond as collateral to the repo market and uses the cash proceeds to pay for the outright purchase of the bond in the cash market.</li>
+	<br/>
+	<li>When the repo reaches its repurchase date, the dealer will repurchase the bond from the repo buyer and sell it back to the cash market. The repurchase price paid to the repo buyer is funded with the proceeds of selling the bond in the cash market. Of course, if the price of the bond has fallen during the term of the repo, the repo seller will suffer a loss on his long position when he sells the bond back to the cash market.</li>
+	</ol>
+</span>
+<br/><br/>
+
+<span class="italicind">
+	<u>To cover a short position</u><br/><br/>
+
+	<ol>
+		<li>A dealer sells a bond outright in the cash market. He does not own that bond and is said to have gone ‘short’ of the bond. At some point in the future, the dealer will have to buy the bond back from the cash market. However, that will be too late to be able to deliver the bond to the cash market to settle his initial sale. Therefore, between selling the bond and eventually buying it back, the dealer must borrow the bond. He will profi t from a fall in its price during this interval.</li>
+		<br/>
+
+		<li>In order to borrow the bond, the dealer uses the cash proceeds of the outright sale in the cash market to buy the bond through a reverse repo (although the dealer is legally buying the bond from the repo market, it is only borrowing it in an economic sense, as it commits to sell the bond back to the repo market at a fixed repurchase price).</li><br/>
+
+		<li>When the reverse repo reaches its repurchase date, the dealer will buy the bond outright from the cash market in order to sell it back to his repo counterparty. The outright purchase is funded using the repurchase price received on the reverse repo. If the dealer succeeds in buying the bond outright from the cash market (and it is not always certain that it can), it will be able to fulfi ll all its 		delivery commitments and will cease to be short of the bond.</li><br/>
+
+
+	</ol>
+
+</span>
+
+<br/><br/>
+
+<b><u>Trading strategies financed or covered by repo</u></b><br/>
+Given that repo is used to fi nance long positions in securities and to cover short positions, it is a key component of securities trading strategies. Many strategies are non-directional, in that their profi t or loss depends, not on a general shift upwards or downwards in the yield curve (and the consequent opposite movements in bond prices), but on a relative widening or narrowing of the spread between the yields on
+two similar securities, or between a security and a derivative.
+<br/><br/>
+
+<b>Yield Curve Trades</b><br/>
+In yield curve trades (in which the yield curve is expected to steepen or fl atten), a long position is taken in bonds in which the yield is expected to fall, and an off-setting short position in bonds from the same issuer, but with a different maturity, in which the yield is expected to rise: repo is used to fi nance the long position and a reverse repo used to cover the short position.
+<br/><br/>
+
+<b>Relative value trades</b><br/>
+Relative value trades are similar to yield curve trades, but are put on, not because the slope of the yield curve is expected to change, but because two bonds from the same issuer, but with different maturities, are trading away from the yield curve (at yields higher or lower than bonds of comparable maturity) and are expected to move back into line.
+<br/><br/>
+A long position is taken in the bond that is trading at a yield higher than comparables and is fi nanced with repo. As this bond has a higher yield, it will also have a lower price, and is said to be ‘cheap’ compared to the rest of the market. An offsetting short position is taken in the bond that is trading at a yield lower than comparables and is covered with reverse repo.
+<br/><br/>
+As this bond has a lower yield, it will also have a higher price, and is said to be ‘expensive’, ‘rich’ or ‘dear’ compared to the rest of the market.
+<br/><br/>
+
+<b>Carry trades</b><br/>
+In carry trades, repo will be used to provide short-term fi nancing for reinvestment in longer-term bonds (not necessarily in the same currency), in expectation of little or no change in the slope of the yield curve. The dealer will earn the spread between the bond yield and repo rate, provided the yield curve does not fl atten too much.
+<br/><br/>
+
+<b>Spread trades</b><br/>
+In spread trades, a short position in a bond from an issuer is offset by a long position in a bond from another issuer but of the same maturity, in expectation that the spread between their yields will widen or narrow, because of changes in credit and/or liquidity premiums. Spread trades are also undertaken between bonds and derivatives.
+<br/><br/>
+
+<span class="italicind">
+	
+	<u>Example:</u><br/>
+	One could simultaneously buy a government bond, fi nance it with overnight, tom/next or open repo, and sell an interest rate swap (pay fi xed) of the same maturity. If the spread between the bond and swap curves widens relative to each other, one can sell off the bond at a lower yield/higher price, not roll-over the repo, and re-hedge the swap by buying a matching swap at a higher swap rate (i.e. receiving fi xed on the new swap at the higher rate and continuing to pay fi xed on the old swap at the lower rate). A special type of cash-derivative spread trade can be initiated between cash government bonds and bond futures. This is called a ‘basis trade’.
+	<br/><br/>
+
+	<u>Example:</u><br/>
+	A long position is taken in a government bond and a simultaneous short position is taken in a futures contract on the bond. The long bond position is fi nanced in the repo market until the futures delivery date. If the cost of buying the bond, and fi nancing it in the repo market until the futures delivery date, is less than the payment due from the clearing house of the futures market upon delivery of the bond, then the three transactions will produce a certain, and therefore riskless, profit. This basis trade will be known as a ‘cash and carry arbitrage’.
+	<br/><br/>
+
+	However, it is also possible to take risk with basis trades. In this case, it is expected (but it is not certain) that, before the futures delivery date, it will be possible to close out the bond and futures positions at a profi t (the repo will also have to be terminated). In the above example, having bought the cash bond and sold the futures contract, a profi t will depend on the bond becoming relatively more expensive to the futures contract (which could mean the bond becoming more expensive, the future becoming cheaper, or both).
+
+</span>
+<br/><br/>
+
+
+<b><u>Who uses repos</u></b><br/><br/>
+
+<b>Securities dealers</b><br/>
+Repo originated as a means for securities firms (broker-dealers and investment banks) to fund the long positions in government bonds that they had acquired in their trading activities. The modern repo developed in the United States in the 1980s, and its development was driven by securities fi rms, which lacked access to retail or interbank deposits. Without repo, such fi rms had to borrow in the unsecured market by issuing CP and taking loans, both fi nanced by commercial banks. The cost of such unsecured funds to securities firms was high, reflecting the highly leveraged and risky nature of their business. The collateralised nature of repo allowed securities dealers to benefi t from a reduction in the cost of funding and an increase in leverage. Direct access to end-investors also did away with the need of third-party intermediaries such as the commercial banks.
+<br/><br/>
+
+<b>Highly leveraged investors</b><br/>
+This category most obviously includes hedge funds and other ‘alternative investment’ companies. Like many securities fi rms, these institutions are relatively thinly capitalised and highly leveraged. The risk of lending to such institutions places tight limits on the quantity of unsecured credit that banks are willing to extend, as well as raising the cost of that credit. The collateralised nature of repo mitigates that risk and provides relatively cheap and plentiful leverage.
+<br/><br/>
+
+<b>Prime brokers</b><br/>
+Much of the borrowing in the repo market by securities firms is done indirectly on behalf of hedge funds by the prime brokerage units of these firms, which also provide securities lending, as well as services such as trade execution, risk management and clearing.
+<br/><br/>
+
+<b>Repo conduits</b><br/>
+These are Special Purpose Vehicles (SPVs), which are independent companies similar to trusts, set up to do reverse repo with securities fi rms. They finance themselves by issuing Asset-Backed Commercial Paper (ABCP) that is secured on the collateral received through their reverse repos. The collateral taken by repo conduits is typically illiquid and diffi cult to repo out into the main repo market.
+<br/><br/>
+
+<b>Risk-averse cash investors</b><br/>
+As explained earlier, repo offers lenders reduced credit and liquidity risks, and lower capital charges, and is therefore an ideal tool for cash investors with limited risk tolerance, including money market mutual funds and agent lenders in the securities lending markets.
+<br/><br/>
+
+<b>Central banks</b><br/>
+The primary role of a central bank is to manage the cost and quantity of credit in an economy, in order to control economic growth and the rate of inflation. To do this, most central banks intervene in the money markets (open market operations) in order to influence very short-term interest rates. Repo has become the preferred tool of central bank intervention around the world, because of the size of the repo market, its role in funding other financial markets and the fact that repo reduces credit risk being taken with public funds. 
+<br/><br/>
+In normal market conditions, central bank repos are relatively small in scale when compared with the repo market between commercial institutions, but exert enormous influence given their impact on interest rate expectations.
+<br/><br/>
+
+Most central bank repo operations take place periodically at set times of the day, or week, using an auction mechanism, but the precise format differs between central banks, reflecting the different market practices in each country. In addition to official open market operations, central banks often use the repo market to commercially invest official foreign exchange reserves, typically against conservative collateral.
+<br/><br/>
+Central banks have responded to the recent severe shortages of liquidity in the fi nancial markets by:
+<br/>
+<ul>
+	<li>widening the range of collateral that they are willing to buy through repos;</li>
+	<li>extending the time for which they are willing to lend;</li>
+	<li>intervening more frequently than normal; and</li>
+	<li>increasing the scale of their lending.</li>
+</ul>
+
+<br/><br/>
+
+<b><u>The legal and economic character of repo</u></b><br/>
+Although the seller in a repo is supposed to give full legal ownership of collateral to the buyer for the term of the repo, the seller does not transfer the risk and return on the assets. In other words, although the buyer is the owner of the collateral, if the value of the collateral falls during the term of the repo, the seller suffers the loss.
+<br/><br/>
+
+This paradox (owning but not taking the risk and return on an asset) arises because the seller is committed to repurchase the collateral on the repurchase date at a repurchase price fixed at the start of the transaction and equal to the purchase price plus a return on the use of the buyer’s cash. The fixed repurchase price means that, if the cash market value of collateral, less any initial margin/haircut, falls below the
+purchase price during the term of a repo, the seller has to repurchase at a loss, and vice versa.
+<br/><br/>
+
+As the seller bears the risk on the collateral used in a repo, the seller should receive the return on the collateral in compensation:
+<br/>
+<ul>
+
+	<li>In the case of the accrued interest on a coupon-bearing bond being used as collateral, this happens automatically. The seller commits to repurchase the bond at a fixed repurchase price, which does not take into account the accrual of coupon interest on the bond after the purchase date. So, the seller repurchases the income accrued during the repo for no extra cost. In effect, the additional accrued interest is paid to the seller automatically.</li>
+	<br/>
+
+	<li>If the coupon on a bond (or dividend on an equity) being used as collateral is paid during the term of a repo, it is actually paid to the buyer, because the buyer is the legal owner at the time. However, the buyer is subject to a contractual obligation, under the repo agreement, to make an equivalent payment to the seller either immediately (in the case of a repurchase agreement) or on the repurchase date (in the case of a buy/sell-back). For more on this so-called ‘manufactured payment’.</li>
+
+</ul>
+
+The fact that the risk and return on collateral in a repo remains with the seller is what makes repo a financing tool. It allows a dealer to buy an asset in the cash market in order to take a risk (in the hope of making a return) and simultaneously use the asset as collateral in the repo market to secure the money needed to pay for the asset. It would be self-defeating if use of the asset as collateral also transferred its risk and return to the buyer.
+
+<br/><br/><br/>
+
+
+<b><u>Managing Repo</u></b><br/>
+Collateral is key to hedging the credit exposure of the buyer in a repo. Therefore, accurate valuation of collateral is critical. However, valuation can be challenging for less-liquid securities, particularly non-government bonds. There are various safeguards against uncertain valuation, as well as other risks, in the form of initial margins or haircuts, and frequent margin maintenance. It is also important to ensure secure custody of collateral. Instead of delivering collateral, which can be expensive and operationally risky, it is possible to outsource its custody, and the management of the repo, to a triparty agent. Another issue in managing repo is the possibility of ‘fails’ – a seller failing to deliver collateral at the start of a repo or a buyer failing to deliver at the end.
+<br/><br/>
+
+<b>Valuation of collateral</b><br/>
+If the buyer in a repo has insufficient collateral to liquidate, in the event of a default by the seller, the buyer is taking an unnecessary credit exposure. On the other hand, if the buyer has more than enough collateral, the seller is losing the opportunity to borrow more cash by doing more repo. It is therefore important for both parties to a repo to accurately value collateral at the start and throughout the term of a transaction.
+<br/><br/>
+Challenges in valuing collateral arise because the degree of liquidity varies so widely among different types of securities. Ideally, a repo buyer has a valuation price for each security used as collateral and knows that it will be able to liquidate its entire holdings in those securities in the cash market at those prices.
+<br/><br/>
+Unfortunately, even if prices are readily available, the normal deal size in the cash market may be smaller than the buyer’s holdings. This means that large holdings would have to be sold in smaller lots, which would take time and would probably have to be sold at lower and lower prices. If collateral has to be liquidated during a market crisis, deal size may shrink or dealing may cease altogether.
+<br/><br/>
+If collateral takes the form of benchmark securities issued by major governments, then there is usually little problem in fi nding a good price at any time. However, the degree of liquidity falls away rapidly as one moves away from these securities to other types. In addition, non-government securities markets are more varied in terms of credit and liquidity risks, and some securities (e.g. asset-backed securities) are inherently diffi cult to value due to their complexity. During a crisis, the trading and the generation of accurate prices in such markets becomes less frequent. The
+pool of dealers and investors willing to trade these instruments may also thin out suddenly, and deal size usually shrinks.
+<br/><br/>
+Of course, buyers willing to accept collateral that is diffi cult to value will be offered higher repo rates for their cash. If the buyer is confi dent in the creditworthiness of the seller, then the possibility of having to liquidate the collateral may be perceived to be such a remote contingency that the extra return is more than adequate compensation for the risk. However, in all circumstances, it is prudent for buyers taking illiquid collateral to protect themselves with measures such as:
+
+<ul>
+	<li>initial margin and regular margin maintenance;</li>
+	<li>secure legal agreements; and</li>
+	<li>robust credit risk management and operational procedures</li>
+</ul>
+
+<br/><br/>
+
+<b>Initial margin</b><br/>
+The initial margin (also known as the haircut) is the difference between the cash market value of the collateral and its purchase price in the repo market. It is a buffer that protects the buyer against a fall in the value of the collateral between the time of a default by the seller and the liquidation of the collateral by the buyer.
+<br/><br/>
+
+<span class="normalind">
+	
+<u>Example:</u><br/>
+Although a bond is valued at EUR 10 million in the cash market, a buyer (or cash provider) may only be willing to pay (or lend) EUR 9.8 million for that bond in the repo market. Of course, while the initial margin/haircut protects the buyer, it represents an unsecured credit exposure to the seller, who will typically incur regulatory capital charges on that exposure.
+</span>
+
+<br/>
+
+The principal reasons for a buyer insisting on an initial margin/haircut are:<br/>
+<ul>
+	<li>the illiquidity or complexity of collateral;</li>
+	<li>the risky credit profile of the seller; and</li>
+	<li>the increased riskiness of a transaction (e.g. if it was long term or undocumented).</li>
+</ul>
+
+Initial margins/haircuts therefore differ between deals and depend on the:
+<ul>
+	<li>type of collateral offered;</li>
+	<li>identity of the seller; and</li>
+	<li>term of the repo.</li>
+</ul>
+
+<br/>
+However, there are recognised benchmarks for initial margins/haircuts (e.g. 2% for eurozone government bonds in the European market and 5% or more for equities). Also, the greater use of non-government collateral has encouraged a more rigorous approach to setting initial margins and haircuts based on statistical measures of volatility. 
+<br/><br/>
+In a repurchase agreement, which is a single legal contract, the initial margin/ haircut on the purchase price automatically cancels out any margin/haircut on the repurchase price and does not therefore affect the value of the repurchase agreement as a whole. However, in the case of an undocumented buy/sell-back, which is two separate legal contracts, the same is not true – you just end up with two badly valued transactions. Initial margins/haircuts are, therefore, not legally prudent in the case of traditional buy/sell-backs (they are nevertheless widely used in practice).
+<br/><br/><br/>
+
+
+<b>Margin maintenance</b><br/>
+This is a mechanism to maintain the initial relative value of the cash and collateral throughout the term of a repurchase agreement. If the market value of the collateral, less any initial margin/haircut, falls materially below the value of the cash (which is equal to the purchase price plus repo interest accrued since the purchase date), the buyer may make a margin call on the seller to restore the previous balance by providing more collateral or returning some cash. On the other hand, if the market value of the collateral rises materially above the value of the cash, the seller can make a margin call on the buyer. This means that the buyer may need to release some collateral or extend more cash.
+<br/><br/>
+It is typically up to the receiver of a margin call to decide how to answer the call. However, in practice, most margins take the form of additional collateral transfers rather than cash payments.
+<br/><br/>
+Margin maintenance involves the regular and frequent revaluation (marking to market) of collateral. Dealers would normally be expected to do this daily. The task obviously becomes more diffi cult with less liquid collateral.
+<br/><br/>
+Marking to market and the management of any consequent margin calls imposes a considerable operational burden on institutions. The burden of marking to market, particularly baskets of collateral and less liquid collateral, can be outsourced to a triparty collateral management agent.
+<br/><br/>
+
+The number and size of margin calls can be reduced by:<br/>
+<ul>
+	<li>netting the margin calls on individual repurchase agreements with the same counterparty that are governed under the same legal agreements; or</li><br/>
+	<li>imposing a margin threshold on net margin calls. This means not making a call unless the credit exposure, and therefore net margin required on all repo transactions with the same counterparty under the same legal agreement, exceeds a fixed level. </li>
+</ul>
+
+Setting a margin threshold means being ready to accept an unsecured credit exposure up to the threshold. A margin threshold is therefore a trade-off between operational cost and credit risk.
+<br/><br/>
+
+Where margin thresholds are set, it is also necessary to decide a minimum transfer amount (i.e. what size of margin call is triggered when the margin threshold is breached). It is usual practice to set the minimum transfer amount equal to the minimum threshold.
+<br/><br/>
+
+<span class="italicind">
+	<u>Example:</u><br/>
+	If the margin threshold and minimum transfer amount are both set at EUR 500,000, and the net credit exposure to a repo counterparty reaches EUR 650,000, the whole of that amount (EUR 650,000) is called as margin, with the aim of reducing the credit exposure to zero.
+</span>
+<br/><br/>
+
+Margin calls and transfers cannot be accommodated in an undocumented buy/ sell-back. A contract between the buyer and seller applies only on the purchase date and on the repurchase date, so margin calls and transfers can only be made on those two days. This would be either too early or too late, respectively, to be of any practical use. There is therefore no margin maintenance with undocumented buy/sell-backs, which means that the value of collateral can diverge materially from the value of cash. Undocumented buy/sell-backs are consequently riskier than repurchase agreements and documented buy/sell-backs.
+<br/><br/>
+While traditional, undocumented buy/sell-backs do not allow margin maintenance because of their legal structure, margining is possible with documented buy/sellbacks. However, as there are often legal and operational obstacles to margining in jurisdictions where buy/sell-backs are commonly used, an alternative is provided to the margin top-up or cash-recall method used in repurchase agreements. This alternative is the early termination method. When parties wish to eliminate a difference between the values of cash and collateral, the buy/sell-back is terminated and a new transaction is simultaneously established for the remaining term to maturity. The only difference between the terminated and replacement transactions is that the amount of collateral or cash in the replacement transaction has been changed, to bring the values of the cash and collateral back into line.
+<br/><br/><br/>
+
+<b>Rights of substitution of collateral</b><br/>
+It is possible for the buyer in a repo to give the seller, at the point of trade, one or several options to call upon the buyer, at anytime during the term of the repo, to return securities the buyer is holding as collateral and accept substitute securities of at least equal quality and value. Such rights of substitution give sellers (who are typically securities dealers) fl exibility in managing their securities trading portfolios.
+<br/><br/>
+<span class="italicind">
+Example: If a dealer suddenly wishes to sell off a bond that is out on repo, provided that he secured a right of substitution when negotiating the transaction, he can retrieve the bond from the repo buyer and substitute another. Without rights of substitution, he would be obliged to wait until the repurchase date to retrieve the bond. 
+</span>
+
+<br/>
+The substitute collateral offered by the seller must be acceptable to the buyer. The buyer must be reasonable in applying this restriction, but it may be prudent to avoid disputes by agreeing what securities are deemed acceptable substitutes in the agreement negotiated before the repo transaction starts.
+<br/><br/>
+Rights of substitution are very important in some jurisdictions, as this may be a pre-requisite to allow the parties to benefi t from preferential balance sheet treatment of repo transactions (e.g. regulation FIN 41 in the United States).
+<br/><br/>
+In an undocumented buy/sell-back, the substitution of securities could only be made on the purchase date and on the repurchase date, which would be
+pointless. Markets in undocumented buy/sell-backs do not therefore offer rights of substitution, which makes them less fl exible than repurchase agreements and documented buy/sell-backs, and restricts the terms for which buy/sell-backs are normally available.
+<br/><br/><br/>
+
+<b>Income payments on collateral and manufactured payments</b><br/>
+Because the seller continues to bear the risk on collateral sold in a repo, the seller should receive the return on the collateral in compensation. However, when a coupon on a bond, or a dividend on an equity, is paid during the term of a repo, it is actually delivered to the buyer (because the buyer is the legal owner at the time). The problem is resolved by requiring the buyer to make an equivalent payment to the seller under a contractual obligation in the repo agreement. The equivalent payment is made, either immediately (in the case of a repurchase agreement), or deferred until the repurchase date (in the case of a buy/sell-back). This payment is known in the UK market as a manufactured payment or manufactured dividend.
+<br/><br/>
+
+If a coupon or dividend is paid on the collateral of an undocumented buy/sell-back, the manufactured payment cannot be made immediately (because the two legs of an undocumented buy/sell-back are separate contracts, the counterparties can only make payments or transfers on the purchase date or repurchase date). In this case, the buyer is supposed to retain the manufactured payment and reinvest it on behalf of the seller. The manufactured payment plus the reinvestment income is then deducted from the repurchase price, which the seller is due to make to the buyer on the repurchase date. However, agreement on a fair reinvestment rate can be a problem and dissuades most dealers from using, as collateral, securities that would pay a coupon or dividend during the term of an undocumented buy/sell-back.
+<br/><br/><br/>
+
+<b>Operational control of collateral</b><br/>
+An important consideration in repo is which party has operational control or custody of collateral. Even though legal ownership is transferred to the buyer, establishing operational control is also important, as it avoids potential problems in accessing the collateral in case of counterparty default. There are three alternative approaches to the custody of collateral in repo.
+<br/>
+
+<ul>
+	<li>Hold-In-Custody (HIC) repo</li>
+	<li>Delivery repo</li>
+	<li>Triparty repo</li>
+
+</ul>
+
+<br/>
+
+<b>Hold-In-Custody repo</b><br/>
+Although the buyer acquires legal ownership of the collateral, the seller retains operational control in a HIC repo. Because there is no operational movement of collateral, HIC repos are cheaper to settle, which makes them especially useful for baskets of collateral, or collateral that is diffi cult to transfer, and offer a higher repo rate to the buyer. However, the buyer is subject to the risk of ‘double dipping’ – the possibility that the seller may fraudulently use the collateral for more than one repo. Double dipping was a serious problem in the US market in the 1980s.
+<br/><br/>
+
+<b>Delivery repo</b><br/>
+In a delivery repo, collateral moves from the securities account of the seller into the securities account of the buyer, across the settlement system for that security, and comes under the buyer’s direct operational control during the term of the repo. Delivery repo provides the greatest security to the buyer, but is a more expensive process than HIC repo, as it incurs a settlement fee on each issue.
+<br/><br/>
+
+<b>Triparty repo</b><br/>
+A triparty repo makes use of the fact that securities that can be used as collateral in repo may already be held on behalf of the buyer and seller by a common custodian. In a triparty repo, the custodian executes an internal transfer of collateral between the securities accounts of the two parties, and a counter payment between their cash accounts. Triparty repo therefore offers both the safety of delivery repo (since operational as well as legal control is transferred to the buyer) and the cost effectiveness of HIC repo (since collateral moves within the custodian rather than
+across settlement systems). It originated as an alternative to HIC repo following the double-dipping scandals in the United States. However, in Europe, its driving force is the operational convenience to repo counterparties. 
+<br/><br/><br/>
+
+
+<b>Failure to deliver collateral</b><br/>
+If a seller fails to deliver collateral on the purchase date, or the buyer fails to return collateral on the repurchase date, the consequences may be prescribed by regulation or by contract between the parties. In some countries, usually where the collateral is domestic government bonds, the law can prohibit failure to deliver collateral and impose penalties. In the international market, the terms of the Global Master Repurchase Agreement (GMRA) usually apply. Under the latest version of the GMRA, unless the parties agree otherwise, a failure by either party to deliver
+collateral is not an event of default. Alternative remedies are supplied:
+
+<ul>
+	<li>If the seller fails to deliver collateral on the purchase date, the buyer is not obliged to deliver the cash or, if the buyer has already done so, it can call for the return of the cash (failure by the seller to pay back the cash would be an event of default). However, although the seller does not have use of the cash, it continues to have an obligation to pay interest on the cash for the entire original term of the repo. Even if the seller delivers the collateral after the purchase date and therefore receives cash late, the seller will have to pay the same interest as if it had received the cash for the whole term. This interest is a penalty that should encourage sellers to remedy a failure to deliver collateral as soon as possible.</li>
+	<br/>
+	<li>If a buyer fails to return collateral on the repurchase date, under the so-called ‘mini close-out’ provisions of the GMRA, the seller can terminate the failed contract (but no other contracts) and charge the buyer the net cost of the termination, if this is greater than the cash value the seller is holding (i.e. the repurchase price). This procedure is different from the ‘buy-in’ provisions that apply to the cash market in securities, in which a party that has not received securities that it has bought outright can fi nd an alternative seller and charge
+	any extra cost of purchase to the failed seller. In a mini close-out in the repo market, the seller gets back cash. In a buy-in in the cash market, it can get securities. Failure to settle a mini close-out is an event of default.</li>
+</ul>
+
+<br/><br/>
+
+<b>Operational risk management</b><br/>
+All the elements described earlier in this chapter represent different forms of operational risk. As a result, both parties need to rely on expert operational and efficiently scalable technical capabilities to mitigate these operational risks. The timely settlement of collateral movements and margin calls, as well as the timely detection and processing of corporate events, are essential in retaining the economic benefits of a repo.
+<br/><br/>
+Managing operational risk is therefore key for any firm active in repos. Some may rely on their own internal operational capabilities and manage the related risks themsleves, while others outsource this responsibility to a triparty agent.
+<br/><br/><br/><br/>
+
+
+<h3 align="center">Managing repo using triparty services</h3><br/>
+
+Triparty repo is an outsourcing solution offered by agent banks to institutions active in the repo market. The solution includes a series of independent collateral management services that support sellers and buyers in their repo transactions, from initiation to maturity.
+<br/><br/>
+The sellers and the buyers are capitalising on the expertise and dedicated infrastructure of specialised agents in order to while, at the same time, minimising back-offi ce and IT investment.
+<br/><br/>
+By opting for this solution, both parties effectively will delegate all the day-today operational responsibilities relating to the repo to the agent. This will free up resources to focus on more productive activities, such as monitoring risk criteria in order to maximise business opportunities, given the risk appetite of their fi rm.
+<br/><br/>
+The tremendous success of this product over the last decade has demonstrated its attractiveness in terms of operational effi ciency, risk management and cost. Moreover, given the low investment required to start operating, triparty has been the main entry point to the repo market for firms such as commercial banks, traditional money managers and corporate treasurers.
+<br/><br/><br/>
+
+<b><u>The role of a triparty agent</u></b><br/>
+
+In a triparty repo, the two parties delegate the management of the collateral. This includes the selection and the automatic execution of collateral transfers, to a neutral agent, which ensures appropriate collateralisation of exposures by daily marking the value of the collateral to the market throughout the life cycle of the transaction. The agent acts as a common custodian for the collateral held on behalf of both parties.
+<br/><br/>
+It is however important to keep in mind that buyers receiving collateral in a triparty repo benefi t from the same level of asset protection as if they were receiving the collateral bilaterally, as the triparty agent is not a principal in the transaction. The outsourcing solution supplements the underlying bilateral agreement and does not affect the transfer of ownership of the assets received as collateral. In a default, there is no difference in the treatment of collateral received bilaterally or in triparty. Buyers will benefi t from the asset protection offered by the  custodian holding the collateral and will have unrestricted access to the assets.
+<br/><br/>
+
+In addition to triparty repo, agents, including Euroclear Bank, offer triparty collateral management services for other collateralised transactions, such as:
+<br/>
+<ul>
+	<li>pledging collateral in securities lending transactions or secured loans; or</li>
+	<li>the collateralisation of exposures arising from OTC derivatives.</li>
+</ul>
+
+The versatility of the triparty model allows firms to manage their collateralised exposures at firm level across many businesses and exposure types. This results in a greater optimisation of available collateral.
+<br/><br/>
+Another significant development of triparty is linked to the management of central bank liquidity. Because of its operational efficiency, robustness and scalability, a growing number of central banks are turning to triparty for the management of collateral received in open-market operations, as well as emergency liquidity schemes. This opens the way for a greater interaction between the interbank market and central bank credit, with greater liquidity in the market as a result.
+<br/><br/><br/>
+
+<b><u>Setting up triparty repo arrangements</u></b><br/>
+Bilateral agreements, such as a GMRA, must first be in place before both parties negotiate a triparty service agreement with the triparty agent of their choice.
+<br/><br/>
+The buyer will also set up dedicated securities accounts (in addition to its existing securities and cash accounts) to separate the collateral purchased through triparty repos.
+<br/><br/>
+Before entering into the transaction, each party also has to decide:
+<ul>
+	<li>what category of collateral it is willing to accept;</li>
+	<li>how much of each category it is willing to accept; and</li>
+	<li>what initial margin/haircut it will require in each category.</li>
+</ul>
+
+Collateral can be categorised in a wide variety of ways, such as:<br/>
+<ul>
+	<li>credit rating;</li>
+	<li>market;</li>
+	<li>type of security; and</li>
+	<li>country</li>
+</ul>
+
+Decisions about what is acceptable as collateral allow certain risks to be excluded altogether. Limits on how much of each category to accept enforce the diversifi cation of collateral. Initial margin/haircuts provide a buffer against sudden and unexpected problems. Other criteria, such as limits on the minimum size of collateral allocated or stale prices, ensure a certain level of liquidity in the collateral portfolio. The wide-ranging spectrum of criteria warehoused by triparty agents gives buyers the opportunity to create collateral profi les that perfectly match
+the risk appetite of their firms. Both parties may agree to defi ne multiple collateral profiles, or ‘baskets’. When trading, that allows them to vary the repo rate by varying the quality of the eligible collateral.
+<br/><br/>
+
+<span class="italicind">
+	<u>Example:</u><br/>
+	A pool of collateral made of AAA sovereign securities will typically be traded below LIBOR, while a profi le accepting lower-rated securities, such as BBB emerging-market securities, may be traded at a substantial spread over LIBOR.
+</span>
+<br/><br/><br/>
+
+<b><u>Initiating a triparty repo</u></b><br/>
+
+Once a triparty repo has been struck (typically over the phone), the counterparties notify the triparty agent of the specifi cations of the transactions (e.g. deal size, maturity and rate) and the collateral profi le (or basket) to be used. If the instructions can be validated and matched by the agent, collateral is selected by the agent from the seller’s account using a standard algorithm and subject to the eligibility criteria of the profi le selected. The agent then initiates the movement of cash and collateral between the accounts of the counterparties, on the basis of delivery versus payment, and reports settlement results to both parties.
+<br/><br/>
+
+<span class="italicind">
+	Triparty online reporting tools (such as Euroclear Bank’s web-based application TriWeb) allow both parties to closely control and monitor outstanding transactions throughout the complete life cycle of the triparty repo. Data is regularly updated throughout the day, giving full
+transparency and the level of detail required by both the buyer and the seller. Those players using TriWeb can also take advantage of its trading simulation tool in order to optimise business opportunities.
+</span>
+<br/><br/>
+
+As the scope of eligible collateral is agreed upfront, all collateral management processes are performed directly by the agent. Subsequent to the execution of a triparty repo, and throughout the life cycle of the transaction, the agent continuously monitors the collateral to ensure that it remains:
+<br/>
+<ul>
+	<li>within the pre-agreed eligibility criteria (e.g. it could suffer a ratings downgrade); and</li>
+	<li>sufficient (e.g. it could fall dramatically in value).</li>
+</ul>
+<br/>
+
+Should the value of the collateral fall below the exposure, the agent will automatically trigger a margin call and transfer additional collateral from the account of the seller to the buyer to cover the shortfall.
+<br/><br/>
+The main European triparty agents, including Euroclear bank, also offer unlimited rights of substitution to their clients during the life cycle of the repo. Moreover, when a coupon on a bond or a dividend on an equity is paid during the term of the repo, the triparty agent will automatically transfer an equivalent amount from the buyer to the seller.
+<br/><br/>
+Increasingly, triparty agents offer dynamic management of collateral through a process called optimisation. This involves the continuous re-evaluation of the securities available to sellers for use as collateral (e.g. through new purchases), and the automatic substitution of collateral, to release the best collateral back to the seller by using the full range of eligibility specifi ed by buyers.
+<br/><br/>
+Some triparty agents also allow buyers to re-use their collateral in a subsequent triparty deal. In other words, triparty clients are able to use collateral bought through one triparty repo (or another type of triparty transaction) in another triparty repo (or another type of triparty transaction), with no impact on the relationship between the original counterparties.
+<br/><br/>
+
+<span class="italicind">
+	Euroclear Bank has modifi ed AutoSelect, its collateral allocation tools, to allow for re-use of collateral while keeping all key features characterising a triparty environment unchanged, including the substitution capability for the collateral giver.
+</span>
+
+<br/><br/>
+
+
+<b><u>The emergence of basket trading in triparty</u></b><br/>
+A significant, recent development in triparty repo is the emergence of ‘basket trading’, such as the EuroGC product recently launched by LCH.Clearnet Ltd, the UK-based Central Counterparty (CCP). By using this product, the seller and buyer can trade, on an anonymous basis, from standardised baskets of collateral (e.g. AAA sovereign bonds from the Eurozone). This is also known as ‘GC financing’.
+<br/><br/>
+Trading firms agree that the collateral to be transferred from one to the other can be any of the securities listed in one or more standardised ‘baskets’. There is, therefore, no need for the seller and buyer to agree on the identity of individual lines of the collateral at the point of trade.
+<br/><br/>
+Once struck, transactions will be sent to the CCP for netting. The result from the netting will then be forwarded to a triparty agent, such as Euroclear Bank, where the collateral traded will be automatically selected, by algorithm, from the account of the seller and transferred between the trading firms and the CCP.
+<br/><br/>
+This product makes triparty repo akin to a deposit in terms of ease of dealing, while bringing all the benefi ts of secured transactions.
+<br/><br/><br/>
+
+
+<b><u>The triparty repo market</u></b><br/>
+Triparty repo originated in the United States in the 1980s as a solution to the problems of ‘double-dipping’ that arose with HIC repo. It was introduced to Europe in 1992. However, the two markets remain very different. In the United States, the bulk of repo is settled by triparty agents, whereas less than one-eighth of repo in Europe is triparty.
+<br/><br/>
+In both the United States and Europe, triparty repo has been used to outsource the management of collateral in which triparty agents can offer economies of scale to their users. However, in the US market, the collateral that is seen as benefi ting the most from the economies of scale offered by triparty agents has been government and federal agency securities; whereas in Europe, it has been difficult-to-manage collateral such as ABS and corporate bonds (both markets use triparty repo for equity).
+<br/><br/>
+The reason seems to be that the very narrow margin earned by dealers on repos of US government and federal agency securities has encouraged them to cut settlement costs by outsourcing to triparty agents. In Europe, on the other hand, the heavy overheads involved in repoing non-government securities – which are more difficult to value and expensive to transfer – has encouraged dealers to use triparty for those products.
+<br/><br/>
+Another major difference between the United States and Europe comes from the operating model used by triparty agents for term repo transactions. In the United States, term repo transactions are, in effect, transformed into a series of overnight transactions. Transactions are unwound daily, returning the collateral to the seller and the cash to the buyer. This process enables the seller to use his securities for settlement purposes and to substitute other eligible collateral. As a result of the unwind, the buyer is secured with cash intra-day. Triparty agents offer such intraday 
+fi nancing to sellers and ensure the related exposure is properly collateralised by the seller. In Europe, triparty agents, such as Euroclear Bank, have developed their platform in such a way that collateral substitution can occur throughout the life cycle of the transaction, therefore there is no requirement to unwind transactions daily.
+<br/><br/>
+<br/><br/>
+
+
+<h3 align="center">Alternative types of collateral</h3><br/>
+
+The bulk of collateral in most repo markets is comprised of domestic government bonds. These are ideal as collateral, being considered as free of default risk and are generally liquid. Prior to the recent crisis, there were growing repo markets in alternative collateral, offering higher returns than the increasingly commoditised government bond repo market. In absolute terms, the size of the alternative collateral market in Europe is still much smaller than that in government bonds and has been set back by the market crisis. Non-government bond repos are sometimes collectively described as ‘credit repo'.
+<br/><br/>
+
+
+<b><u>Credit Repo</u></b><br/>
+There are five main sub-categories of credit repo:
+<ul>
+	<li>covered bonds1, such as German Pfandbrief</li>
+	<li>other Mortgage-Backed Securities (MBSs)</li>
+	<li>other Asset-Backed Securities (ABSs)</li>
+	<li>structured credit securities, such as Collateralised Debt Obligations (CDOs)</li>
+	<li>unsecured corporate bonds</li>
+</ul>
+
+<span class="italicind">
+	Covered bonds’ are a type of asset-backed security in which the assets (mortgages or loans to the public sector) are secured by a special body of public law, rather than contract law. The assets also remain on the balance sheet of the issuer, rather than being sold off balance sheet to an SPV, but are legally ring-fenced in the event of the issuer’s insolvency. This should make them more secure than off-balance sheet asset-backed securities.
+
+</span>
+
+<br/><br/>
+Covered bonds, MBSs, ABSs and structured credit securities can serve as good collateral, if they are secured against high-quality underlying assets. This is usually assumed to be the case for covered bonds, given the special legal security underpinning these bonds. However, liquidity can still be an issue because of the buy-and-hold nature of many investors in these securities and the generally small issue size. Attempts have been made to address these problems with the invention of ‘Jumbo’ Pfandbrief.
+<br/><br/>
+European ABSs can be problematic as collateral because of their illiquidity, their often specialised underlying assets, and the consequently small size of many ABS issues. These problems can be compounded by the complexity of their structures (e.g. the prepayment options embedded in the securities). This makes it difficult to value some ABSs. Attempts are being made to improve liquidity by pooling the prices quoted by market-makers in ABSs and prices derived from theoretical models developed by specialised firms.
+<br/><br/>
+Structured credit securities such as CDOs have suffered a drastic reappraisal of their credit quality following the onset of the US sub-prime mortgage crisis in 2007, as investors worried about the complexity of structures and the potential for further hidden risks.
+<br/><br/>
+Unsecured corporate bonds vary widely in credit quality and liquidity. In many cases (e.g. US automotive companies), good liquidity has been marred by poor credit ratings, thereby complicating their use as collateral.
+<br/><br/>
+<br/>
+
+<b><u>Equity repo</u></b><br/>
+
+Equity poses special challenges when used as collateral:
+<ul>
+	<li>There are no generally accepted equity valuation models.</li>
+	<li>The greater credit and liquidity risk in equities compared to fi xed-income securities is reflected in the more volatile prices of individual equities.</li>
+	<li>Liquidity is restricted by the fact that equities are traded in much smaller amounts than fi xed-income securities.</li>
+	<li>Equities are subject to ‘corporate events’, in which the nature and value of the security may suddenly change (e.g. rights issues, stock splits, non-cash payments of dividends).</li>
+	<li>Equities also carry voting rights, which means that equity repos have implications for the ability of the seller to exercise its corporate governance rights and obligations.</li>
+	<li>In contrast to many bond markets, equities pay income net of withholding tax. Standard repo agreements require manufactured payments to be made gross, regardless of whether or not the corresponding payment to the buyer has been made gross.</li>
+
+</ul>
+
+These challenges are addressed in a number of ways:
+<ul>
+<li>Equity repo is largely in securities included in the main equity indices. These benefit from a broad base of investors as well as the price transparency of stock exchanges and electronic trading systems. Baskets comprising the main equity market indices are also widely traded, refl ecting the composition of underlying trading in equity derivatives.</li>
+
+<li>Equity repos often use non-index baskets containing multiple securities, in order to achieve a reasonable transaction size and to produce an average volatility lower than the volatility of individual equities.</li>
+
+<li>Special annexes are used to adapt standard repo agreements to deal with equity corporate events, by defining ‘equivalent securities’ after there has been a corporate event on the collateral. They also make provisions for net manufactured payments, although (in contrast to securities lending agreements) the default provision is to substitute the collateral or terminate the transaction before the tax event.</li>
+</ul>
+
+The complexity and expense of using equity as collateral means that virtually all equity repo is done through triparty arrangements.
+<br/><br/><br/>
+
+
+<b><u>Emerging market repo</u></b><br/>
+It is difficult to define an emerging market. There is no generally accepted definition. Emerging market indices are distorted, as their composition is dictated by the availability of securities from emerging market issuers. The term is also complicated by the transformation of some emerging markets into developed markets (e.g. Mexico and Korea are now members of the OECD, formerly seen as an ‘industrialised’ country club) and the BRIC economies (Brazil, Russia, India and China) are identified as special cases of transition.
+<br/><br/>
+In a very general sense, labelling a market as ‘emerging’ indicates a special challenge. It is not that emerging markets pose risks that are different to those in developed markets, but there is a tendency for those risks to be more intense. This is particularly true of political risk, in other words, the instability of the government and the possibility of arbitrary political interference in markets. Many emerging markets
+are also small economies and/or dependent on exports of commodities over which they have no price control, which makes them very vulnerable to shocks in the global economy. They also, almost by definition, suffer from an undeveloped infrastructure, not just physical but in terms of legal, financial and commercial sophistication.
+<br/><br/>
+
+
+Of course, as well as the risks, emerging markets offer the potential rewards of a new frontier. Specifically, the main drivers behind emerging market trading in all instruments are:
+<ul>
+<li>access to a new class of credit risk for reasons of portfolio diversification by investors;</li>
+<li>the higher relative yield compared to developed markets; and </li>
+<li>first-mover advantage for dealers.</li>
+<li>Although transacted in smaller sizes than government bond repo, normal deal size in emerging market repo is larger than other types of credit repo.</li>
+</ul>
+<br/><br/>
+
+<b><u>Synthetic repo</u></b><br/>
+	Many equity and emerging market positions are financed or covered using synthetic structures rather than conventional repos. A synthetic repo involves the outright sale of a security with no repurchase. Instead, a derivative, such as a total return swap, is used to transfer the risk and return on the equity back to the seller. Thus, the legal ownership of the security is transferred to the buyer in the outright sale, but its risk and return remains with the seller by means of the derivative. This is the same effect as a conventional repo.
+
+	In a synthetic repo, there is a ‘gentleman’s agreement’ between the counterparties under which the seller agrees to repurchase the security from the buyer at the end of the transaction. As the seller is not legally obliged to do so, this transaction is not part of the synthetic repo contract.
+
+	The main purpose of a synthetic repo is to reduce the impact of the transaction on the balance sheet of the seller. In a conventional repo, because the seller commits to repurchase the collateral at a fixed price, and thereby retains the risk and return on the collateral, the collateral remains on its balance sheet. As it also receives cash, the size of its balance sheet increases. In a synthetic repo, because the seller makes an outright sale of the collateral (and the gentleman’s agreement to repurchase has no legal standing), the collateral leaves its balance sheet, so offsetting the receipt of cash.
+
+
+<br/><br/><br/>
+
+<h3 align="center">Credit risk and Capital charges</h3>
+
+Collateralisation reduces the credit risk on repo, which in turn can reduce the capital charge that regulators impose on lending cash. However, collateral has operational and legal risks, which means that, notwithstanding the comfort given by collateral, the primary concern in a repo should always be the creditworthiness of the counterparty. This is one of the lessons of the current market crisis.
+<br/><br/><br/>
+
+<b><u>Credit risk: the 'double indemnity'</u></b><br/>
+One of the primary benefi ts of repo is the use of collateral to reduce credit risk for the buyer, who is lending cash to the seller. However, the usefulness of repo derives not just from the use of collateral. Repo is said to offer a ‘double indemnity’ to the buyer. This means that the buyer can rely on both the counterparty and the collateral. If the seller defaults, the buyer can liquidate the collateral in order to recover its cash. On the other hand, if the issuer of the collateral defaults, the buyer can secure fresh collateral from the seller by making a margin call. Both events of default are possible, but are unlikely to occur at the same time, provided the issuer of the collateral and the counterparty are suffi ciently independent entities and their credit risks have a low correlation. Where the credit risks on the collateral issuer and the repo counterparty are relatively uncorrelated, the buyer will have materially diversified its overall credit risk.
+<br/><br/>
+However, it is important to understand that the contributions of collateral and counterparty to the diversifi cation of credit risk are not symmetrical. If faced with a choice between a combination of good quality collateral and a poor quality seller on the one hand, versus a combination of poor quality collateral and a good quality seller on the other, buyers should not be indifferent. The former combination is 
+generally thought unwise, whereas the latter is not.
+<br/><br/>
+The reason for this asymmetry is that, if the issuer of collateral defaults, the buyer can make a margin call on the seller, which is a generally straightforward process. However, if the seller defaults and the buyer decides to sell off the collateral, the buyer may experience delays and/or difficulties. Liquidation could be delayed by the need to refer the decision to senior management and/or to serve a default notice on the seller. Depending on market conditions, collateral may be illiquid, or may be held in such quantities as to require time to sell. The buyer’s right to collateral may be challenged in the courts by the defaulting seller, in which case, the repo legal agreement would no longer be subject to the governing law of the contract: an obstructive insolvency regime may apply instead. The default could occur in the midst of a general market crisis (indeed, this could be the cause of the default itself). In this case, the buyer may find that the cash generated by liquidating the collateral is less than expected, due to delays in selling or, in the worst case, the collateral is lost altogether.
+<br/><br/>
+It can be seen that, while collateral mitigates credit risk, it has operational and legal risks. As the collateral may turn out to be worth less than expected, it is clear that undue reliance should not be placed on collateral. Collateral should be treated like insurance, and it should be recognised that the primary credit risk in a repo is on the seller.
+<br/><br/>
+For this reason, it is usually acceptable to take poor quality collateral from a good quality seller, but not to try to compensate for a poor quality seller by taking good quality collateral (although this sounds sensible, collateral quality should not be allowed to drive the decision to transact).
+<br/><br/><br/>
+
+
+<b><u>Regulatory risk capital charges</u></b><br/>
+Regulatory authorities require fi nancial institutions to put capital aside in proportion to the risks they take, in order to absorb unexpected losses and continue in business without disrupting the market.
+<br/><br/>
+Regulators defi ne what is acceptable as capital, and prescribe a percentage, or methods of calculating a percentage, of the value of each type of risky transaction to be matched by capital of a suitable quality. The percentage takes the form of a ‘risk weight’ for each type of transaction. An overall ratio is then applied to the sum of the so-called ‘risk-weighted assets’, to give the regulatory risk capital requirement. Regulators have increasingly offered institutions the opportunity to calculate their regulatory risk capital requirements using their own risk models. The greater sophistication of internal models generally results in lower risk weights than the default percentages prescribed by regulators, or the percentages calculated using regulatory rules, for banks without their own risk models.
+<br/><br/>
+Capital is held by financial institutions in the form of secure investments, like government bonds, and is largely funded by the issuance of equity or equity-like instruments. As the returns on government bonds are low, and equity is expensive to issue, capital has a high net cost and acts as a drag on firms’ profit margins. There is, therefore, a strong incentive for regulated fi nancial institutions to channel their business into capital-efficient transactions and to seek ways of offloading risk from their balance sheets.
+<br/><br/>
+<br/>
+
+<b><u>Accounting for repo</u></b><br/>
+Balance sheets and other financial accounts are intended to show the financial condition of an institution, not the way its transactions are legally structured. This accounting objective is often stated as ‘economic substance over legal form’. The economic substance of a repo is
+that the risk and return on the collateral remains with the seller (the legal form is that title to the collateral passes to the buyer). Therefore, in virtually all accounting regimes, the collateral stays on the seller’s balance sheet and the only movement shown is the payment of cash.
+Consider the following simplified balance sheets set out in accordance with international accounting standards.
+<br/><br/><br/>
+
+
+<img src="/images/buyer1.png" alt="Buyer" style="height: 200px;">
+
+<br/><br/>
+
+<img src="/images/seller1.png" alt="Seller" style="height: 200px;">
+
+<br/><br/>
+
+Assume party A sells 10 million worth of securities to party B in a repo with no initial margin. Under international accounting standards, on the Purchase Date, the securities are deducted from the investments of A and transferred to a new asset in A’s balance sheet called collateral.
+The Purchase Price received from B increases the cash assets of A and is balanced by a new liability on A called collateralised borrowing. On B’s balance sheet, there is no sign of the collateral securities. All that happens is that 10 million is transferred from B’s cash assets to other current assets. This is B’s claim on A. Note that A’s balance sheet expands, demonstrating that it has borrowed, but B’s balance sheet does not change in size.
+<br/><br/>
+
+
+<img src="/images/buyer2.png" alt="Buyer" style="height: 200px;">
+
+<br/><br/>
+
+<img src="/images/seller2.png" alt="Seller" style="height: 200px;">
+
+<br/><br/>
+
+On the repurchase date, A repurchases collateral from B and pays the repurchase price. Assume this is 10.1 million.
+
+<br/><br/>
+
+<img src="/images/buyer3.png" alt="Buyer" style="height: 200px;">
+
+<br/><br/>
+
+<img src="/images/seller3.png" alt="Seller" style="height: 200px;">
+
+<br/><br/>
+
+On A’s balance sheet, the collateral item is extinguished and 10 million of securities are returned to A’s investments. A’s cash assets are reduced by the amount of the repurchase price. On the liabilities side of its balance sheet, the net reduction in A’s assets of 10.1 million is matched by a reduction in retained earnings of 0.1 million. On B’s balance sheet, cash assets increase by 10.1 million and other current assets are reduced by 10 million (showing that B has recovered its investment of 10 million and earned a return of 0.1 million). On the liabilities side of B’s balance sheet, the return earned on the reverse repo increases retained earnings by 0.1 million. A’s balance sheet has been reduced and B’s has been increased by 0.1 million, showing A has paid a return to B for the use of the latter’s cash.
+
+<br/><br/>
+
+The primary risks targeted by regulators are credit risk and market risk. Regulatory capital requirements on repos for market risk arise only if interest rate positions are taken with mismatched or forward-start repos, or if currency risk is taken with cross-currency repos (where the cash and collateral are denominated in different currencies). The market risk on collateral itself is not attributed to the repo, because
+it will have incurred its own capital requirement for market risk, as soon as it has been purchased in the cash market. Regulatory capital requirements on repo therefore tend to refl ect only the credit risk on the securities used as collateral. 
+<br/><br/>
+
+Securities lending is viewed by regulators as comparable to repo and is included in the same capital adequacy framework.
+<br/><br/>
+
+The regulatory capital regimes in most markets are subject to international agreements between regulators aimed at preventing ‘regulatory arbitrage’ by imposing common minimum regulatory risk capital requirements on fi nancial institutions under their supervision. The fi rst international capital agreement, which came into full effect in 1988, was the Basel Accord between developed country supervisors (now known as ‘Basel I’). It applied to credit institutions and securities fi rms that were ‘internationally active’. Originally, this agreement was 
+focused largely on credit risk, but a Market Risk Amendment was added in 1996, which also introduced the concept of fi rms calculating their regulatory risk capital requirements using their own risk models. From 2007, Basel I is being replaced by what is widely known as ‘Basel II’.
+
+<br/><br/>
+
+Between the introduction of Basel I and Basel II, regulators started to differentiate the business of banks and securities fi rms on the basis of the degree of credit risk in their activities. Deposits, loans, long-term holdings of securities and foreign exchange (all of which introduce sizeable, longer-term credit risk onto the balance sheet) were collected into the so-called ‘banking book’, while short-term trading securities and derivatives (which create partial or transitory credit risk) formed the ‘trading book’.
+<br/><br/>
+Repos of securities held in the banking book were subject to the treatment originally laid out in Basel I. A different approach was applied to repos of securities held within the trading book (although individual regulators have been allowed to insist that institutions under their jurisdiction use only the banking book approach for reverse repos). Use of the trading book approach for reverse repo also requires netting in the event of default, frequent marking to market of collateral and margin maintenance to eliminate material exposures, although these conditions
+do not apply if the reverse repo is ‘inter-professional’ (this exemption allowed undocumented buy/sell-backs to survive).
+<br/><br/>
+In the European Economic Area (EEA), the Basel Accords have been implemented through various EU Directives, which were translated into national legislation by the Member States. Basel I was implemented in the EU under the Capital Adequacy Directive (CAD) for investment firms and under a number of directives culminating in the Banking Consolidation Directive (BSD) for credit institutions. The EU Directive that implemented Basel II is the Capital Requirements Directive, which came into effect in 2007.
+<br/><br/><br/>
+
+
+<b><u>Basel I</u></b><br/>
+
+The treatment of repo by Basel I was cursory and fairly crude. For repo, it used the risk weight on the collateral to determine capital requirements. For reverse repo, it substituted the risk weight on the repo counterparty with the risk weight on the collateral, if this was better quality. However, Basel I recognised only a limited range of collateral (cash, OECD government bonds, and bonds issued by multilateral development banks). There were also a limited number of risk weights, defi ned in terms of whether an institution was public or private, and whether or
+not it was headquartered in the OECD (e.g. public institutions in the OECD were assigned a risk weight of 0%, OECD banks 20% and most other institutions 100%). The overall ratio applied to the sum of risk-weighted assets (the ‘Basel Ratio’) was a minimum of 8%.
+<br/><br/>
+
+Example: A bank doing a reverse repo with an OECD-based bank (20% risk weight) holding collateral worth EUR 19 million, but owed cash of EUR 20
+million, would be subject to a capital requirement of at least EUR 16,000: 
+
+\[
+(20,000,000 - 19,000,000 \; \text {x} \; 20 \text {%} \; \text {x} \; 8 \text {%} = 16,000)
+
+\]
+
+<br/><br/>
+
+<b><u>Basel II</u></b><br/>
+
+The rapid evolution of the financial markets since the 1980s, and a decline in the overall amount of capital held by fi nancial institutions, led to a fundamental revision of Basel I. The product of that revision, Basel II, seeks to provide a more sophisticated regulatory regime that aligns capital requirements more closely with the risk profile of institutions. Risk capital requirements are now only one of three so-called regulatory ‘pillars’. The others are Supervision and Disclosure.
+<br/><br/>
+
+<ul>
+<li>The Supervision pillar is a set of standards to be applied by regulators to ensure that financial institutions have sound internal processes to assess the adequacy of their capital (above and beyond what is required by regulators) against a thorough assessment of their risk profile and control environment. </li>
+<li>The Disclosure pillar requires institutions to publish sufficient information to allow potential counterparties to assess their risk profile which, it is hoped, will apply market discipline to institutions.</li>
+</ul>
+The regulatory risk capital requirements for market risk under Basel II are the same as those introduced under the 1996 Market Risk Amendment of Basel I. However, Basel II focuses not just on credit and market risks, but also on operational risk. Another key innovation is that Basel II offers a menu of approaches to calculating regulatory risk capital requirements that is intended to encourage firms to improve their risk management systems and procedures by offering progressively better capital treatment under the more advanced approaches.
+<br/><br/>
+
+For credit risk, the approaches are:
+<ul>
+<li>Simple Standardised;</li>
+<li>Comprehensive Standardised;</li>
+<li>Foundation Internal Ratings-Based (IRB); and</li>
+<li>Advanced Internal Ratings-Based (IRB).</li>
+</ul>
+
+<br/>
+<b>The Standardised approaches</b><br/>
+The Simple Standardised approach is basically the same as Basel I. 
+<br/><br/>
+The Comprehensive Standardised approach replaces the risk weights used in Basel I with credit ratings from, among others, recognised rating agencies. This has led to a major re-rating of counterparties and collateral.
+<br/><br/>
+Example: Under Basel I, Turkey had a risk weight of 20%, since it was a member of the OECD, but Singapore was 100%, since it was not. Under the Comprehensive Standardised approach to Basel II, Turkey, which is rated BB-, has a 100% risk weight, while Singapore, rated AAA, is 20%.
+<br/><br/>
+The Comprehensive Standardised approach also uses the concept of haircuts to adjust the values of both exposures and collateral to take account of the volatility of prices. A set of haircuts is prescribed by Basel II, but more sophisticated institutions are allowed to calculate their own estimates of price volatility or use Value at Risk (VaR) models.
+<br/><br/>
+
+The Standardised approaches place various fl oors under the capital charges for repo, but offer numerous exemptions or ‘carve-outs’. For example, where the counterparty is a ‘core market participant’, the collateral is 0%-weighted, and the repo is correctly documented and margined daily, the capital charge can be reduced to 0%.
+<br/><br/><br/>
+
+<b>Internal Ratings-Based approaches</b><br/>
+The IRB approaches allow institutions to calculate the components of the risk weights.
+<br/><br/>
+Under the Foundation IRB approach, own calculations can be used to estimate the component called the ‘Probability of Default’.
+<br/><br/>
+The Advanced IRB approach also allows the own calculation of components called the ‘Loss Given Default’ (this number is the one reduced by collateral) and ‘Exposure at Default’, which is the number by which the risk weight is multiplied to give the value of the risk-weighted asset (the capital charge is then 8% or more of this number).
+<br/><br/>
+To adopt more sophisticated approaches, institutions must meet increasingly tougher operational conditions. For repo, these conditions include legal certainty about the title to collateral and the right to net, low correlation between the credit risks on collateral and the counterparty, robust collateral management and the secure management of collateral. The rewards are the ability to use a broader range of assets as collateral and lower capital charges. 
+<br/><br/>
+The following examples compare the regulatory risk capital calculations under Basel I and the various approaches of Basel II.
+<br/><br/>
+
+<span class="normalind">
+
+<b>Capital adequacy requirements for repo under Basel</b><br/><br/>
+<b>Example</b><br/>
+Term of repo 1 week<br/>
+Value of collateral 10 million<br/>
+Value of cash 10 million<br/>
+Collateral Aa-/AA- 3-year sovereign issue<br/>
+Counterparty Aaa/AAA OECD bank<br/>
+Currencies same<br/>
+<br/><br/>
+
+<b>Basel I</b><br/>
+Counterparty risk weight for OECD bank = 20%<br/>
+Capital = exposure x counterparty risk weight x Basel ratio<br/>
+= (value of the cash – value of the collateral) x counterparty risk weight x Basel ratio<br/>
+= 0 x 20% x 8%<br/>
+= 0<br/>
+
+<br/><br/>
+<b>Basel II – Comprehensive Standardised Approach</b><br/>
+Standard counterparty risk weight for Aaa/AAA bank = 20%<br/>
+Standard supervisory haircut for Aa-/AA- 3-year sovereign collateral adjusted to the 5-day holding period allowed for securities financing transactions = 1.414%<br/>
+Exposure At Default (EAD) = (cash – collateral) + (net collateral position * haircut) + (net foreign currency collateral position * FX haircut)<br/>
+= (10,000,000 – 10,000,000) + (10,000,000 * 1.414%) + (0 * 8%)<br/>
+= 141,400<br/>
+Capital = EAD x counterparty risk weight x Basel ratio<br/>
+= 141,400 x 20% x 8%<br/>
+= 2,262<br/>
+
+<br/><br/>
+<b>Basel II – Foundation IRB Approach</b><br/>
+Exposure at Default (EAD) = 141,400<br/>
+Internal estimate of Probability of Default (PD) of Aaa/AAA bank subject to fl oor of 0.0003<br/>
+Standard Loss Given Default (LGD) under Foundation IRB = 45%<br/>
+Internal estimate of maturity (M) = 7 days<br/>
+Counterparty risk weight for internal estimate of PD and given LGD, M = 3.1%<br/>
+Counterparty risk weight with scaling factor of 1.06 = 3.28%<br/>
+Capital = EAD x counterparty risk weight x Basel ratio<br/>
+= 141,400 x 3.28% x 8%<br/>
+= 371<br/>
+
+<br/><br/>
+
+<b>Basel II – Advanced IRB Approach</b><br/>
+Exposure at Default (EAD) = 141,400<br/>
+Internal estimate of Probability of Default (PD) of Aaa/AAA bank subject to fl oor of 0.0003<br/>
+Internal estimate of Loss Given Default (LGD) = 20%<br/>
+Internal estimate of maturity (M) = 7 days<br/>
+Counterparty risk weight for internal estimates of PD, LGD, M = 1.4%<br/>
+Counterparty risk weight with scaling factor of 1.06 = 1.46%<br/>
+Capital = EAD x counterparty risk weight x Basel ratio<br/>
+= 141,400 x 1.46% x 8%<br/>
+= 165<br/>
+
+</span>
+
+<br/><br/><br/>
+
+<h3 align="center">Repo Documentation</h3><br/>
+
+The performance of repo depends on the buyer’s right to collateral. In order to minimise legal risks, it is prudent to have a written contract in the form of a master agreement. The standard for cross-border repo markets in Europe and elsewhere is the Global Master Repurchase Agreement (GMRA). Such documentation is also important for reinforcing a party’s netting rights in the event of default by a counterparty, and in setting out operational procedures such as margining and manufactured payments. The basic GMRA has been adapted to specialist uses and certain domestic markets through the use of annexes.
+<br/><br/>
+In an undocumented buy/sell-back, the rights and obligations of the parties in the event of a default by one of the parties are less clear than in a repurchase agreement or documented buy/sell-back. This is especially true of the right of the non-defaulting party to net obligations with a defaulting counterparty.
+<br/><br/>
+<br/>
+
+<b><u>Global Master Repo Agreement</u></b><br/>
+In the early days of the European repo market, counterparties drew up their own contracts, but disagreements prompted efforts to produce standard agreements, both for domestic and international repo transactions. The lead in the international market was taken by what is now the International Capital Markets Association (ICMA), through the committee that became the European Repo Council (ERC). In 1992, the ICMA published the first version of the GMRA. This was done in conjunction with the ICMA’s US counterpart, the Securities Industry and Financial Markets Association (SIFMA – formerly called the PSA and then TBMA), whose domestic Master Repurchase Agreement formed the basis of the first GMRA.
+<br/><br/>
+
+In 1995 and 2000, the GMRA was updated to take account of market developments and incorporate improvements suggested by experience. Thus, the GMRA 1995 (the version updated in 1995) incorporated lessons learnt in the Barings crisis of 1995, in particular, the need for more time to liquidate collateral located in other time zones. The GMRA 2000 (the version updated in 2000) refl ected the experience of the Long-Term Capital Management (LTCM), Russian and Asian crises of 1997-98, and the additional time needed to liquidate illiquid collateral during a crisis.
+<br/><br/>
+
+The function of legal agreements is two-fold:
+<ul>
+	<li>To facilitate trading by having counterparties agree as many general terms and conditions as possible, in advance of executing individual transactions. This saves time and helps to avoid misunderstandings at the point of trade.</li>
+
+	<li>To set out clearly the rights and obligations of the counterparties during the life of the transaction (e.g. in respect of margin maintenance) and in the event of a problem arising (e.g. failure to deliver collateral or a default by one of the parties). By setting out clearly the intention of the counterparties, it is hoped that courts will uphold the contract in disputes between the counterparties or challenges from third parties.</li>
+</ul>
+<br/>
+
+The specific issues that a repo legal agreement is expected to address include the following:
+<ul>
+	<li>The transfer to the buyer of absolute legal title to collateral, margins and substitute collateral.</li>
+	<li>Procedures for marking collateral to market, including price sources.</li>
+	<li>Procedures for margin maintenance to eliminate material differences between the values of cash and collateral.</li>
+	<li>The defi nition of ‘events of default’, and the consequent rights and obligations of the counterparties.</li>
+	<li>The obligation to fully close out and set off (net) opposing claims between counterparties in the event of default.</li>
+	<li>The management of coupon and other payments on collateral (i.e. manufactured payments).</li>
+	<li>The rights and obligations of the counterparties if collateral fails to be delivered.</li>
+	<li>Procedures to be followed if rights of substitution of collateral are exercised</li>
+</ul>
+
+<br/>
+
+The GMRA was designed for repurchase agreements between institutions dealing for their own account (i.e. principals) using fixed-income collateral paying coupons gross of withholding tax. In order to be able to use the agreement to document buy/ sell-backs, repos involving an agent (e.g. a fund manager dealing on behalf of a client), or repos involving other securities, it is necessary to modify the standard agreement by attaching annexes. Annexes have been published by the ICMA to adapt the GMRA to:
+
+<ul>
+	<li>buy/sell-backs;</li>
+	<li>repos between an agent and a principal;</li>
+	<li>repos of equity;</li>
+	<li>repos of money market securities; and</li>
+	<li>repos of net-paying securities</li>
+</ul>
+<br/>
+
+In addition, because the GMRA is governed by English law, it has been necessary to adapt it for use in other jurisdictions (e.g. Australia, Canada and Italy). Annexes have also been published for:
+<ul>
+	<li>the UK-gilts market by the Bank of England;</li>
+	<li>the Australian market by the Australian Financial Markets Association (AFMA); and</li>
+	<li>Japanese securities by the Japanese Securities Dealers Association.</li>
+</ul>
+
+<br/><br/>
+
+<b><u>Legal opinions</u></b><br/>
+
+In addition to publishing and periodically updating the GMRA, the ICMA commissions legal opinions on the enforceability of the GMRA as a whole or,
+in some cases, just on the enforceability of the netting provisions in different jurisdictions. These are vital in minimising legal risk and giving confidence to the market and its regulators about the certainty of contracts and the consequences of a default. By 2007, there were legal opinions for over 50 countries. Work is also being undertaken to extend opinions to more countries and, where opinions already exist, to cover insurance companies, hedge funds and mutual funds. The ICMA updates its suite of legal opinions annually.
+<br/><br/>
+One of the main legal risks which legal opinions seek to address is so-called ‘re-characterisation risk’. This is the possibility that a court may refuse to accept that legal title to collateral has been transferred to the buyer in a repo contract. The risk is often greater for collateral transferred as margin or as a substitute. If a repo is re-characterised, it is possible that it could be re-characterised as a pledge, or even as an unsecured loan.
+<br/><br/>
+<br/>
+
+<b><u>What happens if a counterparty defaults</u></b><br/>
+A key chapter of the GMRA deals with default by one of the counterparties. A standard set of events of default is listed in the GMRA. These include acts of insolvency and failure to make cash payments. Failure to deliver collateral is not a standard event of default but, under the GMRA 2000, the counterparties can agree to make it one. In contrast to the ISDA Master Agreements, there are no credit triggers or cross-default clauses (these legal provisions put a counterparty into default if they suffer a credit ratings downgrade or are in default on another master agreement): this is to avoid undermining an institution in difficulty by automatically stopping their funding because of problems in a possibly unrelated market. Counterparties can also add their own events of default to the standard list, but this may create legal complications.
+<br/><br/>
+If an event of default occurs, and it is one of two particular acts of insolvency, the party which has committed the act is automatically in default. If any other event of default occurs, a default notice has to be served on the party which has committed the act. Except if the event of default is a ‘failure to perform other obligations’ (in which case, there is a 30-day ‘cure period’), a notice places the counterparty on which it is served in immediate default.
+<br/><br/>
+In practice, serving default notices has sometimes proven difficult. Consequently, the GMRA 2000 requires only two reasonable attempts to be made to serve a default notice, after which the non-defaulting entity can certify that an event of default has occurred.
+<br/><br/>
+As soon as a counterparty is formally in default and any cure period has expired, the non-defaulting party can close out and set off all the repos it has outstanding with the defaulter that are documented under the same legal agreement. This means that all outstanding repo contracts are terminated (closed out) and their repurchase date accelerated for settlement as soon as possible. The resulting present values of obligations owed by the defaulter are netted (set off) against the present values of obligations owed to the defaulter, leaving a residual net obligation in one currency. Netting may leave the non-defaulter with a small exposure to the defaulter, or none at all.
+<br/><br/>
+If a seller defaults, the risk to the buyer is that, between the last margin payment or transfer, and the post-default liquidation of collateral, the value of that collateral has fallen to less than the sum of the purchase price plus the accrued return on the cash loaned. If a buyer defaults, the risk to the seller is that, between margining and the post-default repurchase of his lost collateral in the cash market, the value of
+that collateral has risen to more than the sum of the purchase price plus the accrued return on the cash borrowed.
+<br/><br/>
+Non-defaulters can add reasonable expenses to the obligations of the defaulter, but cannot seek ‘consequential damages’, in other words, all the downstream losses incurred as a result of the default. However, the GMRA 2000 does allow for recovery of the costs of replacement, re-hedging or unwinding hedges.
+<br/><br/>
+Agreements such as the GMRA are so-called ‘master agreements’, which means that all repos between the signatories of such agreements fall under the terms of the agreement unless specifically excluded. The consequence is that individual transactions are incorporated into a single contract. This helps to ensure the effectiveness of netting in the event of default by one of the parties.
+<br/><br/>
+A key requirement of close out and set off is, of course, the valuation of collateral. The GMRA 2000 offers considerable flexibility to the non-defaulter in the form of a menu of alternative methods, particularly designed to accommodate illiquid collateral. Thus, the non-defaulter has the choice of:
+<ul>
+	<li>market quotes;</li>
+	<li>the prices actually realised on the sale of collateral or other holdings of the collateral asset; or</li>
+	<li>its own judgement of ‘fair value’ in cases where quotes are not deemed to be ‘commercially reasonable’.</li>
+</ul>
+<br/>
+
+In order to allow time to get market quotes or dealing prices, the deadline for valuation is fi ve business days after default. However, fair value can be fi xed even after this deadline in exceptional circumstances.
+<br/><br/>
+
+
+<h3 align="center">The European Repo Market</h3><br/>
+
+The origins of the European repo market are obscure. Repo and repo-like instruments can be traced back to the 19th century in the United Kingdom and France; a buy/ sell-back market, with a large retail segment, was operating in Italy by the 1970’s; and US investment banks imported the repurchase agreement into Europe during the 1980’s to make up for the lack of securities lending markets in countries such as Italy and to support trading in bund futures from 1988. However, take-off for the European market came with the reform of the French market in 1994 and the opening of a sterling repo market in the United Kingdom in 1996.
+<br/><br/>
+Since that time, the European repo market has grown at a dramatic pace, interrupted occasionally by market crises, including the current ‘credit crunch’. Key drivers have included regulatory capital pressure on unsecured lending, which has led to its progressive substitution by repo, and the rapid growth of hedge funds and proprietary trading in fixed income. The credit crunch is likely to accelerate the substitution of unsecured lending by repo.
+<br/><br/>
+The sample of the European repo market surveyed by the ICMA every six months since 2001 peaked at EUR 6,775 billion in June 2007 (in terms of outstanding contracts). Given that the ICMA survey has been based on a sample of some 60-80 fi rms, albeit including the largest repo traders, the full size of the European market is obviously somewhat larger than the survey number: it is also larger than the US market.
+<br/><br/>
+Following the collapse of Lehman Brothers in September 2008, fi nancial markets contracted sharply, as banks accelerated the de-leveraging of their balance sheets. The December 2008 ICMA survey showed a 26% contraction from June 2008.
+<br/><br/>
+Most trading in the European market is conducted bilaterally between dealers, using the telephone or bilateral text-messaging systems. A declining proportion has been arranged by voice-brokers, and an increasing proportion by electronic trading systems such as BrokerTec, Eurex Repo and MTS.
+<br/><br/>
+
+Electronic trading was introduced by MTS in 1990’s, first into the Italian market and then other European markets. The original electronic trading systems displayed the identity of counterparties; some still do. Anonymous trading was introduced in 2000, when BrokerTec was linked to LCH.Clearnet Ltd’s central clearing product, RepoClear.
+<br/><br/>
+The function of a CCP is to step into each trade, to become the buyer to every seller and the seller to every buyer. It is therefore unnecessary for the original counterparties to ever know each other’s identity, which allows anonymous trading. This is important to dealers, as it hides their trading from other fi rms and reduces the market impact of their transactions. The other benefit of a CCP is the automatic multilateral netting of trades.
+<br/><br/>
+
+<span class="italicind">
+Example: If A repos a bond to B and B repos the same bond to C using a trading system with a CCP, the CCP will step into the middle of the two trades, allowing B’s trades to be set off and cancelled, and reducing its exposure to credit risk. Without the CCP, B’s trades could not be set off and it would have to carry more risk.
+</span>
+<br/>
+
+According to the ICMA survey, electronic repo trading reached a peak of over 28% of outstanding contracts in December 2008. Anonymous electronic trading simultaneously reached almost 18%, boosted by the attraction of netting and risk reduction in the current crisis. The ICMA figure does not include B2C electronic trading between dealers and customers across systems like TradeWeb or the proprietary sales systems used by a number of dealers.
+<br/><br/>
+A major innovation in the electronic trading of repo has been the concept of ‘GC financing’, originally introduced by the DTCC in the US market. In contrast to the other electronic systems, that trade specific bonds, GC financing systems use triparty agents or collateral management systems to automatically select eligible bonds from the seller’s account. Eligible bonds are those included in an agreed list, or basket, of acceptable collateral.
+<br/><br/>
+Electronic trading tends to be very short-term. Indeed, most electronic trades have a term of one day. In contrast, transactions arranged by voice-brokers tend to be longer-term or forward-forward, as these types of repo are more complex and risky, and require negotiation.
+<br/><br/>
+The large bulk of collateral traded in the European market is government bonds. However, the importance of non-government or credit repos is understated by the ICMA survey; much of this collateral is traded in the triparty sector of the repo market and the share of government bonds has tended to decline over time – although it bounced back in the flight to quality which followed the collapse of Lehman in 2008.
+<br/><br/>
+The principal source of collateral is Germany, followed by the United Kingdom, Italy and France. The use of collateral is still hampered by the fragmentation of settlement systems in Europe, for which reason, repo markets, such as Spain, are still largely domestically orientated.
+<br/><br/>
+Most repo contracts traded in Europe are fixed-term, but there is an important floating-rate repo sector (over 10%). Most floating-rate repo is conducted in the French market, but the product has become more popular in other European markets.
+
+<br/><br/>
+
+
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2019
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 03.02.2019<br/>
+Second update on 09.03.2019<br/>
+</p>
+
+</body>
+</html>

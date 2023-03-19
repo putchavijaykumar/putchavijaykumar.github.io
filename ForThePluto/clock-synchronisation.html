@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Clock Synchronisation under MiFID II</h2>
+<br>
+
+Clock synchronisation means that the various clocks that a trading firm uses for time-stamping their trades should be the same, and also the clocks used by various trading firms across the MiFID jurisdiction should be the same so as to enable cross-venue monitoring of orders and conducting audit. Clock synchronisation has a direct impact in many areas. The following are some of the areas where accuracy of time stamping is essential.
+<br>
+<ol>
+	<li>Time stamping of orders by trading venues</li>
+	<li>Time stamping of trades by trading venues</li>
+	<li>Time stamping of quotes by investment firms for pre-trade transparency purposes; and</li>
+	<li>Time stamping of trades by investment firms for trade reporting purposes for compliance under Best Execution rules</li>
+</ol>
+
+The clock synchronisation rules and technical guidelines are designed to ensure that firms have proper time stamping mechanisms in place. This helps in conducting audit and enforcing post-trade transparency requirements. It is also essential for conducting cross-venue monitoring of orders and detecting instances of market abuse and allows for clearer comparison between transactions and the market conditions prevailing at the time of their execution.
+<br><br>
+
+The number of orders received every second by a trading venue can be very high, much higher than that of executed transactions. As a result, a time granularity of one second would not be sufficient for the purposes of effective market manipulation surveillance of certain types of trading activities, particularly high-frequency trades. Therefore, it is necessary to establish minimum granularity requirements for recording the date and time of reportable events by operators of trading venues and their members or participants. Conducting an effective audit may require reconstructing all events relating to an order throughout the lifetime of each order in an accurate time sequence. The effective of this sort of audit heavily depends on the accuracy of time stamping of orders and trades.
+<br><br>
+
+MiFID has recommended the use of <strong>Coordinated Universal Time (UTC)</strong>. It is understood that perfect accuracy may not be achieved; there will be some clock drift due to various factors. Thus, it is appropriate for the regulators to determine an acceptable level for the maximum divergence from UTC time. Accordingly, MiFID has given the following guidelines for Clock Synchronisation.
+<br><br>
+
+<h3 class="side-heading-black">Reference Time</h3>
+Operators of trading venues and their members or participants shall synchronise the business clocks they use to record the date and time of any reportable event with the UTC time issued and maintained by the timing centers listed in the latest "Bureau international des poids et mesures" Annual Report on Time Activities. Currently, there are 90 such timing centers in the list. If any participant is using a time system which receives UTC data via a satellite system then they shall check for any offsets in time and remove such offsets before using the time for time-stamping.
+<br><br>
+
+<h3 class="side-heading-black">Level of accuracy for operators in trading venues</h3>
+
+Operators of trading venue shall ensure that their business clocks adhere to the level of accuracy specified by the MiFID regulations. The following is the level of accuracy specified by the regulations.
+<br><br>
+
+<table>
+	<th width="250">Gateway-to-gateway latency time of the trading system</th>
+	<th width="250">Maximum divergence from UTC</th>
+	<th width="250">Granularity of the timestamp</th>
+
+	<tr>
+		<td>> 1 millisecond</td>
+		<td>1 millisecond</td>
+		<td>1 millisecond or better</td>
+	</tr>
+
+	<tr>
+		<td><= 1 millisecond</td>
+		<td>100 microseconds</td>
+		<td>1 microseconds or better</td>
+	</tr>
+</table> 
+<br>
+
+<span class="flexbox-1">
+<u>Note:</u><br>
+Gateway to gateway latency is the time measured from the moment a message is received by an outer gateway of the trading venue's sytem, sent through the order submission protocol, processed by the matching engine, and then sent back until an acknowledgement is sent from the gateway.
+</span>
+
+<br><br>
+If the operator of the trading venue operates a voice trading system, request for quote (RFQ) or does not allow algorithmic trading, the business clocks should not diverge by more than one second from the UTC time.
+<br><br>
+
+<h3 class="side-heading-black">Level of accuracy for members or participants of a trading venue</h3>
+
+Members or participants of trading venues should ensure that their business clocks used to record the time of reportable events adher to the following level of accuracy.
+<br><br>
+
+<table>
+	<th width="150">Type of trading activity</th>
+	<th width="50">Maximum divergence from UTC</th>
+	<th width="50">Granularity of the time-stamp</th>
+	
+	<tr>
+		<td>Activity using high frequency algorithmic trading technique</td>
+		<td>100 microseconds</td>
+		<td>1 microsecond or better</td>
+	</tr>
+
+	<tr>
+		<td>Activity on voice trading systems</td>
+		<td>1 second</td>
+		<td>1 second or better</td>
+	</tr>
+
+	<tr>
+		<td>Activity on request for quote systems where the response requires human intervention or where the system does not allow algorithmic trading</td>
+		<td>1 second</td>
+		<td>1 second or better</td>
+	</tr>
+
+	<tr>
+		<td>Activity of concluding negotiated transactions</td>
+		<td>1 second</td>
+		<td>1 second or better</td>
+	</tr>
+
+	<tr>
+		<td>Any other trading activity</td>
+		<td>1 millisecond</td>
+		<td>1 millisecond or better</td>
+	</tr>
+</table>
+
+<br><br>
+
+<h3 class="side-heading-black">Compliance with the maximum divergence requirements</h3>
+
+Operators of trading venues and their members or participants shall establish a system of traceability to UTC. They shall be able to demonstrate to UTC by documenting the system design, functioning and specifications. They shall also be able to identify the exact point at which a timestamp is applied and demonstrate that the point within the system where the timestamp is applied remains constant. The review of this compliance shall be conducted at least once in a year.
+
+<br><br><br>
+
+
+<h3 class="side-heading-blue">What is UTC?</h3>
+
+UTC stands for Coordinated Universal Time (UTC). It is a maintained by the Bureau International Des Poids Et Mesures", which in short and in English is "Bureau of International Standards and Measurements"; its headoffice is located in France. It compiles the International Atomic Time (TAI) and Coordinated Universal Time (UTC). Both of these are generated from a combination of data from about 500 atomic clocks operated by about 90 timing centers (the list of timing centers is given below), which maintain a local UTC time. The Bureau runs an iterative algorithm that produces a free atomic time scale which is the weighted average of clock readings. 
+<br><br>
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2021
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 10<sup>th</sup> March 2021.
+</p>
+
+</body>
+</html>
+

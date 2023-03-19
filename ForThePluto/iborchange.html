@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">IBOR Transistion, ISDA Fallback Supplement, Protocol and Bilateral Agreements</h2>
+<br>
+
+As discussed in an earlier article on "Alternative Reference Rates", the Interbank Offered Rates (IBORs) are undergoing changes. Due to the industry's shift from IBORs to Risk-Free-Rates (RFRs), it widely expected that the new transactions would reference the Risk-Free-Rates. This shift is currently gradual and would gather pace as we come closer to the LIBOR cessation date, at the end of this year (2021). Even if we make the full shift to the RFRs, the question remains as to what would happen to the current transactions which still refer the IBORs.
+<br><br>
+
+Historically, the fallback in derivatives contracts for key IBORs have required the calculation agent to obtain quotations from reference banks. This process provided a temporary fix and is only applicable if the IBOR is not available for a short period of time (let's say a day or a few days). However, if the IBORs were to be unavailable for an uncertain period of time or in case of a permenent cessation of IBORs (like the forthcoming possible permanent cessation of LIBOR), this procedure would not work, as it is neither robust nor sustainable. 
+<br><br>
+
+Therefore, to address this issue, ISDA had developed new fallbacks based on adjusted versions of risk-free-rates (RFRs), or commonly known as the "Alternative Reference Rates". The below table shows some IBORs and their alternative RFRs.
+<br><br>
+
+<table>
+  <th>IBOR Currency</th>
+  <th>IBOR</th>
+  <th>IBOR Administrator</th>
+  <th>Alternative RFR</th>
+  <th>Alternative RFR Administrator</th>
+
+  <tr class="noneth">
+    <td>Australian Dollar</td>
+    <td>Bank Bill Swap Rate (BBSW)</td>
+    <td>Australian Securities Exchange (ASX)</td>
+    <td><mark style="background-color: #d2f8d2;">Reserve Bank of Australia Interbank Overnight Cash Rate (AONIA)</mark></td>
+    <td>Reserve Bank of Australia (RBA)</td>
+  </tr>
+
+  <tr style="background-color: lightcyan;">
+    <td>Canadian Dollar</td>
+    <td>Canadian Dollar Offered Rate (CDOR)</td>
+    <td>Refinitiv</td>
+    <td><mark style="background-color: #d2f8d2">Canadian Overnight Repo Rate Average (CORRA)</mark></td>
+    <td>Bank of Canada</td>
+  </tr>
+
+  <tr class="noneth">
+    <td rowspan="2">Euro</td>
+    <td>EURO-LIBOR</td>
+    <td>ICE-LIBOR</td>
+    <td rowspan="2"><mark style="background-color: #d2f8d2">Euro Short Term Rate (ESTR)</mark></td>
+    <td rowspan="2">European Central Bank (ECB)</td>
+  </tr>
+
+  <tr>
+    <td>Euro Interbank Offered Rate (EURIBOR)</td>
+    <td>European Money Markets Institute (EMMI)</td>
+  </tr>
+
+  <tr class="noneth" style="background-color: lightcyan;">
+    <td>Hong Kong Dollar</td>
+    <td>Hong Kong Interbank Offered Rate (HIBOR)</td>
+    <td>Treasury Markets Association (TMA)</td>
+    <td><mark style="background-color: #d2f8d2">Hong Kong Dollar Overnight Index Average (HONIA)</mark></td>
+    <td>TMA</td>
+  </tr>
+
+  <tr class="noneth">
+    <td rowspan="3">Japanese Yen</td>
+    <td>JPY-LIBOR</td>
+    <td>ICE-LIBOR</td>
+    <td rowspan="3">Tokyo Overnight Average Rate (TONA)</td>
+    <td rowspan="3">Bank of Japan</td>
+  </tr>
+
+  <tr class="noneth">
+    <td>Tokyo Interbank Offered Rate (TIBOR)</td>
+    <td>Japanese Bankers Association TIBOR Administrator (JABATA)</td>
+  </tr>
+
+  <tr>
+    <td>Euro-Yen</td>
+    <td>JBATA</td>
+  </tr>
+
+  <tr class="noneth" style="background-color: lightcyan;">
+    <td>Singapore Dollar</td>
+    <td>Singapore Dollar Swap Offer Rate (SOR)</td>
+    <td>ABS Co</td>
+    <td>Singapore Overnight Rate Average (SORA)</td>
+    <td>MAS</td>
+  </tr>
+
+  <tr>
+    <td>Swiss Franc</td>
+    <td>CHF-LIBOR</td>
+    <td>ICE Benchmark Administrator (IBA)</td>
+    <td>Swiss Average Rate Overnight (SARON)</td>
+    <td>SIX Swiss Exchange</td>
+  </tr>
+
+  <tr class="noneth" style="background-color: lightcyan;">
+    <td>Thai Baht</td>
+    <td>Thai Baht Interest Rate Fixing (THBFIX)</td>
+    <td>Bank of Thailand</td>
+    <td>Thai Overnight Repurchase Rate (THOR)</td>
+    <td>Bank of Thailand</td>
+  </tr>
+
+  <tr>
+    <td>Great Britain Pound</td>
+    <td>GBP-LIBOR</td>
+    <td>ICE</td>
+    <td>Sterling Overnight Index Average (SONIA)</td>
+    <td>Bank of England</td>
+  </tr>
+
+  <tr class="noneth" style="background-color: lightcyan;">
+    <td>USD</td>
+    <td>USD-LIBOR</td>
+    <td>ICE</td>
+    <td>Secured Overnight Financing Rate (SOFR)</td>
+    <td>Federal Reserve Bank of New York (NY FED)</td>
+  </tr>
+
+
+</table>
+<br><br>
+
+Obviously, there is a significant difference between the IBORs and the RFRs. The following are the two main differences.
+<br>
+
+<ol>
+  <li>IBORs are based on unsecured lending, while RFRs are mostly based on secured lending.</li>
+  <li>IBORs can be found for various terms but the RFRs are mostly overnight rates.</li>
+</ol>
+
+Therefore, the RFRs cannot be the direct replacement or fallback for the IBORs; some adjustment need to be done to the RFRs to make them useful as fallback rates. Thus, the adjustment is made to the term and the spread to make them the fallback rates. ISDA has given guidelines as to how these adjustments can be carried out. With regard the the term, the adjustment method is "compounded setting in arrears", and for spread it is based on the "median of the historical differences between IBOR for each tenor and the compounded RFR for that tenor over a five-year period prior to an announcement constituting a trigger event". Once these adjustments are made, the final Fallback Rate is published.
+<br><br>
+
+Bloomberg was selected as the vendor for the publication of these adjusted rates or Fallback rates. Currently, the following Fallback rates are published by Bloomberg.
+<br>
+
+<ul>
+  <li>AUD BBSW: 1M, 2M, 3M, 4M, 5M, 6M</li>
+  <li>CAD CDOR: 1M, 2M, 3M, 6M, 12M</li>
+  <li>CHF LIBOR: S/N, 1W, 1M, 2M, 3M, 6M, 12M </li>
+  <li>EUR EURIBOR: 1W, 1M, 3M, 6M, 12M</li>
+  <li>EUR LIBOR: O/N, 1W, 1M, 2M, 3M, 6M, 12M</li>
+  <li>GBP LIBOR: O/N, 1W, 1M, 2M, 3M, 6M, 12M</li>
+  <li>HKD LIBOR: O/N, 1W, 2W, 1M, 2M, 3M, 6M, 12M</li>
+  <li>JPY Euroyen TIBOR: 1W, 1M, 3M, 6M, 12M</li>
+  <li>JYP LIBOR: S/N, 1W, 1M, 2M, 3M, 6M, 12M</li>
+  <li>JPY TIBOR: 1W, 1M, 3M, 6M, 12M</li>
+  <li>USD LIBOR: O/N, 1W, 1M, 2M, 3M, 6M, 12M</li>
+</ul>
+<br><br>
+
+How are IBORs implemented in practice? Would the implementation of these Fallback require any changes to legal documentation?. To address these issues, ISDA has published the IBOR Fallback Supplement, ISDA Fallback Protocol and ISDA IBOR Bilateral Agreement. These documents are discussed below.
+<br><br>
+
+<h3 class="side-heading-blue">IBOR Fallback Supplement</h3>
+The ISDA IBOR Fallback Supplement is a supplement to the 2006 ISDA Definitions. The supplement came into effect on <mark>January 25, 2021</mark>. Being a supplement, it is automatically applicable, without any negotiation, to the parties for all transactions incorporating the 2006 ISDA Definitions. If parties want to opt out from the supplement, they can do so bilaterally.
+<br><br>
+The Fallback supplement provides a better alternative to the traditional method of getting quotes from reference banks. If parties do not want to opt out of these changes, they do not have to do anything, the fallbacks apply automatically and they can refer to the new fallback rates in the event the IBOR rates are not available. If IBOR rates are available (for eg, LIBOR is still published, and would be published for some more time, at least till the end of this year), parties can continue to use the IBOR rates. The Supplement becomes useful only when the IBOR rates are not available.
+<br><br>
+
+The main benefit of the supplement is that parties do not have to bilaterally amend their legal documents. The supplement applies automatically and the new fallback rates as published by Bloomberg can be used whenever required.
+<br><br><br>
+
+
+
+<h3 class="side-heading-blue">IBOR Fallback Protocol</h3>
+The ISDA Fallback Supplement is applicable from its effective date i.e. January 25, 2001. For all transactions that are entered into on or after this effective date, the Fallback rules apply. For transactions entered prior to January 25, 2001 <i><mark>(the legacy contracts)</mark></i>, the ISDA Fallback Supplement cannot help. Therefore, ISDA has launched the ISDA IBOR Fallback Protocol, which is applicable for legacy contracts. Being a protocol, it is not automatically applicable to parties. Parties will need to accept this protocol by signing it. Once done, the parties would be known as the "adhering party" to this protocol. The adherence to the protocol helps amend the legacy derivatives contrats to include the new fallbacks (as discussed above). 
+<br><br>
+
+As usual, the protocol is applicable on a multilateral level, removing the need for any bilateral documentary changes. As with any other ISDA Protocol, adherence is voluntary and will amend contracts only between two adhering parties - in other words, it will not amend contracts between any adhering party and a non-adhering party or between two non-adhering parties.
+<br><br><br>
+
+<h3 class="side-heading-blue">IBOR Bilateral Template</h3>
+In case, parties do not want to adhere to the ISDA Fallback Protocol but amend some bilateral agreements to include the fallbacks, or accept the ISDA Fallback Protocol but want to exclude a few legacy transactions or contracts from its scope, or want to adopt their own fallbacks then it can do so through the ISDA IBOR Bilateral Templates. The templates can be used to make the necessary changes and execute bilaterally to accomplice specific objectives with regard to fallbacks.
+<br><br>
+
+
+
+
+
+
+
+
+<br><br><br>
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+  <footer>
+      <div id="footer">
+        Putcha Vijay Kumar, 2021
+      </div>
+    </footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 30<sup>th</sup> May 2021.
+</p>
+
+</body>
+</html>

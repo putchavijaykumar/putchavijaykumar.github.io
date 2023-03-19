@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Valuation of Forward Rate Agreement (FRA)</h2>
+<br>
+
+The valuation of FRA is done on the Start Date of FRA for the purpose of settlement and on any other day between the Trade Day and Start Date either for cancellation or MtM purposes. We will discuss both the scenarios, as below.
+<br><br>
+
+<h3 class="side-heading-blue">Valuation on Start Date</h3>
+On the start date, the fixed rate is compared with the floating rate obtained on the fixing date (two days prior to the start date) and the winner or loser is decided. If the fixed rate is more than the floating rate, the FRA buyer will pay the net amount to the FRA seller. If the floating rate is more than the fixed rate, the FRA seller will pay to the FRA buyer. The payment accrues on the End Date or Termination Date. However, to mitigate the credit risk, the payment is advanced to the Start Date by applying discounting. The discount rate applied is the floating rate obtained on the fixed date. For FRA involving AUD and NZD currencies, a separate discounting method is adopted: the fixed cash flow is discounting using the fixed rate and the floating cash flow is discounting using the floating rate and the net amount is obtained for settlement purposes.
+<br><br>
+
+The following is an example of valuation on Start Date.
+<br><br>
+<b><u>Inputs</u></b><br>
+Start Date = 9th December 2017 <br>
+End Date = 9th January 2018 <br>
+Notional = USD 100 million <br>
+Fixed Rate = 1.75% <br>
+Market rate on fixing date = 1.68% <br>
+Day count fraction = Actual / 360 
+<br><br>
+
+<b><u>Calculation</u></b><br>
+No of days = 31 <br>
+Fixed rate payment = 100,000,000 x 1.75% x 31/360 = USD 150694.44 <br>
+Floating rate payment = 100,000,000 x 1.68% x 31/360 = USD 144666.67 <br>
+Difference between fixed and floating = 6,027.77 <br>
+This amount has to be discounted to the Start Date using the floating rate as the discounting rate. <br>
+The discounted rate is 6,027.77 / (1+1.68%)<sup>31/360</sup> = 6,019.136.
+<br><br>
+
+<b><u>Settlement</u></b><br>
+The fixed rate is more than the floating rate and, hence, the FRA buyer will need to pay this to the FRA seller on the start date.
+
+<br><br><br>
+
+<b><u>Calculation using FRA Yield Discounting Method</u></b> <br>
+Discounting of fixed cash flow to the start date = 150694.44 / (1+1.75%) <sup>31/360</sup> = 150694.44 / 1.001495 = 150469.48<br>
+Discounting of floating cash flow to the start date = 144666.67 / (1+1.68%) <sup>31/360</sup> = 144666.67 / 1.001435 = 144459.37 <br>
+Difference between fixed and floating = 6,010.11 <br>
+This amount is paid by the FRA buyer to the FRA seller.
+
+<br><br>
+<br>
+
+
+<h3 class="side-heading-blue">Valuation of FRA on any other day before the start date.</h3>
+
+To understand valuation of FRA on any date in between the trade date and start date, let us consider the following example.
+<br><br>
+On March 12, we bought a FRA for June 14/Sep 14 period at 1.75%. On May 6, we want to cancel the FRA. The market data on money market rates on this day are as follows:
+<br><br>
+
+<table>
+	<th>Period</th>
+	<th>Start Date</th>
+	<th>End Date</th>
+	<th>Rate</th>
+
+    <tr>
+    	<td>Spot/1M</td>
+    	<td>May 8</td>
+    	<td>June 8</td>
+    	<th>1.65%</th>
+    </tr>
+
+    <tr>
+    	<td>Spot/2M</td>
+    	<td>May 8</td>
+    	<td>Jul 8</td>
+    	<td>1.69%</td>
+    </tr>
+
+    <tr>
+    	<td>Spot/3M</td>
+    	<td>May 8</td>
+    	<td>Aug 8</td>
+    	<td>1.82%</td>
+    </tr>
+
+    <tr>
+    	<td>Spot/6M</td>
+    	<td>May 8</td>
+    	<td>Nov 8</td>
+    	<td>1.90%</td>
+    </tr>
+</table>
+<br>
+Let's assume that all days are business days and use linear interpolation for stub periods.
+<br><br>
+
+<b><u>Calculation</u></b><br>
+Trade date =  March 12 <br>
+Start date = June 14 <br>
+End date = Sep 14th <br>
+FRA rate (fixed rate) = 1.75% (Actual/360) <br>
+Market side = Buy <br>
+Notional amount = USD 100 million <br>
+FRA type: 3 x 6 FRA 
+<br><br>
+
+<u>Step 1: Calculation of days left</u><br>
+Since we are cancelling the FRA on May 6, we need to calculate the remaining period of FRA - both the short period and long period. <br>
+The cancellation on May 6 is effective from May 8. Therefore, the short and long periods would need to be calculated from May 8. <br>
+From May 8 (cancellation effective date) to June 14 (start date), the number of days = 37 (let's call this short period)<br>
+From May 8 (cancellation effective date) to Sep 14 (end date), the number of days = 127 (let's call this long period)<br>
+Note that the difference between short and long period is still 90 days, which is equal to the original FRA period of 90 days.
+<br><br>
+
+<u>Step 2: Calculate the interest rate applicable from the current money market rates</u><br>
+We do not have a direct rate for the short period (37 days), we must get that rate from the 30-day rate and 60-day rate by way of interpolation. <br>
+The 30-day rate is 1.65%. <br>
+The 60-day rate is 1.69% <br>
+The 37-day rate would be: <br>
+
+\[
+{{x - 1.65} \over {37 - 30}} = {{1.69 - 1.65} \over {60-30}}
+\]
+<br>
+
+\[
+x = 1.6593 \text %
+\]
+
+<br><br>
+
+Similarly, we do not have the rate for the long period (129 days), we must get that rate from the 90-day rate and 180-day rate by way of interpolation. <br>
+The 90-day rate is 1.82% <br>
+The 180-day rate is 1.90% <br>
+The 127-day rate would be: <br>
+
+\[
+{{x - 1.82} \over {127 - 90}} = {{1.90 - 1.82} \over {180-90}}
+\]
+<br>
+
+\[
+x = 1.852 \text %
+\]
+<br><br>
+
+<u>Step 3: Calculate the new FRA rate</u> <br>
+The inputs for this are: <br>
+37-day rate = 1.6593% <br>
+127-day rate = 1.852% <br>
+Days in between = 90 days <br>
+New price of Fixed Rate = <br>
+
+\[
+Price \; of \; the \; fixed \; rate = \left[{(1 + Z_N \; \text x \; N) \over (1 + Z_M \; \text x \; M)} - 1\right] \text \ (N-M)
+\]
+<br>
+Where,<br>
+Z<sub>N</sub> = zero rate for the long period of N <br>
+Z<sub>M</sub> = zero rate for the short period of M <br>
+F<sub>M,N</sub> = Forward rate for the period between M and N <br>
+M, N = length of long and short periods expressed in year with N later than M.
+<br><br>
+
+\[
+Price \; of \; the \; fixed \; rate = \left[{(1 + 1.852\text % \; \text x \; 0.3527) \over (1 + 1.659 \text % \; \text x \; 0.1027)} - 1\right] \text \ (0.3527 - 0.1027) = 0.01927 \; or \;1.9279 \text %
+\]
+
+<br><br>
+
+<u>Step 4: Compare the new rate with the old rate and compute the payoff</u> <br>
+New rate = 1.9279% <br>
+Old rate = 1.75% <br>
+Difference = 0.177% <br>
+
+\[
+Payoff = {(1.9279 - 1.75) \over 100} \; \text x \; {90 \over 360} \; \text x \; $\; 100,000,000 = $44,475
+\]
+
+<br><br>
+
+<u>Step 5: Discount the amount to the date of cancellation</u> <br>
+Discount rate applicable = 1.6593% <br>
+
+\[
+Discounted \; payoff = {{44,475} \over {(1+1.6593 \text %)^{90 \over 360}}} = 44,292.42
+\]
+
+<br><br>
+
+<span class="flexbox-1">
+	This is the amount (44,292.42) that will be settled by the parties. Since the new FRA rate is more than the old rate, the FRA buyer has gained. The FRA seller will need to pay this amount to the FRA buyer. 
+</span>
+
+<br><br>
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 19<sup>th</sup> November 2020.
+</p>
+
+</body>
+</html>

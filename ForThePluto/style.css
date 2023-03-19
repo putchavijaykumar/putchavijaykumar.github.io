@@ -1,0 +1,507 @@
+/*START OF CODE FOR INDEX PAGE SEARCH FORM*/
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  /*background-image: url('/css/searchicon.png');*/
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  /*font-size: 16px;*/
+  padding: 10px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  background-color: #FCF3CF;
+
+}
+
+#myInput:focus {
+  background-color: #F9E79F;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 10px;
+  text-decoration: none;
+  /*font-size: 18px;*/
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #FCF3CF;
+}
+
+#myOL {
+  padding: 0px;
+  margin: 0;
+}
+
+#myOL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 10px;
+  text-decoration: none;
+  /*font-size: 18px;*/
+  color: black;
+  display: block
+}
+
+#myOL {
+  margin-left: 15px;
+}
+
+#myOL li a:hover:not(.header) {
+  background-color: #FCF3CF;
+}
+
+
+/*END OF CODE FOR INDEX PAGE FORM*/
+
+
+/* STYLE CODE FOR THE BODY*/
+
+#container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+body {
+  align: center;
+
+}
+
+#actualcontent {
+  width: 100%;
+  float: left;
+  text-align: justify;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+#actualcontent-2 {
+  width: 100%;
+  float: left;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: Menlo, Inconsolata, Consolas;
+
+}
+
+#actualcontent h2.main-heading-blue {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+  text-align: center;
+}
+
+#actualcontent h2.main-heading-black {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: black;
+  text-align: center;
+}
+
+#actualcontent h2.main-heading-red {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: red;
+  text-align: center;
+}
+
+#actualcontent h3.main-heading-blue {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+  text-align: center;
+}
+
+#actualcontent h3.side-heading-black {
+  font-family: Menlo, Inconsolata, Consolas;
+}
+
+#actualcontent h3.side-heading-blue {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+}
+
+#actualcontent h3.side-heading-red {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: red;
+}
+
+#actualcontent h4.side-heading-fuchsia {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: fuchsia;
+}
+
+#actualcontent h3.c {
+  font-family: Menlo, Inconsolata, Consolas;
+}
+
+#actualcontent h3.d {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+}
+
+#actualcontent b.dg {
+  color: darkgreen;
+}
+
+.selected {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#table {
+  padding: 6px;
+  width: 100%;
+}
+
+th {
+  background-color: #FFFFCC;
+}
+
+td,th {
+  border: 1px solid black;
+  text-align: left;
+  padding-bottom: 6px;
+}
+
+/* The below is the original table design where nth (even) row is highlighted in gray colour */
+tr:nth-child(even) {
+  background-color: #DDDDDD;
+}
+
+/* The below is to set the data in TD to center */
+td.c,th.c {
+  border: 1px solid black;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+/* The below is to set the data in TD to right */
+td.rt,th.rt {
+  border: 1px solid black;
+  text-align: right;
+  padding-bottom: 6px;
+}
+
+/* The below is to change the background of table even row to white so that alternative gray colours do not apply */
+tr.noneth:nth-child(even) {
+  background-color: white;
+}
+
+/* The below is to change the background of table row to gray */
+tr.cgray {
+  background-color: #DDDDDD;
+}
+
+/* The below is to change the background of table row to green */
+tr.cgreen {
+  background-color: lightgreen;
+}
+
+tr.lightgreen {
+  background-color: #b4ecb4;
+}
+
+tr.lightlightgreen {
+  background-color: #c8f1c8;
+}
+
+tr.verylightgreen {
+  background-color: #dcf6dc;
+}
+
+tr.verylightred {
+  background-color: #ffb4b4;
+}
+
+/* The below centers the entire row */
+tr.center td {  
+  text-align: center;
+}
+
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}
+
+ol.e {
+  list-style-type: lower-roman;
+}
+
+#footer {
+
+  clear: both;
+  text-align: center;
+    
+}
+
+#navbar {
+  position: fixed;
+
+}
+
+.top {
+  position: fixed;
+
+}
+
+.bottom {
+  position: fixed;
+
+}
+
+
+.italicind {
+  font-style: italic;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: block;
+}
+
+.normalind {
+  padding-left: 50px;
+  display: block;
+}
+
+.normaldoubleind {
+  padding-left: 50px;
+  padding-right: 50px;
+  display: block;
+}
+
+.normalind25 {
+  padding-left: 25px;
+  display: block;
+}
+
+.normalind50 {
+  padding-left: 40px;
+  display: block;
+}
+
+.normalind75 {
+  padding-left: 75px;
+  display: block;
+}
+
+.flexbox-1 {
+  background-color: #fdfd96;
+  font-family: Menlo, Inconsolata, Consolas;
+  font-size: 14px;
+}
+
+
+.tc td,th {
+  border: 1px solid black;
+  text-align: center;
+  padding-bottom: 6px;
+}
+
+.dropcap1 {
+  float: left;
+  width: 0.7em;
+  font-size: 400%;
+  font-family: 'Cookie', cursive;
+  line-height: 80%;
+}
+
+.topheader {
+  
+}
+
+.topheader ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.topheader li {
+  list-style: none;
+  float: left;
+}
+
+.topheader ul li a {
+  display: block;
+  float: left;
+  padding-left: 10px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+
+}
+
+.topheader a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+
+#myOL.ptsans a {
+  font-family: 'PT Sans', sans-serif;
+
+}
+
+
+
+/* The below is the CSS for the header NAV */
+
+/*
+
+.top-header-nav-parent {
+  height: 6vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 3px;
+  padding-top: 0px;
+  position: fixed;
+    
+}
+
+.top-child-1 {
+  height: 6vh;
+  width: 200px;
+  background: #DEF3FD;
+  /*#F3F3F3; #F9E79F; #FCF3CF; #FCF7DE; #DEFDE0; #DEF3FD; #FDDFDF; #F0DEFD*/
+  
+/*
+  order: 0;
+  flex-grow: 0;
+  text-align: Left;
+  align-content: center;
+  padding-left: 0px;
+}
+
+.top-child-1 p {
+  color: black;  
+}
+
+.top-child-1 a:link {
+  color: black;
+  text-decoration: none;
+  padding-left: 0px;
+}
+
+.top-child-1 a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.top-child-1 ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 16px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  text-align: center;
+  flex-wrap: wrap;
+
+}
+
+.top-child-1 li {
+  text-decoration: none;
+  margin-left: 0px;
+
+}
+
+
+.top-child-2 {
+  height: 6vh;
+  width: 200px;
+  background: #DEF3FD;
+  order: 1;
+  flex-grow: 2;
+  text-align: left;
+  align-content: center;
+  white-space: nowrap;
+  /*flex-wrap: wrap;*/
+/*
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.top-child-2 a:link {
+  color: black;
+  display: block;
+  text-decoration: none;
+}
+
+.top-child-2 a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.top-child-2 ul {
+  list-style-type: none;
+}
+
+.top-child-2 li {
+  text-decoration: none;
+}
+
+.top-child-3 {
+  height: 6vh;
+  width: 200px;
+  background: #DEF3FD;
+  order: 2;
+  flex-grow: 1;
+  align-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .top-child-3 {
+    background: white;
+  }
+
+}
+
+
+*/
+

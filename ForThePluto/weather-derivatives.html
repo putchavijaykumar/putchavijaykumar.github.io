@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Cookie&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h3 div id="top" align="center">Weather Derivatives</h3>
+<br><br>
+
+<span class="dropcap1">W</span>eather derivatives industry is relatively young. Companies are not just exposed to risks from interest rates and foreign exchange fluctuations but also from weather. A good weather may result in good production, while bad weather can hamper production or even cause huge losses. Energy producers, energy consumers, farmers (argicultural companies), ice-cream and beverages (hot and cold) manufacturers and retail units, leisure industry and others are exposed to the risks of weather fluctuations. Some companies would benefit from mild weather, some benefit from cold weather (like consumption of coffee and wine, tourism in tropical resorts, use of home heaters, etc., increase during cold seasons), while others may benefit from very hot weather (ice creams sales may increase in hot summers, similarly, sales in indoor ski's resorts, tourism in hill-stations, power consumption due to increased use in airconditioning, etc.). The business model of these companies depend heavily on assumptions on weather. If the actual weather deviates from the assumptions, they face risks.
+<br><br>
+Though one can argue that commodity derivatives can be used to hedge the price risks, the reality is that commodity derivatives are not available on all products and/or commodities. Moreover, commodity derivatives are designed to hedge price risk but not volumetric risk. <i>Volumetric risk is the risk that the company cannot sell the volume required to generate a sufficient profit even though it is able to get the price that it may desire for its profits. For example, a farmer might sell his crop at a good price, but due to the weather, he may not be able to harvest sufficient quantity.</i>
+<br><br>
+Is is estimated that about 30% of the US economy is exposed to weather risk.
+<br><br>
+
+It is difficult to define weather accurately. In general, the phenomena of weather includes things such as Heat (temperature), Dryness, (Humidity), Sunshine, Wind, Rainfall, Snowfall, Fog, Dust, Clouds, Hailstorms, Hurricanes, Lightning, Tornado. These variables do not occur in isolation. Some occur simultaneously and are connected to each other. Some of these events are difficult to measure while others can be measured to only a certain degree of accuracy.
+<br><br>
+Derivatives can be created even without an underlying cash market but they cannot be created if proper measurement or calculation of the underlying cannot be made (whatever the underlying may be). There must be a solid basis and methodology for calculation of the underlying. Of the weather phenonema that we listed above, calculation (to an acceptable degree of precision) can be made only for certain underlyings such as temperature, rain, snowfall, etc. Even if calculation can be made for all the phenomena (or weather variables) there may not be a need to create such derivatives as either there may not be a market for such derivatives or they can probably be handled via insurance contracts. Thus, currently, derivatives on things such are hailstorms, gail, tornado, etc., are either not available or popular. Moreover, some phenomena is observed occasionally and in various levels of intensity and the risks associated due to them may not be easily ascertained (even though there is surely a risk from them) thereby making it both unnecessary and difficult to create derivatives on them. Of all the phenomena, the most common one that affects a variety of industries (agriculture, tourism, certain manufacturing and services, etc.) is heat and cold. As discussed earlier, some industries depend on hot weather (hotter the weather, the better it is for them), while some other industries depend on cold weather (colder the weather, the better it is for them); while many other industries (particularly Agriculture) depends on the weather being in a particular range (neither too hot not too cold). So, if we can measure heat and cold (to an reasonable and acceptable degree of accuracy) then we can create derivatives on them, which can be used by many industries. The following paragraphs discuss the measurement of Heat and Cold for derivatives purposes.
+<br><br>
+
+<h3 class="d">Heading Degree Day (HDD) and Cooling Degree Day (CDD)</h3>
+
+<!--- <b class="b"><u>Heating Degree Day (HDD)</u></b><br><br> -->
+A day's HDD is defined as:
+<br> 
+
+\[ HDD = Max (0, \ 65 - A)\]
+
+<br>
+and <br><br>
+
+A day's CDD is defined as:
+<br>
+\[ CDD = Max (0, \ A - 65)\]
+
+where:
+<ul>
+	<li>A = Average of the highest and lowest temperature during the day recorded at a specific weather station (usually at airports), measured in degree Fahrenheit. </li><br>
+	<li>65 = It is the common benchmark to differentiate between heating and cooling. <i>One of the reason as to how this benchmark has been arrived at is described in a section titled "Growing Degree Days (GDD) later in this reading material.</i> 65 degree Fahrenheit is equal to 18 degree Celsius. For derivatives purposes, the 65 degree Fahrenheit is a baseline selected by utility companies since furnaces and airconditioners are turned on above and below this benchmark. </li>
+</ul>
+<br><br>
+
+<b><u>Heating Degree Day (HDD)</u></b><br>
+Let's suppose that on a winter day, the high temperature is 41 and low is 25. The HDD can be calculated as follows: <br>
+
+\[ Average \ temperature \ (A) = {41 + 25 \over 2} = {66\over2} = 33 \]
+
+\[ Thus, HDD = Max (0, 65 - 33 ) = Max (0, 32) = 32 \]
+
+<br>
+Let's say the next day, the high temperature is 38 and low is 18. The HDD is as follows. <br>
+
+\[ Average \ temperature \ (A) = {38 + 18\over 2} = {56\over 2} = 28 \]
+
+\[ Thus, HDD = Max (0, 65 - 28) = Max (0, 37) = 37 \]
+
+<br>
+
+<font color="red" style="font-family: consolas"><b>
+A day's HDD is a measure of the volume of energy required for heating during the day. It is measure used during winter or cold days. 
+</b></font>
+
+<br><br><br>
+<b><u>HDD Accumulation</u></b><br>
+In the above example, on the first day, the HDD was 32 and on the second day the HDD is 37. HDD Accumulation refers to the cummulative HDD over a particular period of time. The time period of observation can be a week, forthnight, month, quarter, or longer durations. Usually, for derivatives purposes, the HDD accumulation is either a month or a quarter. In the above example, we have calculated HDD for two days. The HDD for two cummulative days is: <br>
+
+\[ HDD Accumulation = 32 + 37 = 69 \]
+
+<br><br><br>
+
+
+<b><u>Cooling Degree Day (CDD)</u></b><br>
+Let's suppose on a summer day the high temperature is 92 and low is 78. the CDD can be calculated as follows:
+
+\[ Average \ temperature \ (A) = {92 + 78\over 2} = {170\over 2} = 85 \]
+
+\[ Thus, CDD = Max(0, 85 - 65) = Max(0, 20) = 20 \]
+
+<br>
+
+Let's say the next day, the high temperature is 90 and low is 65. The CDD is as follows;
+
+\[ Average \ temperature \ (A) = {90 + 65 \over 2} = {155\over 2} = 77.5 \]
+
+\[ Thus, CDD = Max(0, 77.5 - 65) = Max(0, 12.5) = 12.5\]
+
+<br>
+
+<font color="red" style="font-family: consolas"><b>
+A day's CDD is a measure of the volume of energy required for cooling during the day. It is measure used during summer or hot days. 
+</b></font>
+<br><br><br>
+
+<b><u>CDD Accumulation</u></b><br>
+In the above example, on the first day, the CDD was 20 and on the second day the CDD is 12.5. CDD Accumulation refers to the cummulative CDD over a period of time. The time period of observation can be a week, forthnight, month, quarter, or longer durations. Usually, for derivatives, purposes, the CDD accumulation is either a month or a quarter. In the above example, we have calculated CDD for two days. The CDD for two cummulative days is: <br>
+
+\[ CDD Accumulation = 20 + 12.5 = 32.5 \]
+
+<br><br><br>
+
+<h3 class="d">HDD and CDD Contracts</h3>
+HDD and CDD contracts (based on HDD and CDD Accumulation) are the used both for OTC and Exchange traded weather derivative contracts. A typical OTC weather derivative is a forward or option contract whose payoff depends on the cummulative HDD or CDD during a month. A typical exchange traded weather derivative is a future or option contract whose payoff depends on the cummulative HDD or CDD during contract months. On CME, the HDD and CDD contracts are, currently, available for Nov, Dec, Jan, Feb, Mar plus Oct and Apr. The following paragraphs describe how these contracts function.
+<br><br><br>
+
+<b><u>HDD Forward Contract - OTC Contract</u></b><br>
+Let's suppose that we are in November and an Ice cream company located in New York is afraid that the weather would be too cold in December of a particular year and that its sales would suffer due to this. It thinks that the average daily temperature during that December would be 50 degrees Fahrenheit. In otherwords, the cummulative HDD for December would be 465 HDD (15 HDDs per day x 31 days). It's business might do alright if the average temperature is 60 degrees Fahrenheit but not below it. At 60 degree Fahrenheit, the HDD accumulation would be 155 (5 HDDs per day x 31 days).
+<br><br>
+It goes to a derivatives dealer (in OTC market) in November and enters into a contract for 150 HDDs New York for December. If by the end of December the actual HDD accumulation (as observed) in New York is 400, then the dealer (being the loser in the contract) will pay the Ice cream company the difference between the contracted HDDs and the observed (or actual) HDDs, i.e. 250 <i>(400-150)</i>. For settlement of the contract, the parties will have to agree on a payment rate per degree day. Let's suppose that the agreed payment rate is $1,000, the total settlement amount would be $250,000 ($1,000 x 250 HDDs). 
+<br><br>
+If at the end of December the actual HDD accumulation in New York is 50, then the Ice cream company would pay to the dealer $100,000 ($1,000 x 100 HDDs).
+<br><br>
+In otherwords, if the temperature becomes very cold as expected and feared by the Ice cream company then it would win in the derivatives contract (though it might have lost some money in its business due to poor sales) and if the temperature increases then it would lose in the derivatives contract (it would probably have had good sales due to hot weather). 
+<br><br>
+<br>
+
+<b><u>HDD Options Contract - OTC Contract</u></b><br>
+Continuing with the above example, the Ice cream company could have bought an Call options contract from the dealer with a strike price of 150 HDDs by paying a premium of let's say $7,500. If the actual HDDs at the end of December is 400, the option is in-the-money for the company and thus would enforce it. The settlement ammount would be $250,000 ($1,000 x 250 HDDs). <i>The net profit would be slightly less due to the premium paid. The net profit is $2,42,500 ($250,000 - $7,500)</i>. If the actual HDDs at the end of December is 50, the option is out-of-the-money and thus the company would not exercise it. There will not be any settlement of this contract. The company would have forgone the premium that it had paid which results in a loss of $7,500 to it. The dealer, on the other hand, would have made a profit of $7,500, which is the premium it pocketed.
+<br><br>
+<br>
+
+<b><u>HDD Futures Contract - Exchange Traded contracts</u></b><br>
+Continuing with the above example, the Ice cream company could have gone to a broker on CME and purchased a futures contract (taken a long position). In OTC contracts, the contract payment rate is decided by the parties. On exchanges (like CME), the contracts are standardised. A single contract unit on CME is $20 times the respective CME Degree Days (HDD) Index. For 150 HDDs, the contract value would be $3,000 ($20 per contract x 150 HDDs). If the company wants to cover itself for the same amount as it did in OTC market then it would have to buy more contracts (50 contracts). The value of 50 futures contracts would be $150,000 ($20 times x 150 HDDs x 50 contracts). If at the end of December, the actual HDDs as per CME Degree Days (HDD) Index is 400, the company is in profits on its long contract. The settlement amount would be $250,000 (20 timex x 150 HDDs x 50 contracts). If the HDD Index is 50, the company would have lost, it would have to pay to the exchange $100,000 (20 times x 50 HDDs x 50 contracts).
+<br><br>
+
+<b><u>HDD Option Contract Contract - Exchange Traded contracts</u></b><br>
+Continuing with the above example, the Ice cream company could have purchased a long call at a strike of $3000 per contract (150 HDDs x $20 per contract). A single contract unit on CME is $20 times the respective CME Index Points. To hedge as earlier, the company would have to purchase 50 option contracts. The total contract value would be $150,000 (150 HDDs x $20 per contract x 50 options). Let's assume that the premium per contract is $120. Therefore, the premium for 50 option contracts would be $6,000 ($120 x 50 options). If the actual CME index is 400 HDDs at the end of December, the option is in-the-money and the company would get the settlement amount as it is in profits. The settlement amount would be $250,000 (250 HDDs x $20 per HDD x 50 options). Alternatively, if the HDD index is 50, the option is out-of-the money and there will be no settlement. The option expires worthless for the buyer. The company loses the premium i.e. $6,000. The option seller profits by $6,000.
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 7th March 2020.<br>
+</p>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Portfolio Compression</h2>
+<br>
+
+Trading firms build-up economically redundant trades over a period of time. Portfolio Compression (Trade Compression or Portfolio Trade Compression or Tear-up) is a technique to remove such redundant or non-economic trades from the portfolio of firms. It aims at reducing the gross notional exposures, while keeping the net exposures the same. In other words, trade compression looks to eliminate chains of trades in a network. The below diagram shows the effect of trades before and after compression.
+<br><br>
+
+Ideally, compression would eliminate all such cycles of trades from the network. In practice, all cycles may not be eliminated, as it requires parties to volutarily participate and agree to compress trades. The general market practice is that firms take the help of third parties that offer compression as a service and remove only certain trades from their portfolios. While submitting the trades for compression, firms provide their constraints and tolerences. 
+<br><br><br>
+
+<img src="images/before-and-after-compression.png" alt="Portfolio Compression" height="300" width="800">	
+
+<br><br><br>
+
+Portfolio compression can be carried out bilaterally or multilaterally. The best results can be obtained when it is conducted multilaterally. The following examples show both the methods.
+<br><br>
+
+<b><u>Bilateral Compression</u></b><br>
+Let's suppose <br>
+Party A bought 100 shares of Microsoft from Party B @ USD 50 for settlement T+1 year.
+<br>
+Party A sold 50 shares of Microsoft to Party B @ USD 55 for settlement T+1 year.
+<br><br>
+The market exposure to both the parties is 50 units of Microsoft shares.
+<br>
+The above trades can be compressed into a single trade in any of the following two ways.
+<br>
+<ol>
+	<li>Cancel the original two trades and create a new trade at a new price - For example, the new trade is Party A buys 50 shares of Microsoft from Party B @ USD 45 per share; or</li>
+	<li>Cancel the original two trades and create a new trade at the original price and settle the realised profit now - For example, the new trade is Party A buys 50 shares of Microsoft from Party B @ USD 50 per share and the realised profit of USD 250 can be settled now by discounting it at the appropriate discounting rate.</li>
+</ol>
+
+In the above example, we achieved a 50% compression in trades (from 2 trades to 1 trade), and a 33% compression in notional value (from total gross notional of 150 to notional of 50).
+
+<br><br><br>
+
+<b><u>Multilateral Compression</u></b><br>
+Let's consider the following trades in Microsoft shares by four parties:
+<ol>
+	<li>Party A sold 100 shares to Party B</li>
+	<li>Party A bought 50 shares from Party C</li>
+	<li>Party A bought 75 shars from Party D</li>
+	<li>Party B bought 50 shares from Party C</li>
+	<li>Party B sold 75 shares to Party D</li>
+	<li>Party C bouhgt 50 shares from Party D</li>
+</ol>
+ 
+Ignoring the price, the volumes can be depicted diagrammatically in the following way.
+<br><br><br>
+
+<img src="images/multilateral-compression.png" alt="Multilateral Portfolio Compression" height="450" width="750">
+<br><br><br>
+From the above picture, the following information can be deduced.
+<br><br>
+
+<table>
+	<th>Party</th>
+	<th>No. of Trades</th>
+	<th>Gross Notional</th>
+	<th>Net Exposure</th>
+
+	<tr>
+		<td style="text-align: center;">A</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">225</td>
+		<td style="text-align: center;">Long 25</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">B</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">225</td>
+		<td style="text-align: center;">Long 75</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">C</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">150</td>
+		<td style="text-align: center;">Short 50</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">D</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">200</td>
+		<td style="text-align: center;">Short 50</td>
+	</tr>
+</table>
+<br><br>
+The gross notional of all the three trades is 400 and the net open interest (sum of all long or short positions) is 100. These trades can be compressed as follows.
+<br>
+
+<ol>
+	<li>A bought 25 shares from C</li>
+	<li>B bought 25 shares from C</li>
+	<li>B bought 50 shares from D</li>
+</ol>
+
+The result of the above three trades in terms of net positions is as follows:
+<br><br>
+
+<table>
+	<th>Party</th>
+	<th>No. of Trades</th>
+	<th>Gross Notional</th>
+	<th>Net Exposure</th>
+
+	<tr>
+		<td style="text-align: center;">A</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">25</td>
+		<td style="text-align: center;">Long 25</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">B</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">75</td>
+		<td style="text-align: center;">Long 75</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">C</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">50</td>
+		<td style="text-align: center;">Short 50</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">D</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">50</td>
+		<td style="text-align: center;">Short 50</td>
+	</tr>
+</table>
+<br><br>
+
+As we can see, the net exposure remains the same after compression but the gross exposure and number of trades have changed. The total gross notional after compress is 100 (a compression of 4 times - from 400 notional to 100 notional) and the number of trades is 3 (a compression of 50% - from 6 trades to 3).
+<br><br><br>
+
+<h3 class="side-heading-blue">Steps in Compression</h3>
+The following are the general steps in compression, if a third party service is used.
+<br><br>
+Step 1) Participants submit trades for matching. <br>
+Step 2) Participants agree to parameters and tolerance levels <br>
+Step 3) The third party service provider runs the compression algorithm and results are informed to participants <br>
+Step 4) The trades are compressed.
+<br><br><br>
+
+<h3 class="side-heading-blue">Advantages of Portfolio Compression</h3>
+The following are the advantages of portfolio compression.
+<br>
+<ol>
+	<li>Reduction in counterparty credit risk</li>
+	<li>Reduction in operational risk</li>
+	<li>reduction in capital charge under Basel III</li>
+	<li>Reduction in Systemic risk</li>
+</ol>
+
+<br>
+
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 21<sup>th</sup> September 2020.
+</p>
+
+</body>
+</html>

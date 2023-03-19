@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Interest Rate Arithmetic</h2>
+<br>
+
+Interest rate is one of the most important concept in financial economics. Though it is conceptually simple, it's implementation in practice is complex for the following reasons.
+<br>
+<ul class="b">
+	<li>Interest rate is quoted per annum but is settled per period as amount. <i>(computation is necessary for this conversion of rate to amount, which is known as interest rate arithmetic)</i>  </li>
+	<li>There is no single interest rate. There are multiple interest rates in an economy at any point in time.</li>
+</ul>
+
+We will discuss only the first aspect in this article.
+<br><br>
+
+The conversion of interest rate into interest amount involves the following.
+<ol>
+	<li>Determination of type of interest <i>(simple or compound)</i></li>
+	<li>Payment timing <i>(whether it is paid upfront or in arrears; and whether it is paid monthly, quarterly or at any other frequency)</i></li>
+	<li>Day count convention <i>(determination of the number of days between two dates)</i></li>
+	<li>Business day convention <i>(adjustment of payment date if the payment date falls on a holiday)</i></li>
+</ol>
+
+Before we understand the above aspects, let us discuss a very essential concept of time value of money. 
+<br><br>
+
+<h3 class="side-heading-blue">Type of Interest and Time Value of Money</h3>
+Just like any other asset, money can be given on rent, and the rent on money is called as 'interest'. The interest is commonly mentioned as a rate per annum - 5% per annum or 6% per annum, etc. Thus, an amount of 100 lent for a period of one year at 5% interest would become 105 after 1 year. 
+<br><br>
+The amount of 100, at the beginning of the year, can be referred to as the "Present Value" and the amount of 105, after 1 year, can be referred to as "Future Value". If we know the present value and the interest rate, we should be able to compute the future value. Similarly, if we know the future value and the interest rate, we should be able to compute the present value. Likewise, if we know the present value and future value, we should be able to compute the interest rate. 
+<br><br>
+We can compute these amounts manually but it is convenient to do it with the help of a formula. The following is the formula to compute simple interest.
+<br><br>
+
+\[
+F = P \; (1 + R \; \text x \; T)
+\]
+where, <br>
+F = future value <br>
+P = present value or principal <br>
+R = interest rate per annum <br>
+T = time period of investment 
+<br><br>
+
+For example, <br>
+If P is 100, R is 5% then the following are the future values for some periods. <br>
+Future value after 1 year = 100 (1+5/100*1) => 100 (1+0.05*1) => 100(1.05) => 105 <br>
+Future value after 2 years = 100(1+5/100*2) => 100(1+0.05*2) => 100(1+0.1) => 100(1.1) => 110 <br>
+Future value after 3 years = 100(1+5/100*3) => 100(1+0.05*3) => 100(1+0.15) => 100(1.15) => 115
+<br><br>
+
+In the above example of an investment for 3 years, the interest received at the end of the first year is not considered to have been earning any interest on it for the remaining two years. Similarly, the interest received at the end of the second year is not considered to have been earning any interest for the third year. This concept of not bothering about interest received on interest (or the computation of interest without considering interest on interest) is called as <b>"Simple Interest"</b>. But in practice, the interest (or rent) received is invested back and it can get additional interest, a concept called as <b>"Compound Interest"</b>.
+<br><br>
+
+For example, if we invest $100 for 1 year at an interest rate of 6% per annum, interest payable half-yearly, then we will get $3 at the end of 6 months, another $3 on maturity, and our principal amount of $100. Let us assume that the interest that we received at the end of 6 months is reinvested @6% per annum for 6 months. This would yield us $0.09. Thus, the total amount that we receive on maturity is: 100 <i>(principal)</i> + $3 <i>(interest for first 6 months)</i> + $3 <i>(interest for second 6 months)</i> + $0.09 (interest on $3 invested for 6 months) = $106.09. 
+<br><br>
+The below diagram shows this concept.
+<br><br>
+
+<img src="images/interest-rate-arithmetic-3.png" alt="Compounded Interest" height="180">
+
+<br><br><br>
+
+In the above example, we computed the compound interest period by period. While this is fine for small periods involving one or two calculations, it is difficult to do that for multiple periods. Luckily, there is a formula available to compute this. The below is the formula.
+<br><br>
+
+\[
+F = P \; \left(1 + {r \over m}\right)^{t \; \text x \; m}
+\]
+
+<br>
+where, <br>
+P = principal amount <br>
+F = future value <br>
+r = annual rate of interest <br>
+m = frequency of compounding in a year <br>
+t = time period of investment 
+<br><br>
+
+Using the above formula in our earlier example, we get the following.
+<br><br>
+
+\[
+F = P \; \left(1 + {r \over m}\right)^{t \; \text x \; m} => 100 \; \left(1 + {0.06 \over 2}\right)^{1 \; \text x \; 2} => 100 \; \left(1 + {0.03}\right)^{2} => 100 \; (1.03)^2 => 100(1.0609) = 106.09
+\]
+
+<br><br>
+
+By using inputs such as principal amount, rate of interest, compounding frequency and time period of investments, we were able to compute the future value of our investments. Similarly, given a future value and other inputs, we would be able to compute the present value of our investment, a concept known as <b>"Discounting"</b>. The following diagram shows this concept.
+<br><br><br>
+
+<img src="images/interest-rate-arithmetic-2.png" alt="" height="200">
+
+<br><br><br>
+In the same example, given our future value of 106.09 and other inputs remaining the same, we would be able to compute the present value as follows.
+<br><br>
+
+\[
+P = {F \over {(1 + {r \over m})^{t \; \text x \;  m}}} => {106.09 \over {(1 + {0.06 \over 2})^{1 \; \text x \;  2}}} => {106.09 \over {(1.03)^2}} => {106.09 \over 1.0609} => 100
+\]
+
+<br><br>
+
+<span class="flexbox-1">
+	The compound interest formula above assumes that the interest received at the end of 6 months is reinvested @ 6% per annum. This is not correct, as we do not know whether the interest rate will be the same after 6 months. If the duration of the investment is 3 years then there will be 5 half-yearly payments that we would receive (we are ignoring the last interest payment that we would receive on maturity) and the formula assumes that all these interest receipts are reinvested @ 6% per annum. This is not a correct assumption because we cannot predict the interest rates at different points in future. This assumption is made for the sake of convenience. The real future value that we actually receive could be different from the value predicted by the above formula.
+</span>
+
+<br><br><br>
+
+<h3 class="side-heading-blue">Continuous Compounding</h3>
+
+In the above example of compound interest, the interest is paid once every six months (or half yearly). If the interest is paid only once on maturity then we apply simple interest and our future value would be $106. When we applied compound interest, our future value turned out to be $106.09. What happens if the interest is paid more frequently such as quarterly, monthly, daily or hourly, etc?. 
+<br><br>
+In practice, interest is paid either annually, half-yearly, quarterly or monthly but not at more frequently intervals due to operational challenges. But it is worth investigating the results if the interest is paid more frequently, and possibly at the smallest interval possible. Let us run our calculations to find this our. The below are the calculations.
+<br><br>
+
+Principal = 100 <br>
+Rate = 6% <br>
+Time or Duration of Investment = 1 year
+
+
+<br><br>
+<table>
+	<th>Interest Frequency</th>
+	<th>Frequency in numbers</th>	
+	<th width="300">Calculation</th>
+	<th width="150">Value</th>
+
+	<tr>
+		<td>Annually</td>
+		<td>1</td>
+		<td>100(1+0.06/1)^1*1</td>
+		<td>106</td>
+	</tr>
+
+	<tr>
+		<td>Half-Yearly</td>
+		<td>2</td>
+		<td>100(1+0.06/2)^1*2</td>
+		<td>106.09</td>
+	</tr>
+
+	<tr>
+		<td>Quarterly</td>
+		<td>4</td>
+		<td>100(1+0.06/4)^1*4</td>
+		<td>106.1363</td>
+	</tr>
+
+	<tr>
+		<td>Monthly</td>
+		<td>12</td>
+		<td>100(1+0.06/12)^1*12</td>
+		<td>106.16778</td>
+	</tr>
+
+	<tr>
+		<td>Daily</td>
+		<td>365</td>
+		<td>100(1+0.06/365)^1*365</td>
+		<td>106.183131</td>
+	</tr>
+
+	<tr>
+		<td>Hourly</td>
+		<td>8760</td>
+		<td>100(1+0.06/8760)^1*8760</td>
+		<td>106.1836328</td>
+	</tr>
+
+	<tr>
+		<td>Minute</td>
+		<td>525600</td>
+		<td>100(1+0.06/525600)^1*525600</td>
+		<td>106.18365429</td>
+	</tr>
+
+	<tr>
+		<td>Second</td>
+		<td>31536000</td>
+		<td>100(1+0.06/31536000)^1*31536000</td>
+		<td>106.183654275</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+As we can see the future value when compounded more frequently increases but it does not increase much. It increases only in a few decimal points. This can be visible seen from the below diagram.
+<br><br><br>
+
+<img src="images/interest-rate-arithmetic-5.png" alt="Continous compounding graph">
+
+<br><br><br>
+
+In our example, the principal amount invested was $100 and the rate of interest was 6%. To generalize this concept so as to use it in various scenarios, we can consider the principal amount as a single unit amount of $1 and the rate of interest as 100%. In otherwords, we would want to consider the effect of a $1 investment which is compounded continously at a 100% rate. The following are the calculations.
+<br><br>
+
+<table>
+	<th>Frequency</th>
+	<th>Frequency in numbers</th>
+	<th width="300">Calculation</th>
+	<th width="150">Value</th>
+
+	<tr>
+		<td>Annually</td>
+		<td>1</td>
+		<td>1(1+1/1)^1*1</td>
+		<td>2</td>
+	</tr>
+
+	<tr>
+		<td>Half-yearly</td>
+		<td>2</td>
+		<td>1(1+1/2)^1*2</td>
+		<td>2.25</td>
+	</tr>
+
+	<tr>
+		<td>Quarterly</td>
+		<td>4</td>
+		<td>1(1+1/4)^1*4</td>
+		<td>2.441</td>
+	</tr>
+
+	<tr>
+		<td>Monthly</td>
+		<td>12</td>
+		<td>1(1+1/12)^1*12</td>
+		<td>2.6130</td>
+	</tr>
+
+	<tr>
+		<td>Daily</td>
+		<td>365</td>
+		<td>1(1+1/365)^1*365</td>
+		<td>2.71456</td>
+	</tr>
+
+	<tr>
+		<td>Hourly</td>
+		<td>8760</td>
+		<td>1(1+1/8760)^1*8760</td>
+		<td>2.718126</td>
+	</tr>
+
+	<tr>
+		<td>Minute</td>
+		<td>525600</td>
+		<td>1(1+1/525600)^1*525600</td>
+		<td>2.7182792</td>
+	</tr>
+
+	<tr>
+		<td>Second</td>
+		<td>31536000</td>
+		<td>1(1+1/31536000)^1*31536000</td>
+		<td>2.71828178</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+We can continue our calculations to further smaller frequencies but it would not yield us better results. We can see that the future value continues to grow but only in a small way in decimals. For all practical purposes in finance, we can consider the first 5 digits and ignore the rest of the digits. So, we can say that our $1 investment at a rate of 100% per annum has approached a four digit limit of 2.7182. All further growth in value is in further decimals from this point only. This limit of exponential growth is termed as <i>"e"</i> and is the basis for continous compounded calculations in many aspects of finance.
+<br><br>
+
+One can argue that we are considering a growth rate of 100% to find the above limit but what happens if we consider a 1000% growth rate or even higher growth rates. Well! the answer is that we do not have to consider a higher growth rate for the following reason. We started with $1. We are assuming that our $1 will double itself and become $2 after a small time interval. The question is what will be the exponential limit if it becomes $50 or $1000 or any other value instead of $2. To reach $50 or $1000 or any other value, it will have to first reach and then surpass the value of $2. Our frequency is not seconds but infinitesimally small (the smallest interval possible or measurable). If $1 becomes $50 after a small time interval say "x", then there is always the possibility that it reached $2 first at some fraction of "x". Therefore, we do not have to consider higher growth rates as the growth rate of 100% is always the maximum possible at an infinitesimally small fraction of time. 
+<br><br>
+
+Using the concept of continous compounding, we can find the future value of any investment by the following formula.
+<br><br>
+
+\[
+F = Pe^{rt} 
+\]
+<br>
+where, <br>
+F = future value <br>
+P = present value <br>
+e = the exponential value of 2.7182 <br>
+r = the rate of return that we are expecting on our investment <br>
+t = time period of our investment
+<br><br>
+
+Using the above formula, in our example, we get.
+<br><br>
+
+\[
+F = 100 \; \text x \; 2.7182^{0.06 \; \text x \; 1} => 100 \; \text x \; 1.061836 => 106.1836
+\]
+
+<br><br>
+
+<h3 class="side-heading-blue">Payment Frequency</h3>
+Different securities pay interest at different frequencies. The following table shows some common instruments and thier payment frequencies.
+<br><br>
+
+<table>
+	<th>Market Category</th>
+	<th>Product</th>
+	<th>Frequency</th>
+
+	<tr>
+		<td rowspan="13">Cash</td>
+		<td>Money market</td>
+		<td>Once at maturity</td>
+	</tr>
+
+	<tr>
+		<td>Zero-coupon bonds</td>
+		<td>Once at maturity</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - France ("OATS")</td>
+		<td>Annual</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - Germany ("Bunds")</td>
+		<td>Annual</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - US ("Treasuries")</td>
+		<td>Semiannual</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - UK ("Gilts")</td>
+		<td>Semiannual</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - Japan ("JGB")</td>
+		<td>Semiannual</td>
+	</tr>
+
+	<tr>
+		<td>Sovereign bonds - India ("G-Secs")</td>
+		<td>Semiannual</td>
+	</tr>
+
+	<tr>
+		<td>Eurobonds</td>
+		<td>Annual</td>
+	</tr>
+
+	<tr>
+		<td>US corporate bonds - fixed rate</td>
+		<td>Annual or Semiannual</td>
+	</tr>
+
+	<tr>
+		<td>US corporate bonds - floating</td>
+		<td>Quarterly (mostly)</td>
+	</tr>
+
+	<tr>
+		<td>Mortgages and bank loans</td>
+		<td>Monthly</td>
+	</tr>
+
+	<tr>
+		<td>Some US municipal bonds</td>
+		<td>Weekly</td>
+	</tr>
+
+	<tr>
+		<td rowspan="5">Derivatives</td>
+		<td>Interest rate swap in USD</td>
+		<td>Semiannual for fixed leg; and quarterly or semiannual for floating leg</td>
+	</tr>
+
+	<tr>
+		<td>Interest rate swap in EUR</td>
+		<td>Annual for fixed leg; and semiannual for floating leg</td>
+	</tr>
+
+	<tr>
+		<td>Interest rate swap in CHF</td>
+		<td>Annual for fixed leg; and semiannual for floating leg</td>
+	</tr>
+
+	<tr>
+		<td>Interest rate swap in GBP</td>
+		<td>Semiannual for both fixed and floating legs</td>
+	</tr>
+
+	<tr>
+		<td>Interest rate swap in JPY</td>
+		<td>Semiannual for both fixed and floating legs</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+When there are two identical securities paying same notional interest rate but on different payment frequencies, their returns will differ. For example, consider Security A paying 6% p.a with annual interest payment and Security B paying 6% p.a with semi-annual interest payment. The returns that we get from Security B would be better because we can reinvest the interest that we receive semi-annually and earn some interest on it. We have already discussed this in the topic 'compound interest' above. If we want to compare the rates with different payment frequencies then we must bring them to an equal footing for comparison. There are two ways of doing this - 1) Effective Annual Rate (EAR); and 2) Continous Compunded Rate (CAR). We have already discussed the concept of Continous Compounding earlier. The following paragraphs discuss the Effective Annual Rate.
+<br><br><br>
+
+<h3 class="side-heading-blue">Effective Annual Rate (EAR)</h3>
+
+Effective annual rate is the rate with single payment in an year. If the payment frequency is more than once a year, such frequencies can be restated as equivalent EAR. The EAR can be computed using the following formula.
+<br><br>
+
+\[
+EAR = (1 + {r \over m})^m - 1
+\]
+<br>
+where, <br>
+r = annualised interest rate <br>
+m = frequency of payment of interest
+<br><br>
+
+The following table shows the EAR for different payment frequencies for an instrument.
+<br><br>
+
+<table>
+	<th>Frequency</th>
+	<th>Calculation</th>
+	<th>Value</th>
+
+	<tr>
+		<td>Half-yearly</td>
+		<td>(1+0.06/2)^2 - 1</td>
+		<td>6.09%</td>
+	</tr>
+
+	<tr>
+		<td>Quarterly</td>
+		<td>(1+0.06/4)^4 - 1</td>
+		<td>6.14%</td>
+	</tr>
+
+	<tr>
+		<td>Monthly</td>
+		<td>(1+0.06/12)^12 - 1</td>
+		<td>6.17%</td>
+	</tr>
+
+	<tr>
+		<td>Weekly</td>
+		<td>(1+0.06/52)^52-1</td>
+		<td>6.18%</td>
+	</tr>
+
+</table>
+<br><br>
+
+<h3 class="side-heading-blue">Payment Timing</h3>
+
+There are two types of markets - money market and bond markets. In bond markets, the interest rate is always mentiond and is relatively easy to calculate the yield if current prices are known. In money markets, however, the instruments are issued either in yield or discount basis. Both the yield and discount basis or instruments are issued at a discount to the face value (i.e. for example, they are issued at 95 and redeemed at 100). The terms "yield" or "discount" here refer to the way the interest rate is derived. In case of discount instruments, a discount rate is given which is applied to the future value to arrive at the current price of the instrument; for yield instruments, the issuer mentions a yield that the instrument pays. Both these rates have different meanings. The following paragraphs discuss how they are computed and thier differences.
+
+<br><br>
+The below table shows the features of money market instruments.
+<br><br>
+<table>
+	<th>Instrument type</th>
+	<th>Feature</th>
+	<th>Examples</th>
+
+	<tr>
+		<td>Yield instrument</td>
+		<td>Interest is quoted and is paid on accural basis</td>
+		<td>Repos, Securities Lending, Margin Lending, Bonds, etc.</td>
+	</tr>
+
+	<tr>
+		<td>Discount instruments</td>
+		<td>Interest is not quoted. Issued at a discount to the future value</td>
+		<td>Treasury bills, Commercial papers, Banker's Acceptance, etc.</td>
+	</tr>
+</table>
+<br><br>
+
+<b><u>Calculation of interest rate for money market instruments</u></b><br>
+As indicated above, instruments in the money markets can be on discount basis or yield basis. For discount instruments issued in the money market, the interest rate is applied to the future value and is called as "discount rate". For yield instruments issued in the money markets, the interest rate is applied to the future value and is called as "investment yield". The following shows the calculation for both.
+
+<br><br>
+The discount instruments do not state a interest rate, instead they give a discount rate that is applicable on the future value. The interest rate has to be calculated. The calculation can be done using the following formula.
+<br><br>
+\[
+P = F \; \left(1-{d*n \over 360}\right)
+\]
+where, <br>
+P = present value <br>
+F = future value <br>
+n = number of days to maturity. <br>
+360 = is the denominator assuming there are 360 days in a year. For USD, EUR and CHF money markets, 360 is used. For other markets, 365 is used. <br>
+d = discount rate
+<br><br>
+
+<span class="flexbox-1">
+	Note: The discount rate is a rate applied on the Future Value (Par Value) not on the Current Price (Principal). 
+</span>
+
+<br><br>
+<u>For Example</u><br>
+Consider a U.S. Treasury Bill having a 91 days maturity and future value of 100. If the current price is 99, what is the discount rate? <br>
+\[
+99 = 100 \left(1- {d * 91 \over 360}\right) => \left(360 - 91d \over 360\right) = {99 \over 100} => 360 - 91d = 356.40 => 91d = 3.6 => d = 0.03956 \; or \; 3.956 \text %
+\]
+<br>
+If we know the current price of the instrument then we can calculate the interest rate or vice-versa. In general, we do not know the current price. We are given the discount rate and we would be required to price the current value at which we can purchase the instrument. In the above example, we would be told that an instrument with face value of 100 is selling at a discount of 3.956%. By using the same formula, we should be able to calculate the current price of the instrument.
+<br><br>
+For yield instruments, a yield is states that is applicable on the future value. The formula for interest rate calculation is different as follows. 
+<br><br>
+
+\[
+P = {F \over \left(1 + {{y \; \text x \; n} \over 360} \right)}
+\]
+<br>
+where, <br>
+P = present value <br>
+F = future value <br>
+y = investment yield (this is the yield which is applied to the future value) <br>
+n = number of days to maturity
+<br><br>
+
+<u>For Example</u><br>
+Consider a Certificate of Deposit having a 91 days maturity and future value of 100. If the current price is 99, what is the yield? <br>
+<br>
+By using the above formula, we can compute the yield as follows. <br>
+\[
+99 = {100 \over \left(1 + {\text x \; * \; 91 \over 360} \right)} => 99 = {100 \over \left(1 + 0.25 \text x \right)} => 99(1+0.25x) = 100 => 99 + 24.75x = 100 => 24.75x = 1 => or \; x = 0.040404 \; or \; 4.04 \text%.
+\] 
+<br>
+In the above example, we knew the current price and hence we were able to compute the investment yield. But if we know the investment rate, we would be able to compute the current price. 
+<br><br>
+
+Though there are two different types of instruments (discount and yield) in money markets, they both are not the same. There is a difference. Let us consider the following example.
+<br><br>
+
+<b><u>Difference between discount and yield instrument</u></b><br>
+Let us consider a US Treasury Bill and a Certificate of Deposit (CD) having the same maturity of 91 days and the same future value of 100. Let us further assume that the US treasury bill (a discount instrument) is quoted a 3% and the CD (a yield instrument) is also quoted a 3%. What are their prices and which one will give the higher return on our investment?
+<br><br>
+The prices are as follows.
+<br><br>
+\[
+For \; Treasury \; Bill: P = 100 \left(1 - {0.03 \; \text x \; 91 \over 360}\right) => 99.2417
+\]
+<br><br>
+
+\[
+For \; Certificate \; of \; Deposit: P = {100 \over 1 + {0.03 * 91 \over 360}} => 99.2474
+\]
+<br><br>
+
+As you can see, for the same nominal rate, discount rate results in higher return than money market yield. In the above example, an initial investment of 99.2417 has growth to 100 after 91 days for Treasury bill, while an initial investment of 99.2474 has grown to 100 after 91 days for CD. In terms of returns, the return on investment is:
+<br><br>
+\[
+Return \; from \; treasury \; bill = {(100-99.2417) \over 99.2417} \; \text x \; 100 \; \text x \; {360 \over 91} => 3.0219 \text %
+\]
+<br>
+\[
+Return \; from \; certificate \; of \; deposit = {(100-99.2474) \over 99.2474} \; \text x \; 100 \; \text x \; {360 \over 91} => 2.9998 \text %
+\]
+
+<br><br><br>
+
+<h3 class="side-heading-blue">Day Count Fraction</h3>
+As discussed earlier, the market convention is that interest rate is quoted per annum but settled as amount for period. In formula terms, it is;
+<br><br>
+\[
+Interest \; Amount = Principal \; \text x \; Rate \; \text x \; Period
+\]
+where, <br>
+period is expressed as: <br>
+\[
+Period = {Number \; of \; days \; in \; accrual \; period \over Number \; of \; days \; in \; a \; year}
+\]
+<br><br>
+
+Day count fraction is also known as follows: <br>
+1) As per ISDA documentation = "Day count fraction (DCF)"; <br>
+2) As per ICMA documentation = "Day count basis (DCB)"; and <br>
+3) As per ACI documentation for Forex = the numerator is called "day count" and the denominator is called "annual basis".
+<br><br>
+
+There are more than a dozen conventions on DCF. They can be grouped as follows.
+<br><br>
+
+<table>
+	<th>Category</th>
+	<th>Explanation</th>
+	<th>Conventions</th>
+
+	<tr>
+		<td>Actual/Constant</td>
+		<td>For the numerator, count the actual number of days; and for denominator, assume a constant number of days </td>
+		<td>1) Actual/360 <br> 2) Actual/365 Fixed
+		</td>
+	</tr>
+
+	<tr>
+		<td>Actual/Actual</td>
+		<td>Both for numerator and denominator, count the actual number of days.</td>
+		<td>3) Actual/Actual ISDA <br> 4) Actual/Actual ICMA <br> 5) Actual/Actual AFB <br> 6) Actual/Actual L</td>
+	</tr>
+
+	<tr>
+		<td>30/360</td>
+		<td>Every month has uniformly 30 days so that full year will have 360 days</td>
+		<td>7) 30E/360 <br> 8) 30/360 <br>9) 30E/360 ISDA</td>
+	</tr>
+
+</table>
+<br><br>
+The above are recognised by ISDA. In addition to the above, the following other conventions are also used.
+<br><br>
+
+<table>
+	<th>Category</th>
+	<th>Conventions</th>
+
+	<tr>
+		<td>30/360</td>
+		<td>10) 30/360 SIA <br> 11) 30/360 SIFMA <br> 12) 30/360 German</td>
+	</tr>
+
+	<tr>
+		<td>Others</td>
+		<td>13) 30E+ /360 <br> 14) Actual/365 Japan <br> 15) BUS/252</td>
+	</tr>
+</table>
+
+<br><br>
+
+<h3 class="side-heading-black">Actual/360</h3>
+It is used in the following markets.
+<ul>
+	<li>money market transactions of in both domestic and eurocurrency markets of USD and CHF.</li>
+</ul>
+For the numerator, count the actual number of days <br>
+For the denominator, use the constant of 360 for both leap and normal year (non-leap year).
+<br><br><br>
+
+<h3 class="side-heading-black">Actual/365 Fixed</h3>
+It is used in the following markets: <br>
+<ul>
+	<li>money market transactions of both domestic and eurocurrency markets in GBP currency</li>
+	<li>domestic money and bond markets of JPY, AUD, NZD, CAD, SGD, HKD, ZAR and INR</li>
+</ul>
+For the numerator, count the actual number of days <br>
+For the denominator, use the constant of 365 for both leap and non-leap years. 
+<br><br><br>
+
+<h3 class="side-heading-black">Actual/Actual ISDA</h3>
+This is not commonly used in any markets. 
+<br><br>
+The calculation of day-count fraction under this method is a bit complex. The following shows the calculation.
+<br><br>
+<table>
+	<th>Condition</th>
+	<th>Explanation</th>
+
+	<tr>
+		<td>If the entire accrual period is in non-leap year</td>
+		<td>count the actual number of days for the numerator; and use 365 for the denominator</td>
+	</tr>
+
+	<tr>
+		<td>If the entire accural period is in a leap year</td>
+		<td>count the actual number of days for the numerator; and use 366 for the denominator</td>
+	</tr>
+
+	<tr>
+		<td>If the period falls both in leap and non-leap year</td>
+		<td>divide the period into leap and non-leap part. for the non-leap part, use 365 as denominator; and for the leap part, use 366 as denominator</td>
+	</tr>
+</table>
+
+<br><br>
+
+<h3 class="side-heading-black">Actual/Actual ICMA</h3>
+It is used in the following markets.
+<ul>
+	<li>US treasury notes and bonds</li>
+	<li>All EUR denominated bonds</li>
+	<li>UK gilts; and</li>
+	<li>USD-denominated straight and convertible bonds issued in Eurocurrency market</li>
+</ul>
+
+For the numerator, use the actual number of days for the <u>accrual period</u> <br>
+For the denominator, use the actual number of days in the <u>full coupon period, and NOT the full year</u>.
+<br><br>
+In terms of the fraction, it is as below.
+<br>
+\[
+Day \; count \; fraction = {Actual \; number \; of \; days \; in \; the \; accrual \; period \over Actual \; number \; of \; days \; in \; coupon \; period \; \text x \; coupon \; frequency}
+\]
+
+
+<br><br>
+
+<h3 class="side-heading-black">Actual/Actual AFB</h3>
+It is used in the following markets.
+<ul>
+	<li>Interest rate derivatives market governed by French Master Agreement</li>
+</ul>
+
+For the numerator, count and use the actual number of days. <br>
+For the denominator, use 366 if there is February 29 in the accrual period; else, use 365.
+<br><br><br>
+
+<h3 class="side-heading-black">Actual/365 L or Actual/365 Sterling</h3>
+It is used in the following markets.
+<ul>
+	<li>Floating rate notes on Europounds market</li>
+</ul>
+
+For the numerator, count the actual number of days. <br>
+For the denominator, use 365 for normal years, and 366 for leap years.
+
+<br><br><br>
+
+
+<h3 class="side-heading-black">30E/360</h3>
+It is used in the following markets.
+<ul>
+	<li>For straight and convetible bonds issued in Eurocurrency markets</li>
+</ul>
+The convention assumes that every month has 30 days and that the full year has 360 days. <br>
+If the day of Start date or End date is 31, it is arbitrarily changed to 30. <br>
+Under this method, the day count fraction can be computed by using the following formula.
+<br><br>
+\[
+(Y_2 - Y_1) * 360 + (M_2 - M_1) * 30 + (D_2 - D_1) \over 360
+\]
+<br>
+The shortening of the month has the following consequences.
+<br><br>
+<table>
+	<th>Scenario</th>
+	<th>Consequence</th>
+
+	<tr>
+		<td>Day of Start Date and End Date is not the last day of the month</td>
+		<td>Every half year will have 180 days and every year, 360 days. <br>
+			<u>For Example:</u> <br>
+			Mar 15, 2019 - Sep 15, 2019: 180 days <br>
+			Mar 15, 2019 - Mar 15, 2020: 360 days
+		</td>
+	</tr>
+
+    <tr>
+    	<td>All dates fall on the last day of month; and day of start date is not the last day of February</td>
+    	<td>Half year will have more than 180 days but full year from Start date will have 360 days except when: <br>
+            (a) day of start date is in leap year; full year will have 359 days; and <br>
+            (b) day of end date is in leap year; full year will have 361 days. <br>
+            <u>For Example:</u>
+            <ol>
+            	<li>Feb 28, 2018 - Aug 31, 2018: 182 days; Feb 28, 2018 - Feb 28, 2019: 360 days</li>
+            	<li>Feb 29, 2020 - Feb 28, 2021: 359 days</li>
+            	<li>Feb 28. 2019 - Feb 29, 2020: 361 days</li>
+            </ol>
+    	</td>
+    </tr>
+
+    <tr>
+    	<td>All dates fall on the last day of money; and day of end date is the last day of February</td>
+    	<td>Half year will have less than 180 days but full year from start date will have 360 days except when: <br>
+    		a) day of end date is in leap year; full year will have 361 days; and <br>
+    		b) day of start date is in leap year; full year will have 359 days. <br>
+    		<u>For Example</u>
+    		<ol>
+    			<li>Aug 31, 2018 - Feb 28, 2019: 178 days</li>
+    			<li>Feb 28, 2019 - Feb 29, 2020: 361 days</li>
+    			<li>Feb 29, 2020 - Feb 28, 2021: 359 days</li>
+    		</ol>
+        
+    	 </td>
+    </tr>
+
+
+</table>
+
+<br><br><br>
+
+<h3 class="side-heading-black">30/360</h3>
+It assumes that a month has 30 days and the full year has 360 days. The day count factor is computed as follows.
+<br>
+\[
+(Y_2 - Y_1) * 360 + (M_2 - M_1) * 30 + (D_2 - D_1) \over 360
+\]
+
+<br><br><br>
+
+<h3 class="side-heading-black">30/360 bond basis or 30/360 US Muni</h3>
+It is used in the following markets.
+<ul>
+	<li>Corporate bonds, municipal bonds and some agency bonds in the US</li>
+</ul>
+It is similar to the 30E/360 convention except that, if the day of the end date is 31, it is not automatically but conditionally shorterened to 30, as follows.
+<br>
+<ol>
+	<li>If the day of start date is 31, change it to 30; and</li>
+	<li>If the day of end date is 31, change it to 30 only if the adjusted day of start date is 30 (Otherwise, do not shortern but retain it as 31).</li>
+</ol>
+
+<br><br>
+
+<h3 class="side-heading-black">30/360 German</h3>
+It is used in the following markets.
+<ul>
+	<li>It is used by SIX Exchange for secondary market trades in CHF-deonominated non-convertible bonds and Swiss government bonds issued after April 1999 </li>
+</ul>
+
+It is similar to 30E/360 except that if the day of start date or end date is the last day of February, it is changed to 30. In otherwords, it automatically shorterns the month to 30 if the day is 31; and lengthens the month of Feb to 31, if the day is the last day of February.
+
+<br><br><br>
+
+<h3 class="side-heading-black">30/360 SIA</h3>
+It is used in the following markets.
+<ul>
+	<li>US corporate bonds only when the payment date falls on end-of-month.</li>
+</ul>
+It combines the features of 30/360 and 30/360 German and makes the following adjustments.
+<br>
+<ol>
+	<li>If the day of start date is 31 or the last day of Feb, change the date to 30.</li>
+	<li>If the day of the end date is 31 or the last day of Feb, change it to 30 only if the day of start date after adjustment in the previous step is 30; otherwise do not change it. </li>
+</ol>
+
+<br><br>
+
+<h3 class="side-heading-black">30E/360 ISDA</h3>
+It is like 30/360 German except that no adjustment is made to the day of end date. 
+<ol>
+	<li>If the day of start date is 31 or the last date of Feb, change it to 30; and</li>
+	<li>If the day of the start date is 31 or the last day of Feb, change it to 30 unless it is the Termination Date, in which case, do not change the end date.</li>
+</ol>
+<br><br>
+
+<h3 class="side-heading-black">Actual / 365 Japan</h3>
+In this convention, the numerator (i.e. accrual period) is the actual number of days except when the accrual period contains Feb 29 in which case the accrual period is reduced by one day. The denominator is 365 in all cases.
+
+<br><br><br>
+
+<h3 class="side-heading-black">BUS/252</h3>
+It is used in the following markets.
+<ul>
+	<li>Brazilian Real (BRL) derivatives market</li>
+</ul>
+It is also known as ACTW/252, BU/252 and BD/252.
+<br><br>
+For numerator, it counts the number of business days instead of calendar days and therefore excludes Saturdays, Sundays and other scheduled holidays. <br>
+For denominator, it uses 252 as a constant, which is the assumed number of business days in a year.
+<br><br>
+
+<br><br>
+
+<h3 class="side-heading-blue">Business Day Convention</h3>
+It refers to the convention as to how a date should be adjusted when it falls on a holiday. It is defined with respect to a business center such as London Business Day, New York Business Day, Tokyo Business Day, etc. Sometimes, it is defined with respect to two or more business days also. 
+<br><br>
+Before we understand the various conventions, it is important to note the different dates in the life of a derivatives contract.
+<br><br>
+<table>
+	<th>Date</th>
+	<th>Purpose</th>
+
+	<tr>
+		<td>Period End Date</td>
+		<td>It is the date from which interest accrual is computed until the next such date. It can be holiday since interest can be accrued to holiday</td>
+	</tr>
+
+	<tr>
+		<td>Reset Date</td>
+		<td>It is the date on which floating interest rate is set to the trade and can be a holiday.</td>
+	</tr>
+
+	<tr>
+		<td>Payment Date</td>
+		<td>It is the date on which payment is made and cannot be a holiday</td>
+	</tr>
+
+	<tr>
+		<td>Fixing Date or Valuation Date</td>
+		<td>It is the date on which the rate or price is obtained from the market and cannot be a holiday</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+The following conventions are defined by various ISDA definitions.
+<br><br>
+
+<table>
+	<th>Definitions</th>
+	<th>Business Day Conventions</th>
+
+	<tr>
+		<td>2000 and 2006 definitions</td>
+		<td>Unadjusted Day (i.e. no adjustment) <br>
+			Preceding Day <br>
+			Following Day <br>
+			Modified Following Day <br>
+			FRN Convention
+	    </td>
+
+	</tr>
+
+	<tr>
+		<td>1998 FX and Currency Options Definitions</td>
+		<td>Nearest Day (which is rarely used even in forex market to which the definitions apply)</td>
+	</tr>
+</table>
+<br><br>
+
+<h3 class="side-heading-black">Unadjusted Day</h3>
+The date is not adjusted to another day if it falls on a holiday at the business center. This applies only if the day is a Period End Date and Reset Date but not Payment Date and Fixing Date, as these two dates requires the business center be open.
+<br><br>
+
+<h3 class="side-heading-black">Preceeding Day</h3>
+If the date falls on a holiday at the business center(s) specified in the contract, then it is rolled to the immediately preceeding day that is a business day at the business center.
+<br><br>
+
+<h3 class="side-heading-black">Following Day</h3>
+If the date falls on a holiday at the business center specified, then it is rolled over to the immediately following business day.
+<br><br>
+
+<h3 class="side-heading-black">Modified Following Day</h3>
+Under this convention, the adjustment should be such that the business day should fall in the same calendar month. Thus, if a particular day is a holiday then the next business day can considered, provided such a business day is within the same calendar month; if it is not within the same calendar month, then the previous day is considered. 
+<br><br>
+
+<h3 class="side-heading-black">FRN Convention</h3>
+It combines the rolling day convention with end-of-month adjustment; and is applied when there are series of dates in the life of the trade and cannot be applied to a single date. 
+
+
+
+<br><br>
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 06<sup>th</sup> December 2020.
+</p>
+
+</body>
+</html>

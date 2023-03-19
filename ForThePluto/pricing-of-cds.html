@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Pricing of a Single Name CDS</h2>
+<br>
+
+The pricing of a CDS is slightly different and difficult compared to pricing of other derivatives. In general, the concept of pricing a CDS is the same as with any other derivative - the present value of the expected payouts (premiums) should be equal to the present value of the expected payins (CDS settlement amount) at the time of inception of the trade (trade date) - but the mechanics is different. Therefore, before we start with an example to price a CDS, let's discuss some of the key inputs required for pricing.
+<br><br>
+
+<h3 class="side-heading-blue">Some inputs</h3>
+The following are some of the inputs:
+<br><br>
+
+<b><u>Default Probability</u></b><br>
+It refers to the probability that a CDS reference entity would default during a particular period of time. The maximum probability is 1 and the minimum is 0. In general, the default probability lies between these two extreme values. If we know the survival probability, the default probability is 1 minus survival probability.
+<br><br>
+
+<b><u>Survival Probability</u></b><br>
+It refers to the probability that a CDS reference entity would not default during a particular period of time. The maximum probability is 1 and the minimum is 0. In general, the survival probability lies between these two extreme values. If we know the default probability, then the survival probability is 1 minus default probability.
+<br><br>
+
+<b><u>Default and Survival Probability Calculation</u></b><br>
+If we know the default probability for a particular year, we would be able to compute the default probability of the subsequent years, conditional that no earlier default has occurred. In other words, if in year 1 we estimate that the probability of default is 2% and that no earlier default has occurred, then we would be able to compute the default probability for year 2, with the assumption or condition that no default has occurred in year 1. Similarly, if no default has occurred in year 1 and 2, we would be able to compute the default probability for year 3, based on default probability of previous year. 
+<br><br>
+
+Let's denote default as 'p' and survival as 's'. <br><br>
+<u>On the trade date:</u> <br>
+p = 0 (as no default has occurred now) <br>
+s = 1-p = 1 (as surival probability = 1 minus default probability)
+<br><br>
+
+<u>For 1st period</u> <br>
+p = probability of default (we need to estimate this) <br>
+s = 1-p 
+<br><br>
+
+<u>For 2nd period and subsequent periods</u> <br>
+p = p of previous period x s of previous period (default probability of previous period x survival probability of previous period) <br>
+s = s of previous period - p for the current period (survival probability of previous period x default probability of current period)
+
+<br><br>
+The below table shows a sample default and survival probabilty calculation of a hypothetical CDS reference entity based on no earlier default assumption.
+<br><br>
+
+<table>
+	<th>Time</th>
+	<th>Default Probability Calculation</th>
+	<th>Default Probability</th>
+	<th>Survival Probability Calculation</th>
+	<th>Survival Probability</th>
+
+	<tr>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">0.0200</td>
+		<td style="text-align: center;">1 - 0.0200</td>
+		<td style="text-align: center;">0.9800</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">0.02 x 0.98</td>
+		<td style="text-align: center;">0.0196</td>
+		<td style="text-align: center;">0.98 - 0.0196</td>
+		<td style="text-align: center;">0.9604</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">0.02 x 0.9604</td>
+		<td style="text-align: center;">0.0192</td>
+		<td style="text-align: center;">0.9604 - 0.0192</td>
+		<td style="text-align: center;"> 0.9412</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">4</td>
+		<td style="text-align: center;">0.02 x 0.9412</td>
+		<td style="text-align: center;">0.0188</td>
+		<td style="text-align: center;">0.9412 - 0.0188</td>
+		<td style="text-align: center;">0.9224</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">5</td>
+		<td style="text-align: center;">0.02 x 0.9224</td>
+		<td style="text-align: center;">0.0184</td>
+		<td style="text-align: center;">0.9224 - 0.0184</td>
+		<td style="text-align: center;">0.9040</td>
+	</tr>
+
+</table>
+<br><br>
+
+<b><u>Discount Factor or Curve</u></b><br>
+As discussed above, we price the CDS with the assumption that the present value of the cash outflows (premiums from the perspective of a CDS protection buyer) is equal to the present value of the cash inflows (CDS settlement amount from the CDS protection seller to the CDS protection buyer) on the trade date. To calculate present values we need to apply discounting, and for discounting we need discount rates. The discount rates are based on the zero rate discount curves available in the market. If we know the zero rates, the discount factors can be calculated. Alternatively, if we know the current floating rates (example LIBOR rate) then we can use continous compounding to find the future amount and from that we can calculate the discount rates. We will use the second method, the calculation is as below.
+<br><br>
+
+Let's assume that current LIBOR is 5%. Based on this information, the following are the future values and discount rates for the next 5 years.
+<br><br>
+<table>
+	<th>Years</th>
+	<th>Value at the end of the period (assuming continous compounding)</th>
+	<th>Discount Factor</th>
+
+	<tr>
+		<td>1</td>
+		<td>1 x e <sup>rt</sup> => 1 x e <sup>0.05 x 1</sup> => 1.05127 </td>
+		<td>1/1.05127 = 0.9512</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>1 x e <sup>rt</sup> => 1 x e <sup>0.05 x 2</sup> => 1.105170</td>
+		<td>1/1.105170 = 0.9048</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>1 x e <sup>rt</sup> => 1 x e <sup>0.05 x 3</sup> => 1.16183 </td>
+		<td>1/1.16183 = 0.8607</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>1 x e <sup>rt</sup> => 1 x e <sup>0.05 x 4</sup> => 1.22140</td>
+		<td>1/1.22140 = 0.8187</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>1 x e <sup>rt</sup> => 1 x e <sup>0.05 x 5</sup> => 1.28402</td>
+		<td>1/1.28402 = 0.7788</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+<b><u>Recovery Rate</u></b><br>
+If a credit default occurs on a CDS reference entity, the bond prices will fall. However, they will not fall to zero. There is always some recovery that can be made by the bond holders. The recovery rate depends on the type of the bond. For example, senior secured bonds will have higher recovery rate compared to a unsecured or subordinated bond. For our calculation purposes, we will assume a recovery rate of 40%. 
+<br><br><br>
+
+<h3 class="side-heading-blue">Calculation of CDS premium</h3>
+Let us assume the premium that needs to be paid as "P". With this assumption and the above inputs, we can now proceed for our premium calculation. 
+<br><br>
+Let's us first calculate the present value of the expected premium payments. The following table shows the calculation.
+<br><br>
+
+<table>
+	<th>Time (Years)</th>
+	<th>Probability of survival</th>
+	<th>Expected payment</th>
+	<th>Discount factor</th>
+	<th>PV of expected payment Calc</th>
+	<th>PV of expected payment</th>
+
+	<tr>
+		<td>1</td>
+		<td>0.9800</td>
+		<td>0.9800 x P</td>
+		<td>0.9512</td>
+		<td>0.9800 x P x 0.9512</td>
+		<td>0.9322 P</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>0.9604</td>
+		<td>0.9604 x P</td>
+		<td>0.9048</td>
+		<td>0.9604 x P x 0.9048</td>
+		<td>0.8689 P</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>0.9412</td>
+		<td>0.9412 X P</td>
+		<td>0.8607</td>
+		<td>0.9412 x P x 0.8607</td>
+		<td>0.8100 P</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>0.9224</td>
+		<td>0.9224 x P</td>
+		<td>0.8187</td>
+		<td>0.9224 x P x 0.8187</td>
+		<td>0.7552 P</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>0.9039</td>
+		<td>0.9039 x P</td>
+		<td>0.7788</td>
+		<td>0.9039 x P x 0.7788</td>
+		<td>0.7040 P</td>
+	</tr>
+
+	<tr>
+		<td colspan="5" style="background-color: lightgreen; text-align: center;">Total present value of expected payments</td>
+		<td colspan="5" style="background-color: lightgreen">4.0703 P</td>
+	</tr>
+
+</table>
+
+<br>
+
+<span class="flexbox-1">
+	We are using the survival probabilities because the premium for the next period is only paid if the reference entity survives a default the previous year.
+</span>
+
+<br><br><br>
+
+The next step is to calculate the present value of the expected settlement payments. The following table shows the calculation.
+<br><br>
+
+<table>
+	<th>Time (Years)</th>
+	<th>Probability of Default</th>
+	<th>Recovery Rate</th>
+	<th>Loss given Default (LGD)</th>
+	<th>Expected Payoff Calc</th>
+	<th>Expected Payoff</th>
+	<th>Discount Factor</th>
+	<th>PV of expected payoffs</th>
+
+	<tr>
+		<td>1</td>
+		<td>0.0200</td>
+		<td>0.4</td>
+		<td>0.6</td>
+		<td>0.02 x 0.6</td>
+		<td>0.0120</td>
+		<td>0.9512</td>
+		<td>0.01141</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>0.0196</td>
+		<td>0.4</td>
+		<td>0.6</td>
+		<td>0.0196 x 0.6</td>
+		<td>0.01176</td>
+		<td>0.9048</td>
+		<td>0.01064</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>0.0192</td>
+		<td>0.4</td>
+		<td>0.6</td>
+		<td>0.0192 x 0.6</td>
+		<td>0.01152</td>
+		<td>0.8607</td>
+		<td>0.00991</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>0.0188</td>
+		<td>0.4</td>
+		<td>0.6</td>
+		<td>0.0188 x 0.6</td>
+		<td>0.01128</td>
+		<td>0.8187</td>
+		<td>0.00923</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>0.0184</td>
+		<td>0.4</td>
+		<td>0.6</td>
+		<td>0.0184 x 0.6</td>
+		<td>0.01104</td>
+		<td>0.7788</td>
+		<td>0.00859</td>
+	</tr>
+
+	<tr>
+		<td colspan="7" style="background-color: lightgreen; text-align: center;">Present value of expected payouts</td>
+		<td colspan="7" style="background-color: lightgreen">0.04978</td>
+	</tr>
+
+</table>
+<br><br>
+
+In the above two tables, we have computed the present value of expected premium payments and the present value of expected payouts. Since, these two are set to equal at the start of a CDS contrct (or very close to zero), we can equate these as follows:
+<br><br>
+
+\[
+4.0703 P = 0.04978
+\]
+
+\[
+or \; P = {0.04978 \over 4.0703} = 0.01223
+\]
+
+We can say that the premium is 0.01223 times the notional amount or 1.22% of the notional amount or 122 basis points.
+<br><br>
+<span class="flexbox-1">
+	122 basis points is the price of our CDS. <br><br>
+	
+	Important Note:
+	
+	<ol style="background-color: #faff97">
+		<li>We assumed that premiums are paid once in a year. This is not true, as in practice, premiums are paid quarterly. </li><br>
+		<li>We assumed that the default can at the end of the year. This is also not true, as in practice, default can occur at any time.</li> <br>
+		<li>The discount curve could be slightly different than the once used by us. It won't make much change to our calculations but still it is important to recognise that it could be different. </li> <br>
+		<li>If default occurs at any point of time during the CDS period, then there is an accured premium payment that needs to be paid by the protection buyer to the protection seller. That adjustment is ignore in the above example, that needs to be taken care of. If the default occurs on the premium accural (or payment) date then there is no need for this adjustment. But seldom this happens. Therefore, if the default occurs between two premium dates, then the protection buyer will need to pay premium for a quarter or any other period for which the premium was agreed.</li> <br>
+		<li>To all prices, dealers will make some adjustment for counterparty credit risk and other risks that are not captured in the above pricing model. These adjustments are commonly known as XVA adjustments. This is not captured in the above example. The explanation of the XVA adjusments is beyond the scope of this article. But it is important to note that such adjustments is necessary.</li>
+	</ol>
+
+</span>
+
+<br><br>
+
+
+<h3 class="side-heading-blue">Calculation of CDS Premium under ISDA Big Bang Protocol</h3>
+Under the ISDA Big Bang Protocol, the CDS coupons are standardised for better fungibility and portfolio compression. In North America, the standard coupons are 1% for Investment Grade and 5% for High Yield (non-investment grade) reference entities. 
+<br><br>
+
+Let's assume that we are dealing with an investment grade reference entity and our actual CDS coupon as per our pricing model is 122.3 basis points (the same CDS example described above). However, as per the ISDA protocol, the standard coupon should be 1%. If we are the CDS protection seller, we need to quote 1% (which is the standard coupon as per the protocol) but we should also collect the difference between the actual coupon (122.3 bps) and the standard coupon (1%). We would collect this difference amount as an upfront payment from the protection buyer (in our example) on the trade date. The below diagram shows this concept.
+<br><br><br><br>
+
+<img src="images/cds-upfront-payment.png" alt="CDS Upfront Payment" height="350">
+
+<br><br><br>
+Let us further suppose the following: <br>
+Trade date: 1st January 2020 <br>
+Effective date: 1st January 2020 (in general, the effective date is 2 days from the trade date, we are assuming the same date for simplicity) <br>
+Maturity date: 31st December 2024 <br>
+Premium is paid annually <br>
+Actual premium = 122.3 bps <br>
+Recouponed standard coupon = 100 bps <br>
+Notional amount = $1,000,000
+<br>
+The below diagram shows these dates.
+<br>
+
+<br><br>
+
+On the trade date, the CDS protection buyer has to pay the premium. The premium applicable is the actual premium, which is 122.3 bps or $12,230. However, as per the standard coupon, the premium payable is only 100bps or $10,000. There is a difference of $2,230 between actual premium and standard coupon premium for first year. The same difference will be there for the second year, third year, fourth year and fifth year. Since, the actual coupon is more than the standard coupon, the difference amount needs to be paid by the CDS protection buyer to the CDS protection seller. This difference is called as "upfront payment", instead of "premium", as the term "CDS premium" under the standard coupon trades refers to "standard coupons" only. Therefore, the CDS premium now involves the following.
+<br><br>
+\[
+CDS \; Premium = Upfront \; Payment +/- CDS \; Premium
+\]
+<br><br>
+
+Instead of adjusting (or settling) this upfront payment on year on year (or period-on-period) basis, this is settled for all the years at once at the beginning of the trade. Obviously, the premium for 2nd year if settled on the trade date should be discounted at the appropriate discounting rate. The same goes for the premium that is required to be paid for the subsequent years. Let's use the same discount rates that we used in the above example.
+<br><br>
+
+<!---
+Let us assume that the following are the zero rates for the next 5 years.
+<br><br>
+
+<table>
+	<th>Year</th>
+	<th>Zero Rate</th>
+	<th>Discount Factor</th>
+
+	<tr>
+		<td>1</td>
+		<td>5%</td>
+		<td>0.95123</td>
+	</tr>
+
+    <tr>
+    	<td>2</td>
+    	<td>5.25%</td>
+    	<td>0.90032</td>
+    </tr>
+
+    <tr>
+    	<td>3</td>
+    	<td>5.35%</td>
+    	<td>0.85172</td>
+    </tr>
+
+    <tr>
+    	<td>4</td>
+    	<td>5.46%</td>
+    	<td>0.80380</td>
+    </tr>
+
+    <tr>
+    	<td>5</td>
+    	<td>5.51%</td>
+    	<td>0.75919</td>
+    </tr>
+
+</table>
+<br><br>
+
+---------------------->
+
+We need to apply the above discount factors to the differential cash flows and find out the present value. However, it is not so simple, there is something else to it. These differential cash flows (premiums) are payable only if there is no default (no default = survival). If there is a default then the CDS protection buyer need not pay any further premiums. For example if the reference entity defaulted at the end of the second year, the CDS protection buyer does not have to pay any premiums for the third year till through maturity. Therefore, our calculations should incorporate this probability of survival. The following is the calculation.
+<br><br>
+
+<table>
+	<th>Year</th>
+	<th>Differential Premium</th>
+	<th>Probability of Survival</th>
+	<th>Expected premium payment</th>
+	<th>Discount Factor</th>
+	<th>Present Value</th>
+
+	<tr>
+		<td>1</td>
+		<td>$2,230</td>
+		<td>0.9800</td>
+		<td>$2,185.4</td>
+		<td>0.9512</td>
+		<td>$2,078.752</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>$2,230</td>
+		<td>0.9604</td>
+		<td>$2,141.692</td>
+		<td>0.9048</td>
+		<td>$1,937.803</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>$2,230</td>
+		<td>0.9412</td>
+		<td>$2,098.896</td>
+		<td>0.8607</td>
+		<td>$1,806.503</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>$2,230</td>
+		<td>0.9224</td>
+		<td>$2056.952</td>
+		<td>0.8187</td>
+		<td>$1,684.027</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>$2,230</td>
+		<td>0.9039</td>
+		<td>$2,015.697</td>
+		<td>0.7788</td>
+		<td>$1,569.825</td>
+	</tr>
+
+	<tr>
+		<td colspan="5" style="background-color: lightgreen; text-align: center;">Present value of differential premium</td>
+		<td style="background-color: lightgreen">$9,076.909</td>
+	</tr>
+
+</table>
+<br><br>
+
+<span class="flexbox-1">
+	The upfront payment would be $9,076.909
+</span>
+<br><br>
+
+<h3 class="side-heading-black">How do we know that this calculation is correct?</h3>
+We can use an alternative approach to find this present value of the differential premiums. The alternative approach is to, first, find out the present value of the CDS with premiums as 1% (standard coupons), and, second, to find out the present value of the CDS with 1.22% (actual coupons or premiums), and to find their difference. We do not have to calculate the present value of the actual coupons because we have already done that in our earlier example above. The simiplified calculation is as below:
+<br><br>
+
+P (premium, as per our earlier calculations) = 0.01223 (122 bps or 1.23%)  <br>
+Present value of expected cash flows = 4.0703 P <br>
+Notional amount in our example = $1,000,000 <br>
+Thus, present value of the expected premiums = 4.0703 x 0.0123 x 1,000,000 = $49,779.77.
+<br><br>
+The present value of the expected payments as per standard coupon of 1% is as follows:
+<br><br>
+
+<table>
+	<th>Years</th>
+	<th>Survival Probability</th>
+	<th>Coupon (1% of notional)</th>
+	<th>Expected Payment</th>
+	<th>Discount Factor</th>
+	<th>Present Value</th>
+
+	<tr>
+		<td>1</td>
+		<td>0.9800</td>
+		<td>$10,000</td>
+		<td>$9,800</td>
+		<td>0.9512</td>
+		<td>$9,321.76</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>0.9604</td>
+		<td>$10,000</td>
+		<td>$9,604</td>
+		<td>0.9048</td>
+		<td>$8,689.699</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>0.9412</td>
+		<td>$10,000</td>
+		<td>$9,412</td>
+		<td>0.8607</td>
+		<td>$8,100.90</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>0.9224</td>
+		<td>$10,000</td>
+		<td>$9,224</td>
+		<td>0.8187</td>
+		<td>$7,551.689</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>0.9039</td>
+		<td>$10,000</td>
+		<td>$9,039</td>
+		<td>0.7788</td>
+		<td>$7,039.573</td>
+	</tr>
+
+	<tr>
+		<td colspan="5" style="background-color: lightgreen">Present value of expected premiums</td>
+		<td style="background-color: lightgreen">$40,703.63</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+Now we have: <br>
+The present value of the expected premiums @ 122 bps = $49,779.77 <br>
+The present value of the expected premiums @ 100 bps = $40,703.63 <br>
+The difference in present value = $9,076.139
+<br><br>
+
+Our earlier calculation was $9,076.909 <br>
+The minor difference is due to rounding off errors.
+<br><br><br>
+
+
+<h3 class="side-heading-black">Adjustment for accrued interest</h3>
+
+The CDS premiums usually follows a 'full first coupon' convention, wherein the CDS buyer needs to pay the premium for the whole standard premium period irrespective of the trade date. This method of cds payment necessiates an adjustment similiar to accured interest adjustments in bonds. To understand this better, let's look at the following diagram.
+<br><br><br>
+
+<img src="images/cds-accrued-interest-updated-short.png" alt="" height="250px" >
+
+<br><br><br>
+
+In the above diagram, we can see that the Trade date is in the middle of year 1. If the CDS coupon is 122 bps per annum, the CDS protection buyer would need to pay this entire coupon of 122 bps irrespective of the trade date. Of course, this is not fair to the CDS buyer because he is paying the premium for the full year, while the protection is only for half a year. Therefore, there is an adjustment that is been carried out to handle this inconsistency. The adjustment is called as "accured interest/coupon adjustment", which is similar to the adjustment for accured interest carried out in bonds. In our example, this adjustment would be in the form of a payment made by the CDS protection seller to the CDS protection buyer for an amount equal to the half of the annual coupon (as the trade date is in the half of the period). If the trade date were to be at some other point in time, then the adjustment will have to be carried out by calculating the exact period between the previous coupon (premium) payment date and the trade date.
+<br><br>
+
+In the above example, we have considered that the premiums are paid annually for simplicity of understanding. In practice, the premiums are paid on quarterly basis. In USA, the premiums are paid on IMM dates, which are 20th of March, June, September and December of a year. So, if one were to buy a contract on July 15th, it needs to pay the full premium for the period "June 20th - September 20th". But since the trade date is 15th of July, the coupon for the period "June 20th - July 15th" need to be paid back to the CDS protection buyer as it does not enjoy any protection during that period. This amount is called as "coupon adjustment amount". Thus, the price of a CDS includes the following.
+<br><br>
+
+\[
+CDS \; Premium \; Payment = CDS \; Coupon \; +/- \; Upfront \; Payment \; - \; Accured \; Coupon
+\]
+
+
+<br>
+
+Continuining our earlier example of an annual premium payment and assuming the trade date is 1st July 2020, the following is the calculation.
+<br><br>
+Duration between the previous coupon payment date and trade date = 6 months (let us ignore day-count convention)
+<br><br>
+\[
+Accrued \; coupon = $1,000,000 \; \text x \; 1.223 \text % \; \text x \; 0.5 = $6,115.
+\]
+
+<br>
+All the above calculations can be summarised as follows:
+<br><br>
+
+\[
+CDS \; premium \; payment = CDS \; Coupon \; +/- \; Upfront \; Payment \; - \; Accured \; Coupon
+\]
+
+<br>
+CDS premium payment at the start of the contract (on trade date) = $10,000 + $9,076.90 - $6,115 = $12,961.9 <br>
+CDS premium payment on subsequent premiums payment dates = $10,000
+
+
+<br><br><br>
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 18<sup>th</sup> November 2020.
+</p>
+
+</body>
+</html>

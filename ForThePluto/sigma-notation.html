@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Sigma Notation (Mathematics)</h2>
+<br>
+
+Many times we come across mathematical notations that express a relationship, equation or a series. Mathematics is integral to finance and hence we cannot avoid these mathematical notations. When we encounter them the first time, they seem daunting. But when we spent some time to understand their format and get acquainted with them, they can be understood and handled easily. In this article, we will discuss one of the common notations called "Sigma" notation.
+<br><br>
+The sigma notation comes in various forms but the most common form is as below.
+<br><br><br>
+
+<img src="images/summation-3.png" alt="Sigma Notation Example" height="250">
+
+<br><br>
+
+We will use some examples to understand how to use sigma notation.
+<br><br>
+
+<h3 class="side-heading-red">Example 1</h3>
+
+Let's say we want to sum the following terms.
+<br> <br>
+\[
+1^2 + 2^2 + 3^2 + 4^2 + 5^2 + 6^2 + 7^2 + 8^2 + 9^2 + 10^2
+\]
+<br>
+We can write this as it is, but if we were to do the sum of the series up to 100 or 1,000 numbers then it is incovenient to write down the entire series. Instead, we can use a short form to express what we want to do. We do this with the help of a sigma notation. The following shows how it works.
+<br><br>
+
+<img src="images/summation-4.png" alt="Sigma Notation - 1" height="250">
+
+<br><br>
+
+<ul class="b">
+	<li>We declared a variable called "i" and initialized it to 1 (as our sum starts from 1). We write that down at the bottom of the sigma symbol.
+	<li>Our summation is only till 10. Therefore, we put that restriction by mentioning it on the top of the sigma symbol.</li>
+	<li>We want to square the values. We mention that as i<sup>2</sup> to the right of the sigma symbol. </li>
+</ul>
+<br>
+
+<h3 class="side-heading-red">Example 2</h3>
+
+Let's suppose we have the following series.
+
+\[
+2(1)-1 \; + \; 2(2)-1 \; + \; 2(3)-1 \; + \; 2(4)-1 \; + 2(5)-1 \; + \; 2(6)-1 \; + \; 2(7)-1 \; +  .....................+ \; 2(99)-1\; + 2(100)-1 
+\]
+<br>
+It is quite hard to write the series till 100 and even if we write it, it is not going to help us in any way. By using sigma notation, we can write it in an elegant and simplified form. The following is the notation.
+<br><br>
+
+<img src="images/summation-5.png" alt="Sigma Notation Example-2" height="250">
+
+<ul class="b">
+	<li>We declared a variable called 'n' and initialized it to 1 (as our sum starts from 1). We write that down at the bottom of the sigma symbol.</li>
+	<li>Our summation is only till 100. Therefore, we put that restriction by mentioning it on the top of the sigma symbol.</li>
+	<li>The summation is in the form of 2(n)-1. We mention that to the right of the sigma symbol</li>
+</ul>
+
+<br><br>
+
+<h3 class="side-heading-red">Example 3</h3>
+Let's say we have the following sigma notation. How do we intrepret it?
+<br><br>
+
+<img src="images/summation-6.png" alt="Sigma Notation Example 3" height="250">
+
+<br><br>
+
+This notation can be evaluated as follows.
+<br>
+\[
+5 \; \text x \; ((2 \; \text x \; 4) + (2 \; \text x \; 5) + (2 \; \text x \; 6))
+\]
+
+\[
+5 \; \text x \; (8+10+12) = 5 \; \text x \; 30 = 150
+\]
+
+<br>
+This notation has the following meaning.
+<ul class="b">
+	<li>The valiable p is declared and initialized to 4. This is written at the bottom of the sigma symbol.</li>
+	<li>The maximum that p can reach is 6; this is written at the top of the sigma symbol</li>
+	<li>The 2p is the summation rule, which means that 2 is multiplied to the value of p. The value of p starts at 4 and ends at 6. These different components are added together to find the sum. </li>
+	<li>The number '5' before the sigma symbol indicates to us that the result of the summation should be multiplied by 5</li>
+</ul>
+<br><br>
+
+<h3 class="side-heading-red">Example 4</h3>
+
+While dealing with structured products, we may come across the payoffs in the form of equations. For instance, the following is the payoff of an Cliquet Option, where the seller shall pay to the Buyer an amount determined by the Calculation Agent equal to;
+<br><br>
+\[
+Equity \; Notional \; Amount \; \text x \; Max \left(0, \sum_{j=1}^{12} Min \; [Monthly \; Cap, R_j]   \right)
+\]
+
+<br><br>
+Where <br>
+R<sub>j</sub> is the monthly return of SPX for the j<sup>th</sup> observation date (J=1,2,......12), etc. <br>
+R<sub>j</sub> = (P<sub>j</sub> - P<sub>j-1</sub>) / <Psub>j-1</Psub>, P<sub>j</sub> is the closing price of the j<sup>th</sup> observation date. <br>
+P<sub>j-1</sub> is the closing price of the previous observation date.<br>
+P<sub>0</sub> is the closing price of the SPX on the trade date <br>
+With each R<sub>j</sub> subject to the monthly cap and the monthly floor.
+<br><br>
+
+To understand the above formula, we need to break it down into pieces. The following is one of the ways.
+<br><br>
+
+If we focus on the sigma notation part, it means that the monthly returns (R<sub>j</sub>) are summed together and the minimum amount between the monthly cap and the returns is compared with zero, and whichever is the maximum value is multiplied with Equity Notional Amount to find the settlement value. Without sigma notation, it would have been quite difficult to express the monthly returns.
+<br><br>
+
+<i>Note: Monthly Returns R<sub>j</sub> = Returns of every month such as returns of Jan + Feb + March + .... + December. These monthly returns have been expressed in a sigma notation form to make the equation simpler to understand.</i>
+
+<br><br><br>
+
+<h3 class="side-heading-red">Example 5</h3>
+Sometimes, the underlying series could be easy but when we try to express it in the form of a sigma notation, it may have to be changed. Let's consider the following series.
+<br><br>
+\[
+5 + 7 + 9 + 11 + 13
+\]
+
+<br>
+We can see that the series starts with 5 and is incremented by 2. In order to express it in a sigma form, we may need to find a formula to express it. The following could be one of the ways of expressing it in the form of a sigma notation.
+<br><br>
+
+<img src="images/summation-7.png" alt="Sigma Notation Example 4" height="250">
+
+<br><br>
+<ul class="b">
+	<li>We had to create a small formula to express our series. So, sometimes using sigma notation might require a bit of thought behind how to represent an expression or series.</li>
+</ul>
+
+<br><br>
+
+<h3 class="side-heading-red">Example 6</h3>
+Similar to Example 5 earlier, sometimes, while dealing with summation of fractions, we may not have a direct intuitive way to express in sigma notation. We may have to figure out a formula or a method to express. Let's consider the following fraction series.
+<br><br>
+\[
+{3\over4} + {4\over5} + {5\over6} + {6\over7}
+\]
+<br>
+This series can be expressed in many ways. The following are two of the ways in which it can be expressed.
+<br><br>
+
+<img src="images/sigma-joint.png" alt="Sigma Notation Example 6" height="150">
+<br><br><br>
+I hope the above examples provided a brief introduction to the sigma notation. As with any form of mathematics, practice and continuous learning is essential to make ourselves comfortable with the mathematical terms.
+
+<br><br><br>
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 2<sup>nd</sup> November 2020.
+</p>
+
+</body>
+</html>

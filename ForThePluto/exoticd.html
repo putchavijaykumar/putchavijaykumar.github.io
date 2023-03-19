@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/>
+
+
+<div id="actualcontent">
+
+<h2 align="center">A Brief on Structured Products and Exotic Derivatives </h2>
+<h2 align="center"><i>(Work-in-Progress Notes)</i> </h2>
+
+Over the years, many derivatives have evolved into more or less standard products with well-defined properties that are widely known and actively traded. The prices, volume and implied volatilities are quoted by exchanges or by brokers on a regular basis. However, the derivatives markets being large and still evolving have many non-standard products that are created by financial engineers for specific purposes. These non-standard products are known as “Exotics” or “Exotic Derivatives”. They are traded less actively in comparison with standard products. These products are not entirely new but are variants of standard products: the variation mainly in the features of the products such as maturity, payoffs, effective date, notional amount, reset dates, etc., or the variation is due to the combination of two or more derivatives to form a new derivative. Although they are a small part of the derivatives universe, many derivative dealers use them frequently because they are generally more profitable than the usual standard products. The standard products are also known as “Plain Vanilla Products”.
+<br/><br/>
+The exotic products are developed to meet varied requirements such as very specific hedges, tax, accounting or legal. Occasionally, they are also developed to make them more appealing to the corporate customer in comparison to the standard products. The below table shows some of the exotic products and features that are modified.
+<br/><br/>
+
+<u>Equity</u>
+<ul>
+	<li>Equity forwards</li>
+	<li>Equity warrants</li>
+	<li>Equity linked debt</li>
+</ul>
+
+<u>Debt</u>
+<ul>
+	<li>Structured notes</li>
+</ul>
+
+<u>Options</u>
+<ul>
+	<li>Packages</li>
+	<li>Non-standard American options</li>
+	<li>Forward start options</li>
+	<li>Compound options</li>
+	<li>Chooser options</li>
+	<li>Barrier options</li>
+	<li>Binary options</li>
+	<li>Look back options</li>
+	<li>Shout options</li>
+	<li>Asian options</li>
+	<li>Options to exchange one asset for another</li>
+	<li>Options involving several assets</li>
+</ul>
+
+<u>Swaps</u>
+<ul>
+	<li>Basis swap</li>
+	<li>Constant maturity treasury swap (CMT)</li>
+	<li>Constant spread swap (CMS)</li>
+	<li>Flavoured swap</li>
+	<li>Delayed start and forward start swap</li>
+	<li>Step-up and step-down coupon swap</li>
+	<li>Zero coupon swap or prepaid swap</li>
+	<li>Market agreed coupon swap (MAC)</li>
+	<li>In arrears swap</li>
+	<li>Overnight Index Swap (OIS)</li>
+</ul>
+
+<br/>
+
+<b><u>Equity Forwards</u></b><br/>
+An equity forward contract is simply a forward contract on a stock, stock index, or stock portfolio. It is an agreement between two parties whereby one party agrees to buy a stock, stock index or portfolio of stocks from another party at a pre-determined price at a future point in time. It is a very simple agreement but some consider it to be exotic because usually stocks and portfolios of stocks are bought and sold on exchanges and there is price transparency and liquidity.
+<br/><br/>
+An interesting variation of a forward contract is the <b>Break Forward</b>. It is a combination of spot and derivative positions that replicate the outcome of an ordinary call with one exception – the positions are structures such that the overall position costs nothing up front. This instrument is like a zero-cost call, except that it would be impossible to have an instrument that costs nothing up front and returns either zero or a positive number, like an ordinary call. The break forward achieves this by penalizing the investor if the option ends <i>out-of-the-money</i>. An ordinary call pays Max (0, ST-X), where ST is the stock price at expiry and X is the exercise price. This instrument is a call that pays off if it expires <i>in-the-money</i> and incurs a charge if it expires out-of-the-money. Even the <i>in-the-money</i> payoff, however, can be negative.
+<br/><br/>
+For example, let’s suppose the following.<br/>
+Stock price = $125.9375<br/>
+Time to expiry = 0.0959 years (35/365) (35 days being the duration of the contract)<br/>
+Risk free rate = 4.46% p.a. continuous compounding<br/>
+Volatility = 0.83<br/>
+Number of units = 100<br/>
+Based on the above information, the forward price, using continuous compounding would be:<br/>
+F = Se^rt<br/>
+= 125.9375 x e ^ (0.0446 x 0.0959)<br/>
+= 126.48<br/>
+<br/>
+This forward price will be the exercise price of the break forward.<br/>
+Let us assume that the premium on the above call is $12.88.<br/>
+The exercise price would be 126.48 + 12.88 ^(0.0446 x 0.0959) = 139.41<br/>
+There will be two scenarios under the break forward – one where the stock price is above $126.48 and another below $ 126.48. The payoffs of these two scenarios is as below.<br/>
+If the stock price at expiry (35 days) is more than 126.48, then the payoff would be ST – 139.41.<br/>
+If the stock price at expiry (35 days) is less than 126.48, then the payoff would be 126.48 – 139.41 = -12.96 (a loss or negative payoff).<br/>
+Since the quantity in the above example is 100, the real payoff should be multiplied by 100.<br/>
+<br/>
+In a normal call option, the investor must pay the premium upfront. In a break forward, the investor does not pay the premium upfront but undertakes to pay the compounded value of the premium at the time of expiry. In other words, in a normal option, if the option is out-of-the-money, the investor need not pay anything as he has already paid the premium upfront. But in a break forward, if an option is out of the money, the investor has to pay the compounded value of the option premium. You may consider this as if the option seller has provided a loan to the option buyer for an amount equal to the premium, which needs to be repaid at the time of expiration with continuous compounding interest.
+<br/><br/>
+Break forward options are sometimes also known as “Pay later options”.
+<br/><br/><br/>
+
+<b><u>Equity Warrants</u></b><br/>
+Warrants have been around much longer than exchange traded options. A warrant is an option written by a firm on its own stock and usually offered with a bond issue. The investor in a bond receives warrants which entitles him to purchase one or more of the underlying stocks of the company at a future point in time. Warrants can be priced similar to options, except that the exercise of warrants dilutes the value of the stock and this must be taken into consideration during their valuation. Many warrants trade on stock exchanges. They are usually issued for periods ranging from 3 to 10 years.
+<br/><br/>
+Though simple stock warrants are not called as Exotics, there are plenty of variants which are called as exotics. For example, warrants on domestic and foreign stock indices payable in USD are classified as exotics.
+<br/><br/>
+<br/>
+<b><u>Equity Linked Debt</u></b><br/>
+It is a combination of call option and a bond. Usually, companies offer bonds with coupons at market rates. However, it is possible for companies to issue them for lesser rates than the market rates but to make the issue attractive, it may link the payoff to the returns from an index or any other instruments, such as the performance of a single stock or a basket of stocks. Such issues or instruments are known as “Equity Linked Debt’.
+<br/><br/>
+These sort of instruments came to the market during the late 1980s but were not popular. However, since the last few years there has been a steady demand for these instruments.
+<br/><br/>
+
+<u>For example,</u><br/>
+Suppose, a bank or investment banking firm makes the following offer:<br/><br/>
+Purchase a one year zero coupon bond paying 1% interest and receive 50% of any upside gain on the S&P 500. Each unit is sold with a principal amount of $10. Currently, a one year zero coupon bond without the S&P feature would pay 5% compounded annually. The S&P is at 1,500, its standard deviation is 0.12, and its dividend yield is 1.5%. Is this a good deal?
+<br/><br/>
+If you invest $10 in the bond you would get:<br/>
+$10 x $1.01 = $10.1<br/>
+The alternative opportunity (without S&P 500 linkage) would give:<br/>
+$10 x 1.05 = $10.50<br/>
+To analyse whether it is worth the investment, we should calculate the present value of our investment by discounting it at the market rate of return.<br/>
+Thus, PV = 10.10/1.05 = 9.62<br/>
+
+We can say that for an investment whose value is $9.62, we are paying $10. That means, we are paying $0.38 for getting the upside on the S&P index.
+<br/><br/>
+This amount is also known as the implicit or intrinsic value of the investment. We can think of it as if we are paying a premium of $0.38 for an upside of 50% on the S&P 500, with a strike price of 1,500. We can compare this premium with market premium rates and thereby take a decision as to whether this investment is worth or not.
+<br/><br/>
+Alternatively, we can calculate the value of the call option by using Black-Scholes model and compare whether the premium payable is reasonable or not.
+<br/><br/>
+These securities sometimes have other features such as payoffs based on average price over the last 10 days before expiration, 100% upside on the index, etc.<br/><br/>
+These securities have at times been created by stock and options exchanges but they mostly are traded in the OTC market.
+<br/><br/><br/>
+
+<b><u>Structured Notes</u></b><br/>
+Corporations routinely issue notes rating from 2 to 10 years. Usually, the notes carry both fixed and floating interest rates. In the early 1990s many corporations began issuing notes with derivative transactions attached so as to change the payoff pattern. These instruments have come to be known as “Structured Notes”.
+<br/><br/>
+They are mostly issued by companies having high credit quality. Hence, there is a very limited credit risk involved with them. These are designed for a particular user(s) in mind. The user(s) wants a particular exposure and normally plans to hold the instruments until maturity. Thus, these tend to be fairly illiquid instruments.
+<br/><br/>
+Some of the notes have coupons indexed to the CMT (Constant Maturity Treasury) rate, while others have leveraged and range rates. The following are some common structures available in the market.
+<br/>
+<ul>
+	<li>Leveraged coupon structures</li>
+	<li>Range floaters</li>
+	<li>Reverse or inverse floaters</li>
+</ul>
+
+<u>Leveraged coupon structures:</u><br/>
+Usually, floating rate coupons are linked to indices such as LIBOR, EURIBOR, etc. However, the coupons can be set up as ‘n times’ the index values. For example, a particular coupon can be set up as 1.5 times the LIBOR value. That means, if the LIBOR is 6% then the coupon would be 9%. Similarly, if the LIBOR increases to 7% then the coupon increases to 9.5%. These instruments are usually available in OTC market and are relatively illiquid.
+<br/><br/>
+
+<u>Range floaters:</u><br/>
+Coupons can be set in such a manner that the payoff would be positive only if the linked index is within a particular range. For example, an instrument can promise to pay LIBOR +3% if the LIBOR is between 0% and 6% in the first year, between 0% and 7% in the second year and so on. If the LIBOR is 7% in the first year, then the payoff would be zero. These instruments are called as Range Floaters. It can be viewed as a bet on the LIBOR remaining within a specific range within a particular time period.
+<br/><br/>
+
+<u>Reverse or Inverse floaters:</u><br/>
+A standard floating rate note pays interest at a rate that changes directly with changes in the market interest rates. A reverse or inverse floater is one which pays interest at a rate that changes in opposite direction to the changes in the market interest rates. In other words, if the interest rates go up, the coupon of an inverse floater goes down and vice-versa. This is achieved by setting the coupon at Y-LIBOR, as an example. Suppose, Y is 12% and LIBOR is 5%, then the coupon rate would be 7% (12-5). If LIBOR increases to 6%, then the coupon would decrease to 6%.
+<br/><br/>
+If the LIBOR increases to 13%, then the coupon would be -1% (12%-13%). In this case, the lender will have to pay the interest to the borrower rather than the other way round. Since this would not make any sense, there is usually a cap to the LIBOR increase, and is put in such a way that the coupon rate would always give a minimum return, say 3% or 4%, irrespective of the movement of the LIBOR rate.
+<br/><br/>
+The inverse floaters can also be structured as a leverage – e.g. (Y – 0.75 times LIBOR). They can also be structured in a various creative ways such as the difference between two interest rates, linked to foreign indices, etc.
+<br/><br/>
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Copyright @ 2018, Putcha Vijay Kumar
+			</div>
+		</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h3 div id="top" align="center">Swaptions</h3>
+<br/>
+
+An option on a swap is called as Swaption <i>(please remember that it is an "option on a swap" not a "swap on an option").</i> Being an option, it can be of two types - call and put. However, the market practice is to name them differently for convenience purposes. A plain vanilla interest rate swap (IRS) has two legs - fixed and floating. The counterparties are called as "Payer" and "Receiver". The names payer and receiver are always with reference to the fixed rate. Thus, a payer of an IRS is the payer of fixed rate and receiver of a floating rate; and the receiver of an IRS is the receiver of a fixed rate and payer of a floating rate. Accordingly, the swaption gives its the buyer the right to either pay fixed or receive fixed, and thus are named as "Payer swaption" and "Receiver swaption" instead of swaption call and swaption put.
+<br/><br/>
+
+Payer swaption is equal to call option and receiver swaption is equal to put option. Each one of them can be bought or sold, resulting in four market sides or exposures for swaption. The following shows the market sides.
+<br/><br/>
+
+<table>
+	<th>Swaption type</th>
+	<th>Buyer</th>
+	<th>Seller</th>
+
+	<tr>
+		<td>Payer swaption</td>
+		<td>Right to pay fixed interest rate (and receive floating)</td>
+		<td>Obligation to receive fixed interest rate (and pay floating)</td>
+	</tr>
+
+	<tr>
+		<td>Receiver swaption</td>
+		<td>Right to receive fixed interest rate (and pay floating)</td>
+		<td>Obligation to pay fixed interest rate (and receive floating)</td>
+	</tr>
+</table>
+
+<br/><br/>
+
+<b><u>Swaption Components</u></b><br/>
+As discussed above, a swaption is an option on a swap. Thus, it has two components - option and underlying swap. First, the parties (buyer and seller) enter into the option (called the swaption). If the option is in-the-money then the buyer will exercise the option which will entitle him to enter into a swap with the seller. If the option is out-of-money then the buyer will not exercise the option and the option will go worthless.
+<br/><br/>
+The terms of the swaption represent both the option and the underlying swap, as discussed below.
+<br/><br/><br/>
+
+<b><u>Swaption Terms</u></b><br/>
+Payer swaption: It gives the buyer the right to pay fixed and receive floating.<br/>
+Receiver swaption: It gives its buyer the right to receive fixed and pay floating.<br/>
+Swaption buyer: The buyer of a swaption.<br/>
+Swaption seller: The seller of the swaption (also known as writer).<br/>
+Premium: The amount paid by the buyer of the swaption to the seller to enter into the contract.<br/>
+Strike price: It is the fixed rate of interest agreed by the parties to the contract.<br/>
+Expiry date: The date on which the swaption expires.<br/>
+Start date: It is the start date of the swap (not option). This is usually the next day after expiry or exercise.<br/>
+Term to maturity: The maturity date of the underlying swap.<br/>
+Day count convention: The day count convention applicable for the cash flows under the swap.<br/>
+Notional amount: The notional amount for the underlying swap.<br/>
+
+<br/><br/>
+
+<b><u>Swaption Settlement</u></b><br/>
+The swaption can have either cash or physical settlement.<br/>
+In cash settlement, the seller will pay the buyer an amount equal to the difference between the present values of fixed rate and floating rate.<br/>
+In a payer swaption, this amount is the difference between the floating rate and the fixed rate.<br/>
+In a receiver swaption, this amount is the difference between the fixed rate and the floating rate.<br/>
+The exact settlement amount will depend on the following factors.<br/>
+
+<ul>
+	<li>Term of the swap</li>
+	<li>Notional amount</li>
+	<li>Fixed rate</li>
+	<li>Floating rate</li>
+	<li>Calculation or Reset period</li>
+	<li>Reset frequency; and</li>
+	<li>Day count convention</li>
+</ul>
+<br/>
+
+<span class="normalind25">
+<u>For example:</u><br/>
+Consider a 3 months x 1 year USD 100 million European swaption with a fixed rate of 5% against LIBOR, an annual reset frequency and a day count convention of Actual/360. Trade date is 1st January 2019. Calculate the settlement amount, if the LIBOR is 6% on expiry date.
+<br/><br/>
+In this example, the following are the terms of the swap.<br/>
+<br/>
+Trade date of the swaption: 1st January 2019<br/>
+Expiry date of the swaption: 31st March 2019<br/>
+Start date of the swap: 1st April 2019<br/>
+End date of the swap: 31st March 2020<br/>
+Reset frequency: 1 year<br/>
+Notional amount: USD 100 million<br/>
+Day count convention: Actual/360<br/>
+LIBOR (for the purposes of swap) as on 1st April 2019: 6%<br/>
+<br/>
+The first step is to calculate the present value of the fixed rate. The following is the calculation.<br/>
+
+<p>
+  $$ Present\; value \; of \; fixed \; rate\; = \;{5\over {1.06}^1} = 4.7169 \; million $$
+</p>
+<br/><br/>
+
+The second step is to calculate the present value of the floating rate. The following is the calculation.
+
+<p>
+  $$ Present\; value \; of \; floating \; rate\; = \;{6\over {1.06}^1} = 5.6603 \; million $$
+</p>
+<br/><br/>
+
+The difference between the two is 0.9434 million. This amount will be paid by the seller of the swaption to the buyer.
+<br/><br/>
+In case of physical settlement, there is no need to calculate the present value. The parties of the swaption would become the parties of the swap and the swap would, normally, be settled on accrual basis. That means, the netting will happen at the end of the reset period. In the above example, the floating rate payer would USD 1 million to the fixed rate payer on 31st March 2020, which represents the difference between the fixed rate and the floating rate.
+<br/><br/>
+In the above example, we have considered a swap on one year tenor for easy calculation purposes. In practice, the swap tenor can be long. In such cases, the swap will have multiple settlements (cash flows) at period end-dates depending on the floating rates determined on various fixing dates.
+<br/><br/>
+
+</span>
+<br/><br/>
+
+<b><u>Uses of Swaption</u></b><br/>
+The swaption should be viewed as a tool to hedge dramatic changes in interest rate movements rather than precisely locking in a rate in future. It is a derivative and not a financing tool and hence any financing is actually done outside of a swaption contract.
+<br/><br/>
+In general, the following can be some of the uses.<br/>
+<ul>
+	<li>A borrower who wants to borrow money in future may be afraid that the interest rates may go up. He may enter into a plain vanilla interest rate swap to hedge the interest rate risk, wherein he may pay fixed and receive floating. The idea here is that if the interest rates were to go up (as he feared) then he would receive the floating rate which he will use it to pay the interest on actual loan. In case of netting, he would receive the difference amount between the floating rate and the fixed rate, which can be used to pay the interest on actual loan.
+	<br/><br/>
+	Irrespective of the movement of the interest rates, through an IRS the borrower has locked his liability on his loan. However, if he is not sure about the direction of the interest rate movement and if he wants to take the advantage of lower interest rates (in case the interest rates move downwards) then he cannot do that with an IRS. For this, he needs an option and swaption is that tool that allows him to have an option on entering into a swap. The borrower in this example can enter into a "Payer swaption" which allows him to pay fixed and receive floating.
+	</li>
+
+	<br/>
+	<li>A lender might want to lend money in future but he is afraid that the interest rates may come down. He may enter into a "Receiver swaption" which will allow him to receive fixed and pay floating.</li>
+
+</ul>
+
+<br/><br/>
+
+<b><u>ISDA Confirmation Template for Swaptions</u></b><br/><br/>
+
+<table>
+	<th>Swaption Terms</th>
+	<th>Details</th>
+
+	<tr>
+		<td>Trade Date</td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td>Option Style</td>
+		<td>[American / European / Bermudian]</td>
+	</tr>
+
+	<tr>
+		<td>Seller</td>
+		<td>[Party A/B]</td>
+	</tr>
+
+	<tr>
+		<td>Buyer</td>
+		<td>[Party A/B]</td>
+	</tr>
+
+	<tr>
+		<td>Premium</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Premium Payment Date</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Business Day Convention for Premium Payment Date</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Business Days for Payment</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Exercise Business Days</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Calculation Agent</td>
+		<td>[  ]</td>
+	</tr>
+
+	<th>Procedure for Exercise</th>
+	<th>Details</th>
+
+	<tr>
+		<td>Commencement Date</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Bermuda Option Exercise Dates</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Expiration Date</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Earliest Exercise Time</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Latest Exercise Time</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Expiration Time</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Partial Exercise</td>
+		<td>[Applicable / Inapplicable]</td>
+	</tr>
+
+	<tr>
+		<td>Multiple Exercise</td>
+		<td>[Applicable / Inapplicable]</td>
+	</tr>
+
+	<tr>
+		<td>Minimum Notional Amount</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Maximum Notional Amount</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Integral Multiple</td>
+		<td>[  ]</td>
+	</tr>
+
+	<tr>
+		<td>Automatic Exercise</td>
+		<td>[Applicable / Inappliable]</td>
+	</tr>
+
+	<tr>
+		<td>Threshold</td>
+		<td>[  ] [None]</td>
+	</tr>
+
+</table>
+
+
+
+
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2019
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 07.07.2019<br/>
+</p>
+
+</body>
+</html>

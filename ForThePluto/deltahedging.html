@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Delta, Delta Hedging and Dynamic Hedging</h2>
+<br>
+
+<h3 class="side-heading-blue">Delta and Delta Hedging</h3>
+The word "Delta" can be used in various situations but in this article, we will be using it in relation to options, particularly stock options. The delta of an option is the ratio of the change in the price of the option to the change in the price of the underlying. 
+<br><br>
+\[ Delta \; of \; the \; option = { Change \; in \; the \; price \; of \; the \; option \over Change \; in \; the \; price \; of \; the \; underlying } \]
+<br>
+For example,
+Let's suppose that the price of BofA stock is $25 on 17th Sep 2020 and it changed to $26 on 18th Sep 2020. Let's further suppose that the price of a 3-month call option on BofA stock is $2 on 17th Sep 2020 and $2.5 on 18th Sep 2020. The Delta would be:
+<br><br>
+\[ Delta = {{$2.50-$2} \over {$26-$25}} = {$0.5 \over $1} = 0.5 \]
+<br>
+<i>Note: Delta is an relative measure and hence the prefixes are ignored. </i>
+<br><br>
+The Delta is an important concept both for risk management purposes. We may want to hedge our positon (exposure) in order to create a riskless portfolio. For example, if we sold a call option, then we may worry that if the stock price increases significantly then we may incur losses. We may want to hedge this risk. One way to hedge this is by buying the underlying stock. If the stock price increases, the stock premium would also increase. If the option is on physical settlement, we won't be affected by the increase in stock price because if the option is exercised, we can deliver the stock that we had purchased as a hedge. If the option is on cash settlement, the losses suffered in closing the position would be off-set by the profit that we make on the underlying stock. But the question now is: how much of the stock to buy to create this hedge? 
+<br><br>
+Continuing with the above example, let's suppose we sell one call option. Since the delta (as computed above) is 0.5, we should buy 0.5 units of the underlying stock. The below calculations show how this ratio works.
+<br><br>
+Stock price on 17th Sep 2020: $25 <br>
+Stock price on 18th Sep 2020: $26 <br>
+Option premium (price) on 17th Sep 2020: $2 <br>
+Option premium (price) on 18th Sep 2020: $2.5 <br>
+Change in underlying stock for one da is ($26 - $25) = $1 <br>
+Change in option premium (price) for one day is ($2.5 - $2) = 0.5 <br>
+Delta = 0.5/1 = 0.5 <br>
+<br>
+Let's suppose we sold one call option, the loss suffered by us is: $2.5 - $2 = $0.5. <br>
+To hedge this risk, let's suppose we bought 0.5 units of the underlying (as per the hedge ratio). This would cost us $25 * 0.5 = $12.5 <br>
+Profit from increase of stock price that we purchased = ($26 * 0.5) - ($25 * 0.5) = $13 - $12.5 = $0.5. <br>
+The loss suffered by us from the option is offset by the profit gained by us through the purchase of the underlying.
+<br><br>
+Alternatively, if the stock price on 18th Sep 2020 is $24; and <br>
+Option premium on 18th Sep 2020 is $1.5 <br>
+Profit on option would be $2 - $1.5 = $0.5 <br>
+Loss on the underlying would be 0.5 (25 - 24) = 0.5 * 1 = $0.5
+<br><br>
+
+I hope the above example explained the concept. To put it in other words, the delta tells us the number of units of the stock we should hold for each option shorted in order to create a riskless portfolio. The construction of a riskless hedge is referred to as <b><i>Delta Hedging</i></b>. In this case, we can say that the delta of the overall position is zero because the loss from one financial instrument offsets the profit from the other. A position with a delta of zero is referred to as <b><i>Delta Neutral</i></b>.
+<br><br>
+<span class="flexbox-1">
+Delta of an option does not remain constant as the option price changes differently than the underlying stock price. In practice, the trader's position remains delta hedged (or delta neutral) for only a relatively short period of time. Therefore, the hedge has to be adjusted periodically. This is known as <b><i>Rebalancing</i></b>. 
+</span>
+<br><br>
+To understand why rebalancing is required, let's continue further with the above example.  
+<br><br>
+Let's suppose: <br>
+Stock price on 19th Sep 2020 is $30; and <br>
+Option premium (price) on 19th Sep: $4 <br>
+<br>
+Now, we cannot use our earlier delta ratio of 0.5. If we were to use it still, the following would be the result.
+<br><br>
+Loss suffered by us on option is: $4 - $2 = $2 <br>
+Profit from underlying = ($30 * 0.5) - ($25 * 0.5) = 15 - 12.5 = $2.5
+<br><br>
+As we can see, the hedge ratio did not work and we could not make our portfolio risk neutral. To make it risk neutral, we need to recalculate the hedge ratio. The current hedge ratio is: (4 - 2) / (30 - 25) = 2/5 = 0.4.
+<br><br>
+If we were to re-run our calculations with the new hedge ration, the following would be our result.
+<br><br>
+Loss on option = $4 - $2 = $2. <br>
+Profit on underlying stock = 0.4 (30 - 25) = 0.4 * 5 = 2.
+<br><br>
+
+<span class="flexbox-1">
+In the above case, when the stock price increased from $25 to $30, the delta decreased from 0.5 to 0.4. The hedge worked; but in general, increase in the stock price leads to an increase in delta.
+</span>
+<br><br>
+
+Let's continue with the same example with an increase in delta. <br>
+Let's consider that the option price on 19th Sep 2020 is $5. The delta, therefore, would be (5 - 2) / (30 - 25) = 3/5 = 0.6 <br>
+Loss on call option would be $5 - $2 = $3. <br>
+Profit on the underlying stock with a hedge ration of 0.6 would be 0.6 (30 - 25) = 0.6 * 5 = $3.
+<br><br>
+
+<span class="flexbox-1">
+This procedure where the delta is adjusted on a regular basis is called as <b>Dynamic Hedging</b>. It is different from Static Hedging, where a hedge is set up initially and never adjusted. Static Hedging is sometimes referred to as "Hedge-and-forget".
+</span>
+
+<br><br><br>
+
+
+<h3 class="side-heading-blue">Range of Delta</h3>
+The delta ranges from 0 to 1 (0 to +1 in case of call, and 0 to -1 in case of put). We can illustrate this with the same example that we discussed above.
+<br>
+Let's suppose the option strike is $25 and the following are the movements of stock prices and the option prices in the next few days. The below table shows the changes and the delta.
+<br><br>
+<table>
+	<th>Sl No</th>
+	<th>Day</th>
+	<th>Stock Price</th>
+	<th>Option Price</th>
+	<th>Change in stock price</th>
+	<th>Change in option price</th>
+	<th>Delta</th>
+
+	<tr>
+		<td style="text-align: center;">1</td>
+		<td>17th Sep 2020</td>
+		<td style="text-align: center;">$25</td>
+		<td style="text-align: center;">$2</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">18th Sep 2020</td>
+		<td style="text-align: center;">$26</td>
+		<td style="text-align: center;">$2.5</td>
+		<td style="text-align: center;">$1</td>
+		<td style="text-align: center;">0.5</td>
+		<td style="text-align: center;">0.5</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">3</td>
+		<td>19th Sep 2020</td>
+		<td style="text-align: center;">$30</td>
+		<td style="text-align: center;">$5</td>
+		<td style="text-align: center;">$4</td>
+		<td style="text-align: center;">$2.5</td>
+		<td style="text-align: center;">0.625</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">4</td>
+		<td>20th Sep 2020</td>
+		<td style="text-align: center;">$23</td>
+		<td style="text-align: center;">$1.5</td>
+		<td style="text-align: center;">-$7</td>
+		<td style="text-align: center;">-$3.5</td>
+		<td style="text-align: center;">0.5</td>
+	</tr>
+
+	<tr>
+		<td  style="text-align: center;">5</td>
+		<td>21st Sep 2020</td>
+		<td style="text-align: center;">$18</td>
+		<td style="text-align: center;">$1.2</td>
+		<td style="text-align: center;">-$5</td>
+		<td style="text-align: center;">-$0.3</td>
+		<td style="text-align: center;">0.06</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">6</td>
+		<td>22nd Sep 2020</td>
+		<td style="text-align: center;">$0</td>
+		<td style="text-align: center;">$0</td>
+		<td style="text-align: center;">-$18</td>
+		<td style="text-align: center;">-$1.2</td>
+		<td style="text-align: center;">0.066</td>
+	</tr>
+
+</table>
+<i>Note: When you divide a negative number by a negative number, the result is positive.</i>
+<br><br>
+
+<h3 class="side-heading-blue">Delta of a Call vs. Put option</h3>
+
+The delta of a call option is positive, whereas the delta of a put option is negative. The table above has illustrated that the delta of a call option has remained positive despite the wide swings in the underlying prices. To illustrate that the delta of a put option is negative, let's consider the following stock prices and option prices of a 3-month put option contract with a strike of $25.
+<br><br>
+Note that the put option prices increase when the stock prices decreases. 
+<br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Day</th>
+	<th>Stock Price</th>
+	<th>Option Price</th>
+	<th>Change in stock price</th>
+	<th>Change in option price</th>
+	<th>Delta</th>
+
+	<tr>
+		<td style="text-align: center;">1</td>
+		<td>17th Sep 2020</td>
+		<td style="text-align: center;">$25</td>
+		<td style="text-align: center;">$2</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+		<td style="text-align: center;">-</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">2</td>
+		<td>18th Sep 2020</td>
+		<td style="text-align: center;">$20</td>
+		<td style="text-align: center;">$4</td>
+		<td style="text-align: center;">-$5</td>
+		<td style="text-align: center;">+$2</td>
+		<td style="text-align: center;">-0.4</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">3</td>
+		<td>19th Sep 2020</td>
+		<td style="text-align: center;">$13</td>
+		<td style="text-align: center;">$7</td>
+		<td style="text-align: center;">-$7</td>
+		<td style="text-align: center;">+$3</td>
+		<td style="text-align: center;">-0.428</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">4</td>
+		<td>20th Sep 2020</td>
+		<td style="text-align: center;">$10</td>
+		<td style="text-align: center;">$8</td>
+		<td style="text-align: center;">-$3</td>
+		<td style="text-align: center;">+$1</td>
+		<td style="text-align: center;">-0.334</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">5</td>
+		<td>21th Sep 2020</td>
+		<td style="text-align: center;">$30</td>
+		<td style="text-align: center;">$1</td>
+		<td style="text-align: center;">+$20</td>
+		<td style="text-align: center;">-$7</td>
+		<td style="text-align: center;">-0.35</td>
+	</tr>
+
+	<tr>
+		<td style="text-align: center;">6</td>
+		<td>22th Sep 2020</td>
+		<td style="text-align: center;">$35</td>
+		<td style="text-align: center;">$0.25</td>
+		<td style="text-align: center;">+$5</td>
+		<td style="text-align: center;">-$0.75</td>
+		<td style="text-align: center;">-0.15</td>
+	</tr>
+</table>
+
+<i>Note: When you divide a positive number by a negative number, the result is negative. Similarly, when you divide a negative number by a positive number, the result is negative.</i>
+<br><br><br>
+
+<h3 class="side-heading-blue">Interpreting Delta</h3>
+We can use delta to estimate the change in option premium given a change in the underlying asset price. In our example above, as per the prices of stock and the option between 17th Sep and 18th Sep 2020, we had calculated a delta of 0.5. Using this number, we can estimate that the change in option price for a unit change in the underlying stock. For example, if the underlying stock price were to change by +$1 on 19th Sep 2020 (that means, we expect the stock price to be $27), we can expect the option price to change by 0.5, i.e. to $3 ($2.5 + $0.5).
+
+
+<br><br><br>
+
+<h3 class="side-heading-blue">Limitations of Delta</h3>
+Delta is only accurate for very small price changes. If the price changes are large, the actual option price changes may be a little bit different than predicted by the delta. For example, in the above interpretation of delta, we estimated that the option price would be $3, if the stock price moved to $27 on 19th Sep 2020. But, if the underlying stock price were to move to $35 on 19th Sep 2020, our estimates would not be accurate. We could estimate that the option price would move up by 0.5 * $9 = $4 (i.e. the option price would be $6.5), but in reality it might move more or less. 
+
+
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 17<sup>th</sup> September 2020.
+</p>
+
+</body>
+</html>

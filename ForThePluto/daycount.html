@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+<h3 div id="top" align="center">Day Count Conventions</h3>
+<br/>
+
+For the purpose of calculating annual interest, it might seem reasonable to assume that a year contains 365 days. However, in practice, interest calculation don't always assume that. A year for interest calculation purposes can contain 365, 366 or even 360 days. Moreover, individual months can contain more or fewer days.
+<br/><br/>
+Depending on the day count basis on which interest is calculated, the amount of interest is different for a given principal amount, interest period, and interest rate. There are two types of day count basis - money market basis and bond basis.
+<br/><br/><br/>
+<b><u>Money Market Basis</u></b><br/>
+Money market basis uses a day count fraction equal to the actual number of days of the investment period divided by 360. A key exception is the UK and several other Commonwealth countries, where the denominator is either 365 or the actual number of days in the year (the latter could be either 365 or 366, depending on whether it is a leap year). Money market basis is also called Actual over 360 basis.
+<br/><br/>
+<span class="italicind">
+	<u>Example:</u><br/>
+	Consider a USD 1,000,000 investment at 10% for one year. Calculate the interest payment on money market basis.
+	<br/><br/>
+	<p>
+		  \[ Interest = {P*T*R\over100} = {1,000,000 \text { x } {10\over 100} \text{ x } {365\over360}} = USD\;  1,01,388.89 \]
+	</p>
+
+	As we can see, even though the interest rate is 10%, the actual interest turned out to be 10.138889%
+
+	<br/><br/>
+
+</span>
+
+<br/><br/>
+
+<b><u>Bond Basis</u></b><br/>
+Bond basis is the day count convention that is typically used with fixed income securities. There are a number of conventions in this category. The following are a few of them.
+<br/><br/>
+
+<u>Actual/Actual</u><br/>
+It is the most commonly used convention in bond markets worldwide. It is mostly used with govenment bonds and many corporate bonds. As the name suggests, it uses a day count convention fraction which is equal to the actual number of days in an investment period divided by the actual number of days in a year, which can be 365 or 366 depending on whether it is a leap year or not. This convention is called in different names in different markets, depending on the market segement where it is used, such as Actual/Actual(ISDA), Act/Act and Act/Act(ISDA).
+<br/><br/>
+
+<u>Actual/365</u><br/>
+It is mostly used by some supranational and corporate bonds. Actual/365 basis uses a day count fraction equal to the actual number of days in an investment period divided by 365 (the usual number of days in a year).
+<br/><br/>
+
+<u>30/360</u><br/>
+It is mostly used in the US corporate bond market. It uses a day count fraction that assumes that there are exactly 360 days in a year and each month has 30 days.
+<br/><br/>
+
+<u>30E/360</u><br/>
+This convention assumes that there are twelve 30-day months, except:
+<ul>
+	<li>If the first or last date of the interest accrual period falls on the 31st of the month, the date is changed to the 30th.</li>
+	<li>If the last day of the interest accrual period falls on the last day of February, the February is not extended to a 30-day month; instead, the actual number of days in February is used.</li>
+</ul>
+
+<u>30E+/360</u><br/>
+This convention assumes that there are twelve 30-day months, except:
+<ul>
+	<li>If the first date of the interest accrual period falls on the 31st of the month, that date is changed to the 30th.</li>
+	<li>If the last date of the interest accrual period falls on the 31st of the month, that date is changed to the 1st of the next month.</li>
+</ul>
+
+<u>Actual\365F or Actual/365(Fixed)</u><br/>
+With this convention, a year is always considered to have 365 days, regardless of whether it is a leap year or not.
+<br/><br/>
+<br/>
+
+<b><u>Link between Bond Basis and Money Market Basis</u></b><br/>
+There is a link between bond basis and money market basis. The relationship is as follows:
+<br/>
+
+\[ R_b = R_m \text { x } {365\over 360}	\]
+
+and
+
+\[ R_m = R_b \text { x } {360\over 365}	\]
+
+where, <br/>
+R<sub>b</sub> = interest rate on a bond basis<br/>
+R<sub>m</sub> = interest rate on a money market basis
+<br/><br/>
+Money market basis yields roughly 1.389% (= 365/360 - 1) more interest than bond basis for the same notional interest rate. In otherwords, to generate the same amount of interest, R<sub>b</sub> should be proportionately higher than R<sub>m</sub> by about 1.389%.
+<br/><br/>
+
+<span class="italicind">
+	
+	Let's suppose you have a choice of two investments. Investment A offers 2% anually on a bond basis, while investment B offers 1.99% anually on a money market basis. Which investment offers a higher return?
+	<br/><br/>
+
+	\[ R_m = R_b \text { x } {360\over 365} \]
+
+	\[ = {2\over100} \text { x } {360\over 365}	\]
+
+	\[ = {0.02} \text { x } {0.986301}	\]
+
+	\[ = 1.97 \text {%}	\]
+
+
+</span>
+
+Investment A offers 1.97% on a money market basis, but investment B offers the higher return of 1.99% on the same money market basis. Thus, investment B is better.
+<br/><br/>
+<br/><br/>
+
+<b><u>Different day count conventions and compounding frequencies</u></b><br/>
+What happens when we have investments that have different day count bases and compounding frequencies? In order to compare such investments, we need to convert them to a common compounding basis and then to the same day count basis. There are two steps:
+<br/><br/>
+
+<u>Step 1</u><br/>
+To convert an interest rate from one compounding basis to another, we must first ensure that both investments are expressed on a bond basis or money market basis.
+<br/><br/>
+
+<u>Step 2</u><br/>
+When both investments have been converted to the same day count basis, we can then convert them to the same compounding frequency.
+<br/><br/>
+Note that the common compounding basis does not have to be equal to the original compounding basis of the investment being compared. For example, one investment might have monthly compounding and another investment annual compounding. Both investments can be converted to a semi-annual compounding basis for comparision.
+<br/><br/>
+
+
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2019
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 19.07.2019<br/>
+</p>
+
+</body>
+</html>

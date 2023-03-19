@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Block Deals on Bombay Stock Exchange (BSE)</h2>
+<br>
+
+
+
+<h3 class="side-heading-blue">FAQ on Block Deals</h3>
+<br>
+
+<font style="color:red"><b>Q)</b></font> What is a Block Deal?
+<br>
+<font style="color:green"><b>A)</b></font> A single trade having quantity greater than or equal to 500,000 or value greater than or equal to Rs. 5 Crores, executed through Block Deal Window is called a block deal.
+<br><br><br>
+
+<font style="color:red"><b>Q)</b></font> What are the timings to enter Block Deal at BSE?
+<br>
+<font style="color:green"><b>A)</b></font> The traders are allowed to enter the Block Deal Orders only during the first 35 minutes of the continous trading session i.e. from 9:15 am to 9:50 am.
+<br><br><br>
+
+<font style="color:red"><b>Q)</b></font> In which segement Block Deal is allowed?
+<br>
+<font style="color:green"><b>A)</b></font> Block Deal is allowed only in Cash segement.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How to place block deal in BOLT TWS system and through third party / in-house developed Trading application?
+<br>
+<font style="color:green"><b>A)</b></font> BOLT TWS users has to place normal order by using "Block Deal" button (Alt + B) in order entry window. All third party / in-house developed Trading applications based on IML are required to support appropriate block deal order type available for BSE and make appropriate order type available on tradign application front end.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How to recognize a block deal order on the BOLT TWS?
+<br>
+<font style="color:green"><b>A)</b></font> Block Deal orders are displayed in the pending order window with "K" appended at end of Order Id.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Can one enter market order as block deal order?
+<br>
+<font style="color:green"><b>A)</b></font> No, only limit orders are allowed.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> What is the applicable price range for block deal order?
+<br>
+<font style="color:green"><b>A)</b></font> Block deal order for scrip should be within range of (+/-) 1% from the ruling market price (i.e last traded price) or the previous closing price (if there is no trade executed in the scrip before entering of the block deal order) subject to the applicable price band for the scrip.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How does order matching happen for block deal orders?
+<br>
+<font style="color:green"><b>A)</b></font> For block deal orders to get traded, the quantity and rate should be exactly teh same as opposite-side block deal order. Block odeal orders will be matched against the counter order with same quantity and rate on a time priority basis. Block deal order remains valid in the system for 90 seconds only, after which it gets killed if remaining unexecuted.
+<br><br>
+
+<mark>Order Matching</mark>
+<br><br>
+<b><u>Case 1</u></b><br>
+Example: <br>
+1. Buy block deal order of 5,00,000 quantity @ 55.50 price. <br>
+2. Sell block deal order of 5,00,000 quantity @ 55.50 price. <br> <br>
+In the above case, the buy block deal order will match with the sell order as the order quantity and rate of both the orders are the same.
+<br><br>
+
+<b><u>Case 2</u></b><br>
+Example: <br>
+1. Client ABC enters buy block deal order of 10,00,000 quantity @ 187 price. <br>
+2. Client WYZ enters sell block deal order of 5,00,000 quantity @ 187 price. <br>
+3. Client PQR enters sell block deal order of 5,00,000 quantity @ 187 price. <br><br>
+In the above case, the buy block deal order will not match with either of the sell orders as the quantities do not match although rate is same.
+
+
+<br><br><br>
+<font style="color:red"><b>Q)</b></font> Can block deal orders be partially traded?
+<br>
+<font style="color:green"><b>A)</b></font> No, block deal orders cannot be traded partially. If not traded fully, the order is cancelled.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Can order modification, / deletion allowed for block deal orders?
+<br>
+<font style="color:green"><b>A)</b></font> Only Rate, Quantity & Client code modification is allowed. Modification of other order attributes such as retention type, conversion from limit to market is not allowed. However, trader an delete pending block deal order and can re-submit fresh order.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How can a member assign block deal rights to his traders?
+<br>
+<font style="color:green"><b>A)</b></font> Members can assign block deal rights to his trader through TWS admin termination (0 or 200 trader ID).
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Can the block deal order be entered for any client type?
+<br>
+<font style="color:green"><b>A)</b></font> Yes
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Can a trader enter revealed quantity/stop loss/odd lot orders for block deal?
+<br>
+<font style="color:green"><b>A)</b></font> No
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> In case of very liquid scrip if the LTP of the scrip changes in such a way as to make the already entered block deal order ineligible in terms of the +/- 1% LTP criterion, what will happen to the pending block deal order?
+<br>
+<font style="color:green"><b>A)</b></font> In such cases, pending block deal order will not match with the counter block deal order although rate and quantity of both orders match with each other. The trader has to modify price of the pending block deal order to make it eligible for execution. If price is not modified within 90 seconds of order entry time, order will be killed. 
+<br><br>
+<u>For example: </u><br>
+LTP of scrip - Rs. 100/-, the member can execute a block deal in the range of 99/- to 101/-. In between if the trade takes place in the normal market at Rs. 105/-, in this case, trading member has to modify price of pending block deal order from 99/101 to 105 (+/- 1%) to make it eligible for execution.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How is the block deal trade settled?
+<br>
+<font style="color:green"><b>A)</b></font> All the block deal trades, have to be settled on a trade-to-trade basis (e.g. as traders are settled in "T" Group). Every trade executed must result in delivery and cannot be squared off or reversed.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Can a block deal pending order be viewed in the Market watch?
+<br>
+<font style="color:green"><b>A)</b></font> Pending block deal orders are shown in Market watch.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Do the order Level limits applicable for block deal orders?
+<br>
+<font style="color:green"><b>A)</b></font> Yes, all order level limits such as Gross Buy, Gross Sell, Net Value, Single order quantity & single order value set from BOLT Admin terminal to Trader are applicable for block deal orders similar to any other regular orders.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> What are STT charges for Block Deal?
+<br>
+<font style="color:green"><b>A)</b></font> STT shall be charged on the block deal transaction on similar lines as being charged on delivery based transactions.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Is 6A/7A facility available for settlement of block deal transaction?
+<br>
+<font style="color:green"><b>A)</b></font> Yes
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How does reporting and information dissemination happen for block deal?
+<br>
+<font style="color:green"><b>A)</b></font> Exchange will be providing an indicative report of block deals to members on a daily basis after market hours through Dload32. Further, members should verify each and every record in the file downloaded. In case of any mismatch, members should fax the entire bulk details to the Exchange with corrections within 30 minutes from the time of the indicative block deal report is downloaded. If no mismatch is reported by member to the Exchange, data downloaded will be considered for dissemination on the Exchange's website directly. Block deal details are available on BSE website under path mentioned here (Home --> Markets --> Equity --> Historical Data --> Bulk Deals --> Block Deals).
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Whether block deal is used in the calculation market picture data?
+<br>
+<font style="color:green"><b>A)</b></font> Block deal is considered for displaying day high, day low, total traded quantity, value and number of trades. However, block deal transactions executed in scrip are not considered for updating of LTP, opening price and closing price.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> What margins are applicable for block deal transactions?
+<br>
+<font style="color:green"><b>A)</b></font> Script level VAR & ELM margin currently applicable for normal equity order will be applicable for block deal transactions by non-institutional client types. However, there are no margins for block deal trades by any of institutional client types.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> What will happen to block deal order if member goes in RRM?
+<br>
+<font style="color:green"><b>A)</b></font> In case if member goes in RRM, all pending orders including block deal order will be returned and displayed in returned order window.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> Which retention type support block deal orders?
+<br>
+<font style="color:green"><b>A)</b></font> Only End of Today and End of Season retention type support block deal orders.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How member can enter block deal order using third party trading platform of empanelled vendors or in-house developed systems connected through IML.
+<br>
+<font style="color:green"><b>A)</b></font> All trading members using in-house developed or BSE empanned vendor trading application can enter Block deal order by developing block deal messages / structures mentioned in the IML APIs of BSE.
+<br><br>
+
+<font style="color:red"><b>Q)</b></font> How will IML user enter and identify block deal transaction?
+<br>
+<font style="color:green"><b>A)</b></font> IML user can enter block deals via message type 1071 for Buy Block Deal Order and message type 1072 for Sell Block Deal Orders while entering orders.
+<br><br>
+Similarly, when a trade occurs, User identifies the type of trade as Block Deal by checking the "Transaction Type" field value as "K" within the sub-structure of the Trade Confirmation message.
+<br><br>
+Separate message types have been provided in IML for each of teh actions - addition / modification / deletion of Block Deals in order to avoid message conflicts, reduction in latency as well as providing convenience to track log files in case of issues.
+<br><br>
+The below message types mentioned are used for specific actions performed on Block Deals.
+<br><br>
+1071 - Add Buy Block Deal <br>
+1072 - Add Sell Block Deal <br>
+1073 - Update Buy Block Deal <br>
+1074 - Update Sell Block Deal <br>
+1075 - Delete Buy Block Deal <br>
+1076 - Delete Sell Block Deal
+
+<br><br> <br>
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 11<sup>th</sup> September 2020.
+</p>
+
+</body>
+</html>

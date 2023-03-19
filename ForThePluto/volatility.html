@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Measurement of Stock Price Volatility</h2>
+<br>
+The return from a stock is the change in price from time t<sub>0</sub> to time t<sub>1</sub>, where t<sub>0</sub> and t<sub>1</sub> represents two points in time; t<sub>0</sub> being the current time and t<sub>1</sub> being a future point in time. The price risk involved in the stock is variability of return from t<sub>0</sub> to t<sub>1</sub>. Therefore, to measure risk, we must first measure return and its deviation. But we do not know future return (as t<sub>1</sub> is in future) and hence we also do not know the risk involved. For investment purposes we should know the risk involved in any investment, as knowledge about the risk helps us to make investment decisions. We can compute the risk in the following ways.
+<br>
+<ol>
+	<li>From historical prices: We do not know the future with certainity but we can fall back on past (historical prices) and use it as a proxy to the future.</li>
+	<li>Implied volatility: If options are available on the stock then we can calculate the implied volatility from the option prices.</li>
+	<li>Create a Risk Model: If no historical prices or options are available then understand all the variables that effect the price of the security and create a model (basically an equation) that can estimate the risk involved in the security.</li>
+</ol>
+
+<i>We will discuss the Implied Volatility and Risk Model in a separate article. In this article, we will focus on the historical prices method.</i>
+<br><br>
+
+<h3 class="side-heading-blue">Using historical prices to estimate the risk</h3>
+In this method, we collect historical prices and compute the risk that was present in the past and use the same computed risk for future with a certain degree of confidence but never with 100% confidence, as the future may not replicate the past. For example, if the historical risk is 20% (as per our computation) then we assume that in future also the risk would be about 20%. We are not 100% sure whether this is true, but we will use the risk number with some confidence which is always less than 100%, say 50%, 90% or 95%, etc. 
+<br><br>
+
+The series of historical prices could be collected at regular intervals such as weekly, daily, monthly, etc., and this type of series is called <b>time series</b>, and the analysis that we make on such series is called as <b>time series analysis</b>. As pointed out earlier, to compute past risk we must first compute the past returns. That also means, we must convert the time series of prices into time series of price returns. There are three ways in which we can make this conversion, the following are those.
+
+<ol>
+	<li>Absolute price changes</li>
+	<li>Relative price changes</li>
+	<li>Logarithmic changes (continous compounded)</li>
+</ol>
+
+Absolute changes is the difference between current price and the previous price. Notation-wise we can call this as P<sub>i</sub> minus P<sub>i-1</sub>, where P<sub>i</sub> is the price at i<sup>th</sup> time and P<sub>i-1</sub> is the price on the previous observed time interval. Relative change is the ratio of  P<sub>i</sub> to P<sub>i-1</sub>. Logarithmic change is the natural logarithm of the relative price changes. Symbolically, they can be writted as follows:
+<br><br>
+
+	\[
+		Absolute \; price \; change = {P_i -  P_{i-1}} 
+
+	\]
+
+	\[
+		Relative \; price \; change = {P_i \over P_{i-1}} 
+
+	\]
+
+	\[
+		Logarithmic \; price \; change = \ln {P_i \over P_{i-1}}
+
+	\]
+
+<br><br>
+
+Let's consider the stock price movements of Bank of America's stock for the period between 14th Sep 2020 and 28th Sep 2020 (11 days).
+<br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Date</th>
+	<th>Stock Price ($)</th>
+
+	<tr>
+		<td>1</td>
+		<td>14th Sep 2020</td>
+		<td>25.75</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>15th Sep 2020</td>
+		<td>25.28</td>
+	</tr>
+    
+    <tr>
+    	<td>3</td>
+    	<td>16th Sep 2020</td>
+    	<td>25.60</td>
+    </tr>
+    <tr>
+    	<td>4</td>
+    	<td>17th Sep 2020</td>
+    	<td>25.35</td>
+    </tr>
+    <tr>
+    	<td>5</td>
+    	<td>18th Sep 2020</td>
+    	<td>25.21</td>
+    </tr>
+    <tr>
+    	<td>6</td>
+    	<td>21st Sep 2020</td>
+    	<td>24.47</td>
+    </tr>
+    <tr>
+    	<td>7</td>
+    	<td>22nd Sep 2020</td>
+    	<td>23.94</td>
+    </tr>
+    <tr>
+    	<td>8</td>
+    	<td>23rd Sep 2020</td>
+    	<td>23.26</td>
+    </tr>
+    <tr>
+    	<td>9</td>
+    	<td>24th Sep 2020</td>
+    	<td>23.34</td>
+    </tr>
+    <tr>
+    	<td>10</td>
+    	<td>25th Sep 2020</td>
+    	<td>23.49</td>
+    </tr>
+    <tr>
+    	<td>11</td>
+    	<td>28th Sep 2020</td>
+    	<td>24.09</td>
+    </tr>
+
+</table>
+<br><br>
+
+We can use the above stock prices to compute the returns as follows.
+
+<br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Stock prices</th>
+	<th>Absolute change (P<sub>i</sub> - P<sub>i-1</sub>)</th>
+	<th>Relative changes (P<sub>i</sub> / P<sub>i-1</sub>)</th>
+	<th>Logarithmic changes (ln (P<sub>i</sub> / P<sub>i-1</sub>))</th>
+
+	<tr>
+		<td>1</td>
+		<td>25.75</td>
+		<td>n.a</td>
+		<td>n.a</td>
+		<td>n.a</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>25.28</td>
+		<td>-0.47</td>
+		<td>0.981748</td>
+		<td>-0.0184</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>25.6</td>
+		<td>0.32</td>
+		<td>1.012658</td>
+		<td>0.0126</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>25.35</td>
+		<td>-0.25</td>
+		<td>0.990234</td>
+		<td>-0.0098</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>25.21</td>
+		<td>-0.14</td>
+		<td>0.994477</td>
+		<td>-0.0055</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>24.47</td>
+		<td>-0.74</td>
+		<td>0.970647</td>
+		<td>-0.0298</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>23.94</td>
+		<td>-0.53</td>
+		<td>0.978341</td>
+		<td>-0.0219</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>23.26</td>
+		<td>-0.68</td>
+		<td>0.971596</td>
+		<td>-0.0288</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>23.34</td>
+		<td>0.08</td>
+		<td>1.003439</td>
+		<td>0.0034</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>23.49</td>
+		<td>0.15</td>
+		<td>1.006427</td>
+		<td>0.0064</td>
+	</tr>
+
+	<tr>
+		<td>11</td>
+		<td>24.09</td>
+		<td>0.6</td>
+		<td>1.025543</td>
+		<td>0.0252</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+In finance (and particularly for risk computation), we use the logarithmic price changes; we do not use the absolute price returns and relative price returns. The reason for not using absolute and relative price change measures is as follows:
+<br><br>
+Absolute price changes are not comparable. For example a price change of $5 on a stock whose price is $50 and a price change of $5 on a stock whose price is $1,000 are not the same, and hence are not comparable.  
+<br><br>
+Relative price change is better than absolute price change measurement because it enables comparison at different levels of stock prices. However, it lacks something called as "time consistency", which states that the changes over many periods should be additive. For example, if the price change is 1% on day 1 and 1% on day 2, then the total change over the two days is not equal to 1% + 1% = 2%. Instead, it is 1% multiplied by 1% (1.01 x 1.01 = 1.0201 or 2.01%). <i>An detailed explanation and importance of time consistency requirement is beyond the scope of this article. I shall cover it in another article on time series.</i>
+<br><br>
+Log relative changes is an improvement on the relative price changes. It meets the time consistency requirement as the log price relatives are additive in nature over multiple periods. The logarithms that we are discussing here are the natural logarithm (ln) and not the common logarithm with base 10 (Log<sub>10</sub>). The log relative changes method has one more advantage: financial assets have lognormal distribution, which corresponds to the economic fact that no asset price can fall by 100% or more but can rise by 100% or more. <i>Note: Logarithm of a negative number is undefined.</i> If we take logarithms of relative price changes and plot them, they exhibit behaviour of a Normal Distribution. 
+Normal Distribution can be easily manipulated for statistical analysis. Thus, the log price relatives are a standard measure of return in the financial risk management industry.
+<br><br>
+
+From the table above (using log price relative changes), we can compute the mean and standard deviation of the stock for the sample period. The calculation is as follows.
+<br><br>
+The mean of the stock price returns is the sum of the returns divided by the number of observations. The Calculation is:
+<br><br>
+
+The arithmetic mean of the stock price returns is: <br><br>
+
+\[ 
+Mean = {\sum X \over N } = {-0.0666 \over 10} = -0.0067
+\]
+
+<br><br>
+
+
+<table>
+	<th>Sl No</th>
+	<th>Log price changes (X) </th>
+	<th>Mean</th>
+	<th>Deviation from Mean</th>
+	<th>Deviation squared</th>
+
+	<tr>
+		<td>1</td>
+		<td>-0.0184</td>
+		<td>-0.0067</td>
+		<td>-0.01172</td>
+		<td>0.000137</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>0.0126</td>
+		<td>-0.0067</td>
+		<td>0.01928</td>
+		<td>0.000372</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>-0.0098</td>
+		<td>-0.0067</td>
+		<td>-0.00311</td>
+		<td>0.000010</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>-0.0055</td>
+		<td>-0.0067</td>
+		<td>0.00116</td>
+		<td>0.000001</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>-0.0298</td>
+		<td>-0.0067</td>
+		<td>-0.02309</td>
+		<td>0.000533</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>-0.0219</td>
+		<td>-0.0067</td>
+		<td>-0.01520</td>
+		<td>0.000231</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>-0.0288</td>
+		<td>-0.0067</td>
+		<td>-0.02212</td>
+		<td>0.000489</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>0.0034</td>
+		<td>-0.0067</td>
+		<td>0.01013</td>
+		<td>0.000103</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>0.0064</td>
+		<td>-0.0067</td>
+		<td>0.01311</td>
+		<td>0.000172</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>0.0252</td>
+		<td>-0.0067</td>
+		<td>0.03192</td>
+		<td>0.001019</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+The standard deviation of the stock price returns is: <br><br>
+
+\[ 
+Standard \; Deviation = \sqrt {\sum x^2 \over N } \; = \sqrt {0.003067 \over 10} \; = \sqrt {0.000306691} \; = 0.017513 \; or \; 1.75\text % 
+
+\]
+
+<br><br>
+
+From the above calculations, we have found the following:
+<ol>
+	<li>The average returns (mean of the log price relatives) = -0.0067</li>
+	<li>Standard deviation = 0.017513 or 1.75% (daily standard deviation or standard deviation for 1 day)</li>
+</ol>
+<br>
+
+<span class="flexbox-1">
+These two represent historical average and risk (standard deviation). Although they are valuable in understanding the average returns of the past and the risk, but our focus is to understand the future expected returns and the future risk. Moreover, in practice, the computation of standard deviation in finance (particular risk management industry) is different from the computation of standard deviation in statistics. The above computation is as per normal statistical method. In finance, the following two modification are made.
+<br>
+<ol>
+	<li><mark>The mean daily returns is assumed to be 0 (zero); and</mark></li>
+	<li><mark>In some cases, the standard deviation is computed on the future expected returns instead of the historical returns.</mark></li>
+</ol>
+There is nothing wrong in using the standard deviation calculated from historical prices. It's just that some in finance prefers to compute it from future price and risk. The following shows the computation of standard deviation assuming mean is 0, expected future price and risk.
+</span>
+
+<br><br><br>
+
+<b><u>Calculation of standard deviation assuming mean is 0 (zero)</u></b>
+<br><br>
+<table>
+	<th>Sl No</th>
+	<th>Log price changes</th>
+	<th>Log price changes squared</th>
+
+	<tr>
+		<td>1</td>
+		<td>-0.0184</td>
+		<td>0.0003393</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>0.0126</td>
+		<td>0.0001582</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>-0.0098</td>
+		<td>0.0000963</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>-0.0055</td>
+		<td>0.0000307</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>-0.0298</td>
+		<td>0.0008876</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>-0.0219</td>
+		<td>0.0004795</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>-0.0288</td>
+		<td>0.0008303</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>0.0034</td>
+		<td>0.0000118</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>0.0064</td>
+		<td>0.0000410</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>0.0252</td>
+		<td>0.0006362</td>
+	</tr>
+
+	<tr style="background-color: lightgreen">
+		<td colspan="2">Total</td>
+		<td>0.0035110</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+\[ 
+Standard \; Deviation = \sqrt {\sum x^2 \over N } \; = \sqrt {0.0035110 \over 10} \; = \sqrt {0.0003511} \; = 0.018738 \; or \; 1.87 \text %
+\]
+
+<br><br>
+As we can see, there is difference between the standard deviation obtained by taking deviations from mean (1.75%) and standard deviation obtained by assuming daily mean to be zero (1.87%). In many cases, this difference is insignificant. 
+
+
+<br><br>
+
+<h3 class="side-heading-blue">Expected Future Price</h3>
+We can use the average returns (as computed above) to find the future returns. It can be done as follows:
+<br><br>
+For example: <br>
+The last observed current price is: 24.09 (as on 28th Sep 2020). <br>
+Let's say we want to find out the expected price on 29th Sep 2020, we can use the log price relative and mean to compute the expected future price by using the following equation.
+<br><br>
+
+\[
+Expected \; future \; price = Current \; price \; \text x \; exp^{(log \; price \; relative)}
+\]
+
+Essentially, we need to convert log relative changes back to relative changes. To do this we are using the expoential function, which is the antilog. The calculation is as follows:
+<br><br>
+
+\[
+Expected \; future \; price = 24.09 \; \text x \; exp^{(-0.0067)} = 24.09 \; \text x \; 0.993322 = 23.92
+\]
+
+<br>
+
+If we want to find out the expected future price after 5 days, let's say on 4th Oct 2020, the calculation would be:
+<br><br>
+
+\[
+Expected \; future \; price = 24.09 \; \text x \; exp^{(-0.0067 \; \text x \; 5)} = 24.09 \; \text x \; 0.967054 = 23.30
+\]
+<br><br>
+
+The term Standard Deviation is common used in Statistics. In the risk management industry, we use the term "Volatility". 
+<br><br>
+In the above example, we have computed the volatility of Bank of America's stock as 1.87% using historical prices and 0.66% using expected future prices. This is the risk (or volatility) for 1 day, as we have taken 10 observations and found its average for one day. We can calculate the annualised volatility or volatilty for any period, as follows.
+<br><br>
+
+\[
+
+Annualised \; Historical \; Volatility = \sqrt {{252 \over n} \sum_{i=1}^n \biggl  (ln { {P_i} \over P_{i-1} } \biggr  )^2 }
+
+\]
+
+or 
+
+\[
+
+or, Annualised \; Historical \; Volatility = Daily \; volatilty \; \text x \; \sqrt {Number \; of \; trading \; days}
+
+\]
+
+For example, volatility for 10 days =
+\[
+
+1.87 \text % \; \text x \; \sqrt {10} = 1.87 \; \text x \; 3.1622 = 5.91 \text % 
+
+\]
+
+Similarly, volatility for one year =
+
+\[
+
+1.87 \text % \; \text x \; \sqrt {253} = 1.87 \; \text x \; 15.9059 = 29.74 \text % 
+
+\]
+
+<br><br>
+
+<span class="flexbox-1">
+	If you compare the above obtained volatility numbers with actual historical volatility numbers as reported in various websites, the numbers won't match. The reason for this is as follows: as indicated earlier, the practice is to take either 30, 90 or 365 days observations for the calculation of standard deviation. I have taken observations for 10 days only. Also, some take into consideration future market prices instead of cash market prices, this would also result in a deviation. Despite these obvious differences, the calculations are close to many volatility reports.  
+
+</span>
+
+<br><br>
+There are two methods or techniques of calculating standard deviation - 1) standard deviation of the entire population; and 2) standard deviation of a sample of population. When the standard deviation of the entire population is calculated, we will divide the squared deviations by the total observations (N). However, when we calculate the standard deviation for a sample of population, we will divide the squared deviations by N-1. When we divide by N-1, the denominator is less and hence the output figure is more. Therefore, the standard deviation of a sample will always be greater than the standard deviation for the entire population.
+<br><br>
+
+In Excel, "STDEV.P" function will calculate the standard deviation for the entire population, while "STDEV.S" will calculate the standard deviation for a sample of the population.
+
+<br><br>
+
+<span class="flexbox-1">
+	Implied Volatility and Risk Model will be discussed in separate articles.
+</span>
+
+<br><br>
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 1<sup>st</sup> October 2020.
+</p>
+
+</body>
+</html>

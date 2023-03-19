@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Unique Product Identifier (UPI) and ISDA Taxonomy for OTC Derivatives</h2>
+<br><br>
+
+The regulations for OTC Derivatives, Dodd Frank Act in USA and European Market Infrastructure Regulations (EMIR) in EU, require three (3) reference data for OTC derivatives reporting purposes. In response to these regulations, the following three reference data have been developed.
+<br>
+<ol>
+	<li>LEI (Legal Entity Identifer) for identifying the reporting entity</li>
+	<li>UPI (Unique Product Identifer) for identifying the products being traded</li>
+	<li>UTI (Unique Trade Identifier) for identifying the actual transaction that has taken place between the parties</li>
+</ol>
+
+Out of the above, the most difficult one to develop has been the reference data for identifying the product. To understand the difficulty, let's look into the hierarchy of an financial instrument.
+<br><br>
+At the top of the heap is the Super Asset Class. This comprises of assets such as Money, Bond, Equity, Forex and Commodities for Underlying; Rate, Credit, Equity, FX and Commodity for Derivatives; and Structured Credit and Structured Investment for Structured Finance. Under the Super Asset Class is Asset Class. Sometimes the super asset class and asset class are the same. Under the Asset Class is Product; Under the product is Sub-Product. For some products there may not be any sub-products. And finally, under the sub-product is instrument. The below diagram provides an easy way to understand this hierarchy.
+<br><br>
+
+<img src="images/isdah1.png" alt="Asset Classes" height="400" width="1200">
+
+
+<br><br>
+
+For our discussion, we are only focussing on the Derivative Super Asset Class, and in particular OTC Derivatives (OTCD) asset class. The three main basic derivative instrument types under OTCD are forwards, swaps and options. It is quite straight forward to develop a unique identification system for these simple products. However, the OTCD market also trades exotic or complex products, which can be a combination of one or more of these three instruments, while others can include components which are not derivatives. Examples include trades such as baskets, accumulators and quanto synthetic forwards. It is a bit difficult to identify these products and their variants on a consistent basis. Developing a reference data for these products, while at the same time making them future proof, is tricky, time consuming and expensive.
+<br><br>
+The requirement to develop a unique product identifier stems from the necessity to have a global data harmonization, improving data quality and increasing the efficiency and value of reporting, as proposed by CPMI (Committee on Payments and Market Infrastructure) and IOSCO (International Organisation of Securities Commissions).
+<br><br>
+The following are the three non-proprietary classification systems that are available for identifying derivative products.
+<ol>
+	<li>Classification of Financial Instruments (CFI)</li>
+	<li>ISDA Derivatives Taxonomy; and</li>
+	<li>ISIN (International Securities Identification Number)</li>
+</ol>
+<br>
+
+<img src="images/emir_reporting_regime.png" alt="EMIR reporting regime" height="400" width="800">
+
+
+<br><br><br>
+
+For CFTC reporting under Dodd Frank Act in US, ISDA Taxonomy is widely used.
+<br><br>
+As stated above, there is currently no single global product identifier for all reporting regimes. ISDA Taxonomy may become the global UPI standard.
+<br><br>
+
+<h3 class="side-heading-black">ISDA Taxonomy</h3>
+The ISDA Taxonomy has two versions - v1.0 and v2.0. The original ISDA OTC Derivatives Taxonomy (v1.0) has been in use for cross-jurisdictional reporting for Credit, Rates, Equities, Commodities and FX since 2012. The v2.0 was developed in the year 2015 but was not published until September 3, 2019.
+<br><br>
+On 3rd January 2018, MiFID II / MiFIR came into force. MiFIR mandated the use of ISIN for derivatives. ANNA-DB (Association for Numbering Agencies), generator for OTC derivatives ISINs, has built its derivatives instrument definitions and product templates based on ISDA Taxonomy 2.0.
+<br><br>
+Parties to OTCD contracts can use both the versions of ISDA Taxonomy.
+<br><br>
+In my article on "Smart Derivative Contracts", I had discussed that standardisation of products, clauses, infrastructure, methods, processes and systems is one of the pre-requisites for Smart Derivative Contracts. ISDA's Product Taxonomy is an effort to standardise product classifications. It is paving the way for a global unique identification system of all derivative products - both exchange traded and OTC, but predominatly focussed on OTC. Once properly developed and in place, it shall become the bedrock for all other classification systems, thereby bring about uniformity in identification and reporting. A globally acceptable unique product identifer will help in the following situations.
+
+<ul>
+	<li>For ESMA liquidity and SI computation (SI stands for Systemic Internalizers)</li>
+	<li>Public price reporting for pre and post trade transparency purposes</li>
+	<li>Regulatory reporting</li>
+	<li>Communication of pre-execution requests for quotes and orders</li>
+	<li>Portfolio reconciliation and valuation across market participants</li>
+</ul>
+<br>
+
+The below is a sample ISDA Taxonomy for Interest Rates.
+<br><br>
+
+<img src="images/isdataxonomy.png" alt="ISDA Taxonomy Sample" width="1200" height="300">
+
+
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 6<sup>th</sup> April 2020.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Implied Volatility</h2>
+<br>
+
+Implied Volatility (IV) is the volatility computed from the market prices of options. The buyers and sellers of options consider the future volatility of the underlying stock while pricing their trades. For example, the seller of an 3-month option on Microsoft stock guesses the volatility of the stock for the next three months, and based on that guess and other variables decides on a price to trade. Similarly, the buyer of the same option might have a guess of his own. If the options market has good liquidity, we can say that the bid and ask prices of the options contains and represents the aggregate guess of the traders about the volatility for a future period. In otherwords, the market prices of a 3-month option contains the aggregate guess of the traders about the volatility of the underlying stock for the next three months. Similarly, the market prices of a 6-month option contains the aggregate guess of the traders about the volatility of the underlying stock for the next six months, and so on. Therefore, it is possible for us to extract the volatility from these market prices. The volatility so extracted is forward looking in nature and is the consensus volatility of all traders in that market for a future time period and is therefore better than the historical volatility, which is backward looking in nature.
+<br><br>
+There is no analytical formula to compute the implied volatility. However, we can use the Black-Scholes equation to extract the volatility from the market prices, using trial-and-error methods. The below diagram shows the forward looking nature of the implied volatility.
+<br><br><br>
+
+
+<img src="images/implied-volatility.png" alt="Implied Volatility" height="200" width="750">
+
+<br><br><br>
+
+<h3 class="side-heading-blue">Types of Implied Volatility</h3>
+Implied Volatility can be calculated from prices of call options, put options and/or both. The terms "Implied Volatility (Calls)", "Implied Volatility (Puts)", and "Implied Volatility (Mean)" are used to denote these types.
+<br><br>
+The implied volatility (calls) is derived from pricing of "at-the-money" call options. The implied volatility (puts) is derived from pricing of "at-the-money" put options. The implied volatility (mean) is derived from the average of the call and put implied volatilities. 
+
+
+
+<br><br><br>
+
+<h3 class="side-heading-blue">Historical vs Implied volatility - How much do they differ?</h3>
+It depends on the underlying stock, liquidity and other factors. For highly liquid stocks, the difference could be less; for illiquid stocks, the difference can be significant. For example, the following table shows the historical and implied volatilities for some stocks as on 16th October 2020.
+<br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Stock Name</th>
+	<th>HV for 30 days</th>
+	<th>IV (Mean) for 30 days</th>
+	<th>Remarks</th>
+
+	<tr>
+		<td>1</td>
+		<td>Microsoft</td>
+		<td>28.31%</td>
+		<td>34.83%</td>
+		<td rowspan="5">The difference is less</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>Google</td>
+		<td>28.06%</td>
+		<td>37.84%</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>Tesla</td>
+		<td>66.16%</td>
+		<td>76.97%</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>Bank of America</td>
+		<td>33.19%</td>
+		<td>32.58%</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>Boeing</td>
+		<td>52.59%</td>
+		<td>55.39%</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>Zymeworks Inc.</td>
+		<td>45.89%</td>
+		<td>77.87%</td>
+		<td rowspan="5">The diference is more</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>ZioPharm Oncology Inc.</td>
+		<td>51.67%</td>
+		<td>126.32%</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>XPEL, Inc.</td>
+		<td>65.75%</td>
+		<td>90.14%</td>
+	</tr>
+
+</table>
+<br>
+<i>Note: HV stands for Historical Volatility and IV stands for Implied Volatility.</i>
+
+<br><br>
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 18<sup>th</sup> October 2020.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+  
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h3 div id="top" align="center">Forward Rate Agreement (FRA)</h3>
+
+<b><u>Introduction</u></b><br/>
+Forward rate agreement (pronounced "fra" not "F-R-A") is a simple forward contract. When the underlying for the derivative is a security or commodity, we use the term "forward", and when the underlying for the derivative is "interest rate on money", we use the term "forward rate agreement" to emphasise that the contract is on rate and not money.
+<br/><br/>
+When the underlying is a security or commodity, the market sides are buy and sell. The settlement of this trade happens at a point in time known as "Settlement Date". When the underlying is money, the market sides are borrow and lend. The settlement of this trade happens in two stages - first, the disbursal of money on a date known as "Disbursal date" and second, the refund of money on a date known as "Repayment date". When the underlying is interest rate, the market sides are pay and receive. The settlement of this trade happens at a point in time known as "Payment Date".
+<br/><br/>
+The below table shows these aspects.
+<br/><br/>
+
+<table>
+	<th>Underlying</th>
+	<th>Market Sides</th>
+	<th>Settlement</th>
+
+	<tr>
+		<td>Security</td>
+		<td>Buy and Sell</td>
+		<td>At point in time called settlement date (SD)</td>
+	</tr>
+
+	<tr>
+		<td>Money</td>
+		<td>Borrow and Lend</td>
+		<td>Over a period of time market by disbursal date (DD) and repayment date (RD)</td>
+	</tr>
+
+	<tr>
+		<td>Interest Rate</td>
+		<td>Pay and Receive</td>
+		<td>At a point of time called payment date (PD)</td>
+	</tr>
+
+</table>
+<br/>
+
+For the security underlying, if the settlement date is within 1-3 business days from trade date then it is called as "Cash Trade", and if it is more than 1-3 business days then it is called as 'Forward'.
+<br/><br/>
+For the money underlying, if the settlement date is within 1-3 business days from the trade date then it is called as "Cash loan", and if it is more than 1-2 business days then it is called as "Forward loan or deposit", which is not a derivative because borrowing/lending of money is financing, and derivatives are not financing tools but risk management tools.
+<br/><br/>
+The interest rate on cash loan is called cash interest rate and the interest rate on forward loan is called "Forward rate agreement (FRA", which is a derivative.
+<br/><br/>
+The below picture shows these aspects.
+<br/>
+<img src="/images/fra1.png" alt="Cash loan and forward loan" style="height: 250px;">
+<br/><br/>
+
+FRA is an agreement on interest rate applicable to forward loan/deposit. The parties pay and receive the interest amount without any actual borrowing or lending. It may seem illogical that interest is paid without actual borrowing or lending, but this is perfectly logical for the reason that FRA is not a financing tool, it is a risk management tool. In money borrowing/lending, we pay/receive interest on the principal borrowed/lent. Interest rate derivatives being risk management tools, we pay one interest rate and receive another. We pay one interest rate that is known as of the trade date and receive another that we do not know now but will be known on a future date. The exchange of the known rate against the unknown rate provides the risk management. The known rate is called the "fixed rate" and the unknown rate is called the "floating rate". For settlement purposes, we have to convert these rates into amounts, for which we need a principal amount. However, since FRA is a risk management tool, instead of the word "principal" we use the word "notional" to emphasize that we shll use it for calculation purposes but not for actual borrowing and lending.
+<br/><br/>
+
+<b><u>Terminology used to represent parties in FRA</u></b><br/>
+As per front office terminology, the parties are called payer and receiver. These names are with respect to the "fixed rate" as that is the only rate that is known as on the trade date. The floating rate is not known on the trade date and hence the words "payer and receiver" are not linked to it. Hence, payer refers to fixed rate payer and receiver refers to fixed rate receiver. However, each party is a payer and receiver - payer pays fixed rate and receives floating rate, the receiver receives fixed rate and pays floating rate.
+<br/><br/>
+Parties also use the terminology FRA buyer and FRA seller for buyer and seller respectively, in line with the common usage that buyer "pays" and seller "receives" the price in FRA. The price of the FRA is the fixed rate quoted in the contract.
+<br/><br/>
+As per ISDA documentation, both parties are named "payer". Specifically, the terminology "fixed rate payer", which refers to the party paying the fixed rate, and "floating rate payer", which refers to the party paying the floating rate, are used in the documentation.
+<br/><br/>
+The following picture shows the different names of the two parties to the FRA.
+
+<br/><br/>
+<img src="/images/fra2.png" alt="Parties to FRA" style="height: 150px;">
+<br/><br/><br/>
+
+<b><u>FRA Period</u></b><br/>
+The notation for forward period of FRA is "A x B over C" (pronounced "A-by-B-over-C"), where A is the month number of start date, counting from spot month; B is the month number of end-date, counting from the spot month; and C is the day of the start date, end date and spot date for the trade date.
+<br/><br/>
+Let's first understand "A x B". As mentioned above, A refers to the month number of the start date and B refers to the month number of the end-date. Let's suppose that we are in 1st January of a particular year and we are betting over the interest rates during the period 1st May to 30th September of that year. 1st May is 5 months from 1st January and 30th September is 10 months from 1st January. Thus, this would be represented as "5 x 10 FRA", which means that the forward interest rate is applicable starting from 5 months from the trade date till 10 months from the trade date. The duration of interest applicability can be found by deducting the start-month number from the end-month number. In the above case, the duration of the bet is 5 months, which is the difference between 10 and 5.
+<br/>
+
+<img src="/images/fra3.png" alt="FRA period" style="height: 225px;">
+<br/><br/>
+
+To calculate the start date, end date and spot date, we would need to apply the rules for spot dates for LIBOR. For currencies other than GBP, spot date is the second business day from trade date on which New York (or the settlement center for the currency) must be opened. If the settlement center is closed, then we move to the next business day on which both the fixing and settlement centers are open. Start date and end date require business day adjustment as well.
+<br/><br/>
+For example, consider the following calendar with holidays in London and New York.
+<br/><br/>
+
+<img src="/images/fra5.png" alt="Calendar" style="height: 300px;">
+
+<br/><br/>
+For all LIBOR rates, we require holidays at London because it is the fixing center. Similarly, TARGET calendar is required for EURIBOR. We also need holidays for the settlement center, which is New York for USD, TARGET for EUR, London for GBP, Tokyo for JPY, Zurich for CHF, etc.
+<br/><br/>
+In our example, we are considering a USD FRA with LIBOR as the benchmark. Thefefore, the fixing center is London and the settlement center is New York.
+<br/><br/>
+If trade date is May 22, the spot date will be May 24, which is the second business day at the fixing center and a business day at the settlement center. Therefore, C is 24.
+<br/><br/>
+The following will be the start date and end dates for different FRA periods.
+
+<ol>
+	<li><u>"1 x 2 FRA"</u></li>
+		<ul class="b">
+			<li>Trade date = May 22</li>
+			<li>Spot date = May 24 (two business days from the start date)</li>
+			<li>The start date is 1 month from the spot date, which is June 24th. However, June 24th is a weekend and hence, as per the Modified Following Business Day rules, the new start date would be June 25th</li>
+			<li>The end date is 2 months from the spot date, which is June 25th</li>
+			<li>The period is written as "1 x 2 over 25" or pronounced as "one-by-two-over-twenty-fifth", representing the start period (1), end period (2) and start date (25th June)</li>
+		</ul>
+	
+	<br/><br/>
+	<li><u>2 x 3 FRA"</u></li>
+
+		<ul class="b">
+			<li>Trade date = May 22</li>
+			<li>Spot date = May 24 (two business days from the start date)</li>
+			<li>The start date is 2 months from the spot date, which is July 24th</li>
+			<li>The end date is 3 months from the spot date, which is August 24th. August 24th is a holiday in New York (the settlement center). However, there is no requirement to apply Modified Following Business Day rules to the end date calculation and hence August 24th would be the end date</li>
+			<li>The period is written as "2 x 3 over 24" or pronounced as "two-by-three-over-twenty-fourth", representing the start period (2), end period (3) and start date (24)</li>
+		</ul>
+
+	<br/><br/>
+	<li><u>3 x 6 FRA"</u></li>
+
+		<ul class="b">
+			<li>Trade date = May 22</li>
+			<li>Spot date = May 24 (two business days from the start date)</li>
+			<li>The start date is 3 months from the start date, which is August 24th. However, August 24th is a holiday at the settlement center New York. Hence, by applying Modified Business Day rules the new start date would be August 27th, on which both the fixing center and settlement center are open</li>
+			<li>The end date is 6 months from the spot date, which is November 27th</li>
+			<li>The period is written as "3 x 6 over 27" or pronounced as "three-by-six-over-twenty-seven"</li>
+		</ul>
+</ol>
+<br/>
+
+<b><u>Settlement of FRA</u></b><br/>
+There are four key dates in the life of a FRA. The following are those.
+	<ol>
+		<li>Trade date</li>
+		<li>Start date</li>
+		<li>End date</li>
+		<li>Fixing date</li>
+	</ol>
+<br/>
+On the trade date, the parties enter into a trade. The start date is the date from which the interest amounts are calculated. It is also called as "Effective Date". The end date is the date on which the contract ends. It is also called as "Termination Date".
+<br/><br/>
+On the trade date, the parties negotiate the terms and enter into the FRA contract. The terms to be agreed are start date, end date, fixed interest rate, notional and a market reference benchmark such as LIBOR.
+<br/><br/>
+On the start date, no borrowing/lending takes in the FRA. Any borrowing/lending requirements will have to be outside the FRA in the cash money market. On the start date, the prevailing market benchmark rate (which is agreed by the parties, also known as "floating rate") is obtained and compared with the fixed rate agreed under the FRA to determine the winner or loser of the contract. Derivatives being zero sum games, the loser needs to pay to the winner.
+<br/><br/>
+The prevailing market benchmark rate (floating rate), as discussed in the previous paragraph, is not obtained on the start date but obtained two business days prior to the start date, which is known as the "fixing date". The fixing date is prior to the start date by two business days to enable hedging the cash market, where the gap between the trade date and the start date for cash loan/deposit is two days. For some currencies, the gap may be only one day. In the ISDA 2006 Definitions, the gap between fixing date and start date is specified for each currency's benchmark rate.
+<br/><br/>
+The difference in two interest amounts is computed for the given notional and FRA period and settled on the start date (that is, in advance, not in arrears). In contrast, in the interbank loan/deposit where interest is settled in arrears on end date. Since this will pose a problem in hedging FRA in cash money markets, the settlement amount is discounted for advance payment. The rate used for the discounting is the floating rate determined on the fixing date. This is true for all currencies except AUD and NZD. For these two currencies, the fixed rate amount is discounted using the fixed rate and the floating rate amount is discounted using the floating rate. The method is called as "FRA Yield Discounting".
+<br/><br/>
+The day count basis is Actual/360 for major currencies except GBP for which it is Actual/365.
+<br/><br/><br/>
+
+<b><u>No exchange of principal</u></b><br/>
+As discussed earlier, the principal is not exchanged because FRA is not a financing tool but interest rate risk management tool. The rate risk is managed by exchanging the known interest rate (i.e. fixed rate) against the unknown interest rate (i.e. floating rate).
+<br/><br/>
+
+<b><u>Netting of two interest amounts</u></b><br/>
+The two interest amounts are not separately settled but netted into a single amount, which is called payments netting. This is done to mitigate settlement risk. Consider that the fixed rate payer has to pay 100 to the floating rate payer. Similarly, the floating rate payer has to pay 80 to the fixed rate payer. If there is no netting, the settlement risk to fixed rate payer is 80 (amount receivable from floating rate payer) and the settlement risk to the floating rate payer is 100 (amount receivable from the fixed rate payer). If both the amounts are netted into a single amount, then only the fixed rate payer has to make a payment of 20 to the floating rate payer. In this case, the settlement risk to the fixed rate payer is eliminated (as he has to pay but nothing to receive) and the settlement risk to the floating rate payer is 20 (the net amount). As one can see, the settlement risk is greatly reduced for the floating rate payer - from 100 to 20.
+<br/><br/>
+
+<b><u>Advancement of payment to start date</u></b><br/>
+The settlement amount is known on start date. If the settlement were to be in the normal way then the interest differential or settlement would occur on the end-date. This means that there is a credit risk to one party from the other. Consider the example in the previous section, there is a settlement amount of 20 which needs to be paid by the fixed rate payer to the floating rate payer. This amount is known to us on the start date but if we have to settle normally then this amount would be received by the floating rate payer on the end date. The floating rate payer is exposed to the credit risk from the fixed rate payer. To eliminate this credit risk, in FRA settlement, this amount is advanced to the start date by using discounting. The advancement is fair to both the parties because the amount is discounted at the prevailing market rate.
+<br/>
+
+<img src="/images/fra4.png" alt="Credit risk and Settlement risk in FRA" style="height: 550px;">
+<br/>
+
+<b><u>Market Risk</u></b><br/>
+On the trade date, the fixed rate is known but the floating rate is not known. On the start date, both the fixed rate and the floating rate are known, and the settlement happens on the start date. Thus, there exists an uncertainity from the trade date to the start date. This is where the market risk lies. Both the parties are exposed to market risk in this period. On the start date, the market risk disappears but settlement risk exists.
+<br/><br/>
+
+<b><u>Application of FRA</u></b><br/><br/>
+<u>Example-1</u><br/>
+Consider the following example.<br/>
+Let's suppose that today is January 1st and a finance manager of a company wants to borrow USD 100 million in 6 months from now (i.e. on 1st July) for a period of 6 months. The current borrowing interest rates (for his company) is 10%. He is afraid that this interest rate may increase and he might have to borrow at higher interest rates in 6 months from now when he actually needs the money. If he goes to his bank now, he may or may not get a rate on future borrowing. Even if he gets, the rate of borrowing may be higher than the current rate. In this kind of a scenario, the finance manager can go to the derivatives dealer and enter into a bet on the future interest rates. 
+<br/><br/>
+Let's suppose that the finance manager enters into a FRA with a dealer on 1st Jan. Under this deal, he agrees to pay a fixed rate of 10% on a notional amount of USD 100 million for a period which starts from 1st July and ends on 31st Dec. The dealer on the other hand agrees, under the deal, to pay a floating interest rate (let's suppose LIBOR) on the same notional amount for the same period.
+<br/><br/>
+This contract with the dealer is not a financing deal but a risk management deal. For actual financing, the finance manager would approach his usual bank, most probably on 1st July and borrow the USD 100 million at the rate prevaiing on that date.
+<br/><br/>
+Thus, at this point of time, the finance manager has two deals with him.
+	
+	<span class="normalind">
+	1. The financing deal with the bank wherein he borrows USD 100 million<br/>
+	2. The derivatives contract with a derivatives dealer wherein he pays a fixed rate of 10% against LIBOR.<br/>
+	</span>
+<br/>
+Let's further suppose that on 1st July the prevailing LIBOR rate is 12% and the rate that his bank quoted for lending is 12%. The finance manager will borrow the required amount (USD 100 million) from the bank at the prevailing interest rate i.e. 12%. Unfortunately, as expected by the finance manager, the interest rates increased and hence his interest liability increased from 10% to 12%. The actual interest liability is USD 6 million instead of the USD 5 million which the finance manager would have been comfortable with.
+<br/><br/>
+On the FRA front, the finance manager promised to pay 10% fixed rate against LIBOR payment. Being a fixed rate payer under the FRA, the finance manager will have to pay 10% on USD 100 million for 6 months. At the same time, the derivatives dealer being a floating rate payer under the FRA will need to pay 12% on USD 100 million for 6 months. Accordingly, the fixed rate obligation is USD 5 million and the floating rate obligation is USD 6 million. As discussed earlier, payments netting is applicable. Thus, the floating rate payer will need to pay to the fixed rate payer an amount of USD 1 million. In other words, the finance manager will receive USD 1 million. However, as discussed earlier, the FRA settlement amount is discounted to the start date by using the floating rate. Thus, the settlement amount would be USD 943,396.
+<br/><br/>
+By combining these two deals, we can see that the finance manager's interest liability increased by USD 1 million from his actual borrowing from the bank due to the increase in interest rates. However, due to the FRA deal, the finance manager was able to win a derivatives bet and receive USD 943,396, which in effect means that he has neither lost or won and thus has hedged his interest rate risk.
+<br/><br/>
+One can observe that interest liability increased by USD 1 million but the gain from the derivatives deal is only USD 943,396. This is not an anomaly but is due to the discounting that we performed. The additional USD 1 million that has to be paid to the bank is due on the end date i.e. on 31st December. However, the FRA settlement amount is received on 1st July. If we discount the USD 1 million liability to the bank at the current floating rate then the amounts would match. Alternatively, if we can take the USD 943,396 that we gained from our derivatives bet and invest it at the floating rate of interest (i.e. 12%) then we will get USD 1 million after 6 months. Thus, this is a perfect hedge.
+<br/><br/>
+In the above example, we supposed that the interest rate increased from 10% to 12%. Consider that the interest rates decreased from 10% to 7%. In such a case, the finance manager would have borrowed money from its bank at 7%. This is good for the company. However, it would have lost the FRA bet that it had placed. This means he would have to pay 3% (10%-7%) to the FRA dealer. The net effect is that the finance manager pays 7% to the bank under the normal borrowing and 3% to the FRA dealer due to his lost bet; thus, in total paying 10% on the loan. Being a hedge, the finance manager would always pay 10% irrespective of whether the LIBOR rates increase or decrease.
+<br/><br/>
+<u>Example - 2</u><br/>
+On September 15th, a finance manager of a shopping mall was informed by his bank that the 1-month rate will fall towards the year-end. The manager expects huge sales in December because of festive season and a cash surplus of USD 100 million. The shopping mall has a trade credit for 30 days, implying that the cash surplus is expected between December-end to January-end. How should he manage the rate risk?
+<br/><br/>
+To lock the interest rate receivable on forward deposit, he should sell FRA for a notional of USD 100 million. The finance manager of a shopping mall expects a lot of sales in the festival season of December. Since the surplus is between December-end to January-end, he should choose 3 x 4 FRA. Let us assume that the dealer has offered FRA at 1.78%. FRA will be settled on December at which the market rate is 1.35%. Assuming there are 30 days in the FRA period, the finance manager will receive the following compensation from the dealer.
+<br/><br/>
+
+<span class="italicind">
+	
+	(1.78% - 1.35%) x 100,000,000 x (30/360) / (1 + 1.35% x (30/360) = 35,793.07
+
+</span>
+<br/><br/>
+The actual lending will be outside the FRA and the finance manager was offered a rate of 1.2875%, which is one-sixteenth percentage point less than the market rate of 1.35%. He will deposit the original USD 100 million as well as the FRA settlement amount of USD 35,793.07. Similarly, if the market rate on settlement date is higher than the fixed rate, the settlement amount will be payment for the finance manager and the actual amount lent will be lesser by this FRA settlement amount.
+<br/><br/><br/>
+
+<b><u>Market side of FRA</u></b><br/>
+If you are expecting the rates to go up in future, you should buy FRA today. In buying FRA, you pay the fixed rate and receive the expected floating rate in future and the difference is positive and profit.
+<br/><br/>
+If you expect the rates to fall in future, you should sell FRA. In selling FRA, you receive the fixed rate and pay the expected lower floating rate in future. 
+<br/><br/><br/>
+
+<b><u>Start date of the FRA</u></b><br/>
+You expect the 3-month rate to go up in nine months from now. What should be your FRA?
+<ul class="b">
+	<li>Since you expect the rates to go up, you should receive the floating rate and pay the fixed rate, which is buying FRA now.</li>
+	<li>Since the tenor of the rate speculated is three months, the gap between the start date and the end date should be three months</li>
+	<li>Since you expect the rate will go up in nine months, the start date should be nine months from now</li>
+	<li>Accordingly, you should buy a 9 x 12 FRA</li>
+</ul>
+<br/>
+
+<b><u>FRA Term</u></b><br/>
+FRA is a <i>short-term short-tenor</i> risk management tool. The 'short term' means the time to start date of FRA is less than one year. Though there are FRAs with start date up to two years, the liquidity is poor. For terms higher than one year, interest rate futures, interest rate swaps or interest rate options are better tools. The "short tenor" means that the length of the forward period between start date and end date is less than one year. The most liquid tenors are 3-month and 1-month.
+
+<br/><br/><br/>
+
+<b><u>FRA Pricing</u></b><br/>
+In a FRA, the parties exchange fixed interest rate against floating interest rate. The floating interest rate is not known on the trade date. It is known only on the fixing date and is applicable from the start date for calculation purposes. The parties, usually, select a popular benchmark rate (such as LIBOR, EURIBOR, etc.) as their floating rate. The benchmark rate is selected without any spread. Once a benchmark is selected, there is nothing for the parties to decide about it; they simply will have to wait for the fixing date to determine the spot benchmark rate.
+<br/><br/>
+On the other hand, the fixed rate is something that the parties will have to decide upon. It is not obtained but negotiated by the parties and fixed on the trade date. Usually, the dealers present the FRA in the form of a quote to its clients or other dealers. A quote of “1 x 2 FRA 5%, 6%, LIBOR” means that the FRA starts in 1 month from the trade date, for a period of 2 months from the trade date, has an duration of 1 month, wherein the dealer is willing to pay a fixed rate of 5% to the counterparty against LIBOR, and/or is also willing to accept a fixed rate of 6% against LIBOR from the counterparty. This quote when provided to a counterparty, who can be either a dealer or a client, can be negotiated upon. Once negotiated and finalised, the trade comes into existence. 
+<br/><br/>
+As a first step in understanding pricing of FRA, one has to understand how this rate of 5% and 6% are decided by the dealer. The following explains this concept. 
+<br/><br/>
+Consider a 1 x 4 FRA contract - which means a borrowing for 3 months, 1 month from now. Let’s assume that the following are the spot LIBOR rates.
+<br/>
+<span class="normalind">
+	1-month LIBOR = 5%<br/>
+	4-month LIBOR = 6%
+</span>
+<br/>
+We need to decide the FRA rate (which is the fixed rate of the FRA). To do that, we can think from an arbitrage pricing point of view - i.e. if you were to invest for 1-month period and subsequently in a 1x4 FRA (3 months period) then the value of your investment should be same if you were to invest for 4-month period directly. 
+<br/><br/>
+In other words, if you invest $100 in 1-month security, it will become 100(1+R1) in one months time, and then 100(1+R1)*(1+ 1x4 FRA) after the end of 4 months. 
+<br/><br/>
+If you were to invest directly in a 4-month security, the investment would become 100(1+R4).
+<br/><br/>
+<i>
+Where,<br/>
+R1 = interest rate of the 1-month security<br/>
+1x4 FRA = is the rate that we need to fix<br/>
+R4 = interest rate of the 4-month security<br/>
+</i>
+<br/><br/>
+These two values should be equal or more or less equal.<br/>
+Thus,<br/>
+<i>
+100(1+R1) + {100(1+R1) * (1+ 1x4 FRA)} = 100(1+R4)<br/>
+=> 100 * (1+R1) * (1+ 1x4 FRA) = 100(1+R4)<br/>
+</i>
+<br/>
+Assuming 1x4 FRA being 1+x, and substituting the values above, we get the following.<br/>
+<i>
+100 (1 + 5/100 * 30/360) * (1 + x) = 100 (1 + 6/100 * 120/360)<br/>
+=> 100 (1 + 0.05 * 0.0833) * (1 + x) = 100 (1 + 0.06 * 0.334)<br/>
+=> 100 (1 + 0.004165) * (1 + x) = 100 (1 + 0.02004)<br/>
+=> 100 (1.004165) * (1 + x) = 100 (1.02004)<br/>
+=> 100.4165 * (1 + x) = 102.004<br/>
+=> (1 + x) = 102.004 - 100.4165<br/>
+=> (1+x) = 1.5875<br/>
+</i>
+<br/>
+(1+x) here is a 3-month rate. We can annualise this as follows.<br/>
+<i>
+1.5875 * 360/90 = 571.5/90 = 6.35%
+</i>
+Thus, the FRA rate which equals the value is 6.35%.<br/>
+<br/>
+In the above example, we have found the fixed rate of the FRA with the help of the current spot rates for LIBOR. We can check whether our above calculations are correct or not by deploying this rate into the equation about and checking the result.
+<br/><br/>
+Value at the end of 4 months
+<i>
+100 (1 + 5/100 * 30/360) * (1 + 6.35/100 * 90/360)<br/>
+=> 100 (1 + 0.05 * 0.0833) * (1 + 0.0635 * 90/360)<br/>
+=> 100 (1 + 0.004165) * (1 + 0.0635 * 0.25)<br/>
+=> 100(1.004165) * (1 + 0.015875)<br/>
+=> 100.4165 * 1.015875<br/>
+=> 102.0106<br/>
+</i>
+<br/>
+Baring the lack of proper rounding-off approximation used in the above example, this value is roughly the same.
+<br/><br/>
+
+
+
+<br/><br/><br/>
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2018
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 22.12.2018
+</p>
+
+</body>
+</html>

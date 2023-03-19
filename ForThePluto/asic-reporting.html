@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+<h2 div id="top" align="center">Australian Securities and Investments Commission (ASIC) Reporting</h2>
+<br/>
+
+
+ASIC Reporting refers to the mandatory derivatives transactions reporting regime implemented by the Australian Securities and Investments Commission for monitoring and prevention of systemic risk. The rule came into force in 2013.
+<br><br>
+
+<h3 class="c">Who is affected by this regulation?</h3>
+If any any counterparty to the trade has a reporting obligation they must report that trade even if their counterparty also reports the trade. That means, there exist dual reporting obligations similar to EMIR. However, certain exemptions are also provided for dual reporting. The following are some of them.
+<br><br>
+<b><u>Exceptions to reporting oblgations</u></b><br>
+If an entity's gross notional outstanding positions across all OTC derivatives for two consecutive quarters is less than AUD $5 billion then it is need not report the transactions, but at least one counterparty has to report.
+<br><br>
+
+<h3 class="c">Which firms are required to report?</h3>
+The following firms are required to report.
+<ol>
+	<li>Australian firms (incorporated or formed in Australia).</li>
+	<li>Foreign subsidiaries of Australian authorised deposit taking institutions or Australian Financial Services Licensees, as per the Corporation Act, 2001.</li>
+	<li>Foreign authorised deposit taking institutions with Australian branches (only trades booked in Australia)</li>
+	<li>Foreign companies offering debentures or guaranteering debentures in Autralia (only trades booked in Autralia)</li>
+</ol>
+
+<br>
+
+<h3 class="c">Which trades need to be reported?</h3>
+OTC Derivatives trades in the following asset clases need to be reported.
+<ol>
+	<li>Credit</li>
+	<li>Commodities (excluding electricity)</li>
+	<li>Equities</li>
+	<li>FX</li>
+	<li>Rates</li>
+</ol>
+
+<ul>
+	<li>Australian firms and their subsidiaries must report all derivatives trades meeting the above criteria.</li>
+	<li>Non-Australian firms must report all derivatives meeting the above criteria which are entered into in Australia or booked in Australia</li>
+</ul>
+<br>
+
+<h3><font style="font-family: consolas">What should be reported?</font></h3>
+
+<ul>
+	<li>New trades</li>
+	<li>Modifications (including changes in valuation)</li>
+	<li>Terminations</li>
+	<li>Assignments</li>
+	<li>Step-in/out transactions</li>
+	<li>Others</li>
+</ul>
+
+<font color="red" style="font-family: consolas">	Exchange traded derivative transactions are not reportable.</font>
+
+<br><br>
+Essentially the requirements for an Australian Financial Services License (AFSL) derivatives issuer/broker are to carry out the following on a daily basis.
+<ul>
+	<li>Report all trades</li>
+	<li>Report end of day open positions; and</li>
+	<li>Submit and modifications</li>
+</ul>
+
+Thus, essentially, trades and end-of-day open positions have to be reported.
+
+<br><br>
+
+<h3 class="c">When should they reported?</h3>
+T+1
+
+<br><br>
+
+<h3 class="c">How can firms meet their reporting obligations?</h3>
+<b><u>Non-Australian Firms</u></b><br>
+Non-Australian firms may take advantage of the fact that ASIC has recognised EMIR as an equivalent reporting regime. This means that instead of reporting to a licensed ASIC trade repository, firms may instead report to an EMIR trade repository recognized by ASIC as a 'prescribed trade repository'.
+
+<br><br>
+
+<b><u>Australian Firms</u></b><br>
+Austalian firms can report to ASIC registered trade repositories. These are called as Australian Derivatives Trade Repository (ASIC).
+
+<br><br>
+
+<h3 class="c">What data is reported?</h3>
+The requirements are divided into two categories.
+<ul>
+	<li>Common data; and</li>
+	<li>Data specific to each asset class</li>
+</ul>
+
+Broadly, the following details are to be reported.
+
+<ul>
+	<li>The economic terms of the transaction</li>
+	<li>The product, transaction and entity identifers</li>
+	<li>Information on whether the transaction is centrally cleared</li>
+	<li>Valuation (mark-to-market, mark-to-model or other valuation) and collateral;</li>
+	<li>Legal Entity Identifier</li>
+</ul>
+<br>
+
+<h3 class="c">Reporting Fields</h3>
+
+<b>Common Data</b> <br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Label</th>
+	<th>Information</th>
+	
+	<tr>
+		<td>1</td>
+		<td>Unique transaction identifier</td>
+		<td>The universal transaction identifer for the reportable transaction, or, if no universal tranaction identifer is avaiable, the single transaction identifer as used by the counterparties or the trade identifer used by the trading venue (if available) on which the Reportable Transaction was executed, or if none of these are available, the internal trade identifier used by the Reporting Counterparty.</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>Unique Product Identifier</td>
+		<td>The universal product identifer code for the derivative to which the reportable transaction relates, based on the taxonomy of the derivative or, if no universal product identifer code is available, a product identification code of the derivative using an internally accepted product taxonomy.</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>Contract type</td>
+		<td>The type of derivative to which the reportable transaction relates, such as "swap", "swaption", "forward", "option", "basis swap", "index swap", or "basket swap", unless this information is contained in the unique product identifier referred to in item 2, in which case this field may be left blank or ommitted.</td>
+	</tr>
+
+	<tr>
+		<td>4</td>
+		<td>Underlying</td>
+		<td>A unique identifer for the underlying to the derivative to which the reportable transaction relates, or, if no unique identifer is available in the case of baskets or indices, a notation to indicate that the underlying is a basket or index. </td>
+		<td></td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>Identifier of Reporting Counterparty</td>
+		<td>An identifier of the reporting counterparty, using: <br><br>
+			(a) in the case of an entity, an LEI or interim entity identifier or, if no LEI or interim entity identifer is available for the entity, a designated business identifer or, if no desinated business identifer is available, a Business Identifer Code (BIC) code; or
+			<br><br>
+			(b) in the case of an individual, a client code assigned by the reporting counterparty.
+		</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>Name of the reporting counterparty</td>
+		<td>The legal name of the reporting counterparty identifed under item 5.</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>Identifier of Non-reporting counterparty</td>
+		<td>An identifer of the non-reporting counterparty, using: <br><br>
+			(a) in the case of an entity, an LEI or interim entity identifier or, if no LEI or interim entity identifer is available for the entity, a designated business identifer or, if no desinated business identifer is available, a Business Identifer Code (BIC) code; or
+			<br><br>
+			(b) in the case of an individual, a client code assigned by the reporting counterparty.
+		</td>
+	</tr>
+
+	<tr>
+		<td>8</td>
+		<td>Name of non-reporting counterparty</td>
+		<td>The legal name of the non-reporting counterparty identified under item 7.</td>
+	</tr>
+
+
+	<tr>
+		<td>9</td>
+		<td>Trading capacity of reporting counterparty</td>
+		<td>A notation to indicate whether the reporting counterparty has concluded the derivative to which the reportable transaction relates: <br><br>
+			(a) as principal on its own account (on its own behalf or on behalf of a client;) or <br><br>
+			(b) as agent for the account of and on behalf of a client.
+		</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>Identifier of beneficiary</td>
+		<td>If the beneficiary of the rights and obligations arising from the derivative to which the reportable counterparty: <br><br>
+			(a) an identifier of the beneficiary of the reporting counterparty, using: <br><br>
+			&emsp; (i) in the case of an entity, a LEI or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a desginated business identifier or, if no designated business identifier is available, a business identifier code (BIC code); or <br><br>
+			&emsp; (ii)) in the case of an individual, a client code as assigned by the reporting counterparty; or
+
+			<br><br><br>
+			(b) where the reportable tranaction was executed via a structure, such a trust or managed investment scheme, representing a number of beneficiaries, an identifier of the structure (i.e. as the trust or managed investment schemes).
+		</td>
+	</tr>
+
+	<tr>
+		<td>11</td>
+		<td>Name of the beneficiary or structure</td>
+		<td>The legal name of the beneficiary or structure (if any) identified under item 10.</td>
+	</tr>
+
+	<tr>
+		<td>12</td>
+		<td>Identifer of person making request</td>
+		<td>If the person reporting the Reportable Transaction to the Derivative Trade Repository is not the Reporting Counterparty, an identifier of the person using: <br><br>
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty
+
+		</td>
+	</tr>
+
+
+	<tr>
+		<td>13</td>
+		<td>Name of the person making report</td>
+		<td>The legal name of the person identified under item 12.</td>
+	</tr>
+
+	<tr>
+		<td>14</td>
+		<td>Domicile of the reporting counterparty</td>
+		<td>The jurisdiction of incorporation or formation of the Reporting Counterparty.</td>
+	</tr>
+
+	<tr>
+		<td>15</td>
+		<td>Identifier of broker</td>
+		<td>An identifier of the broker that executed the Reportable Transaction on behalf of the Reporting Counterparty (if applicable), using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+
+	<tr>
+		<td>16</td>
+		<td>Name of broker</td>
+		<td>The legal name of the broker (if any) identified under item 15.</td>
+	</tr>
+
+	<tr>
+		<td>17</td>
+		<td>Whether the Derivative has been centrally cleared (to be amended if cleared after initial report made)</td>
+		<td>A notation to indicate whether the Derivative to which the Reportable Transaction relates has been centrally cleared.</td>
+	</tr>
+
+	<tr>
+		<td>18</td>
+		<td>Name of central clearing facility</td>
+		<td>The name of the central clearing facility where the Derivative to which the Reportable Transaction relates was cleared (if applicable).</td>
+	</tr>
+
+	<tr>
+		<td>19</td>
+		<td>Identifier of clearing member</td>
+		<td>An identifier of the clearing member that cleared the Derivative to which the Reportable Transaction relates (if applicable), using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>20</td>
+		<td>Name of clearing member</td>
+		<td>The legal name of the clearing member (if any) identified under item 19.</td>
+	</tr>
+
+	<tr>
+		<td>21</td>
+		<td>Whether the Derivative has been confirmed</td>
+		<td>A notation to indicate whether the terms of the Derivative to which the Reportable Transaction relates have been confirmed by both counterparties to the Derivative.</td>
+	</tr>
+
+	<tr>
+		<td>22</td>
+		<td>Form of confirmation</td>
+		<td>If the terms of the Derivative to which the Reportable Transaction relates have been confirmed by both counterparties to the Derivative, a notation to indicate whether the confirmation was electronic or non-electronic.</td>
+	</tr>
+	<tr>
+		<td>23</td>
+		<td>Confirmation timestamp</td>
+		<td>The time and date (expressed as AEDT/AEST as applicable – see Rule 1.2.1) the terms of the Derivative to which the Reportable Transaction relates were confirmed by both counterparties (if applicable).</td>
+	</tr>
+
+	<tr>
+		<td>24</td>
+		<td>Execution venue</td>
+		<td>If the Reportable Transaction: <br><br>
+
+		(a)   was executed on a trading venue, an identifier code of the trading venue or, if no identifier code is available for the trading venue, the name of the trading venue; or <br><br>
+
+		(b)   was not executed on a trading venue, a notation to indicate that there was no trading venue.</td>
+	</tr>
+	
+	<tr>
+		<td>25</td>
+		<td>Master agreement type</td>
+		<td>The type of master agreement that was executed in relation to the Derivative to which the Reportable Transaction relates (e.g. ISDA Master Agreement, Master Power Purchase and Sale Agreement, International ForEx Master Agreement, European Master Agreement or any local Master Agreements).</td>
+	</tr>
+	
+	<tr>
+		<td>26</td>
+		<td>Master agreement date</td>
+		<td>The year of the version of the master agreement identified under item 25.</td>
+	</tr>
+
+	<tr>
+		<td>27</td>
+		<td>Derivative-effective date or start date</td>
+		<td>The date when the obligations under the Derivative to which the Reportable Transaction relates, come into effect.</td>
+	</tr>
+
+	<tr>
+		<td>28</td>
+		<td>Maturity, termination or end date</td>
+		<td>The date of expiry of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>29</td>
+		<td>Delivery type</td>
+		<td>A notation to indicate whether the Derivative to which the Reportable Transaction relates is physical (deliverable) or cash (non-deliverable) or a combination of both physical and cash.</td>
+	</tr>
+
+	<tr>
+		<td>30</td>
+		<td>Mark-to-market / mark-to-model / other value of derivative</td>
+		<td>The valuation of the Derivative to which the Reportable Transaction relates, as calculated using the method identified under item 32.</td>
+	</tr>
+	
+	<tr>
+		<td>31</td>
+		<td>Currency used for mark-to-market/mark-to-model/other valuation</td>
+		<td>The currency used for the valuation referred to in item 30.</td>
+	</tr>
+
+	<tr>
+		<td>32</td>
+		<td>Valuation type (mark-to-market/mark-to-model/other)</td>
+		<td>A notation to indicate whether the valuation referred to in item 30 was a mark-to-market or mark-to-model valuation, or a different form of valuation.</td>
+	</tr>
+	
+	<tr>
+		<td>33</td>
+		<td>Counterparty side (buy/sell)</td>
+		<td>A notation to indicate whether the Reporting Counterparty is the buyer or seller of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>34</td>
+		<td>Basis</td>
+		<td>The day count for calculation of periodic payments under the Derivative to which the Reportable Transaction relates (e.g. A/365, quarterly, semi-annual) (if applicable).</td>
+	</tr>
+	
+	<tr>
+		<td>35</td>
+		<td>Settlement rate or index</td>
+		<td>The index for calculation of settlement payments under the Derivative to which the Reportable Transaction relates (e.g. the Bank Bill Swap Reference Rate).</td>
+	</tr>
+	
+	<tr>
+		<td>36</td>
+		<td>Expiry conventions/cut</td>
+		<td>Place of time zone and time of expiry of the Derivative to which the Reportable Transaction relates (e.g. 3 pm, Tokyo; 10 am, New York).</td>
+	</tr>
+
+	<tr>
+		<td>37</td>
+		<td>Execution timestamp</td>
+		<td>If the Reportable Transaction was executed on a trading venue, the time and date (expressed as AEDT/AEST as applicable - see Rule 1.2.1) the Reportable Transaction was executed on a trading venue.</td>
+	</tr>
+	<tr>
+		<td>38</td>
+		<td>Clearing timestamp</td>
+		<td>If the Derivative to which the Reportable Transaction relates was centrally cleared, the time and date the Derivative was cleared.</td>
+	</tr>
+
+	<tr>
+		<td>39</td>
+		<td>Reporting timestamp</td>
+		<td>The time and date (expressed as AEDT/AEST as applicable - see Rule 1.2.1) the Reportable Transaction is reported to the Derivative Trade Repository.</td>
+	</tr>
+	
+	<tr>
+		<td>40</td>
+		<td>Collateralisation</td>
+		<td>A notation to indicate whether the Reportable Transaction is collateralised by one or both counterparties to the Reportable Transaction.</td>
+	</tr>
+
+	<tr>
+		<td>41</td>
+		<td>Collateral portfolio</td>
+		<td>If the Reportable Transaction is collateralised, a notation to indicate whether the collateralisation was performed on a Portfolio Basis.</td>
+	</tr>
+
+	<tr>
+		<td>42</td>
+		<td>Collateral portfolio code</td>
+		<td>If the Reportable Transaction is collateralised and collateral is reported on a Portfolio Basis, a unique code, determined by the Reporting Counterparty, to identify the portfolio.</td>
+	</tr>
+	
+	<tr>
+		<td>43</td>
+		<td>Value of collateral</td>
+		<td>If the Reportable Transaction is collateralised: <br><br>
+
+			(a)   the value of the collateral posted by the Reporting Counterparty to the Non-Reporting Counterparty; or <br><br>
+
+			(b)   where collateral is posted by the Reporting Counterparty to the Non-Reporting Counterparty on a Portfolio Basis, the value of all collateral posted for the portfolio.</td>
+	</tr>
+	
+	<tr>
+		<td>44</td>
+		<td>Currency of collateral value</td>
+		<td>The currency of the collateral value identified under item 43.</td>
+	</tr>
+	
+	<tr>
+		<td>45</td>
+		<td>Option type</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, a notation to indicate whether the option is a call or a put.</td>
+	</tr>
+
+	<tr>
+		<td>46</td>
+		<td>Option expiration date</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, the expiry date of the option.</td>
+	</tr>
+
+	<tr>
+		<td>47</td>
+		<td>Option premium</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, the amount of the premium paid by the buyer to the seller.</td>
+	</tr>
+
+	<tr>
+		<td>48</td>
+		<td>Option premium currency</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, the currency used to calculate the option premium identified under item 47.</td>
+	</tr>
+	
+	<tr>
+		<td>49</td>
+		<td>Option style</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, a notation to indicate whether the option can be exercised on a fixed date ( “European”, “Asian”), on a series of fixed dates (“Bermudan”), or at any time during the life of the Derivative (“American”)</td>
+	</tr>
+	
+	<tr>
+		<td>50</td>
+		<td>Strike price (cap/floor rate)</td>
+		<td>If the Derivative to which the Reportable Transaction relates is an option, the strike price of the option.</td>
+	</tr>
+
+	<tr>
+		<td>51</td>
+		<td>Barrier type</td>
+		<td>If the Derivative to which the Reportable Transaction relates includes a barrier, the type of barrier in the Derivative (“European”, “American”, “Bermudan” or “other”).</td>
+	</tr>
+	
+	<tr>
+		<td>52</td>
+		<td>Barrier value</td>
+		<td>If the Derivative to which the Reportable Transaction relates includes a barrier or barriers, the rate or level of the barrier or barriers.</td>
+	</tr>
+	
+	<tr>
+		<td>53</td>
+		<td>Rate reset frequency</td>
+		<td>Frequency with which the rate leg resets (if applicable).</td>
+	</tr>
+
+	<tr>
+		<td>54</td>
+		<td>Hedging transaction</td>
+		<td>If the Reporting Entity is not an Australian ADI, an AFS Licensee, a CS Facility Licensee, an Exempt Foreign Licensee or a Foreign ADI, an indication of whether the Derivative to which the Reportable Transaction relates is entered into by the Reporting Entity for the purpose of managing a financial risk that arises in the ordinary course of business.</td>
+	</tr>
+	
+	<tr>
+		<td>55</td>
+		<td>Action type</td>
+		<td>A notation to indicate whether the report being made relates to : <br><br>
+
+		(a)  a Reportable Transaction that is an entry into of an arrangement that is a Derivative, in which case the notation must be “new”; <br><br>
+
+		(b)  a Reportable Transaction that is a modification of an arrangement that is a Derivative, in which case the notation must be “modify”; <br><br>
+
+		(c)  a Reportable Transaction that is a termination of an arrangement that is a Derivative, in which case the notation must be “cancel”; or <br><br>
+
+		(d)  a compression of a Derivative, in which case the notation must be “compression”. <br><br>
+
+		For the purposes of subrule 2.2.2(1), a notation to indicate whether the change relates to: <br><br>
+
+		(a)   a cancellation of a report previously made in error, in which case, the notation must be “error”; <br><br>
+
+		(b)   a change or update to the information referred to in items 30–32 (mark-to-market, mark-to-model, or other valuation) or items 40–44 (collateral), in which case the notation must be “valuation update”; or <br><br>
+
+		(c)    any other amendments to a report previously made, in which case the notation must be “other”.</td>
+	</tr>
+	
+</table>
+
+<br><br>
+
+<b>Commodity Derivative Data</b> <br><br>
+
+<table>
+	
+	<th>Sl No</th>
+	<th>Label</th>
+	<th>Derivative Transaction Information</th>
+
+	<tr>
+		<td>1</td>
+		<td>Notional amount</td>
+		<td>The total notional amount, or total quantity in the unit of measure of the commodity underlying the Derivative to which the Reportable Transaction relates, or payout where a fixed payment is made at maturity based on certain conditions being met at expiry or during the life of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>2</td>
+		<td>Notional currency</td>
+		<td>The currency of the total notional amount or payout (if applicable) identified under item 1.</td>
+	</tr>
+
+	<tr>
+		<td>3</td>
+		<td>Grade</td>
+		<td>The grade of the product being delivered</td>
+	</tr>
+	
+	<tr>
+		<td>4</td>
+		<td>Amount of upfront payment, if any</td>
+		<td>The amount of any upfront payment the Reporting Counterparty has made or received in relation to the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>5</td>
+		<td>Payment frequency</td>
+		<td>The dates on, or frequency with which, the agreement executed in relation to the Derivative to which the Reportable Transaction relates requires payments to be made.</td>
+	</tr>
+
+	<tr>
+		<td>6</td>
+		<td>Quantity unit</td>
+		<td>A unit to measure the quantity of each side of the Derivative to which the Reportable Transaction relates (e.g. barrels, bushels).</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>Quantity</td>
+		<td>The amount of the commodity (the number of quantity units) quoted on the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>8</td>
+		<td>Quantity frequency</td>
+		<td>The rate at which the quantity is quoted on the Derivative to which the Reportable Transaction relates (e.g. hourly, daily, weekly, monthly)</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>Total quantity</td>
+		<td>The quantity of the commodity for the entire term of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>10</td>
+		<td>Delivery point or zone</td>
+		<td>The location of the delivery of the commodity underlying the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>11</td>
+		<td>Delivery start date and time</td>
+		<td>The start date and time (expressed as AEDT/AEST as applicable - see Rule 1.2.1) of delivery of the commodity underlying the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>12</td>
+		<td>Delivery end date and time</td>
+		<td>The end date and time (expressed as AEDT/AEST as applicable - see Rule 1.2.1) of delivery of the commodity underlying the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>13</td>
+		<td>Delivery capacity</td>
+		<td>The quantity per delivery time interval of the commodity underlying the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+	<tr>
+		<td>14</td>
+		<td>Commodity base</td>
+		<td>A notation to indicate the type of commodity underlying the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+<b>Equity derivative and credit derivative data</b> <br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Label</th>
+	<th>Derivative Transaction Identifier</th>
+
+	<tr>
+		<td>1</td>
+		<td>Identifier of counterparty purchasing protection</td>
+		<td>The identifier of the counterparty purchasing protection, using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>2</td>
+		<td>Name of counterparty purchasing protection</td>
+		<td>The legal name of the counterparty purchasing protection identified under item 1.</td>
+	</tr>
+	
+	<tr>
+		<td>3</td>
+		<td>Identifier of counterparty selling protection</td>
+		<td>The identifier of counterparty selling protection, using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>4</td>
+		<td>Name of counterparty selling protection</td>
+		<td>The legal name of the counterparty selling protection identified under item 3.</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Information identifying the reference entity</td>
+		<td>The identifier of the entity that is the subject of the protection being purchased and sold, using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>6</td>
+		<td>Name of the reference entity</td>
+		<td>The legal name of the reference entity identified under item 5.</td>
+	</tr>
+
+	<tr>
+		<td>7</td>
+		<td>Notional amount</td>
+		<td>The total notional amount, or total quantity in the unit of measure of an instrument underlying the Derivative to which the Reportable Transaction relates, or payout where a fixed payment is made at maturity based on certain conditions being met at expiry or during the life of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>8</td>
+		<td>Notional currency</td>
+		<td>The currency of the notional amount identified under item 7.</td>
+	</tr>
+
+	<tr>
+		<td>9</td>
+		<td>Amount of upfront payment, if any</td>
+		<td>The amount of any upfront payment the Reporting Counterparty has made or received in relation to the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>10</td>
+		<td>Description of the payment stream of reporting counterparty</td>
+		<td>A description of the payment stream of the Reporting Counterparty (e.g. coupon).</td>
+	</tr>
+	
+	<tr>
+		<td>11</td>
+		<td>Description of the payment stream of Non-Reporting Counterparty</td>
+		<td>A description of the payment stream of the Non-Reporting Counterparty (e.g. coupon).</td>
+	</tr>
+	
+	<tr>
+		<td>12</td>
+		<td>Payment frequency</td>
+		<td>The dates on, or frequency with which, the agreement executed in relation to the Derivative to which the Reportable Transaction relates requires payments to be made.</td>
+	</tr>
+
+</table>
+<br><br>
+
+<b>Foreign Exchange Derivatives Data</b> <br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Label</th>
+	<th>Derivative Transaction Information</th>
+
+	<tr>
+		<td>1</td>
+		<td>Notional amount 1</td>
+		<td>Total amount of the first underlying currency or payout where a fixed payment is made at maturity based on certain conditions being met at expiry or during the life of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>2</td>
+		<td>Notional amount 2</td>
+		<td>Total amount of the second underlying currency.</td>
+	</tr>
+	
+	<tr>
+		<td>3</td>
+		<td>Currency 1</td>
+		<td>The notional currency payable by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>4</td>
+		<td>Currency 2</td>
+		<td>The notional currency payable by the Non-Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>5</td>
+		<td>Exchange rate</td>
+		<td>The rate of exchange of the currencies referred to in items 3 and 4.</td>
+	</tr>
+	
+	<tr>
+		<td>6</td>
+		<td>Forward exchange rate</td>
+		<td>The forward exchange rate on the value date.</td>
+	</tr>
+
+</table>
+
+<br><br>
+
+<b>Interest Rate Derivative Data</b> <br><br>
+
+<table>
+	<th>Sl No</th>
+	<th>Label</th>
+	<th>Derivative Transaction Information</th>
+
+	<tr>
+		<td>1</td>
+		<td>Notional amount for leg 1</td>
+		<td>The total notional amount, or total quantity in the unit of measure of leg 1 of the Derivative to which the Reportable Transaction relates, or payout where a fixed payment is made at maturity based on certain conditions being met at expiry or during the life of the Derivative.</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Notional amount for leg 2</td>
+		<td>Total notional amount or total quantity in the unit of measure of leg 2 of the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Notional currency for leg 1</td>
+		<td>The currency of the total notional amount or payout identified under item 1.</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Notional currency for leg 2</td>
+		<td>The currency of the total notional amount or payout identified under item 2.</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Amount of upfront payment, if any</td>
+		<td>The amount of any upfront payment the Reporting Counterparty has made or received in relation to the Derivative to which the Reportable Transaction relates.</td>
+	</tr>
+	
+	<tr>
+		<td>6</td>
+		<td>Payer (fixed rate)</td>
+		<td>An identifier of the counterparty that pays the fixed rate, using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	
+	<tr>
+		<td>7</td>
+		<td>Name of payer (fixed rate)</td>
+		<td>The legal name of the payer (fixed rate) identified under item 6.</td>
+	</tr>
+	
+	<tr>
+		<td>8</td>
+		<td>Payer (floating rate leg 1)</td>
+		<td>The identifier of the counterparty that pays the floating rate leg 1, using: <br><br>
+
+		(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier or, if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+		(b)   in the case of an individual, a client code assigned by the Reporting Counterparty.</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Name of payer (floating rate leg 1)</td>
+		<td>The legal name of the payer (floating rate leg 1) identified under item 8.</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Payer (floating rate leg 2)</td>
+		<td>The identifier of the counterparty that pays the floating rate leg 2, using: <br><br>
+
+			(a)   in the case of an entity, a Legal Entity Identifier (LEI) or interim entity identifier, or if no LEI or interim entity identifier is available for the entity, a Designated Business Identifier or, if no Designated Business Identifier is available, a Business Identifier Code (BIC code); or <br><br>
+
+			(b)   in the case of an individual, a client code assigned by the Reporting Counterparty</td>
+	</tr>
+	<tr>
+		<td>11</td>
+		<td>Name of payer (floating rate leg 2)</td>
+		<td>The legal name of the payer (floating rate leg 2) identified under item 10.</td>
+	</tr>
+	<tr>
+		<td>12</td>
+		<td>Direction</td>
+		<td>A notation to indicate whether the Reporting Counterparty is paying or receiving the fixed rate.</td>
+	</tr>
+	<tr>
+		<td>13</td>
+		<td>Fixed rate</td>
+		<td>A notation to indicate the fixed rate used.</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>Fixed rate day count fraction</td>
+		<td>The actual number of days in the relevant fixed rate payer calculation period.</td>
+	</tr>
+	<tr>
+		<td>15</td>
+		<td>Fixed leg payment frequency</td>
+		<td>For the fixed rate leg, the dates on, or frequency with which, the agreement executed in relation to the Derivative to which the Reportable Transaction relates requires payments to be made.</td>
+	</tr>
+	<tr>
+		<td>16</td>
+		<td>Floating rate payment frequency</td>
+		<td>For the floating rate leg, the dates on, or frequency with which, the agreement executed in relation to the Derivative to which the Reportable Transaction relates requires payments to be made.</td>
+	</tr>
+	<tr>
+		<td>17</td>
+		<td>Floating rate index name (leg 1)</td>
+		<td>For floating rate leg 1, the name of the rate used to determine the payment amount at predetermined intervals.</td>
+	</tr>
+	<tr>
+		<td>18</td>
+		<td>Floating rate index name (leg 2)</td>
+		<td>For floating rate leg 2, the name of the rate used to determine the payment amount at predetermined intervals.</td>
+	</tr>
+	<tr>
+		<td>19</td>
+		<td>Floating rate reset frequency</td>
+		<td>The dates on, or frequency with which, the interest rate is reset by reference to the rates identified under items 17 and 18.</td>
+	</tr>
+
+
+</table>
+
+
+
+
+
+
+<br/><br/><br/>
+
+
+<h4 align="center">END OF MY NOTES</h4>
+
+
+
+
+</div>
+
+	<footer>
+			<div id="footer">
+				Putcha Vijay Kumar, 2020
+			</div>
+		</footer>
+
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 23rd January 2020<br/>
+</p>
+
+</body>
+</html>
+

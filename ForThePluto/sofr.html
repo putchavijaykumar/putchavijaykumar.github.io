@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P. Vijay Kumar</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2696764143798940"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="navbar">
+<a href="index.html"><mark>Home</mark></a><br/>
+</div>
+
+<br/><br/>
+
+<a class="top" href="#top"><mark>Top</mark></a><br/><br/>
+
+<a class="bottom" href="#bottom"><mark>Bottom</mark></a><br/>
+
+<div id="actualcontent">
+
+<h2 div id="top" align="center" class="main-heading-black">Secured Overnight Financing Rate (SOFR)</h2>
+<br>
+
+The Secured Overnight Financing Rate (SOFR) is an alternative reference rate that was created primarily for the purpose of replacing USD LIBOR, in case of its cessation, and to act as an alternative reference rate, even if USD LIBOR exists. It was created by the Alternative Reference Rate Committee (ARRC), which was set up by the U.S. Federal Reserve. It was desiged and implemented by the Federal Reserve Bank of New York (FRBNY) and U.S. Treasury office of Financial Research (OFR), in close consultation with the ARRC.
+<br><br>
+
+The SOFR reflects a broad universe of overnight U.S. Treaury repo transactions. The SOFR rate is calculated from three sources of repo transactions. The following are the three sources.
+
+<ol>
+  <li>Tri-party Treasury Repo</li>
+  <li>Treasury repo transactions within DTCC GCF Service</li>
+  <li>Bilateral Treasury repos cleared through FICC's Delivery-vs-Payment (DVP) service</li>
+</ol>
+
+The Tri-party Treasury Repo transactions are cleared and settled by Bank of New York Mellon (BNYM), exluding General Collateral Financing (GCF) Repos and transactions in which the Federal Reserve is a counterparty.
+<br><br>
+The Treasury Repo transactions within DTCC's GCF Service are repo transactions in which the Fixed Income Clearing Corporation (FICC) acts as a counterparty.
+<br><br>
+The Bilateral Treasury Repo transactions cleared through FICC's DVP basis are not fully included, they are filtered. The filtering is done mainly to remove repos which have become 'specials'. The bilateral repo transactions are ranked by their rates, from lowest to highest, and the the top 25% of trading volumes corresponding to the lowest transaction rates are removed; the rest of the transactions are included for calculating SOFR.
+<br><br>
+
+After applying the filter for the bilateral repos, transactions from all the aboove mentioned three sources are pooled, ranked as per transaction rates, from lowest to highest, and a transaction-weighted median repo rate (the repo trade rate for which half of the day's repo transaction volumes is made at transaction rates that are equal to it or greater than it) is computed. This transaction-weighted median repo rate becomes the day's SOFR benchmark value.
+<br><br>
+
+The SOFR is published everyday at around 8:00 a.m. ET on the next business day. 
+<br><br>
+
+
+<h3 class="side-heading-blue">SOFR Futures</h3>
+
+SOFR is an overnight interest rate. It is intended to eventually replace LIBOR. However, there are some basic differences between SOFR and LIBOR. LIBOR has both overnight and term rates upto 12 months; this makes the LIBOR very flexible as it can be used as a benchmark in a variety of financial instruments. SOFR does not have any term rates. Also, the base of LIBOR is unsecured lending, while the base of SOFR is secured lending. 
+<br><br>
+One way to create meaningful SOFR term rates is to create SOFR derivatives for various terms, and that is where the SOFR Futures come handy. Though they may not be the ideal way to have terms rates, they do provide a good approximation as long as there is decent liquidity in the market. The CME and other exchanges have created SOFR Futures so as to help develop the terms rates, which can be used as a replacement for LIBOR term rates.
+<br><br>
+The secured vs. unsecured issue is important where existing long term financial contracts, particularly derivatives, which have originally referenced LIBOR needs to be replaced with SOFR upon the final cessation of LIBOR. This issue, at least for the purposes of derivatives trades, has been addressed by ISDA by way of ISDA Fallback Protocols. We will discuss this issue in a separate article.
+<br><br>
+
+Though we will discuss SOFR Futures in general, our focus would mostly be the SOFR Futures that are traded on CME. 
+<br><br><br>
+
+<b><u>SOFR Futures on CME</u></b>
+<br><br>
+
+SOFR Futures are a part of the 'Interest Rate' product offering of the CME. The CME offers the following interest rate products.
+
+<ol>
+  <li>US Treasuries - Futures and Options</li>
+  <li>Eurodollars - Futures and Options</li>
+  <li>Fed Funds - Futures</li>
+  <li>SOFR - Futures and Options</li>
+  <li>BSBY (Bloomberg Short-Term Bank Yield) Index - Futures</li>
+  <li>Mexican Funding TIIE - Futures</li>
+  <li>SONIA - Futures</li>
+  <li>Swap Futures - MAC swaps and Eris swaps</li>
+</ol>
+
+The following are the two SOFR Futures products that CME offers. <br>
+
+<ol>
+  <li>One-Month SOFR Futures (named SR1)</li>
+  <li>Three-Month SOFR Futures (named SR3)</li>
+</ol>
+
+
+Both these products are based on the IMM Index and have very similar contract specification but have different settlement methods. We will discuss each of these products separately.
+<br><br>
+
+But before we understand these products, it is, first, necessary to understand the IMM dates. 
+<br><br><br>
+
+<b><u>IMM Index</u></b><br><br>
+IMM stands for International Monetary Market. Interest Rate product that have original maturity of less than 366 days trade in a market known as "Money Market".
+<br><br>
+The IMM Index is the price convention and the IMM date is the date of expiration for these markets.
+<br><br>
+There are several features that distinguish the money markets from the longer dated instrument markets. The most important of those differences is that the way they are quoted in the market for trading purposes. Bonds and notes are quoted in price format, while the money market products are quoted in yield terms. When money market futures were introduced on CME in the 1970s, this created a problem in the trading, order management and back-office systems, as traders and their back-office had to accomodate and get used to both these formats. To solve this problem by having a common method of quotation, CME's IMM division introduced the "IMM Index". 
+<br><br>
+IMM Index or IMM Quote Convention is 100 - Yield.
+<br><br>
+For example, if the 3-month SOFR rate is 2% then the IMM Index is 100 minus 2 = 98.
+<br><br>
+The yield and IMM Index act in an inverse or opposite relationship. If yields are falling, the IMM Index is rising and as yields rise, the IMM index falls.
+<br><br><br>
+
+
+<b><u>IMM Dates</u></b><br><br>
+IMM dates refer to when quarterly Eurodollar, FX and MAC Swap futures contracts at CME Group expire.
+<br><br>
+These contracts stop trading the Monday preceeding the third Wednesday of a March quarterly cycle. This means the third Wednesday of March, June, September, and December.
+<br><br>
+IMM dates have become significant in recent years beyond CME Group's financial futures. Many OTC interest rate swaps have pegged their floating rate payment dates to the IMM date calendar. This is to closely align them with exchange traded contracts, in an effort to easily offset and neutralize open positions.
+
+
+
+<br><br><br>
+<b><u>One-Month SOFR Futures (SR1)</u></b><br><br>
+It is a one-month future product based on the SOFR. It is cash-settled. The final settlement value is based on the arithmetic average of daily SOFR values during the contract delivery month.
+<br><br>
+Let's understand how the product works with the help of the following example.
+<br><br>
+Suppose that today is 2nd March 2022 and SOFR value is 0.05. This means that the volume-weighted secured overnight funding rate today in USA is 0.05%. If we have to convert this into IMM Index, the value is 99.95. The one-month SOFR Futures contract on CME would be the "March 2022 SR1" contract, which would expire on the IMM date i.e. 14th March 2022. 
+<br><br>
+Let's suppose that the Last Trading Price (LTP), as quoted on CME, is 99.81. This is the IMM Index number. In terms of interest rate or yield, this equates to 0.19%. This means that, currently, the market is expecting the SOFR rates on 14th March 2022 to be 0.19%, an increase of 0.14% from the current SOFR rate.
+<br><br>
+In order for us to trade, we need to have our own expectations of the future interest rates, particularly the SOFR interest rates on 14th March 2022. Let's suppose we believe that the SOFR rates are going to rise beyond the current market expected future rate of 0.19%. If so, we can purchase a SOFR contract now, at its current rate, and sell it when the rate increases, thereby making a profit. However, as discussed earlier, SOFR Futures are quoted in IMM Index terms, which move inversely to the movement of the yields. Therefore, instead of buying a SOFR contract, we should sell a SOFR contract. We can sell a contract at the current index value of 99.81 (equal to an yield of 0.19%).
+<br><br>
+SOFR contracts are cash settled based on the arithmetic average of daily SOFR values during the contract delivery month. The final settlement price would be 100 minus the arithmetic average of daily SOFR values during the contract delivery month. Our March 2022 expiry contract started on 17th of Feb 2022. The contract month is from 17th Feb 2022 to 16th March 2022, but trading closes two days prior on 14th March 2022. The arithmetic average for this period would be computed and subtracted from 100 to arrive at the final settlement price.
+<br><br>
+If the average SOFR rate is 0.25%, then the corresponding IMM Index would be 99.75. We sold a contract at 99.81 and we settled the contract (purchased) at 99.75. We made a profit of 0.06 IMM Index points. To convert this into dollar terms, we need to multiply it with $4,167. This gives us a profit (in dollar terms) of $250.02.
+<br><br><br>
+
+<b><u>One-Month SOFR Futures Contract Specifications</u></b>
+<br><br>
+
+<table>
+  <th>Terms</th>
+  <th>Description</th>
+
+  <tr>
+    <td>Contract Unit</td>
+    <td>$4,167 x contract grade IMM Index</td>
+  </tr>
+
+  <tr>
+    <td>Price Quotation</td>
+    <td>Contract IMM Index = 100 minus R <br>
+      R = Arithmetic average of Secured Overnight Financing Rate (SOFR) during contract delivery month.
+    </td>
+  </tr>
+
+  <tr>
+    <td>Trading Hours</td>
+    <td>
+      <b>CME Globex</b><br>
+      Sunday - Friday 5pm to 4pm with a 60-minute break each day beginning at 4pm.
+      <br><br>
+      <b>CME Clearport</b><br>
+      Sunday 5pm to Friday 5:45pm CT with no reporting Monday - Thursday from 5:45pm to 6pm CT
+    </td>
+  </tr>
+
+  <tr>
+    <td>Minimum Price Fluctuation</td>
+    <td>Nearby delivery month: 0.0025 IMM Index Points (1/4 basis point per annum) = $10.4175 <br><br>
+      All other delivery months: 0.005 IMM Index Points (1/2 basis point per annum) = $20.835 <br><br>
+      Min final settle fluctuation: 0.001 IMM Index Points
+    </td>
+  </tr>
+
+  <tr>
+    <td>Product Code</td>
+    <td>CME Globex: SR1 <br><br>
+      CME ClearPort: SR1 <br><br>
+      Clearing: SR1
+    </td>
+  </tr>
+
+  <tr>
+    <td>Listed Contracts</td>
+    <td>Monthly contracts listed for 13 consecutive months</td>
+  </tr>
+
+  <tr>
+    <td>Settlement Method</td>
+    <td>Financially Settled</td>
+  </tr>
+
+  <tr>
+    <td>Floating Price</td>
+    <td>Daily transaction-value weighted median interest rate on overnight US Treasury general collateral repurchase transactions, based on data collection by FRBNY from BNY Mellon, the FICC GCF Repo service, and the FICC DVP service</td>
+  </tr>
+
+  <tr>
+    <td>Termination of Trading</td>
+    <td>Trading terminates on the last business day of the contract month</td>
+  </tr>
+
+  
+</table>
+
+<br><br>
+
+<b><u>Settlement of One-Month Contract</u></b>
+<br><br>
+There are two types of settlement, the following are those.
+<ol>
+  <li>Normal Final Settlement</li>
+  <li>Normal Daily Settlement</li>
+</ol>
+<br>
+
+<b><u>Normal Final Settlement</u></b>
+<br><br>
+The final settlement price for an expiring contract shall be calculated by the Exchange on the day on which the FRBNY publishes the SOFR value for the last day of such contract's delivery month.
+<br><br>
+The SOFR value for the last day of such delivery month shall be as first published by the FRBNY.
+<br><br>
+The final settlement price shall be 100 minus the arithmetic average of daily SOFR values during the contract delivery month. For any day during such delivery month for which the FRBNY does not publish a SOFR value (eg. a weekend day, a US government securities market holiday), the SOFR value assigned to such day shall be the SOFR value for the last preceding day for which a SOFR value was published.
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br/><br/><br/>
+<h4 align="center">END OF MY NOTES</h4>
+</div>
+  <footer>
+      <div id="footer">
+        Putcha Vijay Kumar, 2022
+      </div>
+    </footer>
+<p id="bottom">
+<u>Updation History</u><br/>
+First updated on 22<sup>th</sup> February 2022.
+</p>
+
+</body>
+</html>
+
+
