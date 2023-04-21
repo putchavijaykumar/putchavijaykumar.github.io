@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Finance</title>
+    <style>
+        *{
+          padding: 0;
+          margin:0;
+          box-sizing: border-box;  
+          font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .footer {
+            text-align: center;
+                        
+        }
+
+        main {
+            width: 80%;
+            height: 600px;
+            box-shadow: 0px 0px 3px grey;
+            margin: auto;
+            margin-top: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button.navButton {
+            background-color: aquamarine;
+            border: none;
+            width: 100px;
+            height: 40px;
+        
+        }
+
+        button.navButton:hover {
+            background-color: green;
+        }
+
+        .navbutton {
+            text-align: center;
+            margin-top: 20px;
+            
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 20px 20px 20px 20px;
+        }
+
+        ol li {
+            list-style-position: none;
+            margin-left: 20px;
+        }
+
+       
+       #slide1 {
+            position: absolute;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            text-align: center;            
+        }
+
+        #slide4 {
+            position: absolute;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            text-align: center;            
+        } 
+        
+        button.simpleButton {
+            border: none;
+            background-color: white;
+            width: auto;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: left;
+          
+
+        }
+
+        button.simpleButton:hover {
+            background-color: goldenrod;
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 200ms ease-in-out;
+            border: 1px solid black;
+            border-radius: 10px;
+            z-index: 10;
+            background-color: white;
+            width: 500px;
+            max-width: 80%;
+        }
+
+        .modal.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-header {
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .modal-header .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .modal-header .close-button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            padding: 10px 15px;
+        }
+
+        #overlay {
+            position: fixed;
+            opacity: 0;
+            transition: 200ms ease-in-out;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+            pointer-events: none;
+        }
+
+        #overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .background-highlight {
+            background-color: beige;
+            width: 90%;
+            height: auto;
+            padding: 10px 10px 10px 10px;
+            position: absolute;
+            
+        }
+
+        table {
+            border: 0.5x solid black;
+            width: 100%;
+        }
+
+        th {
+            background-color: lightskyblue;
+        }
+
+        td, th {
+            border: 0.5px solid black;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .page-footer {
+            text-align: right;
+            font-style: italic;
+            margin-top: 400px;
+            margin-left: 1000px;
+            position: fixed;
+        }
+
+    </style>
+</head>
+<body>
+    
+
+<main>
+    <div id="slide1" class="slide">
+        <h1>Sustainable Finance</h1>
+        <br><br>
+        <p>By Putcha Vijay Kumar</p>
+
+        <div class="page-footer">Page 1 of 10</div>
+
+    </div> <!---End of slide 1-->
+
+    <div id="slide2" class="slide">
+        <h2>Agenda</h2>
+        <br><br>
+        <ol>
+            <li>UN Sustainable Development Goals</li>
+            <li>Types of Sustainable Finance</li>
+            <li>Terminology</li>
+            <li>Some stats</li>
+            <li>Sustainable Finance in our bank</li>
+        </ol>
+        <br>
+    </div> <!---End of slide 2---->    
+    
+    <div id="slide3" class="slide">
+        <h2>UN Sustainable Development Goals</h2>
+        <br><br>
+        <p>There are 17 UN SDG goals that need to be met by the year 2030. The following are the goals.
+        <i>Click on each of the goals to know more</i></p>
+        <br>
+        <ol>
+            <li><button data-modal-target="#modal1" class="simpleButton">No Poverty</button></li>
+            <li><button data-modal-target="#modal2" class="simpleButton">Zero Hunger</button></li>
+            <li><button data-modal-target="#modal3" class="simpleButton">Good Health and Well Being</button></li>
+            <li><button data-modal-target="#modal4" class="simpleButton">Quality Education</button></li>
+            <li><button data-modal-target="#modal5" class="simpleButton">Gender Equality</button></li>
+            <li><button data-modal-target="#modal6" class="simpleButton">Clean Water and Sanitation</button></li>
+            <li><button data-modal-target="#modal7" class="simpleButton">Affordable and Clean Energy</button></li>
+            <li><button data-modal-target="#modal8" class="simpleButton">Decent Work and Economic Growth</button></li>
+            <li><button data-modal-target="#modal9" class="simpleButton">Industry, Innovation and Infrastructure</button></li>
+            <li><button data-modal-target="#modal10" class="simpleButton">Reduced Inequalities</button></li>
+            <li><button data-modal-target="#modal11" class="simpleButton">Sustainable Cities and Communities</button></li>
+            <li><button data-modal-target="#modal12" class="simpleButton">Responsible Consumption and Production</button></li>
+            <li><button data-modal-target="#modal13" class="simpleButton">Climate Action</button></li>
+            <li><button data-modal-target="#modal14" class="simpleButton">Life Below Water</button></li>
+            <li><button data-modal-target="#modal15" class="simpleButton">Life on Land</button></li>
+            <li><button data-modal-target="#modal16" class="simpleButton">Peace, Justice and Strong Institutions</button></li>
+            <li><button data-modal-target="#modal17" class="simpleButton">Partnership for the Goals</button></li>
+
+
+        </ol>
+
+    </div> <!----End of slide 3---->
+
+
+    <div class="slide">
+        <h2>Sustainable Finance - Meaning</h2>
+        <br><br>
+        <span class="background-highlight">
+            Sustainable Finance generally refers to the process of taking due account of environment, social, and governance (ESG) considerations when making investment decisions in the financial sector, leading to increased long-term investments into sustainable economic activities and projects.
+        </span>
+        <br><br><br><br>
+        <p>Essentially, Sustainable Finance focusses on three aspects</p>
+        <br>
+        <ol>
+            <li>Environment</li>
+            <li>Social</li>
+            <li>Governance</li>
+
+        </ol>
+        
+        <br>
+    </div> <!---End of slide 4---->
+
+    <div class="slide">
+        <h2>Sustainable Finance - Historical Perspective</h2>
+        <br><br>
+        Histocially, Sustainable Finance existed in forms such as Concessionary Finance, Grants or Aid and Mutual Assitance. It was restricted to certain sectors only such as Agriculture, Microfinance and Small Industry.
+        <br><br>
+        The below table shows the various terms that were used before the word sustainable finance became popular.
+        <br><br>
+        <table>
+            <tr>
+                <th>Terms</th>
+                <th>Meaning</th>
+            </tr>
+
+            <tr>
+                <td>Philantrophy Finance / Venture Philantrophy</td>
+                <td>Grants and long term start up grants plus other supporting finance</td>
+            </tr>
+
+            <tr>
+                <td>Charitable Asset Finance</td>
+                <td>Mission and Program related finance</td>
+            </tr>
+
+            <tr>
+                <td>Development Finance</td>
+                <td>Financing done by transnational development financial institutions</td>
+            </tr>
+
+            <tr>
+                <td>Ethical Finance</td>
+                <td>Financing based upon moral judgements of performance</td>
+            </tr>
+
+            <tr>
+                <td>Social Impact Finance</td>
+                <td>Finance that supports the social economy</td>
+            </tr>
+
+            <tr>
+                <td>Green Finance</td>
+                <td>Financing that is focussed on climate change and pollution</td>
+            </tr>
+
+            <tr>
+                <td>Impact Finance</td>
+                <td>That is focussed on measurable impact</td>
+            </tr>
+
+        </table>
+        <div class="page-footer">Page 5 of 10</div>
+
+        
+        
+    </div> <!---End of slide 5---->
+
+
+    <div class="slide">
+        <h2>Organisations following financing types</h2>
+        <br><br>
+        The following organisations have been actively involved in various forms of sustainable finance for a long time.
+        <br><br>
+
+        <table>
+            <tr>
+                <th>Type of Finance</th>
+                <th>Examples of Organisations</th>
+            </tr>
+
+            <tr>
+                <td>Grants</td>
+                <td>Rockefeller Foundation</td>
+            </tr>
+
+            <tr>
+                <td>Venture Philantrophy</td>
+                <td>New Philanthrophy Capital</td>
+            </tr>
+
+            <tr>
+                <td>Program-related investments</td>
+                <td>Ford Foundation</td>
+            </tr>
+
+            <tr>
+                <td>Mission-related investment</td>
+                <td>KL Felicitas Foundation</td>
+            </tr>
+
+            <tr>
+                <td>Development Finance</td>
+                <td>Center for Disease Control and Prevention</td>
+            </tr>
+
+            <tr>
+                <td>Ethical Finance</td>
+                <td>Faith Invest</td>
+            </tr>
+
+            <tr>
+                <td>Social Impact Finance</td>
+                <td>RBC Wealth Management</td>
+            </tr>
+
+            <tr>
+                <td>Green Finance</td>
+                <td>Resonance Fund</td>
+            </tr>
+
+            <tr>
+                <td>Impact Finance</td>
+                <td>Bridges Fund Management</td>
+            </tr>
+
+            <tr>
+                <td>Socially Responsible Finance</td>
+                <td>Nutmet</td>
+            </tr>
+
+        </table>
+    
+        <div class="page-footer">Page 6 of 10</div>
+
+    </div>
+
+    <div class="slide">
+        <h2>Broad Categories of Sustainable Finance</h2>
+        <br><br>
+
+    <div class="page-footer">Page 7 of 10</div>
+    </div>
+
+
+    <div id="slide5" class="slide">
+        <h3>Thank You</h3>
+    </div>
+
+</main>
+
+<div class="navbutton" id="navbutton">
+    <button class="navButton" id="previous" onclick="getPrevious()">Previous</button>
+    <button class="navButton" id="next" onclick="getNext()">Next</button>
+</div>
+
+
+<br><br>
+<div class="footer">Putcha Vijay Kumar</div>
+
+
+
+
+<!-- The Modal Box 1 -->
+<div class="modal" id="modal1">
+    <div class="modal-header">
+        <div class="title">No Poverty</div>
+            <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      End poverty in all forms everywhere.
+    </div>
+</div>
+
+<!----End of Modal 1-->
+
+<!-- The Modal Box 2 -->
+<div class="modal" id="modal2">
+    <div class="modal-header">
+        <div class="title">Zero Hunger</div>
+            <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      End hunger, achieve food security and improved nutrition and promote sustainable agriculture.
+    </div>
+</div>
+
+<!----End of Modal 2-->
+
+<!-- The Modal Box 3 -->
+<div class="modal" id="modal3">
+    <div class="modal-header">
+        <div class="title">Good Health and Well Being</div>
+            <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+      Ensure healthy lives and promote well-being for all at all ages.
+    </div>
+</div>
+
+<!----End of Modal 3-->
+
+<!-- The Modal Box 4 -->
+<div class="modal" id="modal4">
+    <div class="modal-header">
+        <div class="title">Quality Education</div>
+            <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+        Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all
+    </div>
+</div>
+
+<!----End of Modal 4-->
+
+
+
+
+
+<div id="overlay"></div>
+
+
+</body>
+
+<script>
+let slide = document.querySelectorAll(".slide");
+let counter = 0;
+
+slide.forEach(    (slide, index) => {
+    slide.style.left = `${index * 100}%`
+}
+);
+
+const getPrevious = () => {
+    counter--
+    changeSlides();
+}
+
+const getNext = () => {
+    counter++
+    changeSlides();
+}
+
+const changeSlides = () => {
+    slide.forEach(
+        (slide) => {
+            slide.style.transform = `translateX(-${counter * 100}%)`
+            if (counter === 10) {
+                counter = -1;
+            }
+        }
+
+    )
+
+}
+
+//MODAL BOXES FUNCTIONS DOWN HERE
+
+// Get the modal
+
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+
+
+</script>
+
+
+</html>

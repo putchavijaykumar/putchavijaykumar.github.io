@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APAC Settlements</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            background-color: none;
+            padding: 10px 10px 10px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .connectors {
+            text-align: center;
+            
+        }
+
+        .button {
+            height: 50px;
+            width: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            background-color: #add8e6;
+            border: none;        
+        }
+
+        .button:hover {
+            background-color: lightgreen;
+        }
+
+        .horizontal-box {
+            background-color: none;
+            height: auto;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+            
+        }
+
+        .box1, .box2 {
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: 200ms ease-in-out;
+            border: 1px solid black;
+            border-radius: 10px;
+            z-index: 10;
+            background-color: white;
+            width: 800px;
+            max-width: 80%;
+        }
+
+        .modal.active {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .modal-header {
+            padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid black;
+        }
+
+        .modal-header .title {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .modal-header .close-button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+
+        .modal-body {
+            padding: 10px 15px;
+        }
+
+        #overlay {
+            position: fixed;
+            opacity: 0;
+            transition: 200ms ease-in-out;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .5);
+            pointer-events: none;
+        }
+
+        #overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button data-modal-target="#modal1" class="button">GMO Settlements</button>
+        <br>
+        <div class="connectors">&#124;<br>&#8595;</div>
+        <br>
+        <button data-modal-target="#modal2" class="button">APAC Settlements</button>
+        <br>
+        <div class="connectors">&#124;</div>
+        <div class="connectors">&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;&#8212;&#8212;&nbsp;</div>
+
+        <div class="horizontal-box">
+            <div class="box1">
+                <div class="connectors">&#124;<br>&#8595;</div>
+                <br>
+                <button class="button">Intercompany Settlements</button>
+                <br>
+                <div class="connectors">&#124;<br>&#8595;</div>
+                <br>
+                <button class="button">Atlas</button>
+                <br>
+                <div class="connectors">&#124;<br>&#8595;</div>
+                <br>
+                <button data-modal-target="#modal10" class="button">Your Work</button>
+
+            </div>
+
+            <div class="box2">
+                <div class="connectors">&#124;<br>&#8595;</div>
+                <br>
+                <button class="button">Prime Brokerage Settlements</button>
+                <br>
+                <div class="connectors">&#124;<br>&#8595;</div>
+                <br>
+                <button class="button">EBAR</button>
+
+            </div>
+            
+        </div>
+
+        
+
+
+
+               
+
+
+
+    </div> <!----END OF CONTAINER DIV----------------------------------------->
+    
+     <!-- The Modal Box 1 -->
+     <div class="modal" id="modal1">
+        <div class="modal-header">
+            <div class="title">Settlements</div>
+                <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            GMO Settlements takes care of settlement of equity, fixed income and derivatives transactions.
+        </div>
+    </div> <!--------END OF MODEL BOX 1----------->
+
+    <!-- The Modal Box 2 -->
+    <div class="modal" id="modal2">
+        <div class="modal-header">
+            <div class="title">APAC Settlements</div>
+                <button data-close-button class="close-button">&times;</button>
+        </div>
+        <div class="modal-body">
+            APAC Settlements is a "Buy-In" market. The market has the following features.
+            <ol>
+                <li>Cut-off timing is 3pm IST</li>
+                <li>Holidays are as per Singapore</li>
+            </ol>
+        </div>
+    </div> <!--------END OF MODEL BOX 2----------->
+
+
+    <div id="overlay"></div>
+
+
+</body>
+
+<script>
+
+//MODAL BOXES FUNCTIONS DOWN HERE
+
+// Get the modal
+
+
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget)
+    openModal(modal)
+  })
+})
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+
+</script>
+
+
+</html>
