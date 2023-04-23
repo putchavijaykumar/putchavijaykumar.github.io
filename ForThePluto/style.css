@@ -97,6 +97,19 @@ body {
 
 }
 
+#actualcontent-new {
+  width: 100%;
+  float: left;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 18px;
+
+}
+
 #actualcontent-2 {
   width: 100%;
   float: left;
@@ -115,7 +128,19 @@ body {
   text-align: center;
 }
 
+#actualcontent-new h2.main-heading-blue {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+  text-align: center;
+}
+
 #actualcontent h2.main-heading-black {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: black;
+  text-align: center;
+}
+
+#actualcontent-new h2.main-heading-black {
   font-family: Menlo, Inconsolata, Consolas;
   color: black;
   text-align: center;
@@ -138,6 +163,11 @@ body {
 }
 
 #actualcontent h3.side-heading-blue {
+  font-family: Menlo, Inconsolata, Consolas;
+  color: blue;
+}
+
+#actualcontent-new h3.side-heading-blue {
   font-family: Menlo, Inconsolata, Consolas;
   color: blue;
 }
@@ -381,7 +411,14 @@ ol.e {
 
 }
 
+.fordate {
+  font-style: italic;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 18px;
+  text-align: center;
+  color: red;
 
+}
 
 /* The below is the CSS for the header NAV */
 
