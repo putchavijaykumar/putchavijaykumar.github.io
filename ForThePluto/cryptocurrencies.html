@@ -51,6 +51,62 @@
     His argument is that we can have a peer-to-peer electronic database which is based on cryptographic proof instead of trust. One way to put it is: let's say I want to buy a cup of coffee for $10, for this I need to transfer $10 to the coffee vendor. The actual transfer is made by my bank which makes changes in its database. This means I and the coffee vendor are relying on a bank for this transaction to happen. This trust that we have on bank to complete the transaction is not free of cost, the bank might charge a few cents or dollars for enabling this transaction or making changes to its database. <b>This is the cost of trust.</b>
     <br><br>
     
+    Can we remove the bank from the transaction and make the transfer directly? The peer-to-peer electronic cash system is designed to do that. It removes the bank (third party or intermediary) from the equation. But that does not mean that this system does not depend on a third party. Instead, it replaces a single party (i.e. the bank) with a lot of unrelated parties.
+    <br><br>
+    
+    The idea is that instead of allowing a single party (in this example, the bank) which is maintaining the database, why not create multiple databases that are linked to each other and maintained by multiple people so that we do not have to trust a single party or a few parties. In this way, we are trusting a network of databases or a system.
+    <br><br>
+
+    We will call the databases as ledger, henceforth, to talk the language of cryptocurrencies. And, since the ledger (database) is maintained by many people we will call it as <mark>distributed ledger</mark>.
+    <br><br>
+
+    Santoshi's argument was that we can have many people maintaining these ledgers and the consensus of these ledgers provides the proof of something. For example, the consensus of these ledgers (distributed ledgers) could be a proof that we own money or owe money, could mean that we own a piece of land, or it could be a proof of ownership and title rights to a music album, ownership of a piece of art, ownership of a vehicle, driving license, and other such things in life.
+    <br><br>
+
+    Santoshi himself did not hint about all the possible uses of the distributed ledger. He was more focussed on its use as a peer-to-peer cash transfer system and that's why he titled his article as such. But the concept of having the distributed ledger can be extended not just to cash but many other things in our day-to-day life.
+    <br><br>
+
+    In this article, we will focus on the cash part, as that's the topic we are discussing.
+    <br><br>
+
+    In case of a distributed ledger dealing with peer-to-peer electronic cash, we need to identify or give some name to that cash. It cannot be called dollars, pounds, rupees, etc., as those are names of money given by the central banks of the countries. The governments together with the central banks have invented those currencies, maintain it and, hence, they have a sort of copyright on it. We need to have our own name for our cash. Let's call it X-Coin.
+    <br><br>
+    
+    The distributed ledgers running our X-Coin is fine conceptually but there are a few things that need to be addressed. First, why would anyone want to maintain a ledger for someone else? I would not like to waste my time recording things that others have done. What benefit that this accrue to me? To address this issue, let's reward those ledger keepres with some money. But insead of giving money created by someone else, why not give the money that we crated - our own X-Coin. So, we say that anyone who maintains these ledgers will get a few X-coins.
+    <br><br>
+
+    But then we run into another problem now. We discussed about consensus of ledgers. If everyone maintains their own ledgers, and the balance of cash recorded in one ledger does not match the balanace in another ledger then we do not know what the right amount of money that someone owns. Therefore, the concept of consensus is important. Ledgers need to match. Everyone maintaining these distributed ledgers need to be honest and maintain the ledgers properly, so that we can have consensus. So, the way it works is that when a transaction is done, it is published to the entire network (of ledger keepers), and the ledger keepers will have to verify it and make changes to their own ledgers. We will get into the technicalities of how this verification is done later but for now just assume that there is a prescribed method in which the ledger keepers verify the transactionss. Once most of them verify the transaction, a consenus is achieved and changes are made to all ledgers. 
+    <br><br>
+
+    Another problem is that there should be an order of transaction. If I have a X-Coin and I sent it to you, and then I send it to someone else, who actually has the X-Coin? Since the ledgers are maintained by different people, there is no guarantee that the information about this transaction has reached all of them at the same time. If one ledger keeper records the transactions but the other does not then there is no consensus and in between all this I can use the same X-Coin for multiple transactions, which is called "double spending". To solve this issue, the ledger keepers must agree on a single history of the order in which they are received, and this is called the "<b>blockchain</b>". In simple terms, it is a chain of transactions that are recorded by all ledger keepers in the same way.
+    <br><br>
+    
+    Another problem is that a large bad group of people may come forward to run these ledgers and deliberately make wrong entries. If that large group of bad people is more than the good group of people running these ledgers, then the consensus will shift towards the bad group and they can steal our X-Coins or put the system into chaos. To prevent this, the people who run these ledgers are made to work harder by way of solving complex puzzles (which we will call as <b>mining</b>). The mining involves doing some work (we will discuss the technicalities later) for the purpose of verification of transactions and in the process, they also generate the X-Coins for themselves. Thus, mining is done for two things - to verify transactions broadcasted to the distributed ledger and to make X-Coins for themsleves. In a way, the miners generate X-Coins to pay for themselves whenever they successfully verify transactions and record them in their ledgers. When many miners do the same job, everyone cannot get the X-Coins, only the one who solves the puzzle first and verifies the transactions gets the X-Coins. But there are so many transactions that are broadcasted to the network so that every miner has a chance to mine something and earn our X-Coins.
+    <br><br>
+
+    But still, it is possible, that the large group of people can do a lot of mining and thereby create the consensus and take a lot of X-Coins for themselves and spoil the network. However, there is a catch! If such bad group has spent so much effort in mining and earned our X-Coins, they would be foolish to spoil the network now because if the network is broken, the value of the X-Coins will become nothing, and they would lose too. Therefore, there is a self-imposed discipline in the network. Those who mine get X-Coins, not dollars or other currencies. Therefore, they are forced in a way to be honest to preserve the value of X-Coins.
+    <br><br>
+
+    Through this system of blockchain, we created X-Coins and maintain a public ledger of money. We are not relying on an individual but a network of ledger keepers, who maintain the ledgers because they make money out of it. Thus, all that we achieved now is to replace trust in an individual company maintaining a database with a network of databases (distrinuted ledgers) to make and move money around. Our X-Coins are created by miners and they can sell it to another through the same network of ledgers or use it to purchase stuff through the same network of ledgers or just keep it with them using the same network of ledgers.
+    <br><br>
+
+    In banking, we keep money with a bank, transfer it or spend it for stuff that we need. The same is now achieved by our X-Coins in a different way. Therefore, we can now call our X-Coin a currency of short.
+    <br><br>
+    <br>
+
+    <h3 class="side-heading-blue">Is Crpto + Currency = Cryptocurrency?</h3>
+    <br>
+
+    The name Cryptocurrency seem to mean that it is a currency and something to do with cryptography. But is it really so? Let's explore.
+    <br><br>
+
+    We created a currency called "X=Coin" based on a distributed ledger system because we did not want to trust any single institution, instead we wanted to put our trust in different unknown people maintaining a distributed ledger system. We also said that this distributed ledger or database would be based on cryptographic proof. Our X-Coin is capable of being held and traded. Think of this like a number that is written against your name in a distributed ledger system and this number can be transferred to someone else. But if you wish to hold it then it would continue to appear against your name in the ledger. This is very similar to money balance that you have in your bank account. It is also a number in a database, which represents the amount that you currently have. You can transfer that number to someone else or purchase goods and services. So, our X-Coin is no different. We are essentailly dealing with numbers in a database that can be held or transferred for commerce purposes. When we think in this fashion, our X-Coin is a currency just like any other currency out there. However, there are some differences.
+    <br><br>
+
+    Currency 
+    
+
+
 
     
 </div><!-------END OF ACTUAL CONTENT DIV--------->
