@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Sql Queries</title>
+
+<style>
+.new-italic-color {
+    color: red;
+}
+</style>
+
+</head>
+
+<body>
+    
+<div id="actualcontent">
+
+<h2 class="main-heading-black">My Sql queries - Postgre SQL</h2> 
+
+<h3 class="side-heading-blue">Expense Registers</h3>
+<br><br>
+
+<i class="new-italic-color">To select all data from expense type table</i><br><br>
+SELECT * FROM expense_type;
+
+<br><br><br>
+
+<i class="new-italic-color">To select all data from expense_register table</i><br><br>
+
+SELECT * FROM expense_register;
+
+<br><br><br>
+
+<i class="new-italic-color">To insert records into expense register</i><br><br>
+INSERT INTO expense_register(expense_date, expense_type, amount, description) <br>
+VALUES ('2023-10-20' ,'3', '900', 'Paid to sweta for misc expenses'); 
+
+<br><br><br>
+
+<i class="new-italic-color">To insert records into expense type table</i> <br><br>
+INSERT INTO expense_type(expense_type) <br>
+VALUES ('Books');
+
+<br><br><br>
+
+<i class="new-italic-color">To get the total sum of expense register</i><br><br>
+SELECT SUM(amount) <br>
+FROM expense_register;
+
+<br><br><br>
+
+<i class="new-italic-color">To get the total sum of expense register based on expense type</i>
+SELECT SUM(amount) <br>
+FROM expense_register <br>
+WHERE expense_type='17';
+
+<br><br><br>
+
+<i class="new-italic-color">To inner join both tables and order based on date in descending order</i><br><br>
+SELECT expense_date, expense_type.expense_type, amount, description <br>
+FROM expense_register <br>
+INNER JOIN expense_type <br>
+ON expense_register.expense_type = expense_type.expense_id <br>
+ORDER BY expense_date DESC;
+
+<br><br><br>
+
+<i class="new-italic-color">To inner join both tables and order by DATE in descending order and get data only for a particular expense type</i> <br><br>
+
+SELECT expense_date, expense_type.expense_type, amount, description <br>
+FROM expense_register <br>
+INNER JOIN expense_type <br>
+ON expense_register.expense_type = expense_type.expense_id <br>
+WHERE expense_type.expense_type='Home Improvement' <br>
+ORDER BY expense_date DESC;
+
+<br><br><br>
+
+<i class="new-italic-color">To inner join both tables and order by date in descending order only for a particular record type and where description starts with ___ </i> <br><br>
+
+SELECT expense_date, expense_type.expense_type, amount, description <br>
+FROM expense_register <br>
+INNER JOIN expense_type <br>
+ON expense_register.expense_type = expense_type.expense_id <br>
+WHERE expense_type.expense_type='EMI' AND expense_register.description LIKE 'P%' <br>
+ORDER BY expense_date DESC;
+
+<br><br><br>
+
+<i class="new-italic-color">To get the sum of the amount column using inner join an filtering the data using expense type and expense description that starts with ___ </i> <br><br>
+
+SELECT SUM(amount) <br>
+FROM expense_register <br>
+INNER JOIN expense_type <br>
+ON expense_register.expense_type = expense_type.expense_id <br>
+WHERE expense_type.expense_type = 'EMI' AND expense_register.description LIKE 'P%';
+
+
+
+
+</div> <!--END OF ACTUAL CONTENT DIV-->
+
+
+</body>
+</html>
