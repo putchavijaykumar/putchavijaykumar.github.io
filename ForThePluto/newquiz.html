@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz-new-style.css">
+    <script defer src="quiz-new.js"></script>
+</head>
+<body>
+    
+    <!-------the below section deals with initial quiz setup----------------->
+
+    
+    <!-------the below section deals with the actual quiz---------------->
+
+    <div class="quiz-container">
+        
+        <p class="quiz-copyright">Designed by Vijay Kumar Putcha</p>
+        <br>
+
+        <h1>Learn through quizzes</h1>
+
+        <h2 id="team-name" class="team">This question is for</h2>
+
+        <quiz class="metrics">
+
+            <div id="progress-bar" class="quiz-progress">
+                <i id="progress-text">Some progress text</i>
+            </div> <!--END OF QUIZ PROGRESS DIV---->
+
+            <div class="quiz-timer">
+                <i id="quiz-timer">Time starts now</i>
+            </div> <!--END OF QUIZ TIMER DIV---->
+
+        </quiz> <!---END OF QUIZ METRICS DIV---->
+
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2> <br>  <!----GRAB THIS ID IN JS FILE---->
+        
+            <div id="answers-buttons" class="quiz-answers"> <!-----GRAB THIS ID IN JS FILE---->
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div> <!----END OF QUIZ ANSWERS DIV---->
+
+        <button id="next-btn">Next</button> <!----GRAB THIS ID IN JS FILE---->
+
+            <br>
+
+           <i id="explanation">Some explanation goes here</i>
+
+        </div> <!----END OF QUIZ STYLNG DIV--- -->
+
+
+    </div> <!-----END OF QUIZ CONTAINER DIV---->
+        
+    <!---the below section deals with quiz team metrics---------->
+
+    <div id="team-metrics" class="team-metrics">
+        <div class="team-metrics-a">
+            <i>Score of team Hyderabad</i><br>
+            <i id="teamHYDScore">Score is reset</i>
+        </div>
+        <div class="team-metrics-b">
+            <i>Score of team Gurugram</i><br>
+            <i id="teamGGMScore">Score is reset</i>
+        </div>
+
+    </div> <!---END OF TEAM METRICS DIV-->
+
+
+
+</body>
+</html>
