@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="styledpl.css">
+    <script defer src="quizdpl.js"></script>
+</head>
+<body>
+    
+    <!-------the below section deals with initial quiz setup----------------->
+
+    <div id="quiz-setup" class="quiz-setup">
+
+        <h2 class="team">Setup Quiz</h2>
+
+        <form id="quiz-setup-form" action="">
+            <label for="team1name">Enter team 1 name</label>
+            <input type="text" id="team1name" name="team1name" placeholder="enter team 1 name here">
+
+            <label for="team2name">Enter team 2 name</label>
+            <input type="text" id="team2name" name="team2name" placeholder="enter team 2 name here">
+
+            <label for="team3name">Enter team 3 name</label>
+            <input type="text" id="team3name" name="team3name" placeholder="enter team 3 name here">
+
+            <label for="team4name">Enter team 4 name</label>
+            <input type="text" id="team4name" name="team4name" placeholder="enter team 4 name here">
+
+            <label for="team5name">Enter team 5 name</label>
+            <input type="text" id="team5name" name="team5name" placeholder="enter team 5 name here">
+
+
+        </form>
+        <br>
+        <button id="form-submit" class="submit">Submit</button>
+        <button id="reset-team-button" class="submit">Reset Form</button>
+
+
+    </div> <!---END OF QUIZ SETUP DIV-->
+
+
+
+
+
+    <!-------the below section deals with the actual quiz---------------->
+
+    <div id="main-quiz-container" class="quiz-container hide">
+        
+        <p class="quiz-copyright">Designed by Vijay Kumar Putcha</p>
+        <br>
+
+        <h1>Learn through quizzes</h1>
+
+        <h2 id="team-name" class="team">This question is for</h2>
+
+        <quiz class="metrics">
+
+            <div id="progress-bar" class="quiz-progress">
+                <i id="progress-text">Some progress text</i>
+            </div> <!--END OF QUIZ PROGRESS DIV---->
+
+            <div class="quiz-timer">
+                <i id="quiz-timer">Time starts now</i>
+            </div> <!--END OF QUIZ TIMER DIV---->
+
+        </quiz> <!---END OF QUIZ METRICS DIV---->
+
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2> <br>  <!----GRAB THIS ID IN JS FILE---->
+        
+            <div id="answers-buttons" class="quiz-answers"> <!-----GRAB THIS ID IN JS FILE---->
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div> <!----END OF QUIZ ANSWERS DIV---->
+
+        <button id="next-btn">Next</button> <!----GRAB THIS ID IN JS FILE---->
+
+            <br>
+
+           <i id="explanation">Some explanation goes here</i>
+
+        </div> <!----END OF QUIZ STYLING DIV--- -->
+
+
+    </div> <!-----END OF QUIZ CONTAINER DIV---->
+        
+    <!---the below section deals with quiz team metrics---------->
+
+    <div id="team-metrics" class="team-metrics">
+        <div class="team-metrics-a">
+            <i id="autoInputTeamNameA" class="bg">Team 1</i><br>
+            <i id="teamAScore">Score is reset</i>
+        </div>
+        <div class="team-metrics-b">
+            <i id="autoInputTeamNameB">Team 2</i><br>
+            <i id="teamBScore">Score is reset</i>
+        </div>
+        <div class="team-metrics-c">
+            <i id="autoInputTeamNameC">Mumbai">Team 3</i><br>
+            <i id="teamCScore">Score is reset</i>
+        </div>
+        <div class="team-metrics-d">
+            <i id="autoInputTeamNameD">Team 4</i><br>
+            <i id="teamDScore">Score is reset</i>
+        </div>
+        <div class="team-metrics-e">
+            <i id="autoInputTeamNameE">GIFT">Team 5</i><br>
+            <i id="teamEScore">Score is reset</i>
+        </div>
+
+    </div> <!---END OF TEAM METRICS DIV-->
+
+
+
+</body>
+</html>
